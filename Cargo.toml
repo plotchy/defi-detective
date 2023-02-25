@@ -1,0 +1,16 @@
+[package]
+name = "defi-explorer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+config = "0.13.3"
+ethers-rs = "0.2.3"
+eyre = "0.6.8"
+once_cell = "1.17.1"
+regex = "1.7.1"
+serde = "1.0.152"
+tokio = {version = "1.25.0", features = ["full"]}
+walkdir = "2.3.2"

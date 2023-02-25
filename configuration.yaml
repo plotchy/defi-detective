@@ -1,0 +1,8 @@
+sanctuary_settings:
+  rel_path_to_sanctuary: "../../../sanctuary/smart-contract-sanctuary"
+
+fetch_settings:
+  rate_interval_ms: 300
+  rel_output_dir: "output"
+  eth_mainnet_rpc_url: "https://eth-mainnet.g.alchemy.com/v2/zfChlGERrpUsOJdRQo5azLpVbNumoTbt"
+
