@@ -15,4 +15,3 @@ def save_model(model, filename):
 def load_model(filename):
   return pickle.load(open(filename, 'rb'))
 
-  
