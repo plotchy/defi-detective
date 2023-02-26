@@ -7,6 +7,7 @@ use once_cell::sync::Lazy;
 use ethers::prelude::*;
 
 pub struct NodeBytecodeMessage {
+    pub network: Chain,
     pub address: Address,
     pub bytecode: Bytes,
 }
