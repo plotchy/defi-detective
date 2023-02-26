@@ -50,7 +50,7 @@ impl NodeWatcher {
         // then, iterate over all transactions in block
         // if transaction is a contract creation, then fetch bytecode
 
-        let mut ws_provider = ethers::providers::Ws::connect(&self.rpc_url).await.unwrap();
+        let ws_provider = ethers::providers::Ws::connect(&self.rpc_url).await.unwrap();
         let provider = Provider::new(ws_provider).interval(Duration::from_millis(2000));
         let mut stream = provider.watch_blocks().await.unwrap().take(1);
         while let Some(block) = stream.next().await {
@@ -105,55 +105,48 @@ impl NodeWatcher {
                 let transaction_gas_price = match transaction.gas_price {
                     Some(price) => price,
                     None => {
-                        // This is type 2. probably a different fn
+                        // This is type 2. just add the two fees
+                        transaction.max_fee_per_gas.unwrap() + transaction.max_priority_fee_per_gas.unwrap()
                     }
                 };
-                let transaction_gas_limit = transaction.gas.unwrap().as_u64();
-                let transaction_input = transaction.input.unwrap();
-                let transaction_nonce = transaction.nonce.unwrap().as_u64();
-                let transaction_block_hash = transaction.block_hash.unwrap();
-                let transaction_block_number = transaction.block_number.unwrap().as_u64();
-                let transaction_transaction_index = transaction.transaction_index.unwrap().as_u64();
-                let transaction_contract_address = transaction.contract_address.unwrap();
-                let transaction_cumulative_gas_used = transaction.cumulative_gas_used.unwrap().as_u64();
-                let transaction_gas_used = transaction.gas_used.unwrap().as_u64();
-                let transaction_root = transaction.root.unwrap();
-                let transaction_status = transaction.status.unwrap().as_u64();
-                let transaction_logs_bloom = transaction.logs_bloom.unwrap();
-                let transaction_logs = transaction.logs.unwrap();
+
+                let transaction_gas_limit = transaction.gas;
+                let transaction_input = transaction.input.clone();
+                // let transaction_nonce = transaction.nonce.unwrap().as_u64();
+                // let transaction_block_hash = transaction.block_hash.unwrap();
+                // let transaction_transaction_index = transaction.transaction_index.unwrap().as_u64();
+
+                // These would be useful, but are under TransactionReceipt
+                let transaction_receipt = match provider.get_transaction_receipt(transaction_hash).await {
+                    Ok(Some(tx_r)) => tx_r,
+                    Ok(None) => {
+                        warn!("No receipt for tx included in finished block???: block {:?}, tx {:?}", block_number, &transaction);
+                        continue;
+                    }
+                    Err(e) => {
+                        error!("ProviderErr on transaction_receipt: {:?}", e);
+                        continue;
+                    }
+                };
+                let transaction_gas_used = transaction_receipt.gas_used.unwrap().as_u64();
+                let transaction_logs_bloom = transaction_receipt.logs_bloom;
+                let transaction_logs = transaction_receipt.logs;
 
                 // if transaction is a contract creation, then fetch bytecode
-                if transaction_to == None {
-                    let bytecode = provider.get_code(transaction_contract_address, None).await.unwrap();
-                    let bytecode = bytecode.unwrap();
-                    let bytecode = bytecode.as_bytes().to_vec();
+                if transaction_to == None && transaction_receipt.contract_address.is_some() {
+                    let transaction_created_address = transaction_receipt.contract_address.unwrap();
+                    let bytecode = provider.get_code(transaction_created_address, None).await.unwrap();
+
+
 
                     let node_msg = NodeBytecodeMessage {
-                        chain: self.chain,
-                        block_number,
-                        block_hash,
-                        block_timestamp,
-                        transaction_hash,
-                        transaction_from,
-                        transaction_to,
-                        transaction_value,
-                        transaction_gas_price,
-                        transaction_gas_limit,
-                        transaction_input,
-                        transaction_nonce,
-                        transaction_block_hash,
-                        transaction_block_number,
-                        transaction_transaction_index,
-                        transaction_contract_address,
-                        transaction_cumulative_gas_used,
-                        transaction_gas_used,
-                        transaction_root,
-                        transaction_status,
-                        transaction_logs_bloom,
-                        transaction_logs,
+                        network: self.chain,
+                        address: transaction_created_address,
                         bytecode,
+                        block_number: Some(block_number)
                     };
 
+                    info!("Sending new deployed contract to bytecode analyzer on network {:?}", &self.chain);
                     self.node_msg_txr.send(node_msg).unwrap();
                 }
             }
