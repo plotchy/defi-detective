@@ -15,6 +15,7 @@
 		"@astrojs/sitemap": "^1.1.0",
 		"@astrojs/svelte": "^2.0.2",
 		"astro": "^2.0.12",
+		"monaco-editor": "^0.36.0",
 		"svelte": "^3.54.0"
 	}
 }

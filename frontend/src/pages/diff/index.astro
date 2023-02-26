@@ -1,0 +1,19 @@
+---
+
+import DiffEditor from '../../components/DiffEditor.svelte'
+
+---
+
+<DiffEditor
+	client:visible
+	leftText={`
+		hello
+		123
+		world
+	`}
+	rightText={`
+		hello
+		456
+		world
+	`}
+/>
