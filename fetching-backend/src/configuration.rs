@@ -10,10 +10,16 @@ pub struct Settings {
 pub struct FetchSettings {
     pub rate_interval_ms: u64,
     pub rel_output_dir: String,
+    pub rel_db_dir: String,
+    pub write_to_db_interval_secs: u64,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct BytecodeSettings {
     pub rel_event_patterns_path: String,
     pub rel_selector_patterns_path: String,
+    pub rel_filtered_bytecodes_path: String,
+    pub rel_match_output_path: String,
+    pub write_to_matches_interval_secs: u64,
+
 }

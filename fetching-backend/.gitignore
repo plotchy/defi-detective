@@ -1,3 +1,5 @@
 /target
 /output
 .env
+/db/fetched_addresses/*
+/db/filtered_bytecodes/*

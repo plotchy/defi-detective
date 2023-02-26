@@ -1,0 +1,6 @@
+{
+    "selectors": [
+        {"name": "approve(address,uint256)", "hash": "0x095ea7b3"},
+        {"name": "transfer(address,uint256)", "hash": "0xa9059cbb"}
+    ]
+}
