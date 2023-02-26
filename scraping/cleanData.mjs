@@ -12,8 +12,17 @@ protocols.forEach((p) => {
     return;
   }
   const data = JSON.parse(fs.readFileSync(filename).toString());
-  if (data.length === 1 && data.SourceCode.includes('pragma solidity')) {
-    console.log(`Deleting ${filename}`);
-    fs.unlinkSync(filename);
+  if (
+    data.length === 1 &&
+    data[0].SourceCode &&
+    data[0].SourceCode.includes('pragma solidity')
+  ) {
+    console.log(`writing ${filename}`);
+    // write to .sol instead of .json
+
+    fs.writeFileSync(
+      filename.replace('.json', '.sol').replace('/contracts/', '/source/'),
+      data[0].SourceCode
+    );
   }
 });
