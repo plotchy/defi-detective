@@ -20,6 +20,7 @@ use ethers::providers::{SubscriptionStream, TransactionStream};
 use nanoid::nanoid;
 use ethers::providers::{Provider, Http, Ws, Middleware};
 use std::time::Duration;
+use futures::future::join_all;
 
 static COUNTER: AtomicUsize = AtomicUsize::new(1);
 pub fn get_id() -> usize { COUNTER.fetch_add(1, Ordering::Relaxed) }
@@ -35,6 +36,8 @@ impl NodeWatcher {
 
     pub fn new(chain: Chain, rpc_url: String, node_msg_txr: UnboundedSender<NodeBytecodeMessage>) -> Self {
         let subscription_id = get_id();
+
+        
         Self {
             chain,
             rpc_url,
@@ -46,13 +49,20 @@ impl NodeWatcher {
     pub async fn run(&self) {
         // this fn subscribes to an RPC's block output
 
+        // check if self.rpc_url is a wss or a http link
+        
+
+
         // use ethers-rs provider to subscribe to block output
         // then, iterate over all transactions in block
         // if transaction is a contract creation, then fetch bytecode
 
-        let ws_provider = ethers::providers::Ws::connect(&self.rpc_url).await.unwrap();
-        let provider = Provider::new(ws_provider).interval(Duration::from_millis(2000));
-        let mut stream = provider.watch_blocks().await.unwrap().take(1);
+        
+        // let ws_provider = ethers::providers::Ws::connect(&self.rpc_url).await.unwrap();
+        // let provider = Provider::new(ws_provider).interval(Duration::from_millis(2000));
+        let http_provider = ethers::providers::Http::from_str(&self.rpc_url).unwrap();
+        let provider = Provider::new(http_provider).interval(Duration::from_millis(2000));
+        let mut stream = provider.watch_blocks().await.unwrap();
         while let Some(block) = stream.next().await {
             let block = match provider.get_block(block).await {
                 Ok(block_opt) => {
@@ -70,16 +80,16 @@ impl NodeWatcher {
                 },
             };
             println!(
-                "Ts: {:?}, block number: {} -> {:?}",
+                "Net: {:?}, Time: {:?}, block number: {} -> bhash {:?}",
+                &self.chain,
                 block.timestamp,
                 block.number.unwrap(),
                 block.hash.unwrap()
             );
 
-
             let block_number = block.number.unwrap().as_u64();
-            let block_hash = block.hash.unwrap();
-            let block_timestamp = block.timestamp.as_u64();
+            // let block_hash = block.hash.unwrap();
+            // let block_timestamp = block.timestamp.as_u64();
             let block_transactions = block.transactions;
 
             for transaction_hash in block_transactions {
@@ -166,14 +176,14 @@ pub async fn run_node_watcher(fetch_settings: FetchSettings, node_msg_txr: Unbou
         (Chain::Mainnet, std::env::var("ETH_MAINNET_RPC_URL").unwrap()),
         (Chain::Goerli, std::env::var("ETH_GOERLI_RPC_URL").unwrap()),
         (Chain::Arbitrum, std::env::var("ARBITRUM_MAINNET_RPC_URL").unwrap()),
-        (Chain::ArbitrumGoerli, std::env::var("ARBITRUM_GOERLI_RPC_URL").unwrap()),
+        // (Chain::ArbitrumGoerli, std::env::var("ARBITRUM_GOERLI_RPC_URL").unwrap()),
         (Chain::Optimism, std::env::var("OPTIMISM_MAINNET_RPC_URL").unwrap()),
-        (Chain::OptimismGoerli, std::env::var("OPTIMISM_GOERLI_RPC_URL").unwrap()),
-        (Chain::OptimismKovan, std::env::var("OPTIMISM_KOVAN_RPC_URL").unwrap()),
-        (Chain::Avalanche, std::env::var("AVALANCHE_MAINNET_RPC_URL").unwrap()),
-        (Chain::AvalancheFuji, std::env::var("AVALANCHE_FUJI_RPC_URL").unwrap()),
+        // (Chain::OptimismGoerli, std::env::var("OPTIMISM_GOERLI_RPC_URL").unwrap()),
+        // (Chain::OptimismKovan, std::env::var("OPTIMISM_KOVAN_RPC_URL").unwrap()),
+        // (Chain::Avalanche, std::env::var("AVALANCHE_MAINNET_RPC_URL").unwrap()),
+        // (Chain::AvalancheFuji, std::env::var("AVALANCHE_FUJI_RPC_URL").unwrap()),
         (Chain::Polygon, std::env::var("POLYGON_MAINNET_RPC_URL").unwrap()),
-        (Chain::PolygonMumbai, std::env::var("POLYGON_MUMBAI_RPC_URL").unwrap()),
+        // (Chain::PolygonMumbai, std::env::var("POLYGON_MUMBAI_RPC_URL").unwrap()),
         
         // (Chain::BaseGoerli, std::env::var("BASE_GOERLI_RPC_URL").unwrap()), // TODO
     ];
@@ -182,21 +192,46 @@ pub async fn run_node_watcher(fetch_settings: FetchSettings, node_msg_txr: Unbou
     // clone Arc of txr for each RPC
     // then, spawn a thread for each RPC
 
-    let mut handles_set = JoinSet::new();
+
+    // HANDLES SET 
+    // let mut handles_set = JoinSet::new();
+    // for (chain, rpc_url) in rpcs {
+    //     let node_msg_txr = node_msg_txr.clone();
+    //     let handle = handles_set.spawn(async move {
+    //         let mut node_watcher = NodeWatcher::new(chain, rpc_url, node_msg_txr);
+    //         node_watcher.run().await;
+    //     });
+    // }
+
+    // // wait for all threads to finish
+    // while let Some(res) = handles_set.join_next().await {
+    //     // Does this block sequentially?
+    //     let out = res?;
+    // }
+
+
+    // SINGLE HANDLE
+    // let node_msg_txr = node_msg_txr.clone();
+    // let handle = tokio::spawn(async move {
+    //     let mut node_watcher = NodeWatcher::new(rpcs[0].0, rpcs[0].1.clone(), node_msg_txr);
+    //     node_watcher.run().await;
+    // });
+
+    // tokio::join!(handle);
+
+
+    // FUTURES JOIN ALL VEC
+    let mut handles = Vec::new();
     for (chain, rpc_url) in rpcs {
         let node_msg_txr = node_msg_txr.clone();
-        let handle = handles_set.spawn(async move {
+        let handle = tokio::spawn(async move {
             let mut node_watcher = NodeWatcher::new(chain, rpc_url, node_msg_txr);
             node_watcher.run().await;
         });
+        handles.push(handle);
     }
 
-    // wait for all threads to finish
-    while let Some(res) = handles_set.join_next().await {
-        // Does this block sequentially?
-        let out = res?;
-    }
-
+    join_all(handles).await;
     /*
     calldata
     emitted events

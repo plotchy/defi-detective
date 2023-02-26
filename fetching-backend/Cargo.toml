@@ -18,3 +18,4 @@ walkdir = "2.3.2"
 tracing-subscriber = {version = "0.3.16"}
 tracing = "0.1.29"
 nanoid = "0.4.0"
+futures = "0.3.17"

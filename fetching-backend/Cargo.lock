@@ -702,6 +702,7 @@ dependencies = [
  "dotenv",
  "ethers",
  "eyre",
+ "futures",
  "nanoid",
  "once_cell",
  "regex",
