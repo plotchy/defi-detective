@@ -9,6 +9,7 @@ use std::collections::HashSet;
 use tracing_subscriber;
 use tracing::{info, warn, error, debug, trace, instrument, span, Level};
 use tokio::join;
+use tokio::sync::mpsc;
 
 
 #[tokio::main]
@@ -27,17 +28,24 @@ async fn main () {
 
     info!("fetch_settings: {:?}", &fetch_settings);
 
+    // set up channel passing of addresses / bytecode
+
+    // Create a new channel with a capacity of at most 32.
+    let (node_watcher_tx, bytecode_analyzer_rx) = mpsc::unbounded_channel();
+
     // run node watchers
     let node_watcher_handle = tokio::spawn(async move {
-        run_node_watcher(fetch_settings).await;
+        run_node_watcher(fetch_settings, node_watcher_tx).await;
     });
 
     // run bytecode analyzer
     let bytecode_analyzer_handle = tokio::spawn(async move {
-        run_bytecode_analyzer(bytecode_settings).await;
+        run_bytecode_analyzer(bytecode_settings, bytecode_analyzer_rx).await;
     });
 
 
+    
+    // run threads until termination / errors
     let join_result = tokio::join!(node_watcher_handle, bytecode_analyzer_handle);
 
     match join_result {

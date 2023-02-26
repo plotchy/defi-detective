@@ -12,9 +12,10 @@ use tracing_subscriber;
 use tracing::{info, warn, error, debug, trace, instrument, span, Level};
 use tokio::join;
 use crate::*;
+use tokio::sync::mpsc::{UnboundedReceiver};
 
 
-pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings)-> eyre::Result<()> {
+pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, node_msg_rx: UnboundedReceiver<NodeBytecodeMessage>)-> eyre::Result<()> {
 
     todo!()
 }

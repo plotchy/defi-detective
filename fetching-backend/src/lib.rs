@@ -4,7 +4,12 @@ pub mod bytecode_analyzer;
 
 use regex::bytes;
 use once_cell::sync::Lazy;
+use ethers::prelude::*;
 
+pub struct NodeBytecodeMessage {
+    pub address: Address,
+    pub bytecode: Bytes,
+}
 
 const RE_ERC20_SELECTORS_BYTES_SET: Lazy<bytes::RegexSet> = Lazy::new( || {
     bytes::RegexSetBuilder::new(&[
