@@ -14,6 +14,30 @@ use ethers::types::Bytes;
 use eyre::eyre;
 
 
+pub fn run_fetcher(fetch_settings: FetchSettings) {
+    // read file from fetch_settings.rel_path_of_addresses and make Vec<String>
+    let addresses_file = std::fs::read_to_string(&fetch_settings.rel_path_of_addresses).unwrap();
+    let addresses_as_matched_line: Vec<String> = addresses_file.lines().map(|s| s.to_string()).collect();
+
+    // gather files from rel_output_dir and insert into HashSet
+    let path = std::path::Path::new(&fetch_settings.rel_output_dir);
+    let path = path.canonicalize().unwrap();
+    let mut completed_addresses: HashSet<String> = HashSet::new();
+    for entry in WalkDir::new(path).into_iter().filter_map(|e| e.ok()) {
+        if entry.path().is_file() {
+            let file_name = entry.file_name().to_str().unwrap();
+            let file_name = file_name.split(".").next().unwrap();
+            completed_addresses.insert(file_name.to_string());
+        }
+    }
+    let uncompleted_address_match_list = filter_match_list_for_network_and_uncompleted(addresses_as_matched_line, &fetch_settings.network, completed_addresses);
+    dbg!(uncompleted_address_match_list.len());
+    // run fetcher
+    fetch_addresses_code_from_rpc(uncompleted_address_match_list, &fetch_settings)
+
+
+}
+
 pub fn filter_match_list_for_network_and_uncompleted(addresses_as_matched_line: Vec<String>, network: &str, completed_addresses: HashSet<String>) -> Vec<String> {
     // goerli/00/001358cA0b4fD3aF17a6132439962FC72112cF2f_MaskairdropCom.sol:contract MaskairdropCom is ERC20, ERC20Burnable, Ownable {
     // we need to extract after the second slash and before the first underscore, then prepend 0x
