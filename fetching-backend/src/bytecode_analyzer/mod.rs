@@ -15,7 +15,12 @@ use crate::*;
 use tokio::sync::mpsc::{UnboundedReceiver};
 
 
-pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, node_msg_rx: UnboundedReceiver<NodeBytecodeMessage>)-> eyre::Result<()> {
+pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node_msg_rx: UnboundedReceiver<NodeBytecodeMessage>)-> eyre::Result<()> {
+
+    loop {
+        let msg = node_msg_rx.recv().await.unwrap();
+        dbg!("Message received: {:?}", &msg);
+    }
 
     todo!()
 }

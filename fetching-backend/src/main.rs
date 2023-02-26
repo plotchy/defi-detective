@@ -44,7 +44,6 @@ async fn main () {
     });
 
 
-    
     // run threads until termination / errors
     let join_result = tokio::join!(node_watcher_handle, bytecode_analyzer_handle);
 
