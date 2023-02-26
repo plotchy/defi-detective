@@ -1,0 +1,38 @@
+[
+	{
+		"contract_address": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+		"deployer_address": "0x1ceb5cb57c4d4e2b2433641b95dd330a33185a44",
+		"daily_active_addresses": 15247,
+		"weekly_active_addresses": 82564,
+		"monthly_active_addresses": 256319,
+		"tvl": 1000000,
+		"avg_volume": 50000,
+		"liquidity": 200000,
+		"admin_fns": true,
+		"upgradeability": false
+	},
+	{
+		"contract_address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+		"deployer_address": "0x80fb784b7ed66730e8b1dbd9820afd29931aab03",
+		"daily_active_addresses": 58934,
+		"weekly_active_addresses": 328475,
+		"monthly_active_addresses": 987543,
+		"tvl": 2000000000,
+		"avg_volume": 100000000,
+		"liquidity": 500000000,
+		"admin_fns": false,
+		"upgradeability": true
+	},
+	{
+		"contract_address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+		"deployer_address": "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5",
+		"daily_active_addresses": 75432,
+		"weekly_active_addresses": 468109,
+		"monthly_active_addresses": 1408776,
+		"tvl": 50000000,
+		"avg_volume": 2500000,
+		"liquidity": 10000000,
+		"admin_fns": true,
+		"upgradeability": true
+	}
+]
