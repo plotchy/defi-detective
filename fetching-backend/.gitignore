@@ -3,3 +3,4 @@
 .env
 /db/fetched_addresses/*
 /db/filtered_bytecodes/*
+/outputs/address_bytecode_matches.json

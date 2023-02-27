@@ -309,14 +309,14 @@ pub async fn run_node_watcher(fetch_settings: FetchSettings, node_msg_txr: Unbou
         (Chain::Mainnet, std::env::var("ETH_MAINNET_RPC_URL").unwrap()),
         (Chain::Goerli, std::env::var("ETH_GOERLI_RPC_URL").unwrap()),
         (Chain::Arbitrum, std::env::var("ARBITRUM_MAINNET_RPC_URL").unwrap()),
-        // (Chain::ArbitrumGoerli, std::env::var("ARBITRUM_GOERLI_RPC_URL").unwrap()),
+        (Chain::ArbitrumGoerli, std::env::var("ARBITRUM_GOERLI_RPC_URL").unwrap()),
         (Chain::Optimism, std::env::var("OPTIMISM_MAINNET_RPC_URL").unwrap()),
         // (Chain::OptimismGoerli, std::env::var("OPTIMISM_GOERLI_RPC_URL").unwrap()),
         // (Chain::OptimismKovan, std::env::var("OPTIMISM_KOVAN_RPC_URL").unwrap()),
         // (Chain::Avalanche, std::env::var("AVALANCHE_MAINNET_RPC_URL").unwrap()),
         // (Chain::AvalancheFuji, std::env::var("AVALANCHE_FUJI_RPC_URL").unwrap()),
         (Chain::Polygon, std::env::var("POLYGON_MAINNET_RPC_URL").unwrap()),
-        // (Chain::PolygonMumbai, std::env::var("POLYGON_MUMBAI_RPC_URL").unwrap()),
+        (Chain::PolygonMumbai, std::env::var("POLYGON_MUMBAI_RPC_URL").unwrap()),
         
         // (Chain::BaseGoerli, std::env::var("BASE_GOERLI_RPC_URL").unwrap()), // TODO
     ];

@@ -10,10 +10,14 @@ use tracing_subscriber;
 use tracing::{info, warn, error, debug, trace, instrument, span, Level};
 use tokio::join;
 use tokio::sync::mpsc;
+use defi_explorer::*;
 
 
 #[tokio::main]
 async fn main () {
+    
+    
+
 
     // initialize tracing
     tracing_subscriber::fmt::init();
@@ -27,6 +31,50 @@ async fn main () {
     let bytecode_settings: BytecodeSettings = config.get("bytecode_settings").unwrap();
 
     info!("fetch_settings: {:?}", &fetch_settings);
+    info!("bytecode_settings: {:?}", &bytecode_settings);
+
+    // check if a "clean" argument was passed
+    let args: Vec<String> = std::env::args().collect();
+    let clean = args.len() > 1 && args[1] == "clean";
+
+    if clean {
+        // read the matches file and keep only the network/address pairs related in the db/fetched_addresses, db/filtered_bytecodes
+        println!("Cleaning up");
+
+        let abs_match_output_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_match_output_path);
+        let matches_str = std::fs::read_to_string(&abs_match_output_path).unwrap();
+        let mut matches = match serde_json::from_str::<MatchesOutput>(&matches_str) {
+            Ok(matches) => matches,
+            Err(_) => MatchesOutput::new(),
+        };
+
+        let network_addresses_vec = matches.matches.iter().map(|match_| {
+            (match_.network.clone(), match_.address.clone())
+        }).collect::<Vec<(String, String)>>();
+
+        // iterate over all files in the db/fetched_addresses directory and remove any lines that are addresses not in the matches file
+        let abs_fetched_addresses_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &fetch_settings.rel_db_dir);
+        for entry in WalkDir::new(abs_fetched_addresses_path).into_iter().filter_map(|e| e.ok()).filter(|e| e.file_type().is_file()) {
+            let network = entry.path().file_name().unwrap().to_str().unwrap().to_string();
+            let mut file_string = std::fs::read_to_string(entry.path()).unwrap();
+            let temp_file_string = file_string.clone();
+
+            for line in temp_file_string.lines() {
+                let address = line.to_string();
+                if !network_addresses_vec.contains(&(network.clone(), address.clone())) {
+                    println!("Removing {} from {}", address, entry.path().to_str().unwrap());
+                    let temp_file_string_ = file_string.clone();
+                    file_string = temp_file_string_.replace(&format!("{}\n", address), "");
+                }
+            }
+
+            // write the file back
+            let mut file = std::fs::File::create(entry.path()).unwrap();
+            file.write_all(file_string.as_bytes()).unwrap();
+        }
+    }
+
+
 
     // set up channel passing of addresses / bytecode
 
