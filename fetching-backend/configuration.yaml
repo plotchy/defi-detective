@@ -1,7 +1,13 @@
 fetch_settings:
   rate_interval_ms: 300
   rel_output_dir: "output"
+  rel_db_dir: "db/fetched_addresses"
+  write_to_db_interval_secs: 60
   
 bytecode_settings:
-  rel_event_patterns_path: "../inputs/events.json"
-  rel_selector_patterns_path: "../inputs/selectors.json"
+  rel_event_patterns_path: "inputs/events.json" # i have this hardcoded to use include_str!... change later
+  rel_selector_patterns_path: "inputs/selectors.json" # i have this hardcoded to use include_str!... change later
+  rel_filtered_bytecodes_path: "db/filtered_bytecodes"
+  rel_match_output_path: "outputs/address_bytecode_matches.json"
+  write_to_matches_interval_secs: 60
+
