@@ -703,6 +703,7 @@ dependencies = [
  "ethers",
  "eyre",
  "futures",
+ "hex",
  "nanoid",
  "once_cell",
  "regex",

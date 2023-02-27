@@ -54,6 +54,21 @@ pub struct Events {
     pub events: Vec<Event>,
 }
 
+impl Events {
+    pub fn new() -> Self {
+        Self {
+            events: Vec::new(),
+        }
+    }
+
+    pub fn add_event(&mut self, name: String, hash: String) {
+        self.events.push(Event {
+            name,
+            hash,
+        });
+    }
+}
+
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Event {
     pub name: String,
@@ -63,6 +78,21 @@ pub struct Event {
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Selectors {
     pub selectors: Vec<Selector>,
+}
+
+impl Selectors {
+    pub fn new() -> Self {
+        Self {
+            selectors: Vec::new(),
+        }
+    }
+
+    pub fn add_selector(&mut self, name: String, hash: String) {
+        self.selectors.push(Selector {
+            name,
+            hash,
+        });
+    }
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
@@ -149,7 +179,9 @@ impl MatchesOutput {
     }
 }
 
-static RE_EVENTHASH_STRING_SET: Lazy<regex::RegexSet> = Lazy::new(|| {
+
+
+static RE_EVENTHASH_STRING_SET: Lazy<regex::RegexSet> = Lazy::new( || {
     // Load event hashes from file
     let events = serde_json::from_str::<Events>(include_str!("../inputs/events.json")).unwrap();
     let events_strings = events

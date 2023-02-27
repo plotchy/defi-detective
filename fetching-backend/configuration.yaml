@@ -10,3 +10,4 @@ bytecode_settings:
   rel_filtered_bytecodes_path: "db/filtered_bytecodes"
   rel_match_output_path: "outputs/address_bytecode_matches.json"
   write_to_matches_interval_secs: 60
+

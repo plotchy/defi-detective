@@ -104,6 +104,7 @@ impl NodeWatcher {
         let http_provider = ethers::providers::Http::from_str(&self.rpc_url).unwrap();
         let provider = Provider::new(http_provider).interval(Duration::from_millis(2000));
         let mut stream = provider.watch_blocks().await.unwrap();
+        let mut send_count = 0;
         while let Some(block) = stream.next().await {
             let block = match provider.get_block_with_txs(block).await {
                 Ok(resp) => {
@@ -223,6 +224,7 @@ impl NodeWatcher {
 
                     info!("Sending new deployed contract to bytecode analyzer on network {:?}", &self.chain);
                     self.node_msg_txr.send(node_msg).unwrap();
+                    send_count += 1;
                     self.fetched_addresses_set.insert(transaction_created_address);
                     let elasped_since_last_write = std::time::Instant::now().duration_since(self.last_write_time.into());
                     if elasped_since_last_write > self.write_interval {
@@ -290,9 +292,14 @@ impl NodeWatcher {
                             block_number: Some(block_number)
                         };
 
-                        info!("Sending new touched contract to bytecode analyzer on network {:?}", &self.chain);
+                        // info!("Sending new touched contract to bytecode analyzer on network {:?}", &self.chain);
                         self.node_msg_txr.send(node_msg).unwrap();
+                        send_count += 1;
+                        
                     }
+                }
+                if send_count % 100 == 0 {
+                    info!("Sent {} new contracts to bytecode analyzer on network {:?}", send_count, &self.chain);
                 }
             }
         }

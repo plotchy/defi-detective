@@ -1,6 +1,7996 @@
 {
-    "selectors": [
-        {"name": "approve(address,uint256)", "hash": "0x095ea7b3"},
-        {"name": "transfer(address,uint256)", "hash": "0xa9059cbb"}
-    ]
+  "selectors": [
+    {
+      "name": "_mint(address,uint256)",
+      "hash": "0x4e6ec247"
+    },
+    {
+      "name": "isFeatureEnabled(uint256)",
+      "hash": "0x725f3626"
+    },
+    {
+      "name": "startTime()",
+      "hash": "0x78e97925"
+    },
+    {
+      "name": "setEverBridgeVaultAddress(address)",
+      "hash": "0x3477320c"
+    },
+    {
+      "name": "forceAnarchize()",
+      "hash": "0x605cfbb5"
+    },
+    {
+      "name": "rescueETH()",
+      "hash": "0x20800a00"
+    },
+    {
+      "name": "unlockTreasuryByGuard()",
+      "hash": "0x98669c26"
+    },
+    {
+      "name": "getAllocatedLP(address)",
+      "hash": "0x17908e77"
+    },
+    {
+      "name": "vestingContractTarget()",
+      "hash": "0xd5dbfbd7"
+    },
+    {
+      "name": "isCollateralManager(address)",
+      "hash": "0x0e0e923b"
+    },
+    {
+      "name": "increaseApproval(address,uint256)",
+      "hash": "0xd73dd623"
+    },
+    {
+      "name": "getEpochDuration()",
+      "hash": "0x5d3ea8f1"
+    },
+    {
+      "name": "totalBonded()",
+      "hash": "0x44d96e95"
+    },
+    {
+      "name": "mintVoteStakeReward(uint256)",
+      "hash": "0x26d76247"
+    },
+    {
+      "name": "implementation()",
+      "hash": "0x5c60da1b"
+    },
+    {
+      "name": "getModules()",
+      "hash": "0xb2494df3"
+    },
+    {
+      "name": "updateInterfaceAddress(address)",
+      "hash": "0xcf6126ed"
+    },
+    {
+      "name": "setFeeNumerator(uint256)",
+      "hash": "0xa45db911"
+    },
+    {
+      "name": "mulDiv(uint256,uint256,uint256)",
+      "hash": "0xaa9a0912"
+    },
+    {
+      "name": "setAdminOperator(address)",
+      "hash": "0x394f0231"
+    },
+    {
+      "name": "teamAddress()",
+      "hash": "0x1c75f085"
+    },
+    {
+      "name": "stopped()",
+      "hash": "0x75f12b21"
+    },
+    {
+      "name": "changeMaxSupply(uint256,uint256)",
+      "hash": "0x265e7bde"
+    },
+    {
+      "name": "initalSupply()",
+      "hash": "0xce4a7a83"
+    },
+    {
+      "name": "_votingSnapshotsCounts(address)",
+      "hash": "0x7bb73c97"
+    },
+    {
+      "name": "setRevenueAddress(address)",
+      "hash": "0x45338d63"
+    },
+    {
+      "name": "TrigReward()",
+      "hash": "0x180004fd"
+    },
+    {
+      "name": "jobProposalDelay(address)",
+      "hash": "0x7724ff68"
+    },
+    {
+      "name": "paidCall(address,uint256,bytes)",
+      "hash": "0xbb1e23cb"
+    },
+    {
+      "name": "transferBatch(address[],uint256[])",
+      "hash": "0x3b3e672f"
+    },
+    {
+      "name": "claimMessageMatchesSignature(address,bytes32,bytes32,bytes32,uint8,uint8,bytes32,bytes32)",
+      "hash": "0xd5a373ff"
+    },
+    {
+      "name": "pendingOwner()",
+      "hash": "0xe30c3978"
+    },
+    {
+      "name": "distributionContract3()",
+      "hash": "0xf00430c2"
+    },
+    {
+      "name": "snapshot()",
+      "hash": "0x9711715a"
+    },
+    {
+      "name": "freeze()",
+      "hash": "0x62a5af3b"
+    },
+    {
+      "name": "_dexAmount()",
+      "hash": "0xe7cc35b1"
+    },
+    {
+      "name": "START_TIME()",
+      "hash": "0xddaa26ad"
+    },
+    {
+      "name": "setPendingGovernance(address)",
+      "hash": "0x0abb6035"
+    },
+    {
+      "name": "seizable()",
+      "hash": "0x3ecd4255"
+    },
+    {
+      "name": "SNAPSHOT_MAKER_ROLE()",
+      "hash": "0x9c0f5fdb"
+    },
+    {
+      "name": "OPERATOR_ROLE()",
+      "hash": "0xf5b541a6"
+    },
+    {
+      "name": "CAP()",
+      "hash": "0xec81b483"
+    },
+    {
+      "name": "vaultMath()",
+      "hash": "0x47db4dec"
+    },
+    {
+      "name": "isMinter(address)",
+      "hash": "0xaa271e1a"
+    },
+    {
+      "name": "confirmChange(bytes32)",
+      "hash": "0xbeda2483"
+    },
+    {
+      "name": "getInflationIntervalStartTime()",
+      "hash": "0x0534f6db"
+    },
+    {
+      "name": "setTimelock(address)",
+      "hash": "0xbdacb303"
+    },
+    {
+      "name": "swapMint(address,uint256)",
+      "hash": "0xa4d70962"
+    },
+    {
+      "name": "genesis_supply()",
+      "hash": "0x51e238e3"
+    },
+    {
+      "name": "addLiquidityToUniswapCORExWETHPair()",
+      "hash": "0x09a2ba10"
+    },
+    {
+      "name": "renounceOwnership()",
+      "hash": "0x715018a6"
+    },
+    {
+      "name": "weekly_disbursement()",
+      "hash": "0x9e20afdf"
+    },
+    {
+      "name": "balancesGetBool(uint256)",
+      "hash": "0xd1505c5d"
+    },
+    {
+      "name": "keeperList(uint256)",
+      "hash": "0xec4515dd"
+    },
+    {
+      "name": "setSellFee(uint256,uint256,uint256,uint256)",
+      "hash": "0xe653da08"
+    },
+    {
+      "name": "ONE_YEAR_IN_SECONDS()",
+      "hash": "0xe7c8fed4"
+    },
+    {
+      "name": "replaceImplementation(address)",
+      "hash": "0xd69efdc5"
+    },
+    {
+      "name": "mintTo(uint256,address)",
+      "hash": "0xb723b34e"
+    },
+    {
+      "name": "xusd_info()",
+      "hash": "0xe56b742c"
+    },
+    {
+      "name": "minimumSwap()",
+      "hash": "0xe03d852a"
+    },
+    {
+      "name": "forceAnarchizeAt()",
+      "hash": "0x9c724e24"
+    },
+    {
+      "name": "tradingActiveBlock()",
+      "hash": "0xee40166e"
+    },
+    {
+      "name": "getRoleMemberCount(bytes32)",
+      "hash": "0xca15c873"
+    },
+    {
+      "name": "primaryMarketActive()",
+      "hash": "0x9406c9a9"
+    },
+    {
+      "name": "getUpgradeState()",
+      "hash": "0x8444b391"
+    },
+    {
+      "name": "kDebt()",
+      "hash": "0x872b9a9a"
+    },
+    {
+      "name": "partnershipAmount()",
+      "hash": "0xa4aebb3f"
+    },
+    {
+      "name": "ERC712_VERSION()",
+      "hash": "0x0f7e5970"
+    },
+    {
+      "name": "isOperatorForPartition(bytes32,address,address)",
+      "hash": "0x6d77cad6"
+    },
+    {
+      "name": "destroyTokens(address,uint256)",
+      "hash": "0xd3ce77fe"
+    },
+    {
+      "name": "isAllFeeExempt(address)",
+      "hash": "0xa4791315"
+    },
+    {
+      "name": "priceBase()",
+      "hash": "0x7310561b"
+    },
+    {
+      "name": "viewLockedBalance(address)",
+      "hash": "0xc7de902d"
+    },
+    {
+      "name": "distributePresale(uint256,uint256)",
+      "hash": "0x879c409b"
+    },
+    {
+      "name": "cancelTask(bytes32)",
+      "hash": "0xee8ca3b5"
+    },
+    {
+      "name": "pendingTerminalInflationRateNumerator()",
+      "hash": "0x1cb6a0e8"
+    },
+    {
+      "name": "updateFundsReceived()",
+      "hash": "0x46c162de"
+    },
+    {
+      "name": "releaseAgent()",
+      "hash": "0xd1f276d3"
+    },
+    {
+      "name": "isBurner(address)",
+      "hash": "0x4334614a"
+    },
+    {
+      "name": "acceptOwnership()",
+      "hash": "0x79ba5097"
+    },
+    {
+      "name": "dailyDataRange(uint256,uint256)",
+      "hash": "0x6a210a0e"
+    },
+    {
+      "name": "getMinters()",
+      "hash": "0x6b32810b"
+    },
+    {
+      "name": "PARTNERSHIP_FIRST_MINT()",
+      "hash": "0x939ab006"
+    },
+    {
+      "name": "getCheckpoints(address,uint32)",
+      "hash": "0xb23ddce7"
+    },
+    {
+      "name": "minterInfo(address)",
+      "hash": "0x977b0b05"
+    },
+    {
+      "name": "getOwnerRequiredNum()",
+      "hash": "0x5dd882dd"
+    },
+    {
+      "name": "setXUSAddress(address)",
+      "hash": "0xf853c9f4"
+    },
+    {
+      "name": "_propositionPowerDelegates(address)",
+      "hash": "0xf0eb7f8e"
+    },
+    {
+      "name": "emissionCurve()",
+      "hash": "0x9a67759b"
+    },
+    {
+      "name": "revokeOperatorByPartition(bytes32,address)",
+      "hash": "0x168ecec5"
+    },
+    {
+      "name": "approve(address)",
+      "hash": "0xdaea85c5"
+    },
+    {
+      "name": "abolishSeizing()",
+      "hash": "0xb74ca805"
+    },
+    {
+      "name": "emission()",
+      "hash": "0x827c049e"
+    },
+    {
+      "name": "privateOfferingDistributionAddress()",
+      "hash": "0x7a13685a"
+    },
+    {
+      "name": "claim(uint256,bytes32,bytes32)",
+      "hash": "0xabf2ebd8"
+    },
+    {
+      "name": "_owner()",
+      "hash": "0xb2bdfa7b"
+    },
+    {
+      "name": "collateralManagers(uint256)",
+      "hash": "0x814435af"
+    },
+    {
+      "name": "termOfTime(uint256)",
+      "hash": "0xef613f16"
+    },
+    {
+      "name": "Burn(uint256)",
+      "hash": "0xb90306ad"
+    },
+    {
+      "name": "deposit()",
+      "hash": "0xd0e30db0"
+    },
+    {
+      "name": "initiateConfigChanges(uint256,uint256,address,bool)",
+      "hash": "0xacff6f79"
+    },
+    {
+      "name": "INITIAL_SUPPLY()",
+      "hash": "0x2ff2e9dc"
+    },
+    {
+      "name": "applyMinter()",
+      "hash": "0x0d707df8"
+    },
+    {
+      "name": "safeTransferFrom(address,address,uint256,bytes)",
+      "hash": "0xb88d4fde"
+    },
+    {
+      "name": "setPendingGov(address)",
+      "hash": "0xefdf0bb0"
+    },
+    {
+      "name": "emergency_minted()",
+      "hash": "0x6e1d35b2"
+    },
+    {
+      "name": "initialsupply()",
+      "hash": "0x1429baba"
+    },
+    {
+      "name": "setStorage(address)",
+      "hash": "0x9137c1a7"
+    },
+    {
+      "name": "setStakingAddress(address)",
+      "hash": "0xf4e0d9ac"
+    },
+    {
+      "name": "totalBurned()",
+      "hash": "0xd89135cd"
+    },
+    {
+      "name": "indexToken()",
+      "hash": "0xe7d015f2"
+    },
+    {
+      "name": "daoChangeEmissionCurve(uint256)",
+      "hash": "0xcc1a03ae"
+    },
+    {
+      "name": "claim(address,uint256[9],bytes32[])",
+      "hash": "0xd240663c"
+    },
+    {
+      "name": "unwhitelist(address)",
+      "hash": "0x9a590427"
+    },
+    {
+      "name": "recoverERC20(address,uint256)",
+      "hash": "0x8980f11f"
+    },
+    {
+      "name": "changeTWAPEpochPeriod(uint256)",
+      "hash": "0x4daff8a3"
+    },
+    {
+      "name": "timelock_address()",
+      "hash": "0xdc6663c7"
+    },
+    {
+      "name": "transferAnyERC20Token(address,uint256)",
+      "hash": "0xdc39d06d"
+    },
+    {
+      "name": "setCore(address)",
+      "hash": "0x80009630"
+    },
+    {
+      "name": "mintAirdropShare()",
+      "hash": "0xb3168d6d"
+    },
+    {
+      "name": "withdraw(uint256)",
+      "hash": "0x2e1a7d4d"
+    },
+    {
+      "name": "setTrustedSigner(address)",
+      "hash": "0x56a1c701"
+    },
+    {
+      "name": "maxSupply()",
+      "hash": "0xd5abeb01"
+    },
+    {
+      "name": "calcSendAllBalance(address)",
+      "hash": "0x0c7a971e"
+    },
+    {
+      "name": "mintForWarpSync(uint256,address)",
+      "hash": "0xe1897b59"
+    },
+    {
+      "name": "MINTER_ROLE()",
+      "hash": "0xd5391393"
+    },
+    {
+      "name": "_setImplementation(address)",
+      "hash": "0xbb913f41"
+    },
+    {
+      "name": "distributeMars(address,address,address)",
+      "hash": "0xaa61aea4"
+    },
+    {
+      "name": "transferOwnershipToDerivaDEXProxy(address)",
+      "hash": "0x61a1007c"
+    },
+    {
+      "name": "inflationAmounts(uint256)",
+      "hash": "0x12ba015e"
+    },
+    {
+      "name": "__admin__()",
+      "hash": "0x1646cbb8"
+    },
+    {
+      "name": "swap(string,uint256)",
+      "hash": "0x9d456b62"
+    },
+    {
+      "name": "setLiquidityFeePercent(uint96)",
+      "hash": "0x1f5e98bb"
+    },
+    {
+      "name": "daysSinceActivity(address)",
+      "hash": "0x29c25d39"
+    },
+    {
+      "name": "authorized(address)",
+      "hash": "0xb9181611"
+    },
+    {
+      "name": "basisAmount()",
+      "hash": "0xbf1805ed"
+    },
+    {
+      "name": "setPartitionStrategy(bytes4,address)",
+      "hash": "0xe30834e0"
+    },
+    {
+      "name": "setImmatureRecipentWhitelist(address,bool)",
+      "hash": "0x0785c064"
+    },
+    {
+      "name": "delegateCheckpoints(address,uint256)",
+      "hash": "0xcb2bf866"
+    },
+    {
+      "name": "migrator()",
+      "hash": "0x7cd07e47"
+    },
+    {
+      "name": "votingPowerHistory(address,uint256)",
+      "hash": "0x7fd491b0"
+    },
+    {
+      "name": "deleteNewIndex()",
+      "hash": "0x1535eca9"
+    },
+    {
+      "name": "setFeeRecipient(address)",
+      "hash": "0xe74b981b"
+    },
+    {
+      "name": "tokenBalanceHandler()",
+      "hash": "0xf476e382"
+    },
+    {
+      "name": "changeCouncil(address)",
+      "hash": "0x02c3b436"
+    },
+    {
+      "name": "isExternalPositionModule(address,address)",
+      "hash": "0x7d966593"
+    },
+    {
+      "name": "tokenActiveStartTimestamp()",
+      "hash": "0xce687a30"
+    },
+    {
+      "name": "summaPri()",
+      "hash": "0x9b58cf18"
+    },
+    {
+      "name": "stakeOnBehalf(address,uint256,bytes32,uint256,uint256,uint256)",
+      "hash": "0x63ff195d"
+    },
+    {
+      "name": "withdraw(uint256[],uint256,address,address)",
+      "hash": "0xdf4209ed"
+    },
+    {
+      "name": "DELEGATE_BY_TYPE_TYPEHASH()",
+      "hash": "0xaa9fbe02"
+    },
+    {
+      "name": "safeWithdraw(uint256[],uint256,address,address,uint256,uint256)",
+      "hash": "0xec5357c6"
+    },
+    {
+      "name": "setMultisigAddress(address)",
+      "hash": "0x05540534"
+    },
+    {
+      "name": "futureCanMintAtBlock()",
+      "hash": "0xf2264a4a"
+    },
+    {
+      "name": "partitionsOf(address)",
+      "hash": "0x740ab8f4"
+    },
+    {
+      "name": "unlockUser(address)",
+      "hash": "0xbd1870a3"
+    },
+    {
+      "name": "revenue()",
+      "hash": "0x3e9491a2"
+    },
+    {
+      "name": "_sellDevFee()",
+      "hash": "0xc9cf7789"
+    },
+    {
+      "name": "distributionContract5()",
+      "hash": "0x2b208d2d"
+    },
+    {
+      "name": "lockToUpdate(uint256)",
+      "hash": "0x0cb285e2"
+    },
+    {
+      "name": "ibRatio()",
+      "hash": "0x27fc7c9c"
+    },
+    {
+      "name": "issueTo(address,uint256)",
+      "hash": "0x1207f0c1"
+    },
+    {
+      "name": "whiteListed(address)",
+      "hash": "0xfa0fca84"
+    },
+    {
+      "name": "oracleAddress()",
+      "hash": "0xa89ae4ba"
+    },
+    {
+      "name": "setAccountInactive(address)",
+      "hash": "0x6a5de0f3"
+    },
+    {
+      "name": "inflationTimeSpans(uint256)",
+      "hash": "0x25c0ada9"
+    },
+    {
+      "name": "DEPLOY_TIME()",
+      "hash": "0x90d92e76"
+    },
+    {
+      "name": "lastTokenReceived(address,address)",
+      "hash": "0x8fe3ad5e"
+    },
+    {
+      "name": "firstSeen(address)",
+      "hash": "0xe326ac43"
+    },
+    {
+      "name": "configAddress()",
+      "hash": "0xd6c31871"
+    },
+    {
+      "name": "_tokenTransferAllowlist(address)",
+      "hash": "0x48032ec1"
+    },
+    {
+      "name": "initialTime()",
+      "hash": "0x9ced0e9b"
+    },
+    {
+      "name": "transferOwnership(address)",
+      "hash": "0xf2fde38b"
+    },
+    {
+      "name": "migrateIn(address,uint256)",
+      "hash": "0xa0c1ca34"
+    },
+    {
+      "name": "changePublisher(address)",
+      "hash": "0xda632fea"
+    },
+    {
+      "name": "registry()",
+      "hash": "0x7b103999"
+    },
+    {
+      "name": "setIdentity(address)",
+      "hash": "0x5d5bf178"
+    },
+    {
+      "name": "last_call_time()",
+      "hash": "0x2258750a"
+    },
+    {
+      "name": "transferFrom(address,address,uint256)",
+      "hash": "0x23b872dd"
+    },
+    {
+      "name": "setRestrictionAmount(uint256)",
+      "hash": "0xf2f82712"
+    },
+    {
+      "name": "isPauser(address)",
+      "hash": "0x46fbf68e"
+    },
+    {
+      "name": "bond(address,uint256)",
+      "hash": "0xa515366a"
+    },
+    {
+      "name": "getOwner()",
+      "hash": "0x893d20e8"
+    },
+    {
+      "name": "setTransferFeeBasisPoints(uint256)",
+      "hash": "0xda403903"
+    },
+    {
+      "name": "isOperatorFor(address,address)",
+      "hash": "0xd95b6371"
+    },
+    {
+      "name": "bonds(address,address)",
+      "hash": "0xa39744b5"
+    },
+    {
+      "name": "setOwner(address)",
+      "hash": "0x13af4035"
+    },
+    {
+      "name": "setSendVersion(uint16)",
+      "hash": "0x07e0db17"
+    },
+    {
+      "name": "blockTimestampLast()",
+      "hash": "0xc5700a02"
+    },
+    {
+      "name": "addBurner(address)",
+      "hash": "0xf44637ba"
+    },
+    {
+      "name": "TOKEN_DECIMALS()",
+      "hash": "0x5b7f415c"
+    },
+    {
+      "name": "exchangeRate()",
+      "hash": "0x3ba0b9a9"
+    },
+    {
+      "name": "owner_address()",
+      "hash": "0x80edef8e"
+    },
+    {
+      "name": "required()",
+      "hash": "0xdc8452cd"
+    },
+    {
+      "name": "secondAndDay(uint256,uint256)",
+      "hash": "0x3a70fd30"
+    },
+    {
+      "name": "EIP712_PERMIT_TYPEHASH()",
+      "hash": "0xe879c19f"
+    },
+    {
+      "name": "setTradingStart(uint256)",
+      "hash": "0x7419683c"
+    },
+    {
+      "name": "resetRequiredNum(string,uint256)",
+      "hash": "0xe9e211bd"
+    },
+    {
+      "name": "setTokenTransferHandler(address)",
+      "hash": "0xc26ebaa4"
+    },
+    {
+      "name": "liquidityHub()",
+      "hash": "0x4639139d"
+    },
+    {
+      "name": "genesis()",
+      "hash": "0xa7f0b3de"
+    },
+    {
+      "name": "disableTransfer()",
+      "hash": "0xb187984f"
+    },
+    {
+      "name": "approveAndCall(address,uint256,bytes)",
+      "hash": "0xcae9ca51"
+    },
+    {
+      "name": "liquidityLocked()",
+      "hash": "0x57976fb4"
+    },
+    {
+      "name": "curve()",
+      "hash": "0x7165485d"
+    },
+    {
+      "name": "setDevAddress(address)",
+      "hash": "0xd0d41fe1"
+    },
+    {
+      "name": "reason()",
+      "hash": "0xe134e33d"
+    },
+    {
+      "name": "approvex(address)",
+      "hash": "0xa7383272"
+    },
+    {
+      "name": "_setPendingGov(address)",
+      "hash": "0x73f03dff"
+    },
+    {
+      "name": "stakeEnd(uint256,uint40)",
+      "hash": "0x343009a2"
+    },
+    {
+      "name": "transferWithPermit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+      "hash": "0x605629d6"
+    },
+    {
+      "name": "fee(address,uint256)",
+      "hash": "0x9e6eda18"
+    },
+    {
+      "name": "unlockedSupply()",
+      "hash": "0xfd3d27b8"
+    },
+    {
+      "name": "xusd_price()",
+      "hash": "0x60e10f81"
+    },
+    {
+      "name": "delegateToImplementation(bytes)",
+      "hash": "0x0933c1ed"
+    },
+    {
+      "name": "stopProgram()",
+      "hash": "0x3c5202ce"
+    },
+    {
+      "name": "burn(uint256)",
+      "hash": "0x42966c68"
+    },
+    {
+      "name": "upgradeToAndCall(address,bytes)",
+      "hash": "0x4f1ef286"
+    },
+    {
+      "name": "tokenBalances(address)",
+      "hash": "0x523fba7f"
+    },
+    {
+      "name": "addMinter(address)",
+      "hash": "0x983b2d56"
+    },
+    {
+      "name": "price30()",
+      "hash": "0xed03942d"
+    },
+    {
+      "name": "setRedeemAddress(address)",
+      "hash": "0xe3461119"
+    },
+    {
+      "name": "maxK()",
+      "hash": "0x7f67d87e"
+    },
+    {
+      "name": "_stakingAmount()",
+      "hash": "0xc67ff2a6"
+    },
+    {
+      "name": "migrationState()",
+      "hash": "0x12a2f792"
+    },
+    {
+      "name": "addJob(address)",
+      "hash": "0xc5198abc"
+    },
+    {
+      "name": "transferFromAndCall(address,address,uint256,bytes)",
+      "hash": "0xc1d34b89"
+    },
+    {
+      "name": "_currentSupply()",
+      "hash": "0xa4fefad6"
+    },
+    {
+      "name": "isWalletLocked(address)",
+      "hash": "0x0c0c91a2"
+    },
+    {
+      "name": "MAX_TOTAL_TOKEN_AMOUNT()",
+      "hash": "0xa89c5be0"
+    },
+    {
+      "name": "trustedMarketTransfer(address,address,uint256)",
+      "hash": "0xf22b258a"
+    },
+    {
+      "name": "ADMIN_ROLE()",
+      "hash": "0x75b238fc"
+    },
+    {
+      "name": "setShouldTransferChecker(address)",
+      "hash": "0x10a7a659"
+    },
+    {
+      "name": "getExternalPositionModules(address)",
+      "hash": "0xa7bdad03"
+    },
+    {
+      "name": "setName(string)",
+      "hash": "0xc47f0027"
+    },
+    {
+      "name": "getBlackListStatus(address)",
+      "hash": "0x59bf1abe"
+    },
+    {
+      "name": "automatedMarketMakerPairs(address)",
+      "hash": "0xb62496f5"
+    },
+    {
+      "name": "facets()",
+      "hash": "0x7a0ed627"
+    },
+    {
+      "name": "getVotingPowerHistoryLength(address)",
+      "hash": "0x84b34a31"
+    },
+    {
+      "name": "paused()",
+      "hash": "0x5c975abb"
+    },
+    {
+      "name": "removeBlackList(address)",
+      "hash": "0xe4997dc5"
+    },
+    {
+      "name": "init(address[],address)",
+      "hash": "0x7e1ddf64"
+    },
+    {
+      "name": "__InitializableAdminUpgradeabilityProductProxy_init__(address,address,address,bytes32,bytes)",
+      "hash": "0x3f407fb9"
+    },
+    {
+      "name": "resolve(bytes32)",
+      "hash": "0x5c23bdf5"
+    },
+    {
+      "name": "resolve(address)",
+      "hash": "0x55ea6c47"
+    },
+    {
+      "name": "getUnlockBlockGap(address)",
+      "hash": "0x400bea94"
+    },
+    {
+      "name": "stop()",
+      "hash": "0x07da68f5"
+    },
+    {
+      "name": "claimableUnlocked(address)",
+      "hash": "0x7b16e15f"
+    },
+    {
+      "name": "lockToBlock()",
+      "hash": "0x8e875e1a"
+    },
+    {
+      "name": "isOwner()",
+      "hash": "0x8f32d59b"
+    },
+    {
+      "name": "bridges(address)",
+      "hash": "0xced67f0c"
+    },
+    {
+      "name": "stake(address,uint256)",
+      "hash": "0xadc9772e"
+    },
+    {
+      "name": "invite_amount()",
+      "hash": "0x8b288a3c"
+    },
+    {
+      "name": "setFRAXAddress(address)",
+      "hash": "0x4b3161c2"
+    },
+    {
+      "name": "toggleCollateralRatio()",
+      "hash": "0xbef40ec8"
+    },
+    {
+      "name": "stake(uint256,bytes32,uint256,uint256,uint256)",
+      "hash": "0x8b93d3fc"
+    },
+    {
+      "name": "closeTheGates()",
+      "hash": "0x8eeb1017"
+    },
+    {
+      "name": "EIP712DOMAIN_HASH()",
+      "hash": "0xc473af33"
+    },
+    {
+      "name": "pauseSendTokens(bool)",
+      "hash": "0xf1878922"
+    },
+    {
+      "name": "getTotalMigrated()",
+      "hash": "0x91d76bbb"
+    },
+    {
+      "name": "setNumTokensSellToAddToLiquidity(uint96)",
+      "hash": "0x1551fe91"
+    },
+    {
+      "name": "releaseStake(address,bytes32,uint256,uint256,uint256,bool)",
+      "hash": "0x5c251cbf"
+    },
+    {
+      "name": "controllerMint(address,uint256)",
+      "hash": "0x5d7b0758"
+    },
+    {
+      "name": "setLiquidityLock(bool)",
+      "hash": "0x26a17edf"
+    },
+    {
+      "name": "setMaxBuybackAmountUpdated(uint256,uint256)",
+      "hash": "0x8aee2c27"
+    },
+    {
+      "name": "setExecutionOperator(address,bool)",
+      "hash": "0x699c834b"
+    },
+    {
+      "name": "EPOCH_DURATION_CONFIG_ID()",
+      "hash": "0xb7840a91"
+    },
+    {
+      "name": "getUnlockSpeed(address,address)",
+      "hash": "0x3a3dbc9a"
+    },
+    {
+      "name": "withdraw(uint256,uint256,uint256,uint256)",
+      "hash": "0x674fb1b4"
+    },
+    {
+      "name": "businessDevelopmentDivisor()",
+      "hash": "0xca5f084f"
+    },
+    {
+      "name": "TRANSFER_WITH_AUTHORIZATION_TYPEHASH()",
+      "hash": "0xa0cc6a68"
+    },
+    {
+      "name": "nominateNewOwner(address)",
+      "hash": "0x1627540c"
+    },
+    {
+      "name": "transfersEnabled()",
+      "hash": "0xbef97c87"
+    },
+    {
+      "name": "withdrawInflation()",
+      "hash": "0xd83f6ace"
+    },
+    {
+      "name": "maxBase()",
+      "hash": "0x1f680039"
+    },
+    {
+      "name": "anyoneCanUnpauseAfter()",
+      "hash": "0x59baed07"
+    },
+    {
+      "name": "mintAndDelay(address,uint256)",
+      "hash": "0xe2cc65c7"
+    },
+    {
+      "name": "unlockToken(address,uint256)",
+      "hash": "0x31e9e9c0"
+    },
+    {
+      "name": "tokens(uint256)",
+      "hash": "0x4f64b2be"
+    },
+    {
+      "name": "lock(uint256)",
+      "hash": "0xdd467064"
+    },
+    {
+      "name": "addControlRole(address,uint8)",
+      "hash": "0x9bbe0533"
+    },
+    {
+      "name": "swapSupplies(address)",
+      "hash": "0x34faea1b"
+    },
+    {
+      "name": "goo()",
+      "hash": "0x274cdd5c"
+    },
+    {
+      "name": "renounceAdmin()",
+      "hash": "0x8bad0c0a"
+    },
+    {
+      "name": "contractUpgradable()",
+      "hash": "0x78b150bd"
+    },
+    {
+      "name": "disputes(address)",
+      "hash": "0xb0103b1a"
+    },
+    {
+      "name": "freezeLiquidityHub()",
+      "hash": "0x20331cfc"
+    },
+    {
+      "name": "withdrawStuckETH()",
+      "hash": "0xf5648a4f"
+    },
+    {
+      "name": "OWNER_ROLE()",
+      "hash": "0xe58378bb"
+    },
+    {
+      "name": "withdraw(uint256,uint96,bool)",
+      "hash": "0xaf774744"
+    },
+    {
+      "name": "emergencyStop()",
+      "hash": "0x63a599a4"
+    },
+    {
+      "name": "setLiquidityPool(address)",
+      "hash": "0x01877020"
+    },
+    {
+      "name": "transferMulti(address[],uint256[])",
+      "hash": "0x35bce6e4"
+    },
+    {
+      "name": "xusd_eth_oracle_address()",
+      "hash": "0xf56a40ae"
+    },
+    {
+      "name": "nextMint()",
+      "hash": "0xcf665443"
+    },
+    {
+      "name": "isUnlocked(address)",
+      "hash": "0x2bbf532a"
+    },
+    {
+      "name": "mainNetLaunchIncentiveReserveWallet()",
+      "hash": "0x642b4a4d"
+    },
+    {
+      "name": "claimNFT(address,uint256[9],bytes32[])",
+      "hash": "0x532b1ba8"
+    },
+    {
+      "name": "price_target()",
+      "hash": "0x2cb4f63e"
+    },
+    {
+      "name": "burn(bytes32)",
+      "hash": "0x08a1eee1"
+    },
+    {
+      "name": "minters(address)",
+      "hash": "0xf46eccc4"
+    },
+    {
+      "name": "maxFlashLoan(address)",
+      "hash": "0x613255ab"
+    },
+    {
+      "name": "alreadyPlayGameUsers(address)",
+      "hash": "0x9cb8dc85"
+    },
+    {
+      "name": "minterMint(address,uint256)",
+      "hash": "0x21f314ca"
+    },
+    {
+      "name": "initial_disbursement()",
+      "hash": "0x8b1d67f9"
+    },
+    {
+      "name": "set_name(string,string)",
+      "hash": "0xe1430e06"
+    },
+    {
+      "name": "balanceOfByPartition(bytes32,address)",
+      "hash": "0x30e82803"
+    },
+    {
+      "name": "distributionContract4()",
+      "hash": "0x92d81e90"
+    },
+    {
+      "name": "initAccessControls(address)",
+      "hash": "0xe6594abd"
+    },
+    {
+      "name": "setLiquidityHub(address)",
+      "hash": "0xab04a6bb"
+    },
+    {
+      "name": "bondings(address,address)",
+      "hash": "0x37feca84"
+    },
+    {
+      "name": "lockTokensAndNfts(address,uint48)",
+      "hash": "0xc38c3ee6"
+    },
+    {
+      "name": "incentiveAddress()",
+      "hash": "0x28957be2"
+    },
+    {
+      "name": "adminTransfer(address,address,uint256,bytes,bytes)",
+      "hash": "0xbcc33e9d"
+    },
+    {
+      "name": "delegateBySig(address,address,uint256,uint8,bytes32,bytes32)",
+      "hash": "0xb20d7fa9"
+    },
+    {
+      "name": "priceGooCumulativeLast()",
+      "hash": "0x9a31e7e3"
+    },
+    {
+      "name": "__changeAdmin__(address)",
+      "hash": "0x9fea0eb1"
+    },
+    {
+      "name": "EIP712_DOMAIN_SEPARATOR()",
+      "hash": "0xdab400f3"
+    },
+    {
+      "name": "simulateTransfer(address,address,uint256)",
+      "hash": "0x2ae96a80"
+    },
+    {
+      "name": "taxHandler()",
+      "hash": "0x12280ba8"
+    },
+    {
+      "name": "withdrawableFundsOf(address)",
+      "hash": "0x443bb293"
+    },
+    {
+      "name": "BDPMasterPending()",
+      "hash": "0xd02c9f93"
+    },
+    {
+      "name": "whitelistAccount(address)",
+      "hash": "0x63e0c2f8"
+    },
+    {
+      "name": "FEATURE_TRANSFERS_ON_BEHALF()",
+      "hash": "0x8f6fba8c"
+    },
+    {
+      "name": "xfLobbyFlush()",
+      "hash": "0x5ac1f357"
+    },
+    {
+      "name": "vecrvProxy()",
+      "hash": "0xfca975a1"
+    },
+    {
+      "name": "redeemAddress()",
+      "hash": "0x265b5150"
+    },
+    {
+      "name": "revokeApprovals(bool,bool)",
+      "hash": "0x08792b14"
+    },
+    {
+      "name": "revenueAddress()",
+      "hash": "0xb410908d"
+    },
+    {
+      "name": "bor()",
+      "hash": "0xe853a1c2"
+    },
+    {
+      "name": "getNumberOfCheckpoints(address)",
+      "hash": "0x42061268"
+    },
+    {
+      "name": "getRoleAdmin(bytes32)",
+      "hash": "0x248a9ca3"
+    },
+    {
+      "name": "chainID()",
+      "hash": "0xadc879e9"
+    },
+    {
+      "name": "totalSwappedRPL()",
+      "hash": "0xe1501499"
+    },
+    {
+      "name": "tokenSaleContract()",
+      "hash": "0x5d5aa277"
+    },
+    {
+      "name": "getConfigByIndex(uint256)",
+      "hash": "0x98e83051"
+    },
+    {
+      "name": "transferFrom(address,address,uint256,bytes)",
+      "hash": "0xab67aa58"
+    },
+    {
+      "name": "acceptRelayedCall(address,address,bytes,uint256,uint256,uint256,uint256,bytes,uint256)",
+      "hash": "0x83947ea0"
+    },
+    {
+      "name": "underlying()",
+      "hash": "0x6f307dc3"
+    },
+    {
+      "name": "bridgeStakeNftIn(address,uint96,uint8,uint48,uint96,bool)",
+      "hash": "0x2b9afa03"
+    },
+    {
+      "name": "move(address,address,uint256)",
+      "hash": "0xbb35783b"
+    },
+    {
+      "name": "maxSupplyAllowed()",
+      "hash": "0xa15d39d4"
+    },
+    {
+      "name": "MAX_SUPPLY_CAP()",
+      "hash": "0x60caae58"
+    },
+    {
+      "name": "MAX_INFLATION_RATE()",
+      "hash": "0x2ed1f923"
+    },
+    {
+      "name": "delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32,bool)",
+      "hash": "0xb4838cb4"
+    },
+    {
+      "name": "chainId()",
+      "hash": "0x9a8a0592"
+    },
+    {
+      "name": "stakeToken()",
+      "hash": "0x51ed6a30"
+    },
+    {
+      "name": "expiration()",
+      "hash": "0x4665096d"
+    },
+    {
+      "name": "transferBlockRelease(address)",
+      "hash": "0xbb1c50ea"
+    },
+    {
+      "name": "bridgeList()",
+      "hash": "0x9da38e2f"
+    },
+    {
+      "name": "redemption_fee()",
+      "hash": "0xcb73999f"
+    },
+    {
+      "name": "paidAt(address,uint256)",
+      "hash": "0x7aa112fd"
+    },
+    {
+      "name": "MINT_MIN_INTERVAL()",
+      "hash": "0x69e3b0d0"
+    },
+    {
+      "name": "transactionCap()",
+      "hash": "0x410d3e67"
+    },
+    {
+      "name": "AUX_ADMIN()",
+      "hash": "0x2eee963b"
+    },
+    {
+      "name": "version()",
+      "hash": "0x54fd4d50"
+    },
+    {
+      "name": "addTroveManager(address)",
+      "hash": "0x6b103eba"
+    },
+    {
+      "name": "domainSeparator()",
+      "hash": "0xf698da25"
+    },
+    {
+      "name": "dailyEmission()",
+      "hash": "0xa335fd36"
+    },
+    {
+      "name": "offRampPair()",
+      "hash": "0x7b31bd78"
+    },
+    {
+      "name": "nonces(address)",
+      "hash": "0x7ecebe00"
+    },
+    {
+      "name": "facetAddress(bytes4)",
+      "hash": "0xcdffacc6"
+    },
+    {
+      "name": "skim(address)",
+      "hash": "0xbc25cf77"
+    },
+    {
+      "name": "operator()",
+      "hash": "0x570ca735"
+    },
+    {
+      "name": "generator()",
+      "hash": "0x7afa1eed"
+    },
+    {
+      "name": "AMOUNT_DAO()",
+      "hash": "0x720248de"
+    },
+    {
+      "name": "crossChainBuyback()",
+      "hash": "0x0844c97f"
+    },
+    {
+      "name": "pushManagement(address)",
+      "hash": "0x46f68ee9"
+    },
+    {
+      "name": "returnHolderDelegation(address,address)",
+      "hash": "0x3f5af244"
+    },
+    {
+      "name": "mint(tuple[])",
+      "hash": "0xc723c694"
+    },
+    {
+      "name": "dspfrozen()",
+      "hash": "0x26fabc7b"
+    },
+    {
+      "name": "burnForMarket(uint256)",
+      "hash": "0xae3816ee"
+    },
+    {
+      "name": "getReleasableLPTokensMinted()",
+      "hash": "0xad0cd7d0"
+    },
+    {
+      "name": "enableTransfers(bool)",
+      "hash": "0xf41e60c5"
+    },
+    {
+      "name": "lastJob(address)",
+      "hash": "0xd454019d"
+    },
+    {
+      "name": "maxSupplyAllowedAfter()",
+      "hash": "0xd6a73a54"
+    },
+    {
+      "name": "collectProtocol(uint256,uint256,uint256,address)",
+      "hash": "0x25f368ae"
+    },
+    {
+      "name": "locking(address)",
+      "hash": "0xc1bf75d8"
+    },
+    {
+      "name": "addCredit(address,address,uint256)",
+      "hash": "0x88b4ac83"
+    },
+    {
+      "name": "termsURL()",
+      "hash": "0xb28025bf"
+    },
+    {
+      "name": "disableWhitelist()",
+      "hash": "0xd6b0f484"
+    },
+    {
+      "name": "preRelayedCall(bytes)",
+      "hash": "0x80274db7"
+    },
+    {
+      "name": "delegateWithSignature(address,uint256,uint256,uint8,bytes32,bytes32)",
+      "hash": "0x9b3957e5"
+    },
+    {
+      "name": "removeBorrowerOps(address)",
+      "hash": "0x3123e15d"
+    },
+    {
+      "name": "merkleRoot()",
+      "hash": "0x2eb4a7ab"
+    },
+    {
+      "name": "url()",
+      "hash": "0x5600f04f"
+    },
+    {
+      "name": "unfreeze(address)",
+      "hash": "0x45c8b1a6"
+    },
+    {
+      "name": "xus_eth_oracle_address()",
+      "hash": "0x22403cb2"
+    },
+    {
+      "name": "apiRewardPool()",
+      "hash": "0xc72e8e3b"
+    },
+    {
+      "name": "ETH_ADDRESS()",
+      "hash": "0xa734f06e"
+    },
+    {
+      "name": "anarchize()",
+      "hash": "0x1b343adc"
+    },
+    {
+      "name": "INFLATION_BPS_CONFIG_ID()",
+      "hash": "0x3f097191"
+    },
+    {
+      "name": "devFundTotal()",
+      "hash": "0x7433e2e7"
+    },
+    {
+      "name": "setGravityContract(address)",
+      "hash": "0x5fd130a9"
+    },
+    {
+      "name": "MINIMUM_BETWEEN_MINTS()",
+      "hash": "0xe05185b7"
+    },
+    {
+      "name": "timeLockRegistry()",
+      "hash": "0x238189a8"
+    },
+    {
+      "name": "setMigrator(address)",
+      "hash": "0x23cf3118"
+    },
+    {
+      "name": "tokenFromReflection(uint256)",
+      "hash": "0x2d838119"
+    },
+    {
+      "name": "lockedBalance(address)",
+      "hash": "0x9ae697bf"
+    },
+    {
+      "name": "getDelegateeByType(address,uint8)",
+      "hash": "0x6f50458d"
+    },
+    {
+      "name": "liquidityFee()",
+      "hash": "0x98118cb4"
+    },
+    {
+      "name": "ERA_SECONDS()",
+      "hash": "0x8d70ce68"
+    },
+    {
+      "name": "isWhitelisted(address)",
+      "hash": "0x3af32abf"
+    },
+    {
+      "name": "renounceMinter()",
+      "hash": "0x98650275"
+    },
+    {
+      "name": "PERFORMANCE_FEE_BPS()",
+      "hash": "0x5b01e374"
+    },
+    {
+      "name": "forceResumeReceive(uint16,bytes)",
+      "hash": "0x42d65a8d"
+    },
+    {
+      "name": "setSwapAndLiquifyEnabled(bool)",
+      "hash": "0xc49b9a80"
+    },
+    {
+      "name": "upgrade(uint256)",
+      "hash": "0x45977d03"
+    },
+    {
+      "name": "transferAll(address)",
+      "hash": "0xa3a7e7f3"
+    },
+    {
+      "name": "burnFor(address,uint256)",
+      "hash": "0x1dd319cb"
+    },
+    {
+      "name": "getVotingPowerAt(address,uint256)",
+      "hash": "0xeaeded5f"
+    },
+    {
+      "name": "offchainBalanceExcluded()",
+      "hash": "0x0e59d5b7"
+    },
+    {
+      "name": "bridgeAddress()",
+      "hash": "0xa3c573eb"
+    },
+    {
+      "name": "migrateOutByPayout(uint256[],uint256)",
+      "hash": "0x5b66876a"
+    },
+    {
+      "name": "blockTimestamp()",
+      "hash": "0xadb61832"
+    },
+    {
+      "name": "toBor(uint256)",
+      "hash": "0x8c594f69"
+    },
+    {
+      "name": "getChainId()",
+      "hash": "0x3408e470"
+    },
+    {
+      "name": "maxAllowedTotalSupply()",
+      "hash": "0x13e4172c"
+    },
+    {
+      "name": "available_supply()",
+      "hash": "0x24f92a25"
+    },
+    {
+      "name": "lockupContractFactory()",
+      "hash": "0x811c5b4d"
+    },
+    {
+      "name": "applyVault()",
+      "hash": "0xd93f2445"
+    },
+    {
+      "name": "contractStartTimestamp()",
+      "hash": "0x6a2f796c"
+    },
+    {
+      "name": "setTransferFeeExempt(address)",
+      "hash": "0x6f9423f6"
+    },
+    {
+      "name": "liquidityAmountsUnbonding(address,address,address)",
+      "hash": "0x83baa693"
+    },
+    {
+      "name": "_setIncentivizer(address)",
+      "hash": "0x98dca210"
+    },
+    {
+      "name": "council()",
+      "hash": "0xe2c6d41c"
+    },
+    {
+      "name": "keepers(address)",
+      "hash": "0x3bbd64bc"
+    },
+    {
+      "name": "burn(address,uint256,string,string,bytes32)",
+      "hash": "0xf691b71a"
+    },
+    {
+      "name": "approveAndCall(address,uint256)",
+      "hash": "0x3177029f"
+    },
+    {
+      "name": "rate()",
+      "hash": "0x2c4e722e"
+    },
+    {
+      "name": "delayVault()",
+      "hash": "0x87689e28"
+    },
+    {
+      "name": "setUnbackedAddress(address)",
+      "hash": "0x7650e683"
+    },
+    {
+      "name": "getVirtueBondAmt(uint256)",
+      "hash": "0x7849ea11"
+    },
+    {
+      "name": "ownerMint(address,uint256)",
+      "hash": "0x484b973c"
+    },
+    {
+      "name": "performLiquidityRebasing()",
+      "hash": "0xd8143c58"
+    },
+    {
+      "name": "getTotalComponentRealUnits(address)",
+      "hash": "0xeaf993e1"
+    },
+    {
+      "name": "granularity()",
+      "hash": "0x556f0dc7"
+    },
+    {
+      "name": "transferEnabled()",
+      "hash": "0x4cd412d5"
+    },
+    {
+      "name": "increaseAllowance(address,uint256)",
+      "hash": "0x39509351"
+    },
+    {
+      "name": "supplyeffect(uint256)",
+      "hash": "0x26796dd5"
+    },
+    {
+      "name": "ADMIN_CONFIG_ID()",
+      "hash": "0x53adf2cb"
+    },
+    {
+      "name": "uniswapMath()",
+      "hash": "0xbef7df47"
+    },
+    {
+      "name": "mintStopped()",
+      "hash": "0xd428ea5c"
+    },
+    {
+      "name": "votingEngine()",
+      "hash": "0x19c90f6d"
+    },
+    {
+      "name": "maxFeeNumerator()",
+      "hash": "0xfbabba22"
+    },
+    {
+      "name": "getDailyEmission()",
+      "hash": "0xf293e675"
+    },
+    {
+      "name": "updateRole(address,uint256)",
+      "hash": "0xae5b102e"
+    },
+    {
+      "name": "xfLobbyPendingDays(address)",
+      "hash": "0x44f0de75"
+    },
+    {
+      "name": "ONE()",
+      "hash": "0xc2ee3a08"
+    },
+    {
+      "name": "addBackedTokens(uint256)",
+      "hash": "0x09d6ec0a"
+    },
+    {
+      "name": "totalUnlocked()",
+      "hash": "0xa779d080"
+    },
+    {
+      "name": "cap()",
+      "hash": "0x355274ea"
+    },
+    {
+      "name": "withdraw(uint256,address)",
+      "hash": "0x00f714ce"
+    },
+    {
+      "name": "initiateRenounceOwnership()",
+      "hash": "0x70ed68d1"
+    },
+    {
+      "name": "pendingPublisher()",
+      "hash": "0x891a5658"
+    },
+    {
+      "name": "updateTransfersRestrictedBefore(uint256)",
+      "hash": "0xad36dafd"
+    },
+    {
+      "name": "addModule(address)",
+      "hash": "0x1ed86f19"
+    },
+    {
+      "name": "updateFees(uint8)",
+      "hash": "0x4f863ea1"
+    },
+    {
+      "name": "unlockTokensAndNfts(address)",
+      "hash": "0xd9cd78f4"
+    },
+    {
+      "name": "setRefreshCooldown(uint256)",
+      "hash": "0x1c5df1e5"
+    },
+    {
+      "name": "publishNewIndex(address[],uint256[],uint256)",
+      "hash": "0x9b58f199"
+    },
+    {
+      "name": "isProtected()",
+      "hash": "0x5300f82b"
+    },
+    {
+      "name": "getUserInfo(address)",
+      "hash": "0x6386c1c7"
+    },
+    {
+      "name": "setIndexToken(address)",
+      "hash": "0xb82a35c5"
+    },
+    {
+      "name": "totalETHContributed()",
+      "hash": "0x23399434"
+    },
+    {
+      "name": "addBorrowerOps(address)",
+      "hash": "0x00a7fe98"
+    },
+    {
+      "name": "global_collateral_ratio()",
+      "hash": "0x2eb9771b"
+    },
+    {
+      "name": "_totalSupplySnapshots(uint256)",
+      "hash": "0x13929bbe"
+    },
+    {
+      "name": "setBurnableTokensZero()",
+      "hash": "0x774a0810"
+    },
+    {
+      "name": "pool_mint(address,uint256)",
+      "hash": "0xb4f56b26"
+    },
+    {
+      "name": "depositWithPermit(address,uint256,uint256,uint8,bytes32,bytes32,address)",
+      "hash": "0x81a37c18"
+    },
+    {
+      "name": "balancesGetNext(uint256)",
+      "hash": "0xcf2adac8"
+    },
+    {
+      "name": "minimumTimeBetweenMints()",
+      "hash": "0x5c11d62f"
+    },
+    {
+      "name": "isBlacklist(address)",
+      "hash": "0x333e99db"
+    },
+    {
+      "name": "isApprovedBySignature(address,bytes32,bytes32,uint8)",
+      "hash": "0x5cbe03d1"
+    },
+    {
+      "name": "getPriorVotes(address,uint256)",
+      "hash": "0x782d6fe1"
+    },
+    {
+      "name": "remainingGrantOf(address)",
+      "hash": "0xb26ff923"
+    },
+    {
+      "name": "setOracle(address)",
+      "hash": "0x7adbf973"
+    },
+    {
+      "name": "withdrawToken(address)",
+      "hash": "0x89476069"
+    },
+    {
+      "name": "setBuybackMinAvailability(uint256,uint256)",
+      "hash": "0xb51d4042"
+    },
+    {
+      "name": "__implementation__()",
+      "hash": "0x0fd5b6ae"
+    },
+    {
+      "name": "addLiquidityToJob(address,address,uint256)",
+      "hash": "0x52a4de29"
+    },
+    {
+      "name": "trustedUniverseTransfer(address,address,uint256)",
+      "hash": "0xfe98184d"
+    },
+    {
+      "name": "authorizationState(address,bytes32)",
+      "hash": "0xe94a0102"
+    },
+    {
+      "name": "setNewWeights()",
+      "hash": "0x12168923"
+    },
+    {
+      "name": "acceptAdminRole()",
+      "hash": "0x8c3d7301"
+    },
+    {
+      "name": "liquidityIncentivesRecipient()",
+      "hash": "0xff552d77"
+    },
+    {
+      "name": "yfv()",
+      "hash": "0x7318a730"
+    },
+    {
+      "name": "setSymbol(string)",
+      "hash": "0xb84c8246"
+    },
+    {
+      "name": "candidate()",
+      "hash": "0x6c8381f8"
+    },
+    {
+      "name": "mintLiqPoolShare()",
+      "hash": "0x58f710c9"
+    },
+    {
+      "name": "_incentiveAmount()",
+      "hash": "0xfec960e9"
+    },
+    {
+      "name": "push(address,uint256)",
+      "hash": "0xb753a98c"
+    },
+    {
+      "name": "ROUTER_ROLE()",
+      "hash": "0x30d643b5"
+    },
+    {
+      "name": "removeJob(address)",
+      "hash": "0x80711989"
+    },
+    {
+      "name": "_propositionPowerSnapshots(address,uint256)",
+      "hash": "0x5f3b6876"
+    },
+    {
+      "name": "swapToken()",
+      "hash": "0xdc73e49c"
+    },
+    {
+      "name": "upgrade()",
+      "hash": "0xd55ec697"
+    },
+    {
+      "name": "removeFromWhiteList(address)",
+      "hash": "0x01bf6648"
+    },
+    {
+      "name": "getPowerCurrent(address,uint8)",
+      "hash": "0xb2f4201d"
+    },
+    {
+      "name": "getVotesAtBlock(address,uint32)",
+      "hash": "0x271a4529"
+    },
+    {
+      "name": "setNumberOfBlocksForBuyback(uint256)",
+      "hash": "0xfa25e2de"
+    },
+    {
+      "name": "setUnpause()",
+      "hash": "0x848cb5c6"
+    },
+    {
+      "name": "postRelayedCall(bytes,bool,uint256,bytes32)",
+      "hash": "0xe06e0e22"
+    },
+    {
+      "name": "setTransferFee(uint256)",
+      "hash": "0x8f02bb5b"
+    },
+    {
+      "name": "withdrawnFundsOf(address)",
+      "hash": "0x0041c52c"
+    },
+    {
+      "name": "cachedChainId()",
+      "hash": "0x771da5c5"
+    },
+    {
+      "name": "xfLobby(uint256)",
+      "hash": "0x87a0f31c"
+    },
+    {
+      "name": "setBurner(address,bool)",
+      "hash": "0x0d895ee1"
+    },
+    {
+      "name": "authorizedNewOwner()",
+      "hash": "0x5481eed3"
+    },
+    {
+      "name": "setAuthority(address)",
+      "hash": "0x7a9e5e4b"
+    },
+    {
+      "name": "burnAmount()",
+      "hash": "0x486a7e6b"
+    },
+    {
+      "name": "start_epoch_supply()",
+      "hash": "0xf9e988eb"
+    },
+    {
+      "name": "getExecutionAdmin()",
+      "hash": "0xb01b0ef7"
+    },
+    {
+      "name": "setFeeAddress(address)",
+      "hash": "0x8705fcd4"
+    },
+    {
+      "name": "endOfTerm(uint256)",
+      "hash": "0x883d38ac"
+    },
+    {
+      "name": "removeTroveManager(address)",
+      "hash": "0xe19c80c2"
+    },
+    {
+      "name": "setBuyFee(uint256,uint256,uint256,uint256)",
+      "hash": "0x8c5a133d"
+    },
+    {
+      "name": "claimInfoFor(uint256,address)",
+      "hash": "0x12408c8e"
+    },
+    {
+      "name": "sweep(address)",
+      "hash": "0x01681a62"
+    },
+    {
+      "name": "extendLockTokensAndNfts(uint48)",
+      "hash": "0xb22a6389"
+    },
+    {
+      "name": "erc_sweep(address,address)",
+      "hash": "0x2b666fcf"
+    },
+    {
+      "name": "EIP712_VERSION()",
+      "hash": "0xeccec5a8"
+    },
+    {
+      "name": "burn(address,uint256)",
+      "hash": "0x9dc29fac"
+    },
+    {
+      "name": "_sellLiquidityFee()",
+      "hash": "0x88790a68"
+    },
+    {
+      "name": "killGovernance()",
+      "hash": "0x654ea5e7"
+    },
+    {
+      "name": "mintTo(address,uint256)",
+      "hash": "0x449a52f8"
+    },
+    {
+      "name": "LIQUIDITYBOND()",
+      "hash": "0x1df0de13"
+    },
+    {
+      "name": "isConfig(bytes32)",
+      "hash": "0x94e90e69"
+    },
+    {
+      "name": "unpause()",
+      "hash": "0x3f4ba83a"
+    },
+    {
+      "name": "_devTokensToSwap()",
+      "hash": "0xe4844854"
+    },
+    {
+      "name": "developer()",
+      "hash": "0xca4b208b"
+    },
+    {
+      "name": "setPendingAdmin(address)",
+      "hash": "0x4dd18bf5"
+    },
+    {
+      "name": "poolAmountTrig()",
+      "hash": "0xc35f6d3e"
+    },
+    {
+      "name": "setGTCDist(address)",
+      "hash": "0xd7f6e3db"
+    },
+    {
+      "name": "addLiquidityToUniswapTCORExWETHPair()",
+      "hash": "0xf0e88dcb"
+    },
+    {
+      "name": "isInWhitelist(address)",
+      "hash": "0x09fd8212"
+    },
+    {
+      "name": "unlockDevFund()",
+      "hash": "0x59c99ef5"
+    },
+    {
+      "name": "setFeeTo(address)",
+      "hash": "0xf46901ed"
+    },
+    {
+      "name": "renouncePauser()",
+      "hash": "0x6ef8d66d"
+    },
+    {
+      "name": "setPause()",
+      "hash": "0xd431b1ac"
+    },
+    {
+      "name": "addLiquidityWithoutSignature(bool)",
+      "hash": "0x39e041c8"
+    },
+    {
+      "name": "transferGovernance(address)",
+      "hash": "0xd38bfff4"
+    },
+    {
+      "name": "removeMinter(address)",
+      "hash": "0x3092afd5"
+    },
+    {
+      "name": "revokeOperator(address)",
+      "hash": "0xfad8b32a"
+    },
+    {
+      "name": "sweep()",
+      "hash": "0x35faa416"
+    },
+    {
+      "name": "lastUnlockBlock(address)",
+      "hash": "0x89a2867c"
+    },
+    {
+      "name": "upgradeCost(uint256)",
+      "hash": "0xf3e4df06"
+    },
+    {
+      "name": "transferBalance(uint256)",
+      "hash": "0x8a60c4c1"
+    },
+    {
+      "name": "bridgeContract()",
+      "hash": "0xcd596583"
+    },
+    {
+      "name": "warpSync()",
+      "hash": "0x5bd5ea71"
+    },
+    {
+      "name": "factory()",
+      "hash": "0xc45a0155"
+    },
+    {
+      "name": "swapTokens(uint256)",
+      "hash": "0xfe784eaa"
+    },
+    {
+      "name": "isKeeper(address)",
+      "hash": "0x6ba42aaa"
+    },
+    {
+      "name": "incrementBondedSteth(uint256)",
+      "hash": "0x259c14c2"
+    },
+    {
+      "name": "treasuryHandler()",
+      "hash": "0x17889633"
+    },
+    {
+      "name": "set_admin(address)",
+      "hash": "0xe9333fab"
+    },
+    {
+      "name": "governanceAddress()",
+      "hash": "0x795053d3"
+    },
+    {
+      "name": "fragmentToYam(uint256)",
+      "hash": "0x09c86403"
+    },
+    {
+      "name": "liquidityAccepted(address)",
+      "hash": "0xeb421f3b"
+    },
+    {
+      "name": "holders()",
+      "hash": "0x8188f71c"
+    },
+    {
+      "name": "claimProxyOwnership()",
+      "hash": "0x9965b3d6"
+    },
+    {
+      "name": "transferAndChargeForGas(address,address,uint256,uint256,uint256,uint256,address)",
+      "hash": "0xe18aa335"
+    },
+    {
+      "name": "start()",
+      "hash": "0xbe9a6555"
+    },
+    {
+      "name": "canUpgrade()",
+      "hash": "0x9738968c"
+    },
+    {
+      "name": "getTotalTheoreticalSupply()",
+      "hash": "0x238d3590"
+    },
+    {
+      "name": "minting_fee()",
+      "hash": "0xc3355b8d"
+    },
+    {
+      "name": "_cexReseveredAmount()",
+      "hash": "0xcc3c42da"
+    },
+    {
+      "name": "setMinter(address,bool)",
+      "hash": "0xcf456ae7"
+    },
+    {
+      "name": "actualBalanceOf(address)",
+      "hash": "0x17a950ac"
+    },
+    {
+      "name": "withdraw()",
+      "hash": "0x3ccfd60b"
+    },
+    {
+      "name": "setTokenSale(address,address,uint256)",
+      "hash": "0x9118575a"
+    },
+    {
+      "name": "delayDelay()",
+      "hash": "0xa29dff72"
+    },
+    {
+      "name": "identity()",
+      "hash": "0x2c159a1a"
+    },
+    {
+      "name": "isJoinedLGE(address)",
+      "hash": "0x9348ac9d"
+    },
+    {
+      "name": "addIssuer(address)",
+      "hash": "0x20694db0"
+    },
+    {
+      "name": "setAddressRegistry(address)",
+      "hash": "0x27c7812c"
+    },
+    {
+      "name": "approveByPartition(bytes32,address,uint256)",
+      "hash": "0x14d1e62f"
+    },
+    {
+      "name": "stopMint()",
+      "hash": "0xd5582965"
+    },
+    {
+      "name": "grantRole(bytes32,address)",
+      "hash": "0x2f2ff15d"
+    },
+    {
+      "name": "_acceptGov()",
+      "hash": "0x4bda2e20"
+    },
+    {
+      "name": "revokeSnapshot(address)",
+      "hash": "0x404a195c"
+    },
+    {
+      "name": "setMinter(address)",
+      "hash": "0xfca3b5aa"
+    },
+    {
+      "name": "mintApiRewardShare()",
+      "hash": "0x077bd04d"
+    },
+    {
+      "name": "finishMinting()",
+      "hash": "0x7d64bcb4"
+    },
+    {
+      "name": "addExchangeHotWallet(address)",
+      "hash": "0xb5d0abfd"
+    },
+    {
+      "name": "facetAddresses()",
+      "hash": "0x52ef6b2c"
+    },
+    {
+      "name": "cSigner()",
+      "hash": "0x5760cc5d"
+    },
+    {
+      "name": "partialUnbonding(address,address)",
+      "hash": "0x67da3184"
+    },
+    {
+      "name": "addPool(address)",
+      "hash": "0xd914cd4b"
+    },
+    {
+      "name": "backedTreasury()",
+      "hash": "0x6d9c8cd8"
+    },
+    {
+      "name": "minter_burn_from(address,uint256)",
+      "hash": "0x7941bc89"
+    },
+    {
+      "name": "isOperatorInRole(address,uint256)",
+      "hash": "0xc688d693"
+    },
+    {
+      "name": "setBusinessDevelopmentDivisor(uint256)",
+      "hash": "0x4f27ec3e"
+    },
+    {
+      "name": "withdrawFunds()",
+      "hash": "0x24600fc3"
+    },
+    {
+      "name": "setTransferBlockRelease(address,uint256)",
+      "hash": "0xf2bd4bbf"
+    },
+    {
+      "name": "pendingIsBurningAllowed()",
+      "hash": "0x4cde8436"
+    },
+    {
+      "name": "vault()",
+      "hash": "0xfbfa77cf"
+    },
+    {
+      "name": "isPrimaryMarketActive()",
+      "hash": "0x2e873bac"
+    },
+    {
+      "name": "allowances(address,address)",
+      "hash": "0x55b6ed5c"
+    },
+    {
+      "name": "balances(address)",
+      "hash": "0x27e235e3"
+    },
+    {
+      "name": "setOffRampPair(address)",
+      "hash": "0xbe1c7142"
+    },
+    {
+      "name": "getMintable()",
+      "hash": "0xf698bceb"
+    },
+    {
+      "name": "setMerkleRoot(bytes32)",
+      "hash": "0x7cb64759"
+    },
+    {
+      "name": "advisorsRewardDistributionAddress()",
+      "hash": "0x6e15d21b"
+    },
+    {
+      "name": "initialize(tuple,address)",
+      "hash": "0x68a7ef55"
+    },
+    {
+      "name": "transferForeignToken(address,address)",
+      "hash": "0x8366e79a"
+    },
+    {
+      "name": "setLockupTriggerAmount(uint256)",
+      "hash": "0xbabed4b1"
+    },
+    {
+      "name": "totalFees()",
+      "hash": "0x13114a9d"
+    },
+    {
+      "name": "setRewardTokens(address[],bool[])",
+      "hash": "0x6daf029f"
+    },
+    {
+      "name": "isSuperOperator(address)",
+      "hash": "0x654b748a"
+    },
+    {
+      "name": "initialize(string,string)",
+      "hash": "0x4cd88b76"
+    },
+    {
+      "name": "delegateToViewImplementation(bytes)",
+      "hash": "0x4487152f"
+    },
+    {
+      "name": "distributor()",
+      "hash": "0xbfe10928"
+    },
+    {
+      "name": "TRUSTY_ROLE()",
+      "hash": "0x34ddb95d"
+    },
+    {
+      "name": "upgradeImpl(address)",
+      "hash": "0x1a2f1363"
+    },
+    {
+      "name": "numCheckpoints(address)",
+      "hash": "0x6fcfff45"
+    },
+    {
+      "name": "endpoint()",
+      "hash": "0x5e280f11"
+    },
+    {
+      "name": "destroyStake(address,bytes32,uint256,uint256)",
+      "hash": "0xa425b752"
+    },
+    {
+      "name": "transferAgents(address)",
+      "hash": "0x867c2857"
+    },
+    {
+      "name": "DAILY_MINT_AMOUNT()",
+      "hash": "0xa5ebc844"
+    },
+    {
+      "name": "distributionContractAddress()",
+      "hash": "0x1ba66f2b"
+    },
+    {
+      "name": "includeAccount(address)",
+      "hash": "0xf84354f1"
+    },
+    {
+      "name": "setVault(address)",
+      "hash": "0x6817031b"
+    },
+    {
+      "name": "MINT_BASE()",
+      "hash": "0x81ea3cc7"
+    },
+    {
+      "name": "addOperator(address)",
+      "hash": "0x9870d7fe"
+    },
+    {
+      "name": "lpReleaseStart()",
+      "hash": "0x93555dfd"
+    },
+    {
+      "name": "VERSION_HASH()",
+      "hash": "0x9e4e7318"
+    },
+    {
+      "name": "_decimals()",
+      "hash": "0x32424aa3"
+    },
+    {
+      "name": "depositAddress(bytes32)",
+      "hash": "0x31eecaf4"
+    },
+    {
+      "name": "poolMint(address,uint256)",
+      "hash": "0x0c407d56"
+    },
+    {
+      "name": "addLockups(address[])",
+      "hash": "0x17fa277e"
+    },
+    {
+      "name": "initSupply()",
+      "hash": "0x97d63f93"
+    },
+    {
+      "name": "storageFee(uint256,uint256)",
+      "hash": "0x4d1e090a"
+    },
+    {
+      "name": "priceGobblerCumulativeLast()",
+      "hash": "0xa752d9aa"
+    },
+    {
+      "name": "_totalSupplySnapshotsCount()",
+      "hash": "0x2b4e1a5b"
+    },
+    {
+      "name": "governanceIsKilled()",
+      "hash": "0x179781c4"
+    },
+    {
+      "name": "exchangeAirdropCampaign()",
+      "hash": "0x6fa02d58"
+    },
+    {
+      "name": "_marketingTokensToSwap()",
+      "hash": "0x24171f32"
+    },
+    {
+      "name": "mint(address)",
+      "hash": "0x6a627842"
+    },
+    {
+      "name": "lockupTriggerAmt()",
+      "hash": "0x7e13e9d7"
+    },
+    {
+      "name": "feeDenominator()",
+      "hash": "0x180b0d7e"
+    },
+    {
+      "name": "ONE_YEAR()",
+      "hash": "0x16d3bfbb"
+    },
+    {
+      "name": "admin()",
+      "hash": "0xf851a440"
+    },
+    {
+      "name": "setVaultOnly(bool)",
+      "hash": "0xc4b740f5"
+    },
+    {
+      "name": "removeTWAPSource(address)",
+      "hash": "0xefa058b1"
+    },
+    {
+      "name": "setParams(uint256,uint256)",
+      "hash": "0xc0324c77"
+    },
+    {
+      "name": "changeAdmin(address)",
+      "hash": "0x8f283970"
+    },
+    {
+      "name": "taxer()",
+      "hash": "0x17c81c1d"
+    },
+    {
+      "name": "_setImplementation(address,bool,bytes)",
+      "hash": "0x555bcc40"
+    },
+    {
+      "name": "addPauser(address)",
+      "hash": "0x82dc1ec4"
+    },
+    {
+      "name": "mint(address,uint256,string)",
+      "hash": "0xd3fc9864"
+    },
+    {
+      "name": "lockUser(address)",
+      "hash": "0xd7972580"
+    },
+    {
+      "name": "claimRewards()",
+      "hash": "0x372500ab"
+    },
+    {
+      "name": "isExcludedFromReward(address)",
+      "hash": "0x88f82020"
+    },
+    {
+      "name": "removeAdminRole(address)",
+      "hash": "0xdccfe310"
+    },
+    {
+      "name": "removeLiquidityFromJob(address,address)",
+      "hash": "0x603c6860"
+    },
+    {
+      "name": "setRewardsDistributor(address)",
+      "hash": "0xd1f5c33b"
+    },
+    {
+      "name": "childChainManagerProxy()",
+      "hash": "0x62f629e7"
+    },
+    {
+      "name": "set_governance(address)",
+      "hash": "0x070313fa"
+    },
+    {
+      "name": "lastWeeklyEmission()",
+      "hash": "0x32c9c834"
+    },
+    {
+      "name": "liquidityPairs(uint256)",
+      "hash": "0x1b7a1fb2"
+    },
+    {
+      "name": "removeBlackLists(address[])",
+      "hash": "0x98313ca1"
+    },
+    {
+      "name": "totalAssets()",
+      "hash": "0x01e1d114"
+    },
+    {
+      "name": "nextEra()",
+      "hash": "0xe95e8a76"
+    },
+    {
+      "name": "initialSupply()",
+      "hash": "0x378dc3dc"
+    },
+    {
+      "name": "stakeGoodAccounting(address,uint256,uint40)",
+      "hash": "0x65cf71b2"
+    },
+    {
+      "name": "_symbol()",
+      "hash": "0xb09f1266"
+    },
+    {
+      "name": "setAutoTimeout(uint16,uint16)",
+      "hash": "0x36b1db15"
+    },
+    {
+      "name": "claimTokens(address)",
+      "hash": "0xdf8de3e7"
+    },
+    {
+      "name": "withdrawFromTreasury(address,uint256)",
+      "hash": "0x0663af08"
+    },
+    {
+      "name": "unsettledProfit(address)",
+      "hash": "0x73205f2f"
+    },
+    {
+      "name": "setWhitelisted(address,bool,bool)",
+      "hash": "0xe6a6dcce"
+    },
+    {
+      "name": "rescueTokensSafe(address,address,uint256)",
+      "hash": "0xceacd451"
+    },
+    {
+      "name": "k()",
+      "hash": "0xb4f40c61"
+    },
+    {
+      "name": "nextEpochTime()",
+      "hash": "0x1da56eb3"
+    },
+    {
+      "name": "setTransferAgent(address,bool)",
+      "hash": "0x02f652a3"
+    },
+    {
+      "name": "gsnExtraGas()",
+      "hash": "0xcbe1f06c"
+    },
+    {
+      "name": "nomineeOwner()",
+      "hash": "0x8ab5150a"
+    },
+    {
+      "name": "xusd_pools_array(uint256)",
+      "hash": "0x65e244fc"
+    },
+    {
+      "name": "multisigAllocationClaimed()",
+      "hash": "0x47377e16"
+    },
+    {
+      "name": "collect(address)",
+      "hash": "0x06ec16f8"
+    },
+    {
+      "name": "authority()",
+      "hash": "0xbf7e214f"
+    },
+    {
+      "name": "setGasPriceLimit(uint256)",
+      "hash": "0x09231602"
+    },
+    {
+      "name": "daoChangeIncentiveAddress(address)",
+      "hash": "0x4ebaf56e"
+    },
+    {
+      "name": "live()",
+      "hash": "0x957aa58c"
+    },
+    {
+      "name": "enableTransfer()",
+      "hash": "0xf1b50c1d"
+    },
+    {
+      "name": "authorizeOperatorByPartition(bytes32,address)",
+      "hash": "0x103ef9e1"
+    },
+    {
+      "name": "setWhitelist(address,bool)",
+      "hash": "0x53d6fd59"
+    },
+    {
+      "name": "reclaimOwnership(address)",
+      "hash": "0xa90fa603"
+    },
+    {
+      "name": "store()",
+      "hash": "0x975057e7"
+    },
+    {
+      "name": "issuedSupply()",
+      "hash": "0x6291f572"
+    },
+    {
+      "name": "setWhitelists(address,bool,bool,bool)",
+      "hash": "0x0e91db66"
+    },
+    {
+      "name": "setPublicCapability(bytes4,bool)",
+      "hash": "0x4b5159da"
+    },
+    {
+      "name": "DELEGATION_TYPEHASH()",
+      "hash": "0xe7a324dc"
+    },
+    {
+      "name": "clayMain()",
+      "hash": "0xa33a7d53"
+    },
+    {
+      "name": "addAuthorized(address)",
+      "hash": "0xcf1c316a"
+    },
+    {
+      "name": "setSuperOperator(address,bool)",
+      "hash": "0xac9fe421"
+    },
+    {
+      "name": "approveAndExecuteWithSpecificGasAndChargeForIt(address,address,uint256,uint256,uint256,uint256,address,bytes)",
+      "hash": "0xdc2173f3"
+    },
+    {
+      "name": "xus_address()",
+      "hash": "0xa087b6a6"
+    },
+    {
+      "name": "setTransferBlockWait(uint256)",
+      "hash": "0x9056cf5f"
+    },
+    {
+      "name": "releaseAll()",
+      "hash": "0x5be7fde8"
+    },
+    {
+      "name": "addLiquidity(bool,bytes32,bytes32,uint8)",
+      "hash": "0x70af5647"
+    },
+    {
+      "name": "getLegacyRepToken()",
+      "hash": "0x77469275"
+    },
+    {
+      "name": "pendingLicenseFee()",
+      "hash": "0xba57b40c"
+    },
+    {
+      "name": "LGE_DURATION()",
+      "hash": "0x652f4e91"
+    },
+    {
+      "name": "FEE()",
+      "hash": "0xc57981b5"
+    },
+    {
+      "name": "addToTokenTransferAllowlist(address[])",
+      "hash": "0x8aaee234"
+    },
+    {
+      "name": "isPaused()",
+      "hash": "0xb187bd26"
+    },
+    {
+      "name": "partitionStrategies(uint256)",
+      "hash": "0x75deca02"
+    },
+    {
+      "name": "pendingDelay()",
+      "hash": "0x4ca8f0ed"
+    },
+    {
+      "name": "removeMinterRole(address)",
+      "hash": "0x54f1e126"
+    },
+    {
+      "name": "setAddresses(address)",
+      "hash": "0x81d3c435"
+    },
+    {
+      "name": "uniswapV2Pair()",
+      "hash": "0x49bd5a5e"
+    },
+    {
+      "name": "distributionContract2()",
+      "hash": "0x99635187"
+    },
+    {
+      "name": "claimVestedTokens(address,uint256)",
+      "hash": "0x2e0876a0"
+    },
+    {
+      "name": "balanceOf(address)",
+      "hash": "0x70a08231"
+    },
+    {
+      "name": "limitsInEffect()",
+      "hash": "0x4a62bb65"
+    },
+    {
+      "name": "YEARLY_MINTABLE_AMOUNT()",
+      "hash": "0x0ffa1015"
+    },
+    {
+      "name": "stake(uint96)",
+      "hash": "0x61f129ad"
+    },
+    {
+      "name": "unlockedBalance(address)",
+      "hash": "0x5e0fac2e"
+    },
+    {
+      "name": "totalBalanceOf(address)",
+      "hash": "0x4b0ee02a"
+    },
+    {
+      "name": "bulkResolve(bytes32[])",
+      "hash": "0xf9e54234"
+    },
+    {
+      "name": "startOfTerm(uint256)",
+      "hash": "0xb4b55ac8"
+    },
+    {
+      "name": "setDistributor(address)",
+      "hash": "0x75619ab5"
+    },
+    {
+      "name": "getImplementation()",
+      "hash": "0xaaf10f42"
+    },
+    {
+      "name": "transferOperator(address)",
+      "hash": "0x29605e77"
+    },
+    {
+      "name": "INITIAL_TOTAL_SUPPLY()",
+      "hash": "0xc04fcad8"
+    },
+    {
+      "name": "createRound(uint256,uint256,uint256,uint256)",
+      "hash": "0x5bc91b2f"
+    },
+    {
+      "name": "tentativeDevAddress()",
+      "hash": "0x444820fb"
+    },
+    {
+      "name": "getVotingPowerHistory(address)",
+      "hash": "0xce9517cf"
+    },
+    {
+      "name": "rescueTokens(address,address,uint256)",
+      "hash": "0xcea9d26f"
+    },
+    {
+      "name": "getRound(uint256,uint256)",
+      "hash": "0x39ec68a3"
+    },
+    {
+      "name": "lock()",
+      "hash": "0xf83d08ba"
+    },
+    {
+      "name": "liquidityProvided(address,address,address)",
+      "hash": "0xdef70844"
+    },
+    {
+      "name": "editDefaultPositionUnit(address,int256)",
+      "hash": "0x2ba57d17"
+    },
+    {
+      "name": "setAutomatedMarketMakerPair(address,bool)",
+      "hash": "0x9a7a23d6"
+    },
+    {
+      "name": "LiquidityProtection_unblock(address[])",
+      "hash": "0x5fdb86f9"
+    },
+    {
+      "name": "flagGobbler(uint256,bool)",
+      "hash": "0xd99f958f"
+    },
+    {
+      "name": "setOracleAddress(address)",
+      "hash": "0x4c69c00f"
+    },
+    {
+      "name": "isToWhitelisted(address)",
+      "hash": "0x1e3c187f"
+    },
+    {
+      "name": "setReceiveVersion(uint16)",
+      "hash": "0x10ddb137"
+    },
+    {
+      "name": "updateOperator()",
+      "hash": "0xd5934b76"
+    },
+    {
+      "name": "toggleVotes()",
+      "hash": "0x45791d19"
+    },
+    {
+      "name": "currentDay()",
+      "hash": "0x5c9302c9"
+    },
+    {
+      "name": "allowance(address,address)",
+      "hash": "0xdd62ed3e"
+    },
+    {
+      "name": "removePool(address)",
+      "hash": "0x3b7d0946"
+    },
+    {
+      "name": "blacklistAddress(address,bool)",
+      "hash": "0x455a4396"
+    },
+    {
+      "name": "setXUSDStep(uint256)",
+      "hash": "0xad2f8ce4"
+    },
+    {
+      "name": "changeApproval(address,uint256,uint256)",
+      "hash": "0x9281cd65"
+    },
+    {
+      "name": "FUTURE_TOTAL_AMOUNT()",
+      "hash": "0xf16daed6"
+    },
+    {
+      "name": "enableBurning(bool)",
+      "hash": "0xb45dd873"
+    },
+    {
+      "name": "whitelistAddress(address,bool)",
+      "hash": "0xb9a45aac"
+    },
+    {
+      "name": "getNonce(address)",
+      "hash": "0x2d0335ab"
+    },
+    {
+      "name": "getLockStatus()",
+      "hash": "0x9ae8ad45"
+    },
+    {
+      "name": "LP_LOCK_FOREVER_PERCENT()",
+      "hash": "0xb4594fa3"
+    },
+    {
+      "name": "getConfig(bytes32)",
+      "hash": "0x6dd5b69d"
+    },
+    {
+      "name": "whiteList(address)",
+      "hash": "0x372c12b1"
+    },
+    {
+      "name": "setReleaseAgent(address)",
+      "hash": "0x29ff4f53"
+    },
+    {
+      "name": "claimWTF(address,uint256[9],bytes32[])",
+      "hash": "0x72ded8f3"
+    },
+    {
+      "name": "mintable_in_timeframe(uint256,uint256)",
+      "hash": "0xd725a9ca"
+    },
+    {
+      "name": "addBlackLists(address[])",
+      "hash": "0x440878b4"
+    },
+    {
+      "name": "unbondings(address,address)",
+      "hash": "0x9af77284"
+    },
+    {
+      "name": "BPE()",
+      "hash": "0xf31e1c9f"
+    },
+    {
+      "name": "FEATURE_UNSAFE_TRANSFERS()",
+      "hash": "0x1993f554"
+    },
+    {
+      "name": "startAtBlock()",
+      "hash": "0x7265d040"
+    },
+    {
+      "name": "minimumTokensBeforeSwapAmount()",
+      "hash": "0xa073d37f"
+    },
+    {
+      "name": "removeAuthorizedMintCaller(address)",
+      "hash": "0xaa2d0100"
+    },
+    {
+      "name": "fundingEnabled()",
+      "hash": "0xe10e95c9"
+    },
+    {
+      "name": "executeWithSpecificGas(address,uint256,bytes)",
+      "hash": "0xdcdf5158"
+    },
+    {
+      "name": "changeSupplyController(address)",
+      "hash": "0xa4012b21"
+    },
+    {
+      "name": "lqtyStakingAddress()",
+      "hash": "0x761ab22c"
+    },
+    {
+      "name": "vaultStorage()",
+      "hash": "0x00fe9ad4"
+    },
+    {
+      "name": "BURNER_ROLE()",
+      "hash": "0x282c51f3"
+    },
+    {
+      "name": "hasOperatorRole(address)",
+      "hash": "0xfc4e3e0a"
+    },
+    {
+      "name": "F_ADDR()",
+      "hash": "0xc794c769"
+    },
+    {
+      "name": "unlock(address,address)",
+      "hash": "0xe674a0bd"
+    },
+    {
+      "name": "adminOperator()",
+      "hash": "0xe900a491"
+    },
+    {
+      "name": "mintersLength()",
+      "hash": "0xc37bbabc"
+    },
+    {
+      "name": "mintingFinishedPermanent()",
+      "hash": "0xf5eae936"
+    },
+    {
+      "name": "removeBlacklist(address)",
+      "hash": "0xeb91e651"
+    },
+    {
+      "name": "messagesender()",
+      "hash": "0x23fd97c8"
+    },
+    {
+      "name": "delegateOnDist(address,address)",
+      "hash": "0x5c583e15"
+    },
+    {
+      "name": "swapBridgeForCanonical(address,uint256)",
+      "hash": "0xf716932e"
+    },
+    {
+      "name": "pendingMinter()",
+      "hash": "0x91c5df49"
+    },
+    {
+      "name": "createCloneToken(string,uint8,string,uint256,bool,uint256)",
+      "hash": "0x3e6c0933"
+    },
+    {
+      "name": "bondedSteth()",
+      "hash": "0x69c3e085"
+    },
+    {
+      "name": "canUnpauseAfter()",
+      "hash": "0xdc0f0d12"
+    },
+    {
+      "name": "delegateContract()",
+      "hash": "0x3c2b0725"
+    },
+    {
+      "name": "getVotingPower(address)",
+      "hash": "0xbb4d4436"
+    },
+    {
+      "name": "rewardsQuote(address)",
+      "hash": "0x0adeccc5"
+    },
+    {
+      "name": "isPending(bytes32)",
+      "hash": "0xe531d8c7"
+    },
+    {
+      "name": "minter_mint(address,uint256)",
+      "hash": "0x6a257ebc"
+    },
+    {
+      "name": "start_epoch_time()",
+      "hash": "0x7375be26"
+    },
+    {
+      "name": "activateMinting()",
+      "hash": "0xab7873fb"
+    },
+    {
+      "name": "isLPGenerationCompleted()",
+      "hash": "0xda3ca81d"
+    },
+    {
+      "name": "MINTING_INTERVAL()",
+      "hash": "0xf0e0ae3e"
+    },
+    {
+      "name": "_addPair(address,address,address)",
+      "hash": "0x412131fa"
+    },
+    {
+      "name": "FEATURE_BURNS_ON_BEHALF()",
+      "hash": "0xf63c2f82"
+    },
+    {
+      "name": "addAdminRole(address)",
+      "hash": "0x6595171c"
+    },
+    {
+      "name": "MINT_MAX_PERCENT()",
+      "hash": "0x657c7a85"
+    },
+    {
+      "name": "unbondLiquidityFromJob(address,address,uint256)",
+      "hash": "0x1101eb41"
+    },
+    {
+      "name": "upgradeTo(address)",
+      "hash": "0x3659cfe6"
+    },
+    {
+      "name": "communityIssuanceAddress()",
+      "hash": "0xd874ea74"
+    },
+    {
+      "name": "deploy_time()",
+      "hash": "0xa5d8cdf2"
+    },
+    {
+      "name": "BASE()",
+      "hash": "0xec342ad0"
+    },
+    {
+      "name": "unstake(address,uint256)",
+      "hash": "0xc2a672e0"
+    },
+    {
+      "name": "minters(uint256)",
+      "hash": "0x8623ec7b"
+    },
+    {
+      "name": "setTokenThreshold(uint256)",
+      "hash": "0x87bde549"
+    },
+    {
+      "name": "nonce(address)",
+      "hash": "0x70ae92d2"
+    },
+    {
+      "name": "chickenBondManagerAddress()",
+      "hash": "0xc6315aa0"
+    },
+    {
+      "name": "totalSwapped()",
+      "hash": "0xd8501f4f"
+    },
+    {
+      "name": "freezingCount(address)",
+      "hash": "0xca63b5b8"
+    },
+    {
+      "name": "init(address,address)",
+      "hash": "0xf09a4016"
+    },
+    {
+      "name": "FEATURE_TRANSFERS()",
+      "hash": "0xc0d6568d"
+    },
+    {
+      "name": "decreaseAllowance(address,uint256)",
+      "hash": "0xa457c2d7"
+    },
+    {
+      "name": "disableStopping()",
+      "hash": "0xd08b89f3"
+    },
+    {
+      "name": "operatorTransfer(address,uint256)",
+      "hash": "0xb0e65d07"
+    },
+    {
+      "name": "setFeeEnforcer(address)",
+      "hash": "0x536f2120"
+    },
+    {
+      "name": "AMOUNT_AIREDROP()",
+      "hash": "0xfdfe8d64"
+    },
+    {
+      "name": "bulkTransfer(address[],uint256[])",
+      "hash": "0x153a1f3e"
+    },
+    {
+      "name": "availableToMint()",
+      "hash": "0x74601c3c"
+    },
+    {
+      "name": "gov()",
+      "hash": "0x12d43a51"
+    },
+    {
+      "name": "claimOwnership()",
+      "hash": "0x4e71e0c8"
+    },
+    {
+      "name": "allowedFrom(address)",
+      "hash": "0x0455e694"
+    },
+    {
+      "name": "_emit(bytes,uint256,bytes32,bytes32,bytes32,bytes32)",
+      "hash": "0x907dff97"
+    },
+    {
+      "name": "dailyData(uint256)",
+      "hash": "0x90de6871"
+    },
+    {
+      "name": "isFromWhitelisted(address)",
+      "hash": "0x28687cc7"
+    },
+    {
+      "name": "transferExternalTokens(address,address,uint256)",
+      "hash": "0xc27afefc"
+    },
+    {
+      "name": "lockdrop()",
+      "hash": "0x32e07d9a"
+    },
+    {
+      "name": "claimTokens(uint256,address,bytes32[])",
+      "hash": "0x76122903"
+    },
+    {
+      "name": "inflationCalculate()",
+      "hash": "0xc1a26006"
+    },
+    {
+      "name": "transferByPartition(bytes32,address,address,uint256,bytes,bytes)",
+      "hash": "0x2036a94d"
+    },
+    {
+      "name": "getMaxTotalSupply()",
+      "hash": "0x5db30bb1"
+    },
+    {
+      "name": "xusd_pools(address)",
+      "hash": "0xb717fa45"
+    },
+    {
+      "name": "storageFeeGracePeriodDays()",
+      "hash": "0x2a533239"
+    },
+    {
+      "name": "sendTokens(uint16,bytes,uint256,address,bytes)",
+      "hash": "0x2e15238c"
+    },
+    {
+      "name": "totalSupplyVirtual()",
+      "hash": "0x71401e5d"
+    },
+    {
+      "name": "stakingState()",
+      "hash": "0xe082f1d4"
+    },
+    {
+      "name": "safeSwap(uint256,uint256,uint256[],uint256,uint256[],uint256,address,bytes)",
+      "hash": "0x529fb8c1"
+    },
+    {
+      "name": "lpTokensInPair()",
+      "hash": "0x49e2f838"
+    },
+    {
+      "name": "setMintingFee(uint256)",
+      "hash": "0x238a4709"
+    },
+    {
+      "name": "delegate(address)",
+      "hash": "0x5c19a95c"
+    },
+    {
+      "name": "getUserRoles(address)",
+      "hash": "0x06a36aee"
+    },
+    {
+      "name": "tradable()",
+      "hash": "0x54840c6e"
+    },
+    {
+      "name": "MAX_CAP()",
+      "hash": "0xd669e1d4"
+    },
+    {
+      "name": "auctionBurn(uint256)",
+      "hash": "0x3f7ab0dc"
+    },
+    {
+      "name": "INFLATION_ENABLE_DATE()",
+      "hash": "0x7c5a7c2a"
+    },
+    {
+      "name": "getGrant(address,uint256)",
+      "hash": "0x40b334f7"
+    },
+    {
+      "name": "decreaseAllowanceByPartition(bytes32,address,uint256)",
+      "hash": "0x1ff6442e"
+    },
+    {
+      "name": "_buyLiquidityFee()",
+      "hash": "0xdc44b6a0"
+    },
+    {
+      "name": "excludeFromFee(address)",
+      "hash": "0x437823ec"
+    },
+    {
+      "name": "FLASH_CLAIM()",
+      "hash": "0xc2801bbf"
+    },
+    {
+      "name": "interfaceAddress()",
+      "hash": "0xaa8a6754"
+    },
+    {
+      "name": "TARGET_USER()",
+      "hash": "0x726a431a"
+    },
+    {
+      "name": "getDefaultPositionRealUnit(address)",
+      "hash": "0x66cb8d2f"
+    },
+    {
+      "name": "isExcludedFromFee(address)",
+      "hash": "0x5342acb4"
+    },
+    {
+      "name": "NUMBER_BLOCKS_PER_DAY()",
+      "hash": "0xd5c4c647"
+    },
+    {
+      "name": "burningPool()",
+      "hash": "0xce9b468f"
+    },
+    {
+      "name": "multisigAddress()",
+      "hash": "0x5462870d"
+    },
+    {
+      "name": "Swapout(uint256,address)",
+      "hash": "0x628d6cba"
+    },
+    {
+      "name": "setInflationRate(uint256)",
+      "hash": "0xb1551b95"
+    },
+    {
+      "name": "previousOwner()",
+      "hash": "0x674f220f"
+    },
+    {
+      "name": "burnAddress()",
+      "hash": "0x70d5ae05"
+    },
+    {
+      "name": "deprecate(address)",
+      "hash": "0x0753c30c"
+    },
+    {
+      "name": "createTournament(uint256)",
+      "hash": "0xdd20a53e"
+    },
+    {
+      "name": "geUnlockTime()",
+      "hash": "0xb6c52324"
+    },
+    {
+      "name": "minter()",
+      "hash": "0x07546172"
+    },
+    {
+      "name": "btcAddressIsClaimable(bytes20,uint256,bytes32[])",
+      "hash": "0x8e21aa01"
+    },
+    {
+      "name": "licenseFeeInc()",
+      "hash": "0xac55b0bf"
+    },
+    {
+      "name": "minter(address)",
+      "hash": "0x3dd08c38"
+    },
+    {
+      "name": "relayHubVersion()",
+      "hash": "0xad61ccd5"
+    },
+    {
+      "name": "switchOn()",
+      "hash": "0xf9f8f895"
+    },
+    {
+      "name": "getPastTotalSupply(uint256)",
+      "hash": "0x8e539e8c"
+    },
+    {
+      "name": "setManager(address)",
+      "hash": "0xd0ebdbe7"
+    },
+    {
+      "name": "updateCeiling(address,uint128)",
+      "hash": "0x7a904120"
+    },
+    {
+      "name": "mintContracts(address)",
+      "hash": "0xce8f5129"
+    },
+    {
+      "name": "checkpoints(address,uint256)",
+      "hash": "0x0cdfebfa"
+    },
+    {
+      "name": "getUnlockTime()",
+      "hash": "0x602bc62b"
+    },
+    {
+      "name": "dividendAt(address,address,uint256)",
+      "hash": "0x87882ac0"
+    },
+    {
+      "name": "parentSnapShotBlock()",
+      "hash": "0xc5bcc4f1"
+    },
+    {
+      "name": "startdecimal()",
+      "hash": "0x7ba8a704"
+    },
+    {
+      "name": "upgradeAgent()",
+      "hash": "0x5de4ccb0"
+    },
+    {
+      "name": "swap(uint256)",
+      "hash": "0x94b918de"
+    },
+    {
+      "name": "isOperatorForCollateralManager(bytes32,address,address)",
+      "hash": "0xaeb72e70"
+    },
+    {
+      "name": "link()",
+      "hash": "0x1c4695f4"
+    },
+    {
+      "name": "toBoring(uint256)",
+      "hash": "0x747682a0"
+    },
+    {
+      "name": "SNAPSHOT_ROLE()",
+      "hash": "0x7028e2cd"
+    },
+    {
+      "name": "registerCollateralManager()",
+      "hash": "0xb9d7b471"
+    },
+    {
+      "name": "treasuryAddress()",
+      "hash": "0xc5f956af"
+    },
+    {
+      "name": "ROLE_ERC20_RECEIVER()",
+      "hash": "0xc5ff500c"
+    },
+    {
+      "name": "mintGobbler()",
+      "hash": "0x09c0478c"
+    },
+    {
+      "name": "setExpiration(uint256)",
+      "hash": "0x515a20ba"
+    },
+    {
+      "name": "hasRole(bytes32,address)",
+      "hash": "0x91d14854"
+    },
+    {
+      "name": "governanceRecoverUnsupported(address,address,uint256)",
+      "hash": "0xf6383b2c"
+    },
+    {
+      "name": "daoStopEmissions()",
+      "hash": "0xbf4dbf57"
+    },
+    {
+      "name": "merkleProofIsValid(bytes32,bytes32[])",
+      "hash": "0x27aa6018"
+    },
+    {
+      "name": "total_minted()",
+      "hash": "0xbe17be5d"
+    },
+    {
+      "name": "unreceivedDividend(address,address)",
+      "hash": "0xf5dedb03"
+    },
+    {
+      "name": "dropTask(bytes32)",
+      "hash": "0x521cb590"
+    },
+    {
+      "name": "getLastGrantID(address)",
+      "hash": "0x5333b2ea"
+    },
+    {
+      "name": "_totalSupply()",
+      "hash": "0x3eaaf86b"
+    },
+    {
+      "name": "stakeStart(uint256,uint256)",
+      "hash": "0x52a438b8"
+    },
+    {
+      "name": "vaultTreasury()",
+      "hash": "0x367a87bb"
+    },
+    {
+      "name": "freezingBalanceOf(address)",
+      "hash": "0xd8aeedf5"
+    },
+    {
+      "name": "EIP712_DOMAIN()",
+      "hash": "0xe1b11da4"
+    },
+    {
+      "name": "isBondExpired()",
+      "hash": "0x074aa9f2"
+    },
+    {
+      "name": "cage(uint256)",
+      "hash": "0xa2f91af2"
+    },
+    {
+      "name": "airdropReserveWallet()",
+      "hash": "0xae1616b0"
+    },
+    {
+      "name": "ownership()",
+      "hash": "0x5d03147a"
+    },
+    {
+      "name": "setCurve(uint256)",
+      "hash": "0x1060d14c"
+    },
+    {
+      "name": "globalInfo()",
+      "hash": "0xf04b5fa0"
+    },
+    {
+      "name": "claimFounderAllocation(uint256,address)",
+      "hash": "0x79224ed6"
+    },
+    {
+      "name": "transferFee()",
+      "hash": "0xacb2ad6f"
+    },
+    {
+      "name": "discountAuthority()",
+      "hash": "0x34091a43"
+    },
+    {
+      "name": "transferWithAuthorization(address,address,uint256,uint256,uint256,bytes32,uint8,bytes32,bytes32)",
+      "hash": "0xe3ee160e"
+    },
+    {
+      "name": "controller_address()",
+      "hash": "0x67feda3e"
+    },
+    {
+      "name": "getInflation()",
+      "hash": "0xd5a95771"
+    },
+    {
+      "name": "deny(address)",
+      "hash": "0x9c52a7f1"
+    },
+    {
+      "name": "getAmountLocked(address)",
+      "hash": "0x601fdff3"
+    },
+    {
+      "name": "getExternalPositionData(address,address)",
+      "hash": "0x8ae458da"
+    },
+    {
+      "name": "treasury()",
+      "hash": "0x61d027b3"
+    },
+    {
+      "name": "isOwner(address)",
+      "hash": "0x2f54bf6e"
+    },
+    {
+      "name": "blacklistRecoverableToken(address)",
+      "hash": "0xf65d901c"
+    },
+    {
+      "name": "mint(address,address,uint256)",
+      "hash": "0xc6c3bbe6"
+    },
+    {
+      "name": "mpc()",
+      "hash": "0xf75c2664"
+    },
+    {
+      "name": "pool_burn_from(address,uint256)",
+      "hash": "0xa8a778ae"
+    },
+    {
+      "name": "changeVault(address)",
+      "hash": "0x60e232a9"
+    },
+    {
+      "name": "partnershipMintedAtBlock()",
+      "hash": "0x1583e3a2"
+    },
+    {
+      "name": "approve(address,uint256)",
+      "hash": "0x095ea7b3"
+    },
+    {
+      "name": "receiveDividend(address,address)",
+      "hash": "0x24b7bf82"
+    },
+    {
+      "name": "INIT_MAX_TOTAL_SUPPLY()",
+      "hash": "0xce1f6a83"
+    },
+    {
+      "name": "implementationAddress()",
+      "hash": "0xb97a2319"
+    },
+    {
+      "name": "isClaimedWTF(uint256)",
+      "hash": "0x32a7eb96"
+    },
+    {
+      "name": "nonceOf(address)",
+      "hash": "0xed2a2d64"
+    },
+    {
+      "name": "transferTo(address,uint256)",
+      "hash": "0x2ccb1b30"
+    },
+    {
+      "name": "gsnTrustedSigner()",
+      "hash": "0xfc876754"
+    },
+    {
+      "name": "mintLockedToken(address,uint256)",
+      "hash": "0x1cc6b7d4"
+    },
+    {
+      "name": "supplyController()",
+      "hash": "0xe7ba1012"
+    },
+    {
+      "name": "balancesGetValue(uint256)",
+      "hash": "0x7e0c5747"
+    },
+    {
+      "name": "updateOperator(address)",
+      "hash": "0xac7475ed"
+    },
+    {
+      "name": "excludeFromMaxTransaction(address,bool)",
+      "hash": "0x7571336a"
+    },
+    {
+      "name": "depositFrom(address,address,uint256)",
+      "hash": "0x68a9674d"
+    },
+    {
+      "name": "pendingAdmin()",
+      "hash": "0x26782247"
+    },
+    {
+      "name": "buyBackEnabled()",
+      "hash": "0x6053a0e3"
+    },
+    {
+      "name": "_buyMarketingFee()",
+      "hash": "0xc5d24189"
+    },
+    {
+      "name": "initialize(string,string,uint8,address)",
+      "hash": "0xde7ea79d"
+    },
+    {
+      "name": "initTotalSupply()",
+      "hash": "0xe889b470"
+    },
+    {
+      "name": "revokeBlocked(address[],address)",
+      "hash": "0x75ee8389"
+    },
+    {
+      "name": "distributeRevenue()",
+      "hash": "0x2d07953a"
+    },
+    {
+      "name": "setBurnAddress(address)",
+      "hash": "0x4b0e7216"
+    },
+    {
+      "name": "init()",
+      "hash": "0xe1c7392a"
+    },
+    {
+      "name": "addCreditETH(address)",
+      "hash": "0x6dab5dcf"
+    },
+    {
+      "name": "start_epoch_time_write()",
+      "hash": "0xadc4cf43"
+    },
+    {
+      "name": "decimalFactor()",
+      "hash": "0x6d6a6a4d"
+    },
+    {
+      "name": "_isExcludedMaxTransactionAmount(address)",
+      "hash": "0x10d5de53"
+    },
+    {
+      "name": "transferTokens(address,uint256)",
+      "hash": "0xbec3fa17"
+    },
+    {
+      "name": "_transfersRestrictedBefore()",
+      "hash": "0x1ff06fdf"
+    },
+    {
+      "name": "pendingProxyOwner()",
+      "hash": "0x0add8140"
+    },
+    {
+      "name": "defaultOperators()",
+      "hash": "0x06e48538"
+    },
+    {
+      "name": "batchTransfer(address[],uint256[])",
+      "hash": "0x88d695b2"
+    },
+    {
+      "name": "doesRoleHaveCapability(uint8,bytes4)",
+      "hash": "0xe688747b"
+    },
+    {
+      "name": "setBridgeContract(address)",
+      "hash": "0x0b26cf66"
+    },
+    {
+      "name": "ADDR_STAKING()",
+      "hash": "0x75df1d7c"
+    },
+    {
+      "name": "setDistributer(address)",
+      "hash": "0xe5830770"
+    },
+    {
+      "name": "getCurrentVotes(address)",
+      "hash": "0xb4b5ea57"
+    },
+    {
+      "name": "removeAdmin(address)",
+      "hash": "0x1785f53c"
+    },
+    {
+      "name": "dispute(address)",
+      "hash": "0xf75f9f7b"
+    },
+    {
+      "name": "unlockedOf(address)",
+      "hash": "0xcaad546e"
+    },
+    {
+      "name": "excludeAccount(address)",
+      "hash": "0xf2cc0c18"
+    },
+    {
+      "name": "setRoleCapability(uint8,bytes4,bool)",
+      "hash": "0x0ea9b75b"
+    },
+    {
+      "name": "addBridge(address)",
+      "hash": "0x9712fdf8"
+    },
+    {
+      "name": "bpValue()",
+      "hash": "0xd36fe2d5"
+    },
+    {
+      "name": "transferBlockWait()",
+      "hash": "0x3b2957f0"
+    },
+    {
+      "name": "editExternalPositionUnit(address,address,int256)",
+      "hash": "0x63a90fc1"
+    },
+    {
+      "name": "authorizeOwnershipTransfer(address)",
+      "hash": "0x87f4427e"
+    },
+    {
+      "name": "lock(address,uint256)",
+      "hash": "0x282d3fdf"
+    },
+    {
+      "name": "isApprovedForAll(address,address)",
+      "hash": "0xe985e9c5"
+    },
+    {
+      "name": "setStorageFeeGracePeriodDays(uint256)",
+      "hash": "0x80a78ac7"
+    },
+    {
+      "name": "cancelVestedTokens(address)",
+      "hash": "0x4f205087"
+    },
+    {
+      "name": "getPendingCount()",
+      "hash": "0xd795ede1"
+    },
+    {
+      "name": "feeEnforcer()",
+      "hash": "0xfc2edf5a"
+    },
+    {
+      "name": "revokeLiquidity(address)",
+      "hash": "0x64bb43ee"
+    },
+    {
+      "name": "set_rate(uint256)",
+      "hash": "0xd4387a99"
+    },
+    {
+      "name": "setAirdropPool(address)",
+      "hash": "0x5729addd"
+    },
+    {
+      "name": "setBridgeAddress(address)",
+      "hash": "0x7f5a22f9"
+    },
+    {
+      "name": "totalSellVolume()",
+      "hash": "0x41e70fa6"
+    },
+    {
+      "name": "lzReceive(uint16,bytes,uint64,bytes)",
+      "hash": "0x001d3567"
+    },
+    {
+      "name": "setAdmin(address)",
+      "hash": "0x704b6c02"
+    },
+    {
+      "name": "TOKEN_DECIMAL_MULTIPLIER()",
+      "hash": "0x56780085"
+    },
+    {
+      "name": "TOKEN_DECIMALS_UINT8()",
+      "hash": "0xcf3b1967"
+    },
+    {
+      "name": "isPartitionStrategy(bytes4)",
+      "hash": "0x900ff16d"
+    },
+    {
+      "name": "accumulativeFundsOf(address)",
+      "hash": "0x4e97415f"
+    },
+    {
+      "name": "HARD_CAP()",
+      "hash": "0x3a03171c"
+    },
+    {
+      "name": "BOND()",
+      "hash": "0xc1c1d218"
+    },
+    {
+      "name": "issue(address,uint256)",
+      "hash": "0x867904b4"
+    },
+    {
+      "name": "ROLE_ACCESS_MANAGER()",
+      "hash": "0xae682e2e"
+    },
+    {
+      "name": "lgeApprover()",
+      "hash": "0x1ed00a7e"
+    },
+    {
+      "name": "getMinter(uint256)",
+      "hash": "0x5b7121f8"
+    },
+    {
+      "name": "roles(uint8,address)",
+      "hash": "0x2a49b684"
+    },
+    {
+      "name": "removeLimits()",
+      "hash": "0x751039fc"
+    },
+    {
+      "name": "total_supply()",
+      "hash": "0x3940e9ee"
+    },
+    {
+      "name": "getDelegatee(address)",
+      "hash": "0x9b4e735f"
+    },
+    {
+      "name": "claimLPTokens()",
+      "hash": "0x38af6632"
+    },
+    {
+      "name": "tokenSaleIsFinished()",
+      "hash": "0xcf124ba3"
+    },
+    {
+      "name": "setTimeLockRegistry(address)",
+      "hash": "0x962399e2"
+    },
+    {
+      "name": "doesUserHaveRole(address,uint8)",
+      "hash": "0xea7ca276"
+    },
+    {
+      "name": "isPendingModule(address)",
+      "hash": "0x53bae5f7"
+    },
+    {
+      "name": "hasMinterRole(address)",
+      "hash": "0x099db017"
+    },
+    {
+      "name": "formula()",
+      "hash": "0x4b75f54f"
+    },
+    {
+      "name": "feePercentage()",
+      "hash": "0xa001ecdd"
+    },
+    {
+      "name": "disableContractUpgradability()",
+      "hash": "0xa8fa14b0"
+    },
+    {
+      "name": "TIMELOCK_DURATION()",
+      "hash": "0x4623c81e"
+    },
+    {
+      "name": "enableTokensTransfers()",
+      "hash": "0x82e012b1"
+    },
+    {
+      "name": "setBDPMasterPendingAtBlock()",
+      "hash": "0x2f51ca50"
+    },
+    {
+      "name": "totalLPTokensMinted()",
+      "hash": "0x002b1329"
+    },
+    {
+      "name": "PAUSED()",
+      "hash": "0xa9aad58c"
+    },
+    {
+      "name": "capUpdate(uint256)",
+      "hash": "0x40346c49"
+    },
+    {
+      "name": "distributionAddress()",
+      "hash": "0x37fb7e21"
+    },
+    {
+      "name": "ADDR_DAO()",
+      "hash": "0xda394aec"
+    },
+    {
+      "name": "setMintAirdropShare(uint256)",
+      "hash": "0x3d5aae13"
+    },
+    {
+      "name": "changeTWAPOracle(address)",
+      "hash": "0x3144fdf6"
+    },
+    {
+      "name": "calPrice(uint256)",
+      "hash": "0x3c9c790c"
+    },
+    {
+      "name": "daoPurge()",
+      "hash": "0x5c7b5357"
+    },
+    {
+      "name": "getPositions()",
+      "hash": "0x80275860"
+    },
+    {
+      "name": "DOMAIN_SEPARATOR()",
+      "hash": "0x3644e515"
+    },
+    {
+      "name": "enableTrading()",
+      "hash": "0x8a8c523c"
+    },
+    {
+      "name": "removeFromAllowedList(address[])",
+      "hash": "0x3c8d76d1"
+    },
+    {
+      "name": "setAuthorizedMintCaller(address)",
+      "hash": "0xc7521922"
+    },
+    {
+      "name": "freezed(address)",
+      "hash": "0x406f11f5"
+    },
+    {
+      "name": "getInflationBps()",
+      "hash": "0xdec98ab7"
+    },
+    {
+      "name": "emergencyDrain24hAfterLiquidityGenerationEventIsDone()",
+      "hash": "0x4f1a0f7d"
+    },
+    {
+      "name": "advance()",
+      "hash": "0xea105ac7"
+    },
+    {
+      "name": "unsafeTransferFrom(address,address,uint256)",
+      "hash": "0x59b961ef"
+    },
+    {
+      "name": "stakingRewardsAddress()",
+      "hash": "0x788bff68"
+    },
+    {
+      "name": "setAutoBurn(bool)",
+      "hash": "0xaf1b597e"
+    },
+    {
+      "name": "send(address,uint256,bytes)",
+      "hash": "0x9bd9bbc6"
+    },
+    {
+      "name": "addAdmin(address)",
+      "hash": "0x70480275"
+    },
+    {
+      "name": "getPowerAtBlock(address,uint256,uint8)",
+      "hash": "0xc2ffbb91"
+    },
+    {
+      "name": "isComponent(address)",
+      "hash": "0xdf5e9b29"
+    },
+    {
+      "name": "canImplementInterfaceForAddress(bytes32,address)",
+      "hash": "0x249cb3fa"
+    },
+    {
+      "name": "trustedDisputeWindowTransfer(address,address,uint256)",
+      "hash": "0x721bb170"
+    },
+    {
+      "name": "totalSupplyAtTermEnd(uint256)",
+      "hash": "0x1c67247c"
+    },
+    {
+      "name": "getTournament(uint256)",
+      "hash": "0x1a5bd7fc"
+    },
+    {
+      "name": "maxScalingFactor()",
+      "hash": "0x11d3e6c4"
+    },
+    {
+      "name": "xfLobbyMembers(uint256,address)",
+      "hash": "0x44203faf"
+    },
+    {
+      "name": "inflationRate()",
+      "hash": "0x31f9e35b"
+    },
+    {
+      "name": "addPresaleAddressForExclusions(address)",
+      "hash": "0xa716b773"
+    },
+    {
+      "name": "moduleStates(address)",
+      "hash": "0x35bc4e52"
+    },
+    {
+      "name": "modules(uint256)",
+      "hash": "0x81b2248a"
+    },
+    {
+      "name": "xfLobbyEnter(address)",
+      "hash": "0xce7d1f77"
+    },
+    {
+      "name": "pool1Amount()",
+      "hash": "0x2c034132"
+    },
+    {
+      "name": "transferAndCall(address,uint256)",
+      "hash": "0x1296ee62"
+    },
+    {
+      "name": "TOKEN_NAME()",
+      "hash": "0x18821400"
+    },
+    {
+      "name": "updateImplementationAddress(address)",
+      "hash": "0xeb5ee83a"
+    },
+    {
+      "name": "stoppable()",
+      "hash": "0xbb4872de"
+    },
+    {
+      "name": "initVault(address)",
+      "hash": "0x2ebe3fbb"
+    },
+    {
+      "name": "unwhitelistOnEmission(address)",
+      "hash": "0x41bc18b1"
+    },
+    {
+      "name": "ospfrozen()",
+      "hash": "0x00383d2f"
+    },
+    {
+      "name": "capitalReserveWallet()",
+      "hash": "0xadf403ad"
+    },
+    {
+      "name": "initialized()",
+      "hash": "0x158ef93e"
+    },
+    {
+      "name": "getStoreAddress()",
+      "hash": "0xb07ed3a9"
+    },
+    {
+      "name": "marketingAddress()",
+      "hash": "0xa5ece941"
+    },
+    {
+      "name": "allocatedSupply()",
+      "hash": "0x3a70a5ca"
+    },
+    {
+      "name": "mintForFutureFarming(address)",
+      "hash": "0x3aacd242"
+    },
+    {
+      "name": "stakerData(address)",
+      "hash": "0xce9972aa"
+    },
+    {
+      "name": "pull(address,uint256)",
+      "hash": "0xf2d5d56b"
+    },
+    {
+      "name": "lastFee()",
+      "hash": "0x9801134e"
+    },
+    {
+      "name": "setUpgradeMaster(address)",
+      "hash": "0xffeb7d75"
+    },
+    {
+      "name": "lpStakingRewardsAddress()",
+      "hash": "0x699ea583"
+    },
+    {
+      "name": "addTWAPSource(address)",
+      "hash": "0xc18230ec"
+    },
+    {
+      "name": "_PAIR_ADDRESS()",
+      "hash": "0x35b71ddf"
+    },
+    {
+      "name": "setTaxHandler(address)",
+      "hash": "0x488d4a51"
+    },
+    {
+      "name": "multisig()",
+      "hash": "0x4783c35b"
+    },
+    {
+      "name": "price_band()",
+      "hash": "0x2853fb10"
+    },
+    {
+      "name": "_creator()",
+      "hash": "0xbc8bde64"
+    },
+    {
+      "name": "setGovernance(address)",
+      "hash": "0xab033ea9"
+    },
+    {
+      "name": "allInfoFor(address)",
+      "hash": "0x57f6b812"
+    },
+    {
+      "name": "devAddress()",
+      "hash": "0x3ad10ef6"
+    },
+    {
+      "name": "tokenFactory()",
+      "hash": "0xe77772fe"
+    },
+    {
+      "name": "eth_usd_price()",
+      "hash": "0x345ba24b"
+    },
+    {
+      "name": "uniswapFactory()",
+      "hash": "0x8bdb2afa"
+    },
+    {
+      "name": "getTimeLockRegistry()",
+      "hash": "0x3dd5a83e"
+    },
+    {
+      "name": "DEV_FUND_RESERVE_PERCENT()",
+      "hash": "0xd052023e"
+    },
+    {
+      "name": "newOwner()",
+      "hash": "0xd4ee1d90"
+    },
+    {
+      "name": "distributionContract()",
+      "hash": "0x5a4528c2"
+    },
+    {
+      "name": "migrate()",
+      "hash": "0x8fd3ab80"
+    },
+    {
+      "name": "delegateByTypeBySig(address,uint8,uint256,uint256,uint8,bytes32,bytes32)",
+      "hash": "0xf713d8a8"
+    },
+    {
+      "name": "setTreasuryHandler(address)",
+      "hash": "0xa9373b7b"
+    },
+    {
+      "name": "calAmount(uint256,uint256)",
+      "hash": "0x8656a78e"
+    },
+    {
+      "name": "secondsPerEra()",
+      "hash": "0x6b92a3b6"
+    },
+    {
+      "name": "LP_INITIAL_LOCKED_PERIOD()",
+      "hash": "0x17f27c80"
+    },
+    {
+      "name": "getFees(uint256,address,address)",
+      "hash": "0x39364fd7"
+    },
+    {
+      "name": "balanceOfAtTermEnd(address,uint256)",
+      "hash": "0x06822859"
+    },
+    {
+      "name": "previewDeposit(uint256[],uint256)",
+      "hash": "0xb590bc62"
+    },
+    {
+      "name": "permit(address,uint256,uint256,uint256,bytes)",
+      "hash": "0x0f5730f1"
+    },
+    {
+      "name": "RENOUNCE_TIMEOUT()",
+      "hash": "0xdc6d6214"
+    },
+    {
+      "name": "setBuybackUpperLimit(uint256,uint256)",
+      "hash": "0x29d9ec5e"
+    },
+    {
+      "name": "feeAddress()",
+      "hash": "0x41275358"
+    },
+    {
+      "name": "pendingReleasableDevFund()",
+      "hash": "0xc83fc86a"
+    },
+    {
+      "name": "changeMPCOwner(address)",
+      "hash": "0x5f9b105d"
+    },
+    {
+      "name": "feeTo()",
+      "hash": "0x017e7e58"
+    },
+    {
+      "name": "checkpointsLength(address)",
+      "hash": "0x76db0696"
+    },
+    {
+      "name": "twapEpochPeriod()",
+      "hash": "0xc5bc7002"
+    },
+    {
+      "name": "OraclePool()",
+      "hash": "0x6aed6323"
+    },
+    {
+      "name": "getDomainSeperator()",
+      "hash": "0x20379ee5"
+    },
+    {
+      "name": "setInflationOwner(address)",
+      "hash": "0x6c5fbfa4"
+    },
+    {
+      "name": "xus_price()",
+      "hash": "0xebeb9ebf"
+    },
+    {
+      "name": "isOpen()",
+      "hash": "0x47535d7b"
+    },
+    {
+      "name": "flagged(uint256)",
+      "hash": "0xa370c668"
+    },
+    {
+      "name": "removeOperatorRole(address)",
+      "hash": "0x9478941c"
+    },
+    {
+      "name": "TOKEN_SYMBOL()",
+      "hash": "0x2a905318"
+    },
+    {
+      "name": "initialize(address)",
+      "hash": "0xc4d66de8"
+    },
+    {
+      "name": "unbond(address,uint256)",
+      "hash": "0xa5d059ca"
+    },
+    {
+      "name": "upgradeMaster()",
+      "hash": "0x600440cb"
+    },
+    {
+      "name": "setFeeExempt(address)",
+      "hash": "0x749796a5"
+    },
+    {
+      "name": "revokeMinter(address)",
+      "hash": "0xcfbd4885"
+    },
+    {
+      "name": "setPendingMaster(address)",
+      "hash": "0xe5dc5f1a"
+    },
+    {
+      "name": "allowedTransferee(address)",
+      "hash": "0x5d4545a0"
+    },
+    {
+      "name": "BASE_UNITS()",
+      "hash": "0xf2c8fb59"
+    },
+    {
+      "name": "admins(address)",
+      "hash": "0x429b62e5"
+    },
+    {
+      "name": "getUniswapRouterV2()",
+      "hash": "0x5873aaa3"
+    },
+    {
+      "name": "totalCirculation()",
+      "hash": "0x5dcf8d2b"
+    },
+    {
+      "name": "taxDestination()",
+      "hash": "0x2c547b3d"
+    },
+    {
+      "name": "pool4Amount()",
+      "hash": "0x0c294ae8"
+    },
+    {
+      "name": "disburse(uint256)",
+      "hash": "0xbd77ac2c"
+    },
+    {
+      "name": "ethContributed(address)",
+      "hash": "0xf96f5b35"
+    },
+    {
+      "name": "mintingRestrictedBefore()",
+      "hash": "0x449443f2"
+    },
+    {
+      "name": "trackingVotes()",
+      "hash": "0x28a4aeaa"
+    },
+    {
+      "name": "getFreezing(address,uint256)",
+      "hash": "0x02d6f730"
+    },
+    {
+      "name": "nextEraTime()",
+      "hash": "0x090bbb01"
+    },
+    {
+      "name": "multiTransfer(address[],uint256[])",
+      "hash": "0x1e89d545"
+    },
+    {
+      "name": "mintInitialSupply(address)",
+      "hash": "0x5db53202"
+    },
+    {
+      "name": "mintToContract(address,address,uint256,bytes)",
+      "hash": "0xf08a7980"
+    },
+    {
+      "name": "_votingDelegates(address)",
+      "hash": "0x537f215c"
+    },
+    {
+      "name": "pool3percentage()",
+      "hash": "0xca34857d"
+    },
+    {
+      "name": "lockedOf(address)",
+      "hash": "0xa5f1e282"
+    },
+    {
+      "name": "minters_array(uint256)",
+      "hash": "0xd73ced04"
+    },
+    {
+      "name": "totalBuyVolume()",
+      "hash": "0xb9e5a03b"
+    },
+    {
+      "name": "idolMarketAddress()",
+      "hash": "0x84f96865"
+    },
+    {
+      "name": "isOperator(address,address)",
+      "hash": "0xb6363cf2"
+    },
+    {
+      "name": "isBurningAllowed()",
+      "hash": "0xe76af32e"
+    },
+    {
+      "name": "mint(address,uint256,bytes,bytes)",
+      "hash": "0xdcdc7dd0"
+    },
+    {
+      "name": "liquidityGenerationOngoing()",
+      "hash": "0x60a02590"
+    },
+    {
+      "name": "miner()",
+      "hash": "0x349dc329"
+    },
+    {
+      "name": "receiptETH(address,uint256)",
+      "hash": "0x2119a62a"
+    },
+    {
+      "name": "MAX_SUPPLY()",
+      "hash": "0x32cb6b0c"
+    },
+    {
+      "name": "delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32)",
+      "hash": "0xc3cda520"
+    },
+    {
+      "name": "cancelRenounceOwnership()",
+      "hash": "0xb451b812"
+    },
+    {
+      "name": "configChangesInitiated()",
+      "hash": "0xee87ab6b"
+    },
+    {
+      "name": "mint_SFI(address,uint256)",
+      "hash": "0xc21b27c7"
+    },
+    {
+      "name": "tournaments(uint256)",
+      "hash": "0x7503e1b7"
+    },
+    {
+      "name": "excludeFromReward(address)",
+      "hash": "0x52390c02"
+    },
+    {
+      "name": "setRouterAddress(address)",
+      "hash": "0x41cb87fc"
+    },
+    {
+      "name": "convertToAssets(uint256)",
+      "hash": "0x07a2d13a"
+    },
+    {
+      "name": "globalCollateralValue()",
+      "hash": "0xd2d97b06"
+    },
+    {
+      "name": "accuracyBalanceOf(address)",
+      "hash": "0xd6644ff7"
+    },
+    {
+      "name": "allowTransferLock(address)",
+      "hash": "0xddaf32dc"
+    },
+    {
+      "name": "deposit(address,uint256)",
+      "hash": "0x47e7ef24"
+    },
+    {
+      "name": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+      "hash": "0xd505accf"
+    },
+    {
+      "name": "fundingFee()",
+      "hash": "0x5d16e120"
+    },
+    {
+      "name": "balanceOfNoFees(address)",
+      "hash": "0x4fcf262c"
+    },
+    {
+      "name": "grantSnapshot(address)",
+      "hash": "0xf8114937"
+    },
+    {
+      "name": "_setMigrator(address)",
+      "hash": "0x47dfe70d"
+    },
+    {
+      "name": "contactInformation()",
+      "hash": "0x36f7ab5e"
+    },
+    {
+      "name": "burnForAllowance(address,address,uint256)",
+      "hash": "0x32790343"
+    },
+    {
+      "name": "setMintAccess(address,bool)",
+      "hash": "0x1729f712"
+    },
+    {
+      "name": "setFeeDistributor(address)",
+      "hash": "0xccfc2e8d"
+    },
+    {
+      "name": "_airdropAmount()",
+      "hash": "0x47d6cd6b"
+    },
+    {
+      "name": "mint(uint256)",
+      "hash": "0xa0712d68"
+    },
+    {
+      "name": "registerLGE(bytes32,bytes32,uint8)",
+      "hash": "0x741a1f4e"
+    },
+    {
+      "name": "dailyEmit()",
+      "hash": "0x9ee0b79a"
+    },
+    {
+      "name": "removeComponent(address)",
+      "hash": "0x6f86c897"
+    },
+    {
+      "name": "freeze(address)",
+      "hash": "0x8d1fdf2f"
+    },
+    {
+      "name": "rebaser()",
+      "hash": "0x11fd8a83"
+    },
+    {
+      "name": "setFeeManager(address)",
+      "hash": "0x472d35b9"
+    },
+    {
+      "name": "invoke(address,uint256,bytes)",
+      "hash": "0x8f6f0332"
+    },
+    {
+      "name": "canSnapshot(address)",
+      "hash": "0x9af68326"
+    },
+    {
+      "name": "preSaleDistributionContract()",
+      "hash": "0x86d12325"
+    },
+    {
+      "name": "mintForTeam(address)",
+      "hash": "0x5b1d7350"
+    },
+    {
+      "name": "unstake(uint96)",
+      "hash": "0xdea4ccf2"
+    },
+    {
+      "name": "getRoleMember(bytes32,uint256)",
+      "hash": "0x9010d07c"
+    },
+    {
+      "name": "setKeep3rHelper(address)",
+      "hash": "0x72da828a"
+    },
+    {
+      "name": "CAN_MINT()",
+      "hash": "0xcda472b0"
+    },
+    {
+      "name": "ROLE_TOKEN_DESTROYER()",
+      "hash": "0xe62cac76"
+    },
+    {
+      "name": "pullManagement()",
+      "hash": "0x5a96ac0a"
+    },
+    {
+      "name": "getTransactionDetail(tuple)",
+      "hash": "0xdb9d9b5d"
+    },
+    {
+      "name": "defaultPartition()",
+      "hash": "0x7e3a262d"
+    },
+    {
+      "name": "daoChangeEraDuration(uint256)",
+      "hash": "0x5adbc422"
+    },
+    {
+      "name": "transferDelayEnabled()",
+      "hash": "0xc876d0b9"
+    },
+    {
+      "name": "boostRewards()",
+      "hash": "0x2f1c030d"
+    },
+    {
+      "name": "denyTransferLock(address)",
+      "hash": "0xd44462d0"
+    },
+    {
+      "name": "getPastVotes(address,uint256)",
+      "hash": "0x3a46b1a8"
+    },
+    {
+      "name": "requestChange(bytes32,uint256)",
+      "hash": "0xa65ad63e"
+    },
+    {
+      "name": "daoStartEmissions()",
+      "hash": "0x6fdd999c"
+    },
+    {
+      "name": "resetHolderWeight(address)",
+      "hash": "0xf18365d9"
+    },
+    {
+      "name": "reflinkPercent(address)",
+      "hash": "0xad046ddf"
+    },
+    {
+      "name": "setFundingWallet(address)",
+      "hash": "0x9819d24e"
+    },
+    {
+      "name": "inflationOwner()",
+      "hash": "0x8020b3d0"
+    },
+    {
+      "name": "updateMaxAmount(uint256)",
+      "hash": "0x106b5da1"
+    },
+    {
+      "name": "UNBOND()",
+      "hash": "0x603b4d14"
+    },
+    {
+      "name": "applyConfigChanges()",
+      "hash": "0x4245a580"
+    },
+    {
+      "name": "setBondExpiry()",
+      "hash": "0x6a416d49"
+    },
+    {
+      "name": "actualValue()",
+      "hash": "0xe4664096"
+    },
+    {
+      "name": "addKPRCredit(address,uint256)",
+      "hash": "0xd8ae6faf"
+    },
+    {
+      "name": "mirgateV2Staker(address,uint96,uint96,uint8,uint48,uint96)",
+      "hash": "0xbfa1c45e"
+    },
+    {
+      "name": "swap(uint256[],uint256,uint256[],uint256,address,bytes)",
+      "hash": "0x837c7dc2"
+    },
+    {
+      "name": "refreshCollateralRatio()",
+      "hash": "0x4013124a"
+    },
+    {
+      "name": "getOwner(uint256)",
+      "hash": "0xc41a360a"
+    },
+    {
+      "name": "setTransactionCap(uint256)",
+      "hash": "0xd1bdac24"
+    },
+    {
+      "name": "validateWeights(address[],uint256[])",
+      "hash": "0x0b0a3499"
+    },
+    {
+      "name": "recoverTokens(address)",
+      "hash": "0x16114acd"
+    },
+    {
+      "name": "pool1percentage()",
+      "hash": "0xf4974554"
+    },
+    {
+      "name": "pool3Amount()",
+      "hash": "0x6b13518d"
+    },
+    {
+      "name": "returnFromPool(address,address,uint256)",
+      "hash": "0x20c582be"
+    },
+    {
+      "name": "release(address,address,address,address)",
+      "hash": "0x08db597a"
+    },
+    {
+      "name": "rescueTokens(address)",
+      "hash": "0x00ae3bf8"
+    },
+    {
+      "name": "getAdmin()",
+      "hash": "0x6e9960c3"
+    },
+    {
+      "name": "isSenderInRole(uint256)",
+      "hash": "0xfcc2c078"
+    },
+    {
+      "name": "removeControlRole(address,uint8)",
+      "hash": "0xc0316ffe"
+    },
+    {
+      "name": "getLpRewardsEntitlement()",
+      "hash": "0x974f5590"
+    },
+    {
+      "name": "numerai()",
+      "hash": "0x29684907"
+    },
+    {
+      "name": "TRANSFER_TYPEHASH()",
+      "hash": "0x00bf26f4"
+    },
+    {
+      "name": "setBackedAddress(address)",
+      "hash": "0x2f648c1a"
+    },
+    {
+      "name": "parentToken()",
+      "hash": "0x80a54001"
+    },
+    {
+      "name": "setKYA(string)",
+      "hash": "0x56204f8c"
+    },
+    {
+      "name": "pairs()",
+      "hash": "0xffb0a4a0"
+    },
+    {
+      "name": "sendToPool(address,address,uint256)",
+      "hash": "0xbb997bac"
+    },
+    {
+      "name": "xfLobbyRange(uint256,uint256)",
+      "hash": "0xf57a1b3c"
+    },
+    {
+      "name": "pairAddress()",
+      "hash": "0xa8b08982"
+    },
+    {
+      "name": "FEATURE_DELEGATIONS_ON_BEHALF()",
+      "hash": "0x2d4c39ea"
+    },
+    {
+      "name": "rely(address)",
+      "hash": "0x65fae35e"
+    },
+    {
+      "name": "setSwitchOn(bool)",
+      "hash": "0x41a24e60"
+    },
+    {
+      "name": "RECIPIENT_CONFIG_ID()",
+      "hash": "0x36843697"
+    },
+    {
+      "name": "getInflationRewardsContractAddress()",
+      "hash": "0xc32c367a"
+    },
+    {
+      "name": "destroy(address,uint256)",
+      "hash": "0xa24835d1"
+    },
+    {
+      "name": "teamAmount()",
+      "hash": "0x70439385"
+    },
+    {
+      "name": "removeTrusted(address)",
+      "hash": "0xd55e62a0"
+    },
+    {
+      "name": "expirations(address,address)",
+      "hash": "0xff9e884d"
+    },
+    {
+      "name": "uspfrozen()",
+      "hash": "0x22344b05"
+    },
+    {
+      "name": "openingTime()",
+      "hash": "0xb7a8807c"
+    },
+    {
+      "name": "secondsPerDay()",
+      "hash": "0x63809953"
+    },
+    {
+      "name": "lockups(uint256)",
+      "hash": "0x8e6f4fb7"
+    },
+    {
+      "name": "addTreasury(address)",
+      "hash": "0xc8cb3834"
+    },
+    {
+      "name": "permitTypeHash()",
+      "hash": "0x10ce43bd"
+    },
+    {
+      "name": "setClosingTime(uint256)",
+      "hash": "0x4b89c41d"
+    },
+    {
+      "name": "amountToEmit()",
+      "hash": "0xae0074c6"
+    },
+    {
+      "name": "platform()",
+      "hash": "0x4bde38c8"
+    },
+    {
+      "name": "checkpoints(address,uint32)",
+      "hash": "0xf1127ed8"
+    },
+    {
+      "name": "founder()",
+      "hash": "0x4d853ee5"
+    },
+    {
+      "name": "setMaster(address)",
+      "hash": "0x26fae0d3"
+    },
+    {
+      "name": "virtueBondCum(uint256)",
+      "hash": "0xba3606ca"
+    },
+    {
+      "name": "liquidityApplied(address,address,address)",
+      "hash": "0xfede7008"
+    },
+    {
+      "name": "jobList(uint256)",
+      "hash": "0x0c33c522"
+    },
+    {
+      "name": "KYA()",
+      "hash": "0x8109a271"
+    },
+    {
+      "name": "mining_epoch()",
+      "hash": "0xf9a40bf6"
+    },
+    {
+      "name": "futureAmount()",
+      "hash": "0x0748e052"
+    },
+    {
+      "name": "operators(uint256)",
+      "hash": "0xe28d4906"
+    },
+    {
+      "name": "withdraw(address)",
+      "hash": "0x51cff8d9"
+    },
+    {
+      "name": "getMyDelegatee()",
+      "hash": "0x76ee4038"
+    },
+    {
+      "name": "changeTokenName(string,string)",
+      "hash": "0x453920cb"
+    },
+    {
+      "name": "TEAM_TOTAL_AMOUNT()",
+      "hash": "0x701c1955"
+    },
+    {
+      "name": "updatePlatformWallet(address)",
+      "hash": "0xada4ef30"
+    },
+    {
+      "name": "updateOwner()",
+      "hash": "0xbc5920ba"
+    },
+    {
+      "name": "INIT_CIRCULATING()",
+      "hash": "0xf557d657"
+    },
+    {
+      "name": "uniswapV2Router()",
+      "hash": "0x1694505e"
+    },
+    {
+      "name": "pendingEmissionRateMultiplierNumerator()",
+      "hash": "0xe4a1ecb6"
+    },
+    {
+      "name": "addExternalPositionModule(address,address)",
+      "hash": "0xea0ee559"
+    },
+    {
+      "name": "transferToTeam()",
+      "hash": "0xe2e30211"
+    },
+    {
+      "name": "totalCap()",
+      "hash": "0x16450092"
+    },
+    {
+      "name": "_sellMarketingFee()",
+      "hash": "0xc8607952"
+    },
+    {
+      "name": "setUserRole(address,uint8,bool)",
+      "hash": "0x67aff484"
+    },
+    {
+      "name": "reserveTeamMemberOrEarlyInvestor(address)",
+      "hash": "0x91cdccec"
+    },
+    {
+      "name": "updateSummaPri(address)",
+      "hash": "0xbe59eec9"
+    },
+    {
+      "name": "MANAGEMENT_FEE_BPS()",
+      "hash": "0xbcf90d2b"
+    },
+    {
+      "name": "INIT_MINT_AMOUNT()",
+      "hash": "0x6cd16339"
+    },
+    {
+      "name": "emergencyRecipient()",
+      "hash": "0xbe9ee11f"
+    },
+    {
+      "name": "INACTIVE_THRESHOLD_DAYS()",
+      "hash": "0x7c37080e"
+    },
+    {
+      "name": "cancelChange(bytes32)",
+      "hash": "0x5449b798"
+    },
+    {
+      "name": "mine(address,uint256)",
+      "hash": "0xab27be20"
+    },
+    {
+      "name": "setBalanceCalculator(address)",
+      "hash": "0x5aac5d2a"
+    },
+    {
+      "name": "recoverERC721(address,address,uint256,bytes)",
+      "hash": "0xfc4e51f6"
+    },
+    {
+      "name": "getUniswapFactory()",
+      "hash": "0x3e6dfa36"
+    },
+    {
+      "name": "a()",
+      "hash": "0x0dbe671f"
+    },
+    {
+      "name": "freezeDiscountAuthority()",
+      "hash": "0x2559882d"
+    },
+    {
+      "name": "updateLogicAddress(address)",
+      "hash": "0xb56fbb97"
+    },
+    {
+      "name": "removeVotes(address,uint256)",
+      "hash": "0xce6a0880"
+    },
+    {
+      "name": "burnForSelf(uint256)",
+      "hash": "0xc5714744"
+    },
+    {
+      "name": "openTheGates()",
+      "hash": "0x7bbdad11"
+    },
+    {
+      "name": "setTarget(address)",
+      "hash": "0x776d1a01"
+    },
+    {
+      "name": "gsnFeeTarget()",
+      "hash": "0xdab02527"
+    },
+    {
+      "name": "lockOf(address)",
+      "hash": "0x5a46d3b5"
+    },
+    {
+      "name": "liquidityGenerationParticipationAgreement()",
+      "hash": "0x8e8e2925"
+    },
+    {
+      "name": "getMinterStatus(address)",
+      "hash": "0xbbb30c5d"
+    },
+    {
+      "name": "getVotes(address)",
+      "hash": "0x9ab24eb0"
+    },
+    {
+      "name": "updateTokenIssue(address)",
+      "hash": "0x5c7d30ca"
+    },
+    {
+      "name": "increaseAllowanceByPartition(bytes32,address,uint256)",
+      "hash": "0xc2f89a51"
+    },
+    {
+      "name": "lockMyTokensForever(string)",
+      "hash": "0x03ff0fec"
+    },
+    {
+      "name": "isBondedKeeper(address,address,uint256,uint256,uint256)",
+      "hash": "0xf9d46cf2"
+    },
+    {
+      "name": "emitting()",
+      "hash": "0x0781f4d2"
+    },
+    {
+      "name": "updateMinimum(uint256)",
+      "hash": "0x387f55e1"
+    },
+    {
+      "name": "airdropTokens(address[],uint256[])",
+      "hash": "0x706f6937"
+    },
+    {
+      "name": "emergencyDrain72hAfterLiquidityGenerationEventIsDone()",
+      "hash": "0x4c54d2f1"
+    },
+    {
+      "name": "bridgePointers(address)",
+      "hash": "0x4bcb88bc"
+    },
+    {
+      "name": "getAddressMinter()",
+      "hash": "0x2cabc835"
+    },
+    {
+      "name": "target()",
+      "hash": "0xd4b83992"
+    },
+    {
+      "name": "isOperator(address)",
+      "hash": "0x6d70f7ae"
+    },
+    {
+      "name": "setMintLiqPoolShare(uint256)",
+      "hash": "0x0fc81c5e"
+    },
+    {
+      "name": "nextMinting()",
+      "hash": "0xb4eddb81"
+    },
+    {
+      "name": "reflectionFromToken(uint256,bool)",
+      "hash": "0x4549b039"
+    },
+    {
+      "name": "diamondCut(tuple[],address,bytes)",
+      "hash": "0xee0c950c"
+    },
+    {
+      "name": "transferable()",
+      "hash": "0x92ff0d31"
+    },
+    {
+      "name": "seize(address,uint256)",
+      "hash": "0xeb9253c0"
+    },
+    {
+      "name": "dailyDataUpdate(uint256)",
+      "hash": "0x8f1c65c0"
+    },
+    {
+      "name": "addLiquidity(bool)",
+      "hash": "0xda620cd7"
+    },
+    {
+      "name": "createUniswapPairMainnet()",
+      "hash": "0x75b208bc"
+    },
+    {
+      "name": "basisPointsRate()",
+      "hash": "0xdd644f72"
+    },
+    {
+      "name": "stakeCount(address)",
+      "hash": "0x33060d90"
+    },
+    {
+      "name": "drop(uint256,address)",
+      "hash": "0x87e96a24"
+    },
+    {
+      "name": "features()",
+      "hash": "0x2b521416"
+    },
+    {
+      "name": "GTCDist()",
+      "hash": "0xc904e00e"
+    },
+    {
+      "name": "canUnlockAmount(address)",
+      "hash": "0x202b1760"
+    },
+    {
+      "name": "updateBurnerStatus(bool)",
+      "hash": "0xd37cd55d"
+    },
+    {
+      "name": "approveFor(address,address,uint256)",
+      "hash": "0x2b991746"
+    },
+    {
+      "name": "leaveStaking(uint256,bool)",
+      "hash": "0x445e7688"
+    },
+    {
+      "name": "claimLiquidityEmissions()",
+      "hash": "0x5d587aea"
+    },
+    {
+      "name": "changeOwner(address)",
+      "hash": "0xa6f9dae1"
+    },
+    {
+      "name": "addToWhitelist(address)",
+      "hash": "0xe43252d7"
+    },
+    {
+      "name": "setController(address)",
+      "hash": "0x92eefe9b"
+    },
+    {
+      "name": "mintingFinished()",
+      "hash": "0x05d2035b"
+    },
+    {
+      "name": "disableTransfers(bool)",
+      "hash": "0x1608f18f"
+    },
+    {
+      "name": "removeExternalPositionModule(address,address)",
+      "hash": "0xacf3f077"
+    },
+    {
+      "name": "getReserves()",
+      "hash": "0x0902f1ac"
+    },
+    {
+      "name": "createGrant(address,uint256)",
+      "hash": "0x3dce2b46"
+    },
+    {
+      "name": "mintAndFreeze(address,uint256,uint64)",
+      "hash": "0x0bb2cd6b"
+    },
+    {
+      "name": "addOperatorRole(address)",
+      "hash": "0xb7928b1d"
+    },
+    {
+      "name": "eth_usd_consumer_address()",
+      "hash": "0xb0fc69ce"
+    },
+    {
+      "name": "getTime()",
+      "hash": "0x557ed1ba"
+    },
+    {
+      "name": "setIssueAuthAddr(address)",
+      "hash": "0xe0b3944a"
+    },
+    {
+      "name": "setAnarchyPoint(uint256)",
+      "hash": "0xde19d079"
+    },
+    {
+      "name": "getKeepers()",
+      "hash": "0xb105e39f"
+    },
+    {
+      "name": "addToAllowedList(address[])",
+      "hash": "0x885ad0cf"
+    },
+    {
+      "name": "setArchAdmin(address)",
+      "hash": "0x622f0829"
+    },
+    {
+      "name": "activateLockdrop(address)",
+      "hash": "0x18b82281"
+    },
+    {
+      "name": "poolpercentages(uint256,uint256,uint256,uint256,uint256,uint256)",
+      "hash": "0xb97ec182"
+    },
+    {
+      "name": "lockFromBlock()",
+      "hash": "0x66fc237b"
+    },
+    {
+      "name": "setTaxRate(uint256)",
+      "hash": "0xc6d69a30"
+    },
+    {
+      "name": "getLpReleaseStart()",
+      "hash": "0xfec7f830"
+    },
+    {
+      "name": "INFLATION_BLOCKED_UNTIL()",
+      "hash": "0x1862ccce"
+    },
+    {
+      "name": "FUTURE_EACH_MINT()",
+      "hash": "0x41dcaf34"
+    },
+    {
+      "name": "DOMAIN_TYPEHASH()",
+      "hash": "0x20606b70"
+    },
+    {
+      "name": "cachedDomainSeparator()",
+      "hash": "0xb4f94b2e"
+    },
+    {
+      "name": "xfLobbyEntry(address,uint256)",
+      "hash": "0xbd926ed3"
+    },
+    {
+      "name": "SUPPLY_CAP()",
+      "hash": "0x0cfccc83"
+    },
+    {
+      "name": "balancesStart()",
+      "hash": "0xb8ba5c20"
+    },
+    {
+      "name": "isCapabilityPublic(bytes4)",
+      "hash": "0x0bade8a4"
+    },
+    {
+      "name": "acceptRenounceOwnership()",
+      "hash": "0x7b3c3487"
+    },
+    {
+      "name": "getPending(bytes32)",
+      "hash": "0x78de7d19"
+    },
+    {
+      "name": "canTransfer(address)",
+      "hash": "0x78fc3cb3"
+    },
+    {
+      "name": "dropAddress(string,address)",
+      "hash": "0x91c40bf7"
+    },
+    {
+      "name": "canCall(address,bytes4)",
+      "hash": "0x86bed3e0"
+    },
+    {
+      "name": "unlockTreasuryByOwner()",
+      "hash": "0x085ca444"
+    },
+    {
+      "name": "uniswapRouterV2()",
+      "hash": "0x596fa9e3"
+    },
+    {
+      "name": "delMinter(address)",
+      "hash": "0x23338b88"
+    },
+    {
+      "name": "getTimelock()",
+      "hash": "0x6221a54b"
+    },
+    {
+      "name": "removeAuthorized(address)",
+      "hash": "0x485d7d94"
+    },
+    {
+      "name": "btcAddressIsValid(bytes20,uint256,bytes32[])",
+      "hash": "0xec9a1917"
+    },
+    {
+      "name": "mintCap()",
+      "hash": "0x76c71ca1"
+    },
+    {
+      "name": "userInformation(address)",
+      "hash": "0x7d2e227d"
+    },
+    {
+      "name": "gravity()",
+      "hash": "0xcbf0a64e"
+    },
+    {
+      "name": "borrowerOps(uint256)",
+      "hash": "0xfc2882be"
+    },
+    {
+      "name": "FRAXStablecoinAdd()",
+      "hash": "0x94ac91c6"
+    },
+    {
+      "name": "fundsToken()",
+      "hash": "0x63f04b15"
+    },
+    {
+      "name": "claimPeriodEnds()",
+      "hash": "0x66deac47"
+    },
+    {
+      "name": "emergencyWithdraw(address)",
+      "hash": "0x6ff1c9bc"
+    },
+    {
+      "name": "__upgradeToAndCall__(address,bytes)",
+      "hash": "0x6726eb16"
+    },
+    {
+      "name": "totalSupply()",
+      "hash": "0x18160ddd"
+    },
+    {
+      "name": "Swapin(bytes32,address,uint256)",
+      "hash": "0xec126c77"
+    },
+    {
+      "name": "TRANSFER_RESTRICTION_LIFTED_NO_LATER_THAN()",
+      "hash": "0xd17deb9f"
+    },
+    {
+      "name": "inflationMintTokens()",
+      "hash": "0x08824003"
+    },
+    {
+      "name": "createCloneToken(string,uint8,string,uint256,bool)",
+      "hash": "0x6638c087"
+    },
+    {
+      "name": "airdropPool()",
+      "hash": "0x3cebff9c"
+    },
+    {
+      "name": "updateTreasury(address)",
+      "hash": "0x7f51bb1f"
+    },
+    {
+      "name": "addBlackList(address)",
+      "hash": "0x0ecb93c0"
+    },
+    {
+      "name": "AMOUNT_STAKING()",
+      "hash": "0xb43bbd11"
+    },
+    {
+      "name": "totalTokensAmount()",
+      "hash": "0xf26230f1"
+    },
+    {
+      "name": "lockedTokens(address)",
+      "hash": "0x5eb7413a"
+    },
+    {
+      "name": "executeMetaTransaction(address,bytes,bytes32,bytes32,uint8)",
+      "hash": "0x0c53c51c"
+    },
+    {
+      "name": "controllerBurnFrom(address,uint256)",
+      "hash": "0x816cadab"
+    },
+    {
+      "name": "daysPerEpoch()",
+      "hash": "0x6960a842"
+    },
+    {
+      "name": "addAddress(string,address)",
+      "hash": "0xceb35b0f"
+    },
+    {
+      "name": "BDPMaster()",
+      "hash": "0x52e2c41b"
+    },
+    {
+      "name": "claimUnlocked(address)",
+      "hash": "0x718489c5"
+    },
+    {
+      "name": "setBusinessDevelopmentAddress(address)",
+      "hash": "0xd96d54d8"
+    },
+    {
+      "name": "LPperETHUnit()",
+      "hash": "0x31a22a20"
+    },
+    {
+      "name": "govCanUnpauseAfter()",
+      "hash": "0x92e7c85e"
+    },
+    {
+      "name": "userRoles(address)",
+      "hash": "0x74d5e100"
+    },
+    {
+      "name": "btcAddressClaims(bytes20)",
+      "hash": "0x7c426620"
+    },
+    {
+      "name": "getInflationIntervalRate()",
+      "hash": "0xee96d774"
+    },
+    {
+      "name": "calcTransferFee(address,uint256)",
+      "hash": "0x3c6d4774"
+    },
+    {
+      "name": "hasTokenStarted()",
+      "hash": "0x16758e0b"
+    },
+    {
+      "name": "isExecutionOperator(address)",
+      "hash": "0x61247de3"
+    },
+    {
+      "name": "calcStorageFee(address)",
+      "hash": "0xfd1c1ae0"
+    },
+    {
+      "name": "pubKeyToEthAddress(bytes32,bytes32)",
+      "hash": "0x30c1a785"
+    },
+    {
+      "name": "getBurners()",
+      "hash": "0x86fe8b43"
+    },
+    {
+      "name": "seeBondExpiryStatus()",
+      "hash": "0x8058425b"
+    },
+    {
+      "name": "activate(address)",
+      "hash": "0x1c5a9d9c"
+    },
+    {
+      "name": "isBlacklisted(address)",
+      "hash": "0xfe575a87"
+    },
+    {
+      "name": "setUseDELEGATECALL(bool)",
+      "hash": "0xbefff6af"
+    },
+    {
+      "name": "updateMinterStatus(address,bool)",
+      "hash": "0xefc8f3c8"
+    },
+    {
+      "name": "totalLock()",
+      "hash": "0x3a1aae35"
+    },
+    {
+      "name": "useDELEGATECALL()",
+      "hash": "0x95578ebd"
+    },
+    {
+      "name": "removeFromWhitelist(address)",
+      "hash": "0x8ab1d681"
+    },
+    {
+      "name": "addAllowanceIfNeeded(address,address,uint256)",
+      "hash": "0x3b7b5a16"
+    },
+    {
+      "name": "transferFromWithPermit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+      "hash": "0xd6e03cd4"
+    },
+    {
+      "name": "changeGovernance(address)",
+      "hash": "0x99572d6f"
+    },
+    {
+      "name": "approveAndExecuteWithSpecificGas(address,address,uint256,uint256,bytes)",
+      "hash": "0x7dd711c4"
+    },
+    {
+      "name": "getDeploymentStartTime()",
+      "hash": "0x3c84b7c2"
+    },
+    {
+      "name": "changeOperator(address)",
+      "hash": "0x06394c9b"
+    },
+    {
+      "name": "reflinkInfoFor(address)",
+      "hash": "0x0a53669f"
+    },
+    {
+      "name": "earlyWithdraw(uint256,uint96)",
+      "hash": "0xcc5ba480"
+    },
+    {
+      "name": "PAUSER_ROLE()",
+      "hash": "0xe63ab1e9"
+    },
+    {
+      "name": "dropMultiplier()",
+      "hash": "0x27dc95c3"
+    },
+    {
+      "name": "setRedemptionFee(uint256)",
+      "hash": "0x7dbc1df0"
+    },
+    {
+      "name": "validBorrowerOps(address)",
+      "hash": "0x258de014"
+    },
+    {
+      "name": "mint()",
+      "hash": "0x1249c58b"
+    },
+    {
+      "name": "manualMint(address,uint256)",
+      "hash": "0xe4c5ff46"
+    },
+    {
+      "name": "upgradeReflink(uint256)",
+      "hash": "0x53aeea1e"
+    },
+    {
+      "name": "removeFromTokenTransferAllowlist(address[])",
+      "hash": "0x8d48f4f1"
+    },
+    {
+      "name": "DECIMALS()",
+      "hash": "0x2e0f2625"
+    },
+    {
+      "name": "profitAt(address,uint256)",
+      "hash": "0x27b7bb4a"
+    },
+    {
+      "name": "upgradedAddress()",
+      "hash": "0x26976e3f"
+    },
+    {
+      "name": "getInflationIntervalsPassed()",
+      "hash": "0xb933c49e"
+    },
+    {
+      "name": "name()",
+      "hash": "0x06fdde03"
+    },
+    {
+      "name": "revoke(address)",
+      "hash": "0x74a8f103"
+    },
+    {
+      "name": "tradingActive()",
+      "hash": "0xbbc0c742"
+    },
+    {
+      "name": "pendingLiquidityIncentivesRecipient()",
+      "hash": "0x2fac9cca"
+    },
+    {
+      "name": "lastWeekEmissionSent()",
+      "hash": "0x0d7a1c62"
+    },
+    {
+      "name": "future_epoch_time_write()",
+      "hash": "0xb26b238e"
+    },
+    {
+      "name": "KPRH()",
+      "hash": "0x09aff02b"
+    },
+    {
+      "name": "votingDelegates(address)",
+      "hash": "0x1e0fa234"
+    },
+    {
+      "name": "mintAddress()",
+      "hash": "0x425d4980"
+    },
+    {
+      "name": "removeIssuer(address)",
+      "hash": "0x47bc7093"
+    },
+    {
+      "name": "delegate()",
+      "hash": "0xc89e4361"
+    },
+    {
+      "name": "fundingWallet()",
+      "hash": "0x3c4b40b8"
+    },
+    {
+      "name": "getRolesWithCapability(bytes4)",
+      "hash": "0xed0d0efb"
+    },
+    {
+      "name": "addBlacklist(address)",
+      "hash": "0x9cfe42da"
+    },
+    {
+      "name": "editPositionMultiplier(int256)",
+      "hash": "0xc2de0e9d"
+    },
+    {
+      "name": "proxyOwner()",
+      "hash": "0x025313a2"
+    },
+    {
+      "name": "PRE_MINE_SUPPLY()",
+      "hash": "0xe961b94a"
+    },
+    {
+      "name": "DOMAINSEPARATOR()",
+      "hash": "0x1778e29c"
+    },
+    {
+      "name": "updateGovernanceAddress(address)",
+      "hash": "0xb90d8930"
+    },
+    {
+      "name": "changeShareable(address[],uint256)",
+      "hash": "0x788023ff"
+    },
+    {
+      "name": "trusted(address)",
+      "hash": "0x6e9821c2"
+    },
+    {
+      "name": "whitelistEnabled()",
+      "hash": "0x51fb012d"
+    },
+    {
+      "name": "tokenIssue()",
+      "hash": "0x6aa1f07b"
+    },
+    {
+      "name": "tokenThreshold()",
+      "hash": "0x66692ff0"
+    },
+    {
+      "name": "removePendingModule(address)",
+      "hash": "0xc7564017"
+    },
+    {
+      "name": "born()",
+      "hash": "0x10c19421"
+    },
+    {
+      "name": "mintForReportingParticipant(uint256)",
+      "hash": "0xdb054134"
+    },
+    {
+      "name": "allowed(address,address)",
+      "hash": "0x5c658165"
+    },
+    {
+      "name": "allowanceByPartition(bytes32,address,address)",
+      "hash": "0x17ec83ca"
+    },
+    {
+      "name": "snapStamp()",
+      "hash": "0x83542bcc"
+    },
+    {
+      "name": "increaseStake(uint256,uint96)",
+      "hash": "0x7d84ed26"
+    },
+    {
+      "name": "setHolderDelegation(address,bool)",
+      "hash": "0x2477c6e8"
+    },
+    {
+      "name": "setPriceBand(uint256)",
+      "hash": "0x6140133b"
+    },
+    {
+      "name": "setRegistry(address)",
+      "hash": "0xa91ee0dc"
+    },
+    {
+      "name": "setMintMultiplier(uint256)",
+      "hash": "0xeb0eec48"
+    },
+    {
+      "name": "set_minter(address)",
+      "hash": "0x1652e9fc"
+    },
+    {
+      "name": "liquidityAmount(address,address,address)",
+      "hash": "0x1992d206"
+    },
+    {
+      "name": "minimumMintInterval()",
+      "hash": "0x515b612a"
+    },
+    {
+      "name": "currentEpoch()",
+      "hash": "0x76671808"
+    },
+    {
+      "name": "standard()",
+      "hash": "0x5a3b7e42"
+    },
+    {
+      "name": "pendingGovernance()",
+      "hash": "0xf39c38a0"
+    },
+    {
+      "name": "burnToken(address,uint256)",
+      "hash": "0xd1df306c"
+    },
+    {
+      "name": "disableProtection()",
+      "hash": "0x421dd7c7"
+    },
+    {
+      "name": "updateMinter(address)",
+      "hash": "0x4eb03f6e"
+    },
+    {
+      "name": "autoBurn()",
+      "hash": "0xa63b91f4"
+    },
+    {
+      "name": "getTotalLPTokensMinted()",
+      "hash": "0xbe1716a4"
+    },
+    {
+      "name": "getPendingWeights()",
+      "hash": "0x76472007"
+    },
+    {
+      "name": "workReceipt(address,uint256)",
+      "hash": "0x4b3fde21"
+    },
+    {
+      "name": "transferFeeBasisPoints()",
+      "hash": "0x183767da"
+    },
+    {
+      "name": "deployer()",
+      "hash": "0xd5f39488"
+    },
+    {
+      "name": "setTokenSaleFinished()",
+      "hash": "0xe6197f41"
+    },
+    {
+      "name": "ADDR_LP()",
+      "hash": "0x46de2673"
+    },
+    {
+      "name": "multiMint(address[],uint256[])",
+      "hash": "0x2f81bc71"
+    },
+    {
+      "name": "quack()",
+      "hash": "0x62f14029"
+    },
+    {
+      "name": "totalSupplyByPartition(bytes32)",
+      "hash": "0xa26734dc"
+    },
+    {
+      "name": "pow(uint256,uint256)",
+      "hash": "0x2e4c697f"
+    },
+    {
+      "name": "decreaseApproval(address,uint256)",
+      "hash": "0x66188463"
+    },
+    {
+      "name": "businessDevelopmentAddress()",
+      "hash": "0x5f7e3821"
+    },
+    {
+      "name": "inflationStartTime()",
+      "hash": "0x227f3c89"
+    },
+    {
+      "name": "addAllowedFrom(address,bool)",
+      "hash": "0x7500806f"
+    },
+    {
+      "name": "isClaimedNFT(uint256)",
+      "hash": "0xbe459f62"
+    },
+    {
+      "name": "transferCheckerAddress()",
+      "hash": "0xb2aef26b"
+    },
+    {
+      "name": "mintingAllowedAfter()",
+      "hash": "0x30b36cef"
+    },
+    {
+      "name": "maxTransactionAmount()",
+      "hash": "0xc8c8ebe4"
+    },
+    {
+      "name": "setFeeTarget(address)",
+      "hash": "0xdc3ca1bf"
+    },
+    {
+      "name": "getTokenUniswapPair()",
+      "hash": "0xbb96e90c"
+    },
+    {
+      "name": "reductionPerCliff()",
+      "hash": "0xaa74e622"
+    },
+    {
+      "name": "withdraw(address,address,uint256)",
+      "hash": "0xd9caed12"
+    },
+    {
+      "name": "oracle_address()",
+      "hash": "0x7e0c1792"
+    },
+    {
+      "name": "totalRemainingGrants()",
+      "hash": "0xd9f300ac"
+    },
+    {
+      "name": "changeMinter(address)",
+      "hash": "0x2c4d4d18"
+    },
+    {
+      "name": "emission_Whitelisted(address)",
+      "hash": "0x9d379bdb"
+    },
+    {
+      "name": "depositWithTransferPermit(address,uint256,uint256,uint8,bytes32,bytes32,address)",
+      "hash": "0xf954734e"
+    },
+    {
+      "name": "transferFromAndCall(address,address,uint256)",
+      "hash": "0xd8fbe994"
+    },
+    {
+      "name": "setComponents(address,address,address,address,address,address)",
+      "hash": "0xeaf59557"
+    },
+    {
+      "name": "isSnapshotMaker(address)",
+      "hash": "0x09de0b44"
+    },
+    {
+      "name": "credits(address,address)",
+      "hash": "0x637cd7f0"
+    },
+    {
+      "name": "swapEnabled()",
+      "hash": "0x6ddd1713"
+    },
+    {
+      "name": "initialize(string,string,address,address)",
+      "hash": "0x8f15b414"
+    },
+    {
+      "name": "previewSwap(uint256[],uint256,uint256[],uint256)",
+      "hash": "0x2a01e6f9"
+    },
+    {
+      "name": "positionMultiplier()",
+      "hash": "0x5230c396"
+    },
+    {
+      "name": "minted(address)",
+      "hash": "0x1e7269c5"
+    },
+    {
+      "name": "founderAllocationClaimed()",
+      "hash": "0x8319be75"
+    },
+    {
+      "name": "checkEligibility(bytes32[])",
+      "hash": "0x9a3483fe"
+    },
+    {
+      "name": "removeBurner(address)",
+      "hash": "0x02846858"
+    },
+    {
+      "name": "totalUpgraded()",
+      "hash": "0xc752ff62"
+    },
+    {
+      "name": "augur()",
+      "hash": "0x7a0d8f8a"
+    },
+    {
+      "name": "timelock()",
+      "hash": "0xd33219b4"
+    },
+    {
+      "name": "bridgeCount()",
+      "hash": "0xfbb2a53f"
+    },
+    {
+      "name": "feeNumerator()",
+      "hash": "0xe86dea4a"
+    },
+    {
+      "name": "getConfigCount()",
+      "hash": "0xe879b118"
+    },
+    {
+      "name": "emissionRateMultiplierNumerator()",
+      "hash": "0x22d7bf8d"
+    },
+    {
+      "name": "FEATURE_DELEGATIONS()",
+      "hash": "0x3e9c5f7e"
+    },
+    {
+      "name": "unbackedTreasury()",
+      "hash": "0x72cc14fa"
+    },
+    {
+      "name": "tokenUniswapPair()",
+      "hash": "0x4d332457"
+    },
+    {
+      "name": "changeController(address)",
+      "hash": "0x3cebb823"
+    },
+    {
+      "name": "getStaked(address)",
+      "hash": "0x399080ec"
+    },
+    {
+      "name": "transfer(address,uint256,bytes,string)",
+      "hash": "0xf6368f8a"
+    },
+    {
+      "name": "logicAddress()",
+      "hash": "0x9c1fcc4c"
+    },
+    {
+      "name": "initialSupplyMinted()",
+      "hash": "0xfc2ab6f2"
+    },
+    {
+      "name": "deposit(uint256[],uint256,address)",
+      "hash": "0xc24317ff"
+    },
+    {
+      "name": "bridgeVaultLockedBalance()",
+      "hash": "0x8db2063b"
+    },
+    {
+      "name": "ammPair(address)",
+      "hash": "0x98e2ebbf"
+    },
+    {
+      "name": "teamMintedAtBlock()",
+      "hash": "0x2b44b5b4"
+    },
+    {
+      "name": "getPastDelegate(address,uint256)",
+      "hash": "0xb369460c"
+    },
+    {
+      "name": "lastTransactionOf(address)",
+      "hash": "0xa28035c5"
+    },
+    {
+      "name": "acceptMinter()",
+      "hash": "0xcbd956c3"
+    },
+    {
+      "name": "setTaxDestination(address)",
+      "hash": "0x1163c3eb"
+    },
+    {
+      "name": "withdrawToken(address,uint256,address)",
+      "hash": "0x3ccdbb28"
+    },
+    {
+      "name": "authorizeOperator(address)",
+      "hash": "0x959b8c3f"
+    },
+    {
+      "name": "nextEpoch(uint256)",
+      "hash": "0x342a7b01"
+    },
+    {
+      "name": "swapAndLiquifyEnabled()",
+      "hash": "0x4a74bb02"
+    },
+    {
+      "name": "tokenTransferHandler()",
+      "hash": "0x54db7b72"
+    },
+    {
+      "name": "updateBridgeSupplyCap(address,uint256)",
+      "hash": "0x4ce2f71a"
+    },
+    {
+      "name": "whitelistOnEmission(address)",
+      "hash": "0x197322fe"
+    },
+    {
+      "name": "setCap(uint256)",
+      "hash": "0x47786d37"
+    },
+    {
+      "name": "poolBurnFrom(address,uint256)",
+      "hash": "0x0a0c165a"
+    },
+    {
+      "name": "totalsForWallet(address)",
+      "hash": "0x1a321efc"
+    },
+    {
+      "name": "setUnlockFactor(address,uint256)",
+      "hash": "0x617b8ced"
+    },
+    {
+      "name": "setPriceTarget(uint256)",
+      "hash": "0x408ab10f"
+    },
+    {
+      "name": "addTrusted(address)",
+      "hash": "0xd4d0d6e6"
+    },
+    {
+      "name": "setName(bytes32)",
+      "hash": "0x5ac801fe"
+    },
+    {
+      "name": "getAllMinters()",
+      "hash": "0xa045442c"
+    },
+    {
+      "name": "mintInflation()",
+      "hash": "0xc551a2f9"
+    },
+    {
+      "name": "setVotingEngine(address)",
+      "hash": "0xf5a750c1"
+    },
+    {
+      "name": "interval()",
+      "hash": "0x947a36fb"
+    },
+    {
+      "name": "changeName(string)",
+      "hash": "0x5353a2d8"
+    },
+    {
+      "name": "_sellTaxFee()",
+      "hash": "0x200a692d"
+    },
+    {
+      "name": "setNoVestingWhitelist(address,bool)",
+      "hash": "0x60237260"
+    },
+    {
+      "name": "owner()",
+      "hash": "0x8da5cb5b"
+    },
+    {
+      "name": "getLogicAddress()",
+      "hash": "0xabd108ba"
+    },
+    {
+      "name": "withdrawETH()",
+      "hash": "0xe086e5ec"
+    },
+    {
+      "name": "setAMM(address,bool)",
+      "hash": "0xa9d3cd8a"
+    },
+    {
+      "name": "initialize(address,address,bytes)",
+      "hash": "0xcf7a1d77"
+    },
+    {
+      "name": "disableTokensTransfers()",
+      "hash": "0xd5e62855"
+    },
+    {
+      "name": "HARD_CAP_LIQUIDITY_EVENT()",
+      "hash": "0x12c44999"
+    },
+    {
+      "name": "lockFromUpdate(uint256)",
+      "hash": "0xc38533c6"
+    },
+    {
+      "name": "balanceOfUnderlying(address)",
+      "hash": "0x3af9e669"
+    },
+    {
+      "name": "destroyBlackFunds(address)",
+      "hash": "0xf3bdc228"
+    },
+    {
+      "name": "changeDelegate(address)",
+      "hash": "0xe38296e4"
+    },
+    {
+      "name": "perlin1()",
+      "hash": "0x57fbdcdd"
+    },
+    {
+      "name": "hasAdminRole(address)",
+      "hash": "0xc395fcb3"
+    },
+    {
+      "name": "DEFAULT_ADMIN_ROLE()",
+      "hash": "0xa217fddf"
+    },
+    {
+      "name": "setApiRewardPool(address)",
+      "hash": "0xf2fdd5aa"
+    },
+    {
+      "name": "transferStake(address,address,uint96)",
+      "hash": "0xf5dc51ec"
+    },
+    {
+      "name": "DAO()",
+      "hash": "0x98fabd3a"
+    },
+    {
+      "name": "initialize()",
+      "hash": "0x8129fc1c"
+    },
+    {
+      "name": "rescueEth(address)",
+      "hash": "0x3b1ab44c"
+    },
+    {
+      "name": "_setRebaser(address)",
+      "hash": "0xfa8f3455"
+    },
+    {
+      "name": "impl()",
+      "hash": "0x8abf6077"
+    },
+    {
+      "name": "DefiPool()",
+      "hash": "0xa2663d74"
+    },
+    {
+      "name": "inflationWithdrawnAmount()",
+      "hash": "0xf321794e"
+    },
+    {
+      "name": "setOffchainBalanceExcluded(bool)",
+      "hash": "0xda5fcc9f"
+    },
+    {
+      "name": "initialize(string,string,uint8)",
+      "hash": "0x1624f6c6"
+    },
+    {
+      "name": "update_mining_parameters()",
+      "hash": "0xd43b40fa"
+    },
+    {
+      "name": "getDomainSeparator()",
+      "hash": "0xed24911d"
+    },
+    {
+      "name": "TIMELOCK_CONFIG_ID()",
+      "hash": "0xfa4e4a37"
+    },
+    {
+      "name": "setApprovalForAll(address,address,bool)",
+      "hash": "0x367605ca"
+    },
+    {
+      "name": "pendingbonds(address,address)",
+      "hash": "0xdeac3541"
+    },
+    {
+      "name": "claimGovernance()",
+      "hash": "0x5d36b190"
+    },
+    {
+      "name": "addMinterRole(address)",
+      "hash": "0xadbf3776"
+    },
+    {
+      "name": "_admin()",
+      "hash": "0x01bc45c9"
+    },
+    {
+      "name": "blacklist(address)",
+      "hash": "0xf9f92be4"
+    },
+    {
+      "name": "setTransfersAllowed(bool)",
+      "hash": "0xf3cd1c28"
+    },
+    {
+      "name": "depositToGrant(address,uint256,uint256)",
+      "hash": "0x27951119"
+    },
+    {
+      "name": "pool2Amount()",
+      "hash": "0xc96781de"
+    },
+    {
+      "name": "seedPoolAmount()",
+      "hash": "0x75993783"
+    },
+    {
+      "name": "convertToFractions(uint256,uint256)",
+      "hash": "0x20bb4adf"
+    },
+    {
+      "name": "setPrimaryMarketActive(bool)",
+      "hash": "0x94035515"
+    },
+    {
+      "name": "lockForMemberVote(address,uint256)",
+      "hash": "0x4c47e71d"
+    },
+    {
+      "name": "transferAllowances(address,address)",
+      "hash": "0x63152a50"
+    },
+    {
+      "name": "daoChange(address)",
+      "hash": "0x6d2cf23b"
+    },
+    {
+      "name": "hasConfirmed(bytes32,address)",
+      "hash": "0xc2cf7326"
+    },
+    {
+      "name": "payStorageFee()",
+      "hash": "0x8f9e4cf2"
+    },
+    {
+      "name": "mint(address,uint256)",
+      "hash": "0x40c10f19"
+    },
+    {
+      "name": "settleProfit(address)",
+      "hash": "0x13f4948d"
+    },
+    {
+      "name": "holderWeight(address)",
+      "hash": "0x51b07180"
+    },
+    {
+      "name": "reflect(uint256)",
+      "hash": "0x053ab182"
+    },
+    {
+      "name": "totalCliffs()",
+      "hash": "0x1f96e76f"
+    },
+    {
+      "name": "internalDecimals()",
+      "hash": "0x64dd48f5"
+    },
+    {
+      "name": "ROLE_TOKEN_CREATOR()",
+      "hash": "0x8d4e57e6"
+    },
+    {
+      "name": "DEV_FUND_LOCKED_MONTHS()",
+      "hash": "0xc4618101"
+    },
+    {
+      "name": "setNextEra(uint256)",
+      "hash": "0x7b0c187b"
+    },
+    {
+      "name": "adjustBalanceOfNoVestingAccount(address,uint256,bool)",
+      "hash": "0xc6700553"
+    },
+    {
+      "name": "lockToken(address,uint256)",
+      "hash": "0x17be3fa5"
+    },
+    {
+      "name": "taxRate()",
+      "hash": "0x771a3a1d"
+    },
+    {
+      "name": "trigRewardpercentage()",
+      "hash": "0x96f4ee05"
+    },
+    {
+      "name": "freezeTo(address,uint256,uint64)",
+      "hash": "0x3be1e952"
+    },
+    {
+      "name": "flashFee(address,uint256)",
+      "hash": "0xd9d98ce4"
+    },
+    {
+      "name": "controller()",
+      "hash": "0xf77c4791"
+    },
+    {
+      "name": "weth_address()",
+      "hash": "0x246126bd"
+    },
+    {
+      "name": "forcePayFees(address)",
+      "hash": "0x2ec3fc8e"
+    },
+    {
+      "name": "vestingTransactions(address,uint256)",
+      "hash": "0x9e2d2bec"
+    },
+    {
+      "name": "getInflationIntervalTime()",
+      "hash": "0x63657510"
+    },
+    {
+      "name": "_teamAmount()",
+      "hash": "0xdde3b986"
+    },
+    {
+      "name": "_burnFrom(address,uint256)",
+      "hash": "0xa22b35ce"
+    },
+    {
+      "name": "TrigAmount()",
+      "hash": "0x4747b94d"
+    },
+    {
+      "name": "approveNFTAndTokens(address,uint256,uint256)",
+      "hash": "0xb971383a"
+    },
+    {
+      "name": "isMain()",
+      "hash": "0x604269d1"
+    },
+    {
+      "name": "setSwapEnabled(bool)",
+      "hash": "0xe01af92c"
+    },
+    {
+      "name": "basispercentage()",
+      "hash": "0xb8acb200"
+    },
+    {
+      "name": "allowTransfers()",
+      "hash": "0x2185810b"
+    },
+    {
+      "name": "updateChildChainManager(address)",
+      "hash": "0x445a6797"
+    },
+    {
+      "name": "transferOwnership(address,bool,bool)",
+      "hash": "0x078dfbe7"
+    },
+    {
+      "name": "idolMainAddress()",
+      "hash": "0xa04046c7"
+    },
+    {
+      "name": "CONTINUE_MINTING()",
+      "hash": "0x003fd35a"
+    },
+    {
+      "name": "updateMinimumTokensBeforeSwap(uint256)",
+      "hash": "0x08043751"
+    },
+    {
+      "name": "convertVNL(bytes32[])",
+      "hash": "0x21f06ea0"
+    },
+    {
+      "name": "pause()",
+      "hash": "0x8456cb59"
+    },
+    {
+      "name": "getDelegate(address)",
+      "hash": "0x544d8564"
+    },
+    {
+      "name": "yamToFragment(uint256)",
+      "hash": "0xf18d9b63"
+    },
+    {
+      "name": "terminalInflationRateNumerator()",
+      "hash": "0xdc23b265"
+    },
+    {
+      "name": "onERC721Received(address,address,uint256,bytes)",
+      "hash": "0x150b7a02"
+    },
+    {
+      "name": "votes(address)",
+      "hash": "0xd8bff5a5"
+    },
+    {
+      "name": "isExchangeHotWallet(address)",
+      "hash": "0xcf913db9"
+    },
+    {
+      "name": "setFormula(address)",
+      "hash": "0xecc06c76"
+    },
+    {
+      "name": "addToWhiteList(address)",
+      "hash": "0x47ee0394"
+    },
+    {
+      "name": "circulatingSupply()",
+      "hash": "0x9358928b"
+    },
+    {
+      "name": "ONE_MONTH()",
+      "hash": "0x20988cef"
+    },
+    {
+      "name": "kTotals(uint256)",
+      "hash": "0xba2cf3aa"
+    },
+    {
+      "name": "getExternalPositionRealUnit(address,address)",
+      "hash": "0x22ebeba4"
+    },
+    {
+      "name": "wards(address)",
+      "hash": "0xbf353dbb"
+    },
+    {
+      "name": "currentTerm()",
+      "hash": "0xc48c7342"
+    },
+    {
+      "name": "swap(address)",
+      "hash": "0x03438dd0"
+    },
+    {
+      "name": "releasedDevFund()",
+      "hash": "0xb041e272"
+    },
+    {
+      "name": "renewMintRound(uint256)",
+      "hash": "0xc3ece3e5"
+    },
+    {
+      "name": "swapPool()",
+      "hash": "0x982697dd"
+    },
+    {
+      "name": "vestedToken(address)",
+      "hash": "0x86cb9498"
+    },
+    {
+      "name": "dao_admin()",
+      "hash": "0xa538e6a9"
+    },
+    {
+      "name": "transfer(address,uint256)",
+      "hash": "0xa9059cbb"
+    },
+    {
+      "name": "_buyTaxFee()",
+      "hash": "0xefcc52de"
+    },
+    {
+      "name": "getBurnerStatus(address)",
+      "hash": "0xb168dc5b"
+    },
+    {
+      "name": "AdminRole(address)",
+      "hash": "0x16afc871"
+    },
+    {
+      "name": "getFallbackAddress()",
+      "hash": "0x2c408059"
+    },
+    {
+      "name": "rmIssueAuthAddr(address)",
+      "hash": "0x691664c9"
+    },
+    {
+      "name": "enterStaking(uint96,uint8)",
+      "hash": "0x379f96da"
+    },
+    {
+      "name": "setStorageFeeExempt(address)",
+      "hash": "0xedd496fa"
+    },
+    {
+      "name": "updateInviteAmount(uint256)",
+      "hash": "0xfd0b6238"
+    },
+    {
+      "name": "_routerPairs(address)",
+      "hash": "0xb3f579f5"
+    },
+    {
+      "name": "upgradeComplete()",
+      "hash": "0xecc684a8"
+    },
+    {
+      "name": "totalPartitions()",
+      "hash": "0x69598efe"
+    },
+    {
+      "name": "closingTime()",
+      "hash": "0x4b6753bc"
+    },
+    {
+      "name": "transferAndCall(address,uint256,bytes)",
+      "hash": "0x4000aea0"
+    },
+    {
+      "name": "currentEra()",
+      "hash": "0x973628f6"
+    },
+    {
+      "name": "deposit(address,bytes)",
+      "hash": "0xcf2c52cb"
+    },
+    {
+      "name": "totalSupplyAt(uint256)",
+      "hash": "0x981b24d0"
+    },
+    {
+      "name": "setJelly()",
+      "hash": "0x996fa3e1"
+    },
+    {
+      "name": "mintForPartnership(address)",
+      "hash": "0x45721785"
+    },
+    {
+      "name": "isClaimed(uint256)",
+      "hash": "0x9e34070f"
+    },
+    {
+      "name": "revokeRole(bytes32,address)",
+      "hash": "0xd547741f"
+    },
+    {
+      "name": "getJobs()",
+      "hash": "0x68581ebd"
+    },
+    {
+      "name": "setDestination(uint16,bytes)",
+      "hash": "0x706d8fff"
+    },
+    {
+      "name": "newElyfiToken()",
+      "hash": "0xcc7520b8"
+    },
+    {
+      "name": "stakeLists(address,uint256)",
+      "hash": "0x2607443b"
+    },
+    {
+      "name": "emergencyStopMinting(address,bool)",
+      "hash": "0x35995907"
+    },
+    {
+      "name": "EMISSIONS_MAX_SUPPLY()",
+      "hash": "0xe6c6700e"
+    },
+    {
+      "name": "FEATURE_OWN_BURNS()",
+      "hash": "0x1a0b04ea"
+    },
+    {
+      "name": "ETH()",
+      "hash": "0x8322fff2"
+    },
+    {
+      "name": "getFees(uint256)",
+      "hash": "0xd5a06d4c"
+    },
+    {
+      "name": "MAX_TOKENS()",
+      "hash": "0xf47c84c5"
+    },
+    {
+      "name": "contractOwner()",
+      "hash": "0xce606ee0"
+    },
+    {
+      "name": "liquidityRebasingPermitted()",
+      "hash": "0x61fe09d0"
+    },
+    {
+      "name": "ownershipTransferred()",
+      "hash": "0xe6cfe6fc"
+    },
+    {
+      "name": "website()",
+      "hash": "0xbeb0a416"
+    },
+    {
+      "name": "getPendingByIndex(uint256)",
+      "hash": "0xa7d59b59"
+    },
+    {
+      "name": "lastMaxTotalSupply()",
+      "hash": "0x512a9054"
+    },
+    {
+      "name": "isPendleToken()",
+      "hash": "0x924a23b4"
+    },
+    {
+      "name": "nftAddress()",
+      "hash": "0x5bf8633a"
+    },
+    {
+      "name": "claimMyTokens()",
+      "hash": "0x937f2e33"
+    },
+    {
+      "name": "claimMultisigAllocation()",
+      "hash": "0x641cee40"
+    },
+    {
+      "name": "revoke(bytes32)",
+      "hash": "0xb75c7dc6"
+    },
+    {
+      "name": "MINT_CALL_HASH_TYPE()",
+      "hash": "0xc688387f"
+    },
+    {
+      "name": "setXUSDEthOracle(address,address)",
+      "hash": "0x07a2e5f6"
+    },
+    {
+      "name": "upgradeDelegate(address)",
+      "hash": "0x2da4e75c"
+    },
+    {
+      "name": "decreaseAllowanceAdmin(address,address,uint256)",
+      "hash": "0x5314dc60"
+    },
+    {
+      "name": "feeDistributor()",
+      "hash": "0x0d43e8ad"
+    },
+    {
+      "name": "releaseTokenTransfer()",
+      "hash": "0x5f412d4f"
+    },
+    {
+      "name": "recoverERC20(address,address,uint256)",
+      "hash": "0x1171bda9"
+    },
+    {
+      "name": "yfvLockedBalance()",
+      "hash": "0x44f5e54e"
+    },
+    {
+      "name": "MINT_CAP()",
+      "hash": "0x98f1312e"
+    },
+    {
+      "name": "inflationPerSecond()",
+      "hash": "0x8b268f92"
+    },
+    {
+      "name": "getComponents()",
+      "hash": "0x99d50d5d"
+    },
+    {
+      "name": "getHubAddr()",
+      "hash": "0x74e861d6"
+    },
+    {
+      "name": "swapInProgress()",
+      "hash": "0x0fc6d1d4"
+    },
+    {
+      "name": "renounceOperator()",
+      "hash": "0x2ab6f8db"
+    },
+    {
+      "name": "_votingSnapshots(address,uint256)",
+      "hash": "0x5b3cc0cf"
+    },
+    {
+      "name": "components(uint256)",
+      "hash": "0xc5d574fe"
+    },
+    {
+      "name": "xfLobbyExit(uint256,uint256)",
+      "hash": "0xcbb151d3"
+    },
+    {
+      "name": "ecosystemGrantsReserveWallet()",
+      "hash": "0xdd681e51"
+    },
+    {
+      "name": "LiquidityProtection_setLiquidityProtectionService(address)",
+      "hash": "0x1f69fcb9"
+    },
+    {
+      "name": "enableWhitelist()",
+      "hash": "0xcdfb2b4e"
+    },
+    {
+      "name": "setMinBuybackAmount(uint256,uint256)",
+      "hash": "0x415e9718"
+    },
+    {
+      "name": "ratio()",
+      "hash": "0x71ca337d"
+    },
+    {
+      "name": "getUnlockFactor(address)",
+      "hash": "0x3fe9c253"
+    },
+    {
+      "name": "renounceManagement()",
+      "hash": "0x089208d8"
+    },
+    {
+      "name": "unsetFeeExempt(address)",
+      "hash": "0xcbabd8d8"
+    },
+    {
+      "name": "_name()",
+      "hash": "0xd28d8852"
+    },
+    {
+      "name": "LPGenerationCompleted()",
+      "hash": "0x14b8fecc"
+    },
+    {
+      "name": "manager()",
+      "hash": "0x481c6a75"
+    },
+    {
+      "name": "transfer(address,uint256,bytes)",
+      "hash": "0xbe45fd62"
+    },
+    {
+      "name": "getSecondsLeftInLiquidityGenerationEvent()",
+      "hash": "0x5b5f3e87"
+    },
+    {
+      "name": "initializeModule()",
+      "hash": "0x0ffe0f1e"
+    },
+    {
+      "name": "updateIBRatio(uint256)",
+      "hash": "0xf7c019fc"
+    },
+    {
+      "name": "parentUniverse()",
+      "hash": "0x183636c5"
+    },
+    {
+      "name": "nextDayTime()",
+      "hash": "0xfee05d62"
+    },
+    {
+      "name": "setETHUSDOracle(address)",
+      "hash": "0x741d3c18"
+    },
+    {
+      "name": "isInitializedModule(address)",
+      "hash": "0xd7f1b27c"
+    },
+    {
+      "name": "distributer()",
+      "hash": "0xa898e0f4"
+    },
+    {
+      "name": "migrateFromLegacyReputationToken()",
+      "hash": "0x75d9aa1a"
+    },
+    {
+      "name": "getAdminAddresses(string)",
+      "hash": "0xc8e369bf"
+    },
+    {
+      "name": "setMarketingAddress(address)",
+      "hash": "0x906e9dd0"
+    },
+    {
+      "name": "aspfrozen()",
+      "hash": "0x0833ce88"
+    },
+    {
+      "name": "addLiquidityToUniswapNERDxWETHPair()",
+      "hash": "0x2a615cb1"
+    },
+    {
+      "name": "transferProxyOwnership(address)",
+      "hash": "0xf1739cae"
+    },
+    {
+      "name": "setDiscountAuthority(address)",
+      "hash": "0xabd6aa41"
+    },
+    {
+      "name": "nexus()",
+      "hash": "0xa3f5c1d2"
+    },
+    {
+      "name": "incentivizer()",
+      "hash": "0x6fc6407c"
+    },
+    {
+      "name": "applyCreditToJob(address,address,address)",
+      "hash": "0x4395d8ba"
+    },
+    {
+      "name": "TOKEN_UID()",
+      "hash": "0x8a114e13"
+    },
+    {
+      "name": "lastMaxTotalSupplyTime()",
+      "hash": "0x76fbcc72"
+    },
+    {
+      "name": "previousDelegates(uint256)",
+      "hash": "0xfbd2dbad"
+    },
+    {
+      "name": "withdrawVault(address,uint256,address)",
+      "hash": "0x0039d6ec"
+    },
+    {
+      "name": "setBridgeTokenSwapCap(address,uint256)",
+      "hash": "0xcd046119"
+    },
+    {
+      "name": "treasuries_array(uint256)",
+      "hash": "0xe7f38862"
+    },
+    {
+      "name": "setFeeManagerPercent(uint256)",
+      "hash": "0xe8d2c8c1"
+    },
+    {
+      "name": "kLast()",
+      "hash": "0x7464fc3d"
+    },
+    {
+      "name": "setUpgradeAgent(address)",
+      "hash": "0xd7e7088a"
+    },
+    {
+      "name": "setFallbackAddress(address)",
+      "hash": "0x91423765"
+    },
+    {
+      "name": "mintMultiplier()",
+      "hash": "0x3acd81a5"
+    },
+    {
+      "name": "PARTNERSHIP_TOTAL_AMOUNT()",
+      "hash": "0xdd3cf226"
+    },
+    {
+      "name": "deprecated()",
+      "hash": "0x0e136b19"
+    },
+    {
+      "name": "burningPoolconfigs(address)",
+      "hash": "0xa1646a0a"
+    },
+    {
+      "name": "burnFrom(address,uint256)",
+      "hash": "0x79cc6790"
+    },
+    {
+      "name": "deposit(uint256,uint256,uint256,address,uint256,uint256,uint256)",
+      "hash": "0x0ca6157b"
+    },
+    {
+      "name": "distributionContract1()",
+      "hash": "0xf792a56e"
+    },
+    {
+      "name": "setTaxer(address)",
+      "hash": "0x0d2f0b2e"
+    },
+    {
+      "name": "renounceRole(bytes32,address)",
+      "hash": "0x36568abe"
+    },
+    {
+      "name": "creationBlock()",
+      "hash": "0x17634514"
+    },
+    {
+      "name": "changeCap(uint256)",
+      "hash": "0x800edb9d"
+    },
+    {
+      "name": "disableTransferDelay()",
+      "hash": "0xe884f260"
+    },
+    {
+      "name": "isBlackListed(address)",
+      "hash": "0xe47d6060"
+    },
+    {
+      "name": "rewardsDistributor()",
+      "hash": "0x3f2a5540"
+    },
+    {
+      "name": "pendingWeights()",
+      "hash": "0x4306ccd3"
+    },
+    {
+      "name": "isTransferFeeExempt(address)",
+      "hash": "0x549b4729"
+    },
+    {
+      "name": "rewardsOf(address)",
+      "hash": "0x479ba7ae"
+    },
+    {
+      "name": "emergencyStopMintingCollateral(address)",
+      "hash": "0xa1285d17"
+    },
+    {
+      "name": "previewWithdraw(uint256[],uint256)",
+      "hash": "0x40874f01"
+    },
+    {
+      "name": "isOperator()",
+      "hash": "0x4456eda2"
+    },
+    {
+      "name": "isInactive(address)",
+      "hash": "0x5fcbc896"
+    },
+    {
+      "name": "calculateConfigID(string)",
+      "hash": "0x52d56792"
+    },
+    {
+      "name": "updateFeatures(uint256)",
+      "hash": "0xd5bb7f67"
+    },
+    {
+      "name": "jobs(address)",
+      "hash": "0x3d1f0bb9"
+    },
+    {
+      "name": "trustedReportingParticipantTransfer(address,address,uint256)",
+      "hash": "0xb873e9a7"
+    },
+    {
+      "name": "setBuyBackEnabled(bool)",
+      "hash": "0x29370cc6"
+    },
+    {
+      "name": "deployNewVestingContract(tuple)",
+      "hash": "0xd6de32d2"
+    },
+    {
+      "name": "FLASH_PROTOCOL()",
+      "hash": "0xa7f0e903"
+    },
+    {
+      "name": "yamsScalingFactor()",
+      "hash": "0xb6fa8576"
+    },
+    {
+      "name": "manualMintLimit()",
+      "hash": "0xf85b84a4"
+    },
+    {
+      "name": "pendingGov()",
+      "hash": "0x25240810"
+    },
+    {
+      "name": "acceptGov()",
+      "hash": "0x7bc6729b"
+    },
+    {
+      "name": "ROLE_ERC20_SENDER()",
+      "hash": "0xe98f5ba7"
+    },
+    {
+      "name": "getOperatorRequiredNum()",
+      "hash": "0xb1d3e05e"
+    },
+    {
+      "name": "initMigration(address)",
+      "hash": "0x9c00cc79"
+    },
+    {
+      "name": "pendingVault()",
+      "hash": "0x52113ba7"
+    },
+    {
+      "name": "daysSincePaidStorageFee(address)",
+      "hash": "0x35dd4403"
+    },
+    {
+      "name": "manualMinted()",
+      "hash": "0xe6b2fb4a"
+    },
+    {
+      "name": "removeTreasury(address)",
+      "hash": "0xb35ee931"
+    },
+    {
+      "name": "liquidityUnbonding(address,address,address)",
+      "hash": "0xbb49096d"
+    },
+    {
+      "name": "artGobblers()",
+      "hash": "0x1d1c9e59"
+    },
+    {
+      "name": "feeManagerAddress()",
+      "hash": "0x8d8474c8"
+    },
+    {
+      "name": "_liquidityTokensToSwap()",
+      "hash": "0x4047ea3e"
+    },
+    {
+      "name": "treasuries(address)",
+      "hash": "0x0849b234"
+    },
+    {
+      "name": "getInflationCalcTime()",
+      "hash": "0x7f79e64a"
+    },
+    {
+      "name": "withdrawTokens(address,address,uint256)",
+      "hash": "0x5e35359e"
+    },
+    {
+      "name": "changeTransferability(bool)",
+      "hash": "0x81893c7c"
+    },
+    {
+      "name": "whitelist(address)",
+      "hash": "0x9b19251a"
+    },
+    {
+      "name": "remove(address,address,uint256)",
+      "hash": "0x59e5fd04"
+    },
+    {
+      "name": "generateTokens(address,uint256)",
+      "hash": "0x827f32c0"
+    },
+    {
+      "name": "activatePostFirstRebasingState()",
+      "hash": "0x041b1bbe"
+    },
+    {
+      "name": "auction()",
+      "hash": "0x7d9f6db5"
+    },
+    {
+      "name": "slash(address,address,uint256)",
+      "hash": "0xe74f8239"
+    },
+    {
+      "name": "licenseFee()",
+      "hash": "0xa9d9d0c7"
+    },
+    {
+      "name": "delegates(address)",
+      "hash": "0x587cde1e"
+    },
+    {
+      "name": "_balances(address)",
+      "hash": "0x6ebcf607"
+    },
+    {
+      "name": "isLocked()",
+      "hash": "0xa4e2d634"
+    },
+    {
+      "name": "fundsTokenBalance()",
+      "hash": "0xa9691f3f"
+    },
+    {
+      "name": "deposit(uint256)",
+      "hash": "0xb6b55f25"
+    },
+    {
+      "name": "calN(uint256)",
+      "hash": "0xcd4fe8ec"
+    },
+    {
+      "name": "legacyRepToken()",
+      "hash": "0xd5466777"
+    },
+    {
+      "name": "globals()",
+      "hash": "0xc3124525"
+    },
+    {
+      "name": "recoverToken(address,address,uint256)",
+      "hash": "0xa7229fd9"
+    },
+    {
+      "name": "getMinterLength()",
+      "hash": "0x0323aac7"
+    },
+    {
+      "name": "BABLTokenDeploymentTimestamp()",
+      "hash": "0x1523a371"
+    },
+    {
+      "name": "flashLoan(address,address,uint256,bytes)",
+      "hash": "0x5cffe9de"
+    },
+    {
+      "name": "supply_cap()",
+      "hash": "0xeaac77ea"
+    },
+    {
+      "name": "initialize(address,bytes)",
+      "hash": "0xd1f57894"
+    },
+    {
+      "name": "operatorSend(address,address,uint256,bytes,bytes)",
+      "hash": "0x62ad1b83"
+    },
+    {
+      "name": "_mintingRestrictedBefore()",
+      "hash": "0xcdfeb0c1"
+    },
+    {
+      "name": "TRANSFER_ROLE()",
+      "hash": "0x206b60f9"
+    },
+    {
+      "name": "setConfig(uint16,uint16,uint256,bytes)",
+      "hash": "0xcbed8b9c"
+    },
+    {
+      "name": "receipt(address,address,uint256)",
+      "hash": "0x8d9acd2e"
+    },
+    {
+      "name": "setMintCap(uint256)",
+      "hash": "0x4070a0c9"
+    },
+    {
+      "name": "isStorageFeeExempt(address)",
+      "hash": "0xe8337a27"
+    },
+    {
+      "name": "maximumFee()",
+      "hash": "0x35390714"
+    },
+    {
+      "name": "removeExchangeHotWallet(address)",
+      "hash": "0xd921cd76"
+    },
+    {
+      "name": "DELEGATE_TYPEHASH()",
+      "hash": "0x41cbf54a"
+    },
+    {
+      "name": "blacksmith()",
+      "hash": "0xc1882166"
+    },
+    {
+      "name": "permit(address,address,uint256,uint256,bool,uint8,bytes32,bytes32)",
+      "hash": "0x8fcbaf0c"
+    },
+    {
+      "name": "ArchAdmin()",
+      "hash": "0xaac5185c"
+    },
+    {
+      "name": "unfreeze()",
+      "hash": "0x6a28f000"
+    },
+    {
+      "name": "refresh_cooldown()",
+      "hash": "0xc03f7be3"
+    },
+    {
+      "name": "transfersAllowed()",
+      "hash": "0xb0660c3d"
+    },
+    {
+      "name": "everBridgeVault()",
+      "hash": "0xaefac34d"
+    },
+    {
+      "name": "getHardCap()",
+      "hash": "0xbf0a07bd"
+    },
+    {
+      "name": "released()",
+      "hash": "0x96132521"
+    },
+    {
+      "name": "editExternalPositionData(address,address,bytes)",
+      "hash": "0x26898fe1"
+    },
+    {
+      "name": "assumeOwnership()",
+      "hash": "0xa2c1cae2"
+    },
+    {
+      "name": "lockedSupply()",
+      "hash": "0xca5c7b91"
+    },
+    {
+      "name": "withdrawEther(uint256,address)",
+      "hash": "0xce56c454"
+    },
+    {
+      "name": "includeInFee(address)",
+      "hash": "0xea2f0b37"
+    },
+    {
+      "name": "getRecipient()",
+      "hash": "0x1b88094d"
+    },
+    {
+      "name": "instaIndex()",
+      "hash": "0xa41098bf"
+    },
+    {
+      "name": "claimTokens(address,address)",
+      "hash": "0x69ffa08a"
+    },
+    {
+      "name": "initialBalance()",
+      "hash": "0x18369a2a"
+    },
+    {
+      "name": "pool2percentage()",
+      "hash": "0x1b02b6e0"
+    },
+    {
+      "name": "mintUnlockedToken(address,uint256)",
+      "hash": "0x0dc47c3c"
+    },
+    {
+      "name": "setXUSEthOracle(address,address)",
+      "hash": "0xcd1b7fcc"
+    },
+    {
+      "name": "decimals()",
+      "hash": "0x313ce567"
+    },
+    {
+      "name": "calcOwedFees(address)",
+      "hash": "0x5aa34921"
+    },
+    {
+      "name": "calcSharesAndAmounts(uint256,uint256,uint256,uint256,bool)",
+      "hash": "0xafc47244"
+    },
+    {
+      "name": "acceptGovernance()",
+      "hash": "0x238efcbc"
+    },
+    {
+      "name": "anarchizedAt()",
+      "hash": "0x66bfc158"
+    },
+    {
+      "name": "setBlacksmith(address)",
+      "hash": "0x04677cf7"
+    },
+    {
+      "name": "holderDelegation(address,address)",
+      "hash": "0x4823838d"
+    },
+    {
+      "name": "acceptAdmin()",
+      "hash": "0x0e18b681"
+    },
+    {
+      "name": "SFI_minter()",
+      "hash": "0xa5ccf91b"
+    },
+    {
+      "name": "stabilityPoolManager()",
+      "hash": "0x2f2b4e90"
+    },
+    {
+      "name": "__upgradeTo__(address)",
+      "hash": "0xe405236b"
+    },
+    {
+      "name": "pubKeyToBtcAddress(bytes32,bytes32,uint8)",
+      "hash": "0x283a5baf"
+    },
+    {
+      "name": "publisher()",
+      "hash": "0x8c72c54e"
+    },
+    {
+      "name": "delegateBySig(address,uint256,uint256,bytes)",
+      "hash": "0x4a9e3e13"
+    },
+    {
+      "name": "changeMintRole(address)",
+      "hash": "0x3e7ffc8b"
+    },
+    {
+      "name": "setDevFundReciever(address)",
+      "hash": "0xc0f4783d"
+    },
+    {
+      "name": "setCapped()",
+      "hash": "0x3d6ec4a1"
+    },
+    {
+      "name": "setFundingSells(bool)",
+      "hash": "0x017b0a30"
+    },
+    {
+      "name": "bridgeStakeNftOut(address,uint256)",
+      "hash": "0x2b0e1d79"
+    },
+    {
+      "name": "removeModule(address)",
+      "hash": "0xa0632461"
+    },
+    {
+      "name": "xusd_step()",
+      "hash": "0x0a619ae0"
+    },
+    {
+      "name": "unlock()",
+      "hash": "0xa69df4b5"
+    },
+    {
+      "name": "PERMIT_TYPEHASH()",
+      "hash": "0x30adf81f"
+    },
+    {
+      "name": "lonePool()",
+      "hash": "0x43306a96"
+    },
+    {
+      "name": "mint(address,uint256,string,bytes32)",
+      "hash": "0xd4bf51a7"
+    },
+    {
+      "name": "emergency_mint(uint256,address)",
+      "hash": "0xd54d1c98"
+    },
+    {
+      "name": "setBlacklisted(address,bool)",
+      "hash": "0xd01dd6d2"
+    },
+    {
+      "name": "workCompleted(address)",
+      "hash": "0x1b44555e"
+    },
+    {
+      "name": "issuer()",
+      "hash": "0x1d143848"
+    },
+    {
+      "name": "transferLock(address,uint256,uint256)",
+      "hash": "0xd72896db"
+    },
+    {
+      "name": "delay()",
+      "hash": "0x6a42b8f8"
+    },
+    {
+      "name": "multiTransfer(uint256[])",
+      "hash": "0xb33fcc7a"
+    },
+    {
+      "name": "confirmDevAddress()",
+      "hash": "0x1c9c52ab"
+    },
+    {
+      "name": "getStake(uint256,uint256,address,bytes32)",
+      "hash": "0x887ccc82"
+    },
+    {
+      "name": "isMinKeeper(address,uint256,uint256,uint256)",
+      "hash": "0x1ff5f3da"
+    },
+    {
+      "name": "setDEIAddress(address)",
+      "hash": "0xefa00736"
+    },
+    {
+      "name": "NAME_HASH()",
+      "hash": "0x04622c2e"
+    },
+    {
+      "name": "setSwapInProgress(bool)",
+      "hash": "0xbae083af"
+    },
+    {
+      "name": "liquidityPool()",
+      "hash": "0x665a11ca"
+    },
+    {
+      "name": "rebase(uint256,uint256,bool)",
+      "hash": "0x7af548c1"
+    },
+    {
+      "name": "governance()",
+      "hash": "0x5aa6e675"
+    },
+    {
+      "name": "worked(address)",
+      "hash": "0x5feeb794"
+    },
+    {
+      "name": "facetFunctionSelectors(address)",
+      "hash": "0xadfca15e"
+    },
+    {
+      "name": "devFundAddress()",
+      "hash": "0xb480f6ad"
+    },
+    {
+      "name": "safeDeposit(uint256[],uint256,address,uint256,uint256)",
+      "hash": "0x5922e56f"
+    },
+    {
+      "name": "RATES(uint256)",
+      "hash": "0x62203d74"
+    },
+    {
+      "name": "ANNUAL_TREASURY_MINT_AMOUNT()",
+      "hash": "0x0643e298"
+    },
+    {
+      "name": "setProxyOwner(address)",
+      "hash": "0xcaaee91c"
+    },
+    {
+      "name": "setPendingMinter(address)",
+      "hash": "0xbe1aae73"
+    },
+    {
+      "name": "toggleEmitting()",
+      "hash": "0x7a21acc6"
+    },
+    {
+      "name": "transferDistribution(address,uint256)",
+      "hash": "0x238a3fe1"
+    },
+    {
+      "name": "locker()",
+      "hash": "0xd7b96d4e"
+    },
+    {
+      "name": "withdrawFundsOnBehalf(address)",
+      "hash": "0x61ec7bb5"
+    },
+    {
+      "name": "maxRewardMintAfterBlocks(uint256)",
+      "hash": "0x14cd345d"
+    },
+    {
+      "name": "sendToLQTYStaking(address,uint256)",
+      "hash": "0xf3a2568b"
+    },
+    {
+      "name": "updateMinters(address[],bool)",
+      "hash": "0xf24c37a5"
+    },
+    {
+      "name": "setLocker(address)",
+      "hash": "0x171060ec"
+    },
+    {
+      "name": "approvals(address)",
+      "hash": "0x5d0341ba"
+    },
+    {
+      "name": "includeInReward(address)",
+      "hash": "0x3685d419"
+    },
+    {
+      "name": "delayMinter()",
+      "hash": "0xc3081240"
+    },
+    {
+      "name": "registerLockup(address,uint256,bool,uint256,uint256,uint256)",
+      "hash": "0x8cec2923"
+    },
+    {
+      "name": "addComponent(address)",
+      "hash": "0x4e353270"
+    },
+    {
+      "name": "depositVault(uint256,address)",
+      "hash": "0xbebbf4d0"
+    },
+    {
+      "name": "confirmMaster()",
+      "hash": "0xaa4c37d2"
+    },
+    {
+      "name": "getUniverse()",
+      "hash": "0x870c426d"
+    },
+    {
+      "name": "symbol()",
+      "hash": "0x95d89b41"
+    },
+    {
+      "name": "maxTotalSupply()",
+      "hash": "0x2ab4d052"
+    },
+    {
+      "name": "setNewMaxSupply(uint256)",
+      "hash": "0xb7c7d9a7"
+    },
+    {
+      "name": "reserve()",
+      "hash": "0xcd3293de"
+    },
+    {
+      "name": "validTroveManagers(address)",
+      "hash": "0x670c5856"
+    },
+    {
+      "name": "burn(uint256,bytes32)",
+      "hash": "0xbcf64e05"
+    },
+    {
+      "name": "getLiquidityPool()",
+      "hash": "0x95ddbe89"
+    },
+    {
+      "name": "delegateByType(address,uint8)",
+      "hash": "0xdc937e1c"
+    },
+    {
+      "name": "weights(uint256)",
+      "hash": "0xb5f163ff"
+    },
+    {
+      "name": "btcAddressClaim(uint256,bytes32[],address,bytes32,bytes32,uint8,uint8,bytes32,bytes32,uint256,address)",
+      "hash": "0x96f62b9d"
+    },
+    {
+      "name": "balanceOfAt(address,uint256)",
+      "hash": "0x4ee2cd7e"
+    },
+    {
+      "name": "numeraiTransfer(address,uint256)",
+      "hash": "0x7c8d56b8"
+    },
+    {
+      "name": "setMintApiRewardShare(uint256)",
+      "hash": "0x7d596e65"
+    },
+    {
+      "name": "_presaleAmount()",
+      "hash": "0x7420c40b"
+    },
+    {
+      "name": "burn(uint256,bytes)",
+      "hash": "0xfe9d9303"
+    },
+    {
+      "name": "mirgateV1V2Holder(address,uint96)",
+      "hash": "0x5f898ce8"
+    },
+    {
+      "name": "MAX_UINT()",
+      "hash": "0xe5b5019a"
+    },
+    {
+      "name": "AMOUNT_LP()",
+      "hash": "0x86fdbdc1"
+    },
+    {
+      "name": "nominatedOwner()",
+      "hash": "0x53a47bb7"
+    },
+    {
+      "name": "isExcluded(address)",
+      "hash": "0xcba0e996"
+    },
+    {
+      "name": "twapOracle()",
+      "hash": "0x9043292a"
+    },
+    {
+      "name": "setFullSenderWhitelist(address,bool)",
+      "hash": "0xb4110de3"
+    },
+    {
+      "name": "secondarySaleReserveWallet()",
+      "hash": "0x1f3bec3b"
+    },
+    {
+      "name": "rebasingLPAddress()",
+      "hash": "0xb7cf97ab"
+    },
+    {
+      "name": "evaluateBy(address,uint256,uint256)",
+      "hash": "0xf822d5aa"
+    },
+    {
+      "name": "swapCanonicalForBridge(address,uint256)",
+      "hash": "0x13f1a4a4"
+    },
+    {
+      "name": "deploymentChainId()",
+      "hash": "0xcd0d0096"
+    },
+    {
+      "name": "domainSeparators(uint256)",
+      "hash": "0x99740a18"
+    },
+    {
+      "name": "releaseOnce()",
+      "hash": "0x66a92cda"
+    },
+    {
+      "name": "setGSNExtraGas(uint256)",
+      "hash": "0x9bf8d82f"
+    },
+    {
+      "name": "MAX_MINT()",
+      "hash": "0xf0292a03"
+    },
+    {
+      "name": "DEFAULT_ADMIN_ADDRESS()",
+      "hash": "0x35467d5d"
+    },
+    {
+      "name": "MIMO_MINTER_ROLE()",
+      "hash": "0x223a5d9e"
+    },
+    {
+      "name": "_buyDevFee()",
+      "hash": "0x62015852"
+    },
+    {
+      "name": "delegateWithSig(address,uint256,uint256,uint8,bytes32,bytes32)",
+      "hash": "0x15d2c225"
+    },
+    {
+      "name": "operatorBurn(address,uint256,bytes,bytes)",
+      "hash": "0xfc673c4f"
+    },
+    {
+      "name": "FXS_DAO_min()",
+      "hash": "0x3f22a488"
+    },
+    {
+      "name": "collateral_ratio_paused()",
+      "hash": "0x87a140c3"
+    },
+    {
+      "name": "returnHolderUnits(address,uint256)",
+      "hash": "0x0b1b72f2"
+    },
+    {
+      "name": "release()",
+      "hash": "0x86d1a69f"
+    },
+    {
+      "name": "core()",
+      "hash": "0xf2f4eb26"
+    },
+    {
+      "name": "pool4percentage()",
+      "hash": "0xbe640d83"
+    },
+    {
+      "name": "setUnlockBlockGap(address,uint256)",
+      "hash": "0x2268e19e"
+    },
+    {
+      "name": "supportsInterface(bytes4)",
+      "hash": "0x01ffc9a7"
+    },
+    {
+      "name": "reflinkLevel(address)",
+      "hash": "0xfa82e8c5"
+    },
+    {
+      "name": "calcInactiveFee(address)",
+      "hash": "0x1a222ac7"
+    },
+    {
+      "name": "deposit(uint256,address)",
+      "hash": "0x6e553f65"
+    },
+    {
+      "name": "changeExecutionAdmin(address)",
+      "hash": "0x0819ba74"
+    },
+    {
+      "name": "pendingMaxSupply()",
+      "hash": "0x621a9ef1"
+    },
+    {
+      "name": "changeLicenseFee(uint256)",
+      "hash": "0xbc13d8b8"
+    },
+    {
+      "name": "feeManagerPercent()",
+      "hash": "0x531bc097"
+    },
+    {
+      "name": "estimateSendTokensFee(uint16,bool,bytes)",
+      "hash": "0x73874336"
+    },
+    {
+      "name": "_propositionPowerSnapshotsCounts(address)",
+      "hash": "0x549aa8a3"
+    },
+    {
+      "name": "removeBridge(address)",
+      "hash": "0x04df017d"
+    },
+    {
+      "name": "setMiner(address)",
+      "hash": "0x9742ca46"
+    },
+    {
+      "name": "setReserve(address)",
+      "hash": "0x9cecc80a"
+    },
+    {
+      "name": "renouncedAt()",
+      "hash": "0xefe1d130"
+    },
+    {
+      "name": "troveManagers(uint256)",
+      "hash": "0x3b707478"
+    },
+    {
+      "name": "modifyAdminAddress(string,address,address)",
+      "hash": "0x2c2df742"
+    },
+    {
+      "name": "isLockedForMV(address)",
+      "hash": "0x98fd371f"
+    },
+    {
+      "name": "dstContractLookup(uint16)",
+      "hash": "0x60f05c7a"
+    },
+    {
+      "name": "permitNonces(address)",
+      "hash": "0x191d0ffc"
+    },
+    {
+      "name": "setFXSMinDAO(uint256)",
+      "hash": "0x37a30bbc"
+    },
+    {
+      "name": "FACTOR_DENOMINATOR()",
+      "hash": "0x5ef73d58"
+    },
+    {
+      "name": "approveLiquidity(address)",
+      "hash": "0xb600702a"
+    },
+    {
+      "name": "poolconfigs(address,address,address,address)",
+      "hash": "0x529d8cd3"
+    },
+    {
+      "name": "setBuybackTriggerTokenLimit(uint256)",
+      "hash": "0xd98daa43"
+    },
+    {
+      "name": "startBlock()",
+      "hash": "0x48cd4cb1"
+    },
+    {
+      "name": "swapTokenGraveyard()",
+      "hash": "0xa0cf6b84"
+    },
+    {
+      "name": "isBridge(address)",
+      "hash": "0x726600ce"
+    },
+    {
+      "name": "governanceMint(address,uint256)",
+      "hash": "0xdd329b5c"
+    },
+    {
+      "name": "addVotes(address,uint256)",
+      "hash": "0xde63298d"
+    },
+    {
+      "name": "reclaimToken(address)",
+      "hash": "0x17ffc320"
+    }
+  ]
 }

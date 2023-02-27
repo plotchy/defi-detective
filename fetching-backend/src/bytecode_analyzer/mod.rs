@@ -23,7 +23,10 @@ use std::time::{Instant};
 pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node_msg_rx: UnboundedReceiver<NodeBytecodeMessage>)-> eyre::Result<()> {
 
     let abs_match_output_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_match_output_path);
-    let matches_str = std::fs::read_to_string(&abs_match_output_path).unwrap();
+    let matches_str = match std::fs::read_to_string(&abs_match_output_path) {
+        Ok(matches_str) => matches_str,
+        Err(_) => String::new(),
+    };
     let mut matches = match serde_json::from_str::<MatchesOutput>(&matches_str) {
         Ok(matches) => matches,
         Err(_) => MatchesOutput::new(),
@@ -41,7 +44,7 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
 
     loop {
         let msg = node_msg_rx.recv().await.unwrap();
-        info!("Message received from: {}", &msg.network);
+        info!("Processing msg from: {}", &msg.network);
 
 
         // filter bytecode with regex
