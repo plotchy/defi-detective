@@ -1,6 +1,7 @@
 import os
 import sys
-import Levenshtein 
+import Levenshtein
+from remove_comments import remove_comments 
 
 
 def minimize_sum(arr):
@@ -48,24 +49,30 @@ def rearrange(contract1_text, contract2_text):
         c2 += contracts2[i]+'\n'
     if swapped:
         c1, c2 = c2, c1
-    return c1, c2
+
+    total_dist = Levenshtein.distance(c1, c2)
+
+    return c1, c2, total_dist
 
 
 c1_name = sys.argv[1]
 c2_name = sys.argv[2]
-path1 = '../contracts_no_comments/'+c1_name
-path2 = '../contracts_no_comments/'+c2_name
+path1 = './scraping/data/source/'+c1_name
+path2 = './scraping/data/source/'+c2_name
 
 with open(path1, 'r') as f:
-    contract1_text = f.read()
+    contract1_text = remove_comments(f.read())
+
 with open(path2, 'r') as f:
-    contract2_text = f.read()
+    contract2_text = remove_comments(f.read())
 
-c1, c2 = rearrange(contract1_text, contract2_text)
+c1, c2, total_distance = rearrange(contract1_text, contract2_text)
 
-if not os.path.exists('../contracts_rearranged'):
-    os.makedirs('../contracts_rearranged')
-with open('../contracts_rearranged/'+c1_name, 'w') as f:
+print(total_distance)
+
+if not os.path.exists('./contracts_rearranged'):
+    os.makedirs('./contracts_rearranged')
+with open('./contracts_rearranged/'+c1_name, 'w') as f:
     f.write(c1)
-with open('../contracts_rearranged/'+c2_name, 'w') as f:
+with open('./contracts_rearranged/'+c2_name, 'w') as f:
     f.write(c2)

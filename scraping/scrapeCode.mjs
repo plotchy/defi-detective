@@ -2,15 +2,14 @@ import fs from 'fs';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
+/// This script scrapes the source code of defillama listed defi protocols from etherscan.io
+
 dotenv.config();
 
 let protocols = JSON.parse(fs.readFileSync('./data/allprots.json'));
 protocols = protocols.filter((p) => !!p.address);
 
-console.log(protocols.length);
-
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
-console.log(ETHERSCAN_API_KEY);
 async function getCode(address) {
   const query = `https://api.etherscan.io/api?module=contract&action=getsourcecode&address=${address}&apikey=${ETHERSCAN_API_KEY}`;
   const res = await (await fetch(query)).json();

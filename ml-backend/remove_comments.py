@@ -1,4 +1,3 @@
-
 import os
 import re
 
@@ -14,5 +13,5 @@ def _replacer(match):
 def remove_comments(text):
     text = regex.sub(_replacer, text)
     text = os.linesep.join([s for s in text.splitlines() if s.strip()])
-    text = os.linesep.join([s for s in text.splitlines() if not s.startswith('pragma solidity')])
+    text = os.linesep.join([s for s in text.splitlines() if not s.startswith('pragma ')])
     return text
