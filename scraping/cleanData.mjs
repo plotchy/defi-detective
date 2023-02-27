@@ -15,7 +15,8 @@ protocols.forEach((p) => {
   if (
     data.length === 1 &&
     data[0].SourceCode &&
-    data[0].SourceCode.includes('pragma solidity')
+    data[0].SourceCode.includes('pragma solidity') &&
+    !data[0].SourceCode.startsWith('{')
   ) {
     console.log(`writing ${filename}`);
     // write to .sol instead of .json

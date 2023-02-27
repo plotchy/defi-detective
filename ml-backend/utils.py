@@ -4,7 +4,7 @@ openai.api_key = OPENAI_SECRET_KEY
 
 def embed(text):
   model_id = "text-embedding-ada-002"
-  embedding = openai.Embedding.create(input=text, engine=model_id)['data'][0]['embedding']
+  embedding = openai.Embedding.create(input=text, engine=model_id)
   return embedding
 
 import pickle

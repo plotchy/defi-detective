@@ -1,20 +1,30 @@
-# read contracts from ../contracts/
-
 import os
+import random
+from utils import embed
+from remove_comments import remove_comments
+import json
+
+source_path = './scraping/data/source/'
+files = os.listdir(source_path)
+random.shuffle(files)
 
 def get_contracts():
     contracts = {}
-    for file in os.listdir("../contracts/"):
-        with open(os.path.join("../contracts/", file), "r") as f:
-            contracts[file] = f.read()
+    for file in files:
+        with open(os.path.join(source_path, file), "r") as f:
+            contracts[file] = remove_comments(f.read())
     return contracts
 
-# embed contracts
-from utils import embed, save_model
 
 contracts = get_contracts()
-embeddings = {}
 for name, contract in contracts.items():
-    embeddings[name] = embed(contract)
-
-save_model(embeddings, "contract_embeddings.pkl")
+    if os.path.exists("./embeddings/"+name+".json"):
+        continue
+    print("Embedding contract: ", name)
+    try:
+        embedding = embed(contract)
+    except Exception as e:
+        print(e)
+        continue
+    with open("./embeddings/"+name+".json", "w") as f:
+        f.write(json.dumps(embedding))
