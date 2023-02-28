@@ -1,22 +1,30 @@
 <script lang="ts">
-	import { LayerCake, Svg, WebGL, Html } from 'layercake';
-
-	import ScatterWebGL from './Scatter.webgl.svelte';
-	import AxisX from './AxisX.svelte';
-	import AxisY from './AxisY.svelte';
-	import QuadTree from './QuadTree.html.svelte';
-  	import Labels from './Labels.html.svelte';
-
-
 	type Datum = $$Generic<{}>
+	type DatumLabel = $$Generic<string>
+	type DatumSeries = $$Generic<string>
+
 
 	export let data: Datum[]
 
-	export const xAccessor = 'x';
-	export const yAccessor = 'y';
+	export let xAccessor = datum => datum.x
+	export let yAccessor = datum => datum.y
+
+	export let labelAccessor: (datum: Datum) => DatumLabel = datum => datum.name
+	
+	export let seriesAccessor: (datum: Datum) => DatumSeries = datum => datum.category
+	export let seriesColors: Record<DatumSeries, string> = {}
+
 
 	const r = 3;
 	const padding = 6;
+
+
+	import { LayerCake, Svg, WebGL, Html } from 'layercake'
+	import ScatterWebGL from './Scatter.webgl.svelte'
+	import AxisX from './AxisX.svelte'
+	import AxisY from './AxisY.svelte'
+	import QuadTree from './QuadTree.html.svelte'
+	import Labels from './Labels.html.svelte'
 </script>
 
 
@@ -54,7 +62,7 @@
 		data={data}
 	>
 		<Svg>
-			<AxisX/>
+			<AxisX />
 			<AxisY
 				ticks={5}
 			/>
@@ -64,6 +72,7 @@
 			<ScatterWebGL
 				{r}
 			/>
+			<!-- fill={seriesColors[seriesAccessor(datum)]]} -->
 		</WebGL>
 
 		<Html>
@@ -82,7 +91,7 @@
 				labels={
 					data
 				}
-				getLabelName={datum => datum.name}
+				getLabelName={labelAccessor}
 			/>
 		</Html>
 	</LayerCake>

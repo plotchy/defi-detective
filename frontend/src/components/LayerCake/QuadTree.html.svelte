@@ -4,14 +4,16 @@
 
 	The quadtree searches across both the x and y dimensions at the same time. But if you want to only search across one, set the `x` and `y` props to the same value. For example, the [shared tooltip component](https://layercake.graphics/components/SharedTooltip.html.svelte) sets `y='x'` since it's nicer behavior to only pick up on the nearest x-value.
  -->
-<script>
+<script lang="ts">
 	import { getContext } from 'svelte';
 	import { quadtree } from 'd3-quadtree';
+
+	type Datum = $$Generic<any>
 
 	const { data, xGet, yGet, width, height } = getContext('LayerCake');
 
 	let visible = false;
-	let found = {};
+	let found: Datum
 	let e = {};
 
 	/** @type {String} [x='x'] The dimension to search across when moving the mouse left and right. */
@@ -66,8 +68,8 @@
 />
 
 <slot
-	x={xGetter(found) || 0}
-	y={yGetter(found) || 0}
+	x={found ? xGetter(found) : 0}
+	y={found ? yGetter(found) : 0}
 	{found}
 	{visible}
 	{e}
