@@ -111,7 +111,7 @@ pre > code {
 
 dl {
 	display: grid;
-	gap: 0.25rem;
+	gap: 0;
 }
 dl > * {
 	display: grid;
@@ -119,4 +119,8 @@ dl > * {
 		auto
 		/ auto 1fr;
 	gap: 0.5rem;
+}
+
+label {
+	cursor: pointer;
 }

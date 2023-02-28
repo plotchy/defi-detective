@@ -6,6 +6,8 @@
 
 	export let data: Datum[]
 
+	export let keyAccessor = datum => [xAccessor, yAccessor, labelAccessor, categoryAccessor].map(f => f(datum)).join('|')
+
 	export let xAccessor = datum => datum.x
 	export let yAccessor = datum => datum.y
 
@@ -24,6 +26,14 @@
 
 	const r = 3;
 	const padding = 6;
+
+
+	let showCategories = new Set()
+
+	let filteredData: Datum[]
+	$: filteredData = showCategories.size
+		? data.filter((datum) => showCategories.has(categoryAccessor(datum)))
+		: data
 
 
 	import { LayerCake, Svg, WebGL, Html, Canvas } from 'layercake'
@@ -69,6 +79,22 @@
 		height: 0;
 		min-height: 100%;
 	}
+	.legend input[type="checkbox"] {
+		display: none;
+	}
+	.legend input[type="checkbox"] ~ * {
+		transition-property: opacity;
+	}
+	.legend:has(:checked) input[type="checkbox"]:not(:checked) ~ * {
+		opacity: 0.5;
+	}
+	.legend label {
+		display: flex;
+	}
+
+	.label {
+		text-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.15);
+	}
 </style>
 
 
@@ -79,7 +105,7 @@
 		y={yAccessor}
 		xPadding={[padding, padding]}
 		yPadding={[padding, padding]}
-		data={data}
+		data={filteredData}
 	>
 		<Svg>
 			<AxisX />
@@ -114,12 +140,13 @@
 			</QuadTree>
 
 			<Labels
-				labels={data}
+				labels={filteredData}
 				getLabelName={labelAccessor}
+				{keyAccessor}
 				let:datum
 				let:label
 			>
-				<span style="color: {categoryColors[categoryAccessor(datum)]}">{label}</span>
+				<span class="label" style="color: {categoryColors[categoryAccessor(datum)]}">{label}</span>
 			</Labels>
 		</Html>
 	</LayerCake>
@@ -127,10 +154,26 @@
 	<div class="legend">
 		<dl>
 			{#each categories as category}
-				<div>
+				<!-- <label
+					on:mouseover={e => { showCategories.add(category); showCategories = showCategories }}
+					on:focus={e => { showCategories.add(category); showCategories = showCategories }}
+					on:mouseout={e => { showCategories.delete(category); showCategories = showCategories }}
+					on:blur={e => { showCategories.delete(category); showCategories = showCategories }}
+				> -->
+				<label>
+					<input
+						type="checkbox"
+						checked={showCategories.has(category)}
+						on:input={(e) =>{
+							e.target.checked
+								? showCategories.add(category)
+								: showCategories.delete(category)
+							showCategories = showCategories
+						}}
+					/>
 					<dt style="color: {categoryColors[category]}">●</dt>
 					<dd>{category}</dd>
-				</div>
+				</label>
 			{/each}
 		</dl>
 	</div>
