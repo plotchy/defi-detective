@@ -20,14 +20,21 @@
 </script>
 
 
-{#each labels as d}
-	<div
+{#each labels as datum}
+	<span
 		class="label"
 		style="
-			left:{$xGet(d) + offset.x}px;
-			top:{$yGet(d) + offset.y}px;
+			left:{$xGet(datum) + offset.x}px;
+			top:{$yGet(datum) + offset.y}px;
 		"
-	>{formatLabelName(getLabelName(d))}</div>
+	>
+		<slot
+			{datum}
+			label={formatLabelName(getLabelName(datum))}
+		>
+			{formatLabelName(getLabelName(datum))}
+		</slot>
+	</span>
 {/each}
 
 
