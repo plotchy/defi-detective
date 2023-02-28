@@ -4839,6 +4839,2311 @@
         "owner()",
         "onERC721Received(address,address,uint256,bytes)"
       ]
+    },
+    {
+      "address": "0xf6ee5f8af46783c16efb5a5d1206d1a9325bb39d",
+      "network": "mumbai",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "DelegateChanged(address,address,address)",
+        "DelegateVotesChanged(address,uint256,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "nonces(address)",
+        "increaseAllowance(address,uint256)",
+        "numCheckpoints(address)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "delegate(address)",
+        "getPastTotalSupply(uint256)",
+        "approve(address,uint256)",
+        "DOMAIN_SEPARATOR()",
+        "delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32)",
+        "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+        "getPastVotes(address,uint256)",
+        "checkpoints(address,uint32)",
+        "getVotes(address)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "delegates(address)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xa4dd12884b9bc215bfc715219f3e7a3734c0e9c9",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x5b047639a7f963c255c0b5c2901498f4607ee067",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x27c808786ea3919707b845c3cf51c285694609a5",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)"
+      ],
+      "selectors": [
+        "balanceOf(address)",
+        "treasury()",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x9fb3499c8b982aaba50b7fa514055c4a4480d68f",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)"
+      ],
+      "selectors": [
+        "balanceOf(address)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x3bd6546245cd4905a08bd326fa1073a24a71e145",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "OwnershipTransferred(address,address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Approval(address,address,uint256)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "totalBurned()",
+        "maxSupply()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "setSendVersion(uint16)",
+        "burn(uint256)",
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "forceResumeReceive(uint16,bytes)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "balanceOf(address)",
+        "setReceiveVersion(uint16)",
+        "hasRole(bytes32,address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "setConfig(uint16,uint16,uint256,bytes)",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xdfb552ed65d48409d0e261a1b0d68214508d735b",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xdc351d8d8d0f40bf8e272c6c003c740081bd7e8f",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x316640b7c653351a1715236261f0b172a952e6bd",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x770d26f15f851b1d0a96041e0fc6dfb3a38c07cc",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xac92bc4d6929260544b4b9970aa4d2f43d31f962",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x42223fc687b7a56640b94412e418c06d51e707d6",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x0cf3bf728bd9a694746de2dcd3bb474fc6df34a4",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "admin()"
+      ]
+    },
+    {
+      "address": "0xa3db39c5dcd87f823e5300602b5bf6372876013e",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x4ff7560b21f580591201a1b4d46d43e29953ac9a",
+      "network": "polygon",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "OwnershipTransferred(address,address)",
+        "RoleRevoked(bytes32,address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "setName(string)",
+        "getRoleAdmin(bytes32)",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "name()",
+        "withdraw(address,address,uint256)",
+        "owner()",
+        "DEFAULT_ADMIN_ROLE()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x5ee51aa43547ebf9ac707dbc2a3b2b08ebda650c",
+      "network": "mainnet",
+      "events": [],
+      "selectors": [
+        "implementation()"
+      ]
+    },
+    {
+      "address": "0xfe4ad5344494ab25107bffd1caa7346ef6b3e916",
+      "network": "polygon",
+      "events": [
+        "AdminChanged(address,address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "implementation()",
+        "upgradeToAndCall(address,bytes)",
+        "admin()",
+        "changeAdmin(address)",
+        "upgradeTo(address)"
+      ]
+    },
+    {
+      "address": "0xeedaef36a31c0c0b480468edb2d9835a5728c62e",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "mint(uint256)",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x243f163d945154aa00901b3b9763d46e16fd34b9",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "withdraw()",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x42d5b60a62511d17566c161b589be4c9af630461",
+      "network": "mumbai",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x073fb208b1a93c114da8c66b878f111d9117cdf6",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "OwnershipTransferred(address,address)",
+        "RoleRevoked(bytes32,address,address)",
+        "ModuleAdded(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "getRoleAdmin(bytes32)",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "owner()",
+        "DEFAULT_ADMIN_ROLE()",
+        "initialize()",
+        "revokeRole(bytes32,address)",
+        "manager()",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x1b9b041909d4680013cdc7046368cf25948d6de2",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x64f91278b51e40fc2c6e50e5f7adc2956ae6aee8",
+      "network": "mumbai",
+      "events": [],
+      "selectors": [
+        "removeAdmin(address)",
+        "isOpen()",
+        "removeIssuer(address)",
+        "owner()",
+        "onERC721Received(address,address,uint256,bytes)"
+      ]
+    },
+    {
+      "address": "0xf26ab09c36bc40727a295b1068e72945002f0c98",
+      "network": "polygon",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "SetAutomatedMarketMakerPair(address,bool)",
+        "SwapAndLiquify(uint256,uint256,uint256)",
+        "SwapAndLiquifyEnabledUpdated(bool)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "setStakingAddress(address)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "automatedMarketMakerPairs(address)",
+        "setSwapAndLiquifyEnabled(bool)",
+        "increaseAllowance(address,uint256)",
+        "uniswapV2Pair()",
+        "balanceOf(address)",
+        "setAutomatedMarketMakerPair(address,bool)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "enableTrading()",
+        "marketingAddress()",
+        "uniswapV2Router()",
+        "totalSupply()",
+        "name()",
+        "swapAndLiquifyEnabled()",
+        "owner()",
+        "transfer(address,uint256)",
+        "setMarketingAddress(address)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xe0345adc40a52a8a761246f969a9704eb6734282",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "maxSupply()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "paused()",
+        "merkleRoot()",
+        "withdraw()",
+        "setMerkleRoot(bytes32)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "mint(uint256)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xceaf3fad2bcddf53d7d6f44894ad4905bbd731d0",
+      "network": "goerli",
+      "events": [
+        "AdminChanged(address,address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "implementation()",
+        "upgradeToAndCall(address,bytes)",
+        "admin()",
+        "changeAdmin(address)",
+        "upgradeTo(address)"
+      ]
+    },
+    {
+      "address": "0x8a1e07d2d5ad78be81e34549eeb2f2f6b04a29ec",
+      "network": "arbitrum",
+      "events": [],
+      "selectors": [
+        "getOwner()",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x2bec098d8ca51ce46a238f8dd4e4988916d41ede",
+      "network": "mumbai",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0xc86feb7ba60d44a53b511cb4050bf1637d0930dd",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "increaseAllowance(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xea7b0b14c5258b51c839e7359d7209c1dcd434a4",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "SetAutomatedMarketMakerPair(address,bool)",
+        "SwapAndLiquify(uint256,uint256,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "automatedMarketMakerPairs(address)",
+        "increaseAllowance(address,uint256)",
+        "burn(address,uint256)",
+        "uniswapV2Pair()",
+        "balanceOf(address)",
+        "setAutomatedMarketMakerPair(address,bool)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "uniswapV2Router()",
+        "addToWhitelist(address)",
+        "totalSupply()",
+        "isBlacklisted(address)",
+        "name()",
+        "maxTransactionAmount()",
+        "owner()",
+        "transfer(address,uint256)",
+        "ETH()",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x10358227405f1f75af7e47c4c1c766cffd7dedfe",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "SetAutomatedMarketMakerPair(address,bool)",
+        "SwapAndLiquify(uint256,uint256,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "automatedMarketMakerPairs(address)",
+        "increaseAllowance(address,uint256)",
+        "uniswapV2Pair()",
+        "balanceOf(address)",
+        "limitsInEffect()",
+        "setAutomatedMarketMakerPair(address,bool)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "excludeFromMaxTransaction(address,bool)",
+        "_isExcludedMaxTransactionAmount(address)",
+        "removeLimits()",
+        "enableTrading()",
+        "transferDelayEnabled()",
+        "uniswapV2Router()",
+        "totalSupply()",
+        "name()",
+        "tradingActive()",
+        "maxTransactionAmount()",
+        "swapEnabled()",
+        "owner()",
+        "transfer(address,uint256)",
+        "disableTransferDelay()",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x50238a42f30c874c3b9ab60c4663c3fb148beb53",
+      "network": "polygon",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferFrom(address,address,uint256)",
+        "withdraw()",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "mint()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x648ef705f25af09555302574ad7eb0a93077820f",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "acceptOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x11b177fd8d7d3d71d0f323811055ca4688f3876f",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferFrom(address,address,uint256)"
+      ]
+    },
+    {
+      "address": "0x177d3c00d14ce6f7d5155a8082cc6f5d0f507074",
+      "network": "mainnet",
+      "events": [],
+      "selectors": [
+        "start()"
+      ]
+    },
+    {
+      "address": "0x52289be1dfc29784edd4f77dae042153186d1316",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "admin()"
+      ]
+    },
+    {
+      "address": "0x093205e7e64cbfc369ae58530f7a1b742b249ad0",
+      "network": "mumbai",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x9486928de3f2d24d638e5e99c3873fe42085a2a4",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "OwnershipTransferred(address,address)",
+        "RoleRevoked(bytes32,address,address)",
+        "ModuleAdded(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "getRoleAdmin(bytes32)",
+        "grantRole(bytes32,address)",
+        "initialize(string,string)",
+        "hasRole(bytes32,address)",
+        "owner()",
+        "DEFAULT_ADMIN_ROLE()",
+        "revokeRole(bytes32,address)",
+        "manager()",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x98bb8e5a5abfac4b9e2f0750f48684ad9ac63fa1",
+      "network": "mumbai",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x33c7f2a2235bee2b1185ef264d7783aa92f67eec",
+      "network": "goerli",
+      "events": [
+        "AdminChanged(address,address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "implementation()",
+        "upgradeToAndCall(address,bytes)",
+        "admin()",
+        "changeAdmin(address)",
+        "upgradeTo(address)"
+      ]
+    },
+    {
+      "address": "0x905e3a4c77a40479f5f73cf7d7ca5a90e9486348",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "implementation()"
+      ]
+    },
+    {
+      "address": "0x0ed2615dada9ece7ff18a4866fc250c0ae495fef",
+      "network": "mainnet",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "increaseAllowance(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xa5585faa36960e73d47101286926c0b94f090457",
+      "network": "goerli",
+      "events": [
+        "AdminChanged(address,address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "implementation()",
+        "upgradeToAndCall(address,bytes)",
+        "admin()",
+        "changeAdmin(address)",
+        "upgradeTo(address)"
+      ]
+    },
+    {
+      "address": "0x20bad723138a5b709157709d90001a08ff49b43c",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "implementation()",
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "upgradeTo(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x8b56feeeb270c851b2af73a98890f54c037e97bb",
+      "network": "mumbai",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0xf481dc1b24d7868345265cd6d31785bb1ddae599",
+      "network": "mainnet",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "uniswapV2Pair()",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "approve(address,uint256)",
+        "uniswapV2Router()",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x23704ddeee1b43cdfcbf91e45163a725c17df09e",
+      "network": "mumbai",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Initialized()"
+      ],
+      "selectors": [
+        "getRoleAdmin(bytes32)",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "onERC721Received(address,address,uint256,bytes)",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x655b36c6a3005ebdbff523f24c468e808de9bbaf",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x218a35cbb9843c87331969e99388b8b2fae7eedb",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "OwnershipTransferred(address,address)",
+        "RoleRevoked(bytes32,address,address)",
+        "BeaconUpgraded(address)",
+        "ModuleAdded(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "getRoleAdmin(bytes32)",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "owner()",
+        "DEFAULT_ADMIN_ROLE()",
+        "revokeRole(bytes32,address)",
+        "manager()",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xfa37e8094b92af940dea0fafcda8cb1424eeb3f7",
+      "network": "arbitrum",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "getOwner()",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "blacklistAddress(address,bool)",
+        "isOwner(address)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "isBlacklisted(address)",
+        "name()",
+        "swapEnabled()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x1f74855047bd7c489c3670e138262c132b1204be",
+      "network": "goerli",
+      "events": [
+        "AdminChanged(address,address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "implementation()",
+        "upgradeToAndCall(address,bytes)",
+        "admin()",
+        "changeAdmin(address)",
+        "upgradeTo(address)"
+      ]
+    },
+    {
+      "address": "0x1623f040803d2cf1e8c162c172213431365c4ca4",
+      "network": "goerli",
+      "events": [
+        "SwapTokensForETH(uint256,address[])",
+        "SwapETHForTokens(uint256,address[])",
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "lock(uint256)",
+        "uniswapV2Pair()",
+        "getUnlockTime()",
+        "uniswapV2Router()",
+        "getTime()",
+        "owner()",
+        "unlock()"
+      ]
+    },
+    {
+      "address": "0x03b2b6153a5047a981cbf509cb0f617a0f8b12b2",
+      "network": "mumbai",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "increaseAllowance(address,uint256)",
+        "burn(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "minter()",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "updateMinter(address)",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x993fcb6c9303c40bf6afb9b74b30fb025cc829b6",
+      "network": "polygon",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x5646c5bb522ee7b9a8e87f4f1d123939447427aa",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xfe41a9f0210c7a8611f0fabaedb970f7eb7581f3",
+      "network": "mumbai",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "increaseAllowance(address,uint256)",
+        "burn(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "mint(address,uint256)",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xd9c67314e78c918ef2da6e62e52e8f84a93bb0ba",
+      "network": "polygon",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "burn(uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xe018d7c94cd0b69d5a27b859ef36f213deec0ca2",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "name()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xa5c7d2d50cba10fa8ec62785f517b8368bba1624",
+      "network": "polygon",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "burn(uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xe83a69c8cd50d681895602acdec81f7847e70fde",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "maxSupply()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "paused()",
+        "merkleRoot()",
+        "withdraw()",
+        "setMerkleRoot(bytes32)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "mint(uint256)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xbcdff0a7d36813b8a75535b37aff47557d3776de",
+      "network": "mumbai",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x97373fa5788f9ab9af24298799d050abf4d0e0fe",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "burn(uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "approve(address,uint256)",
+        "mint(uint256)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x492830aa6af150ebb876b83cd62b9e4a4a17d411",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "withdraw()",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "mint()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x546eb3c0a4997d1f5558f0edd55eb40a3a8365ba",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "withdraw()",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "mint()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x91a6d114edf7f21d00f8b94ff11343299729ff16",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)"
+      ],
+      "selectors": [
+        "balanceOf(address)",
+        "treasury()",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x75db9b3f8aae5e0c3a1efaa5b1ea34ebdf7ebff8",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)"
+      ],
+      "selectors": [
+        "balanceOf(address)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x46122ec136c0e97c4a4344be818028883f99a86f",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "OwnershipTransferred(address,address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Approval(address,address,uint256)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "totalBurned()",
+        "maxSupply()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "setSendVersion(uint16)",
+        "burn(uint256)",
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "forceResumeReceive(uint16,bytes)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "balanceOf(address)",
+        "setReceiveVersion(uint16)",
+        "hasRole(bytes32,address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "setConfig(uint16,uint16,uint256,bytes)",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xcf52fe22ceb022073acfaf05800cfe50fc17096b",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x34dde5a71c32907450de45cc09b4ade98a6ea922",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x3c9498e81f4f58d626c886a2c528944c93175eb7",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x1b0196897259021b4107c19a433fbd41189aa69f",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x38e594591513d2a584d39025fb89220c30a89c0f",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x26a5078ca9309ba34e9d3150239abce5726b489d",
+      "network": "mumbai",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x2999b90d0486f5002c45d1434518dd17bb8ee11f",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x57cb0ec4deff4717dd83d842fc45a59a4c44a720",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xd4fcaf2cce835b7f0ecf3fae9e23e5b3da02bcd2",
+      "network": "mainnet",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "increaseAllowance(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x29c2e6692dd29f1a156888a85b20a698c06c0c46",
+      "network": "mainnet",
+      "events": [],
+      "selectors": [
+        "start()"
+      ]
+    },
+    {
+      "address": "0xa7160835cd8bb6344f244dc0d5b819804321a26a",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "name()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x3c3079ab5510148e241e2277f46800a8389e60b7",
+      "network": "polygon",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "maxSupply()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x234413376757f422529b7d4dff29ef30ff6377ce",
+      "network": "polygon",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "acceptOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "burn(uint256)",
+        "increaseAllowance(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "transfer(address,uint256)",
+        "burnFrom(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x15d2d1b21f5d3e9caea44bbe92c63e6c98630bb0",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "deposit()",
+        "balances(address)",
+        "addToWhitelist(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x8ff366baced235418963fdf8acb290af32a397cd",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()",
+        "onERC721Received(address,address,uint256,bytes)"
+      ]
+    },
+    {
+      "address": "0xb82b9669985761b44aea19826ac6d30f16f10d03",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()",
+        "onERC721Received(address,address,uint256,bytes)"
+      ]
+    },
+    {
+      "address": "0xeae57f34e6a4fe129fbe464afe6f329ee29b2262",
+      "network": "arbitrum",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "burn(uint256)",
+        "increaseAllowance(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "mint(address,uint256)",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x8e9683eb34a2661db95c8f455ca162bb09ece7bc",
+      "network": "arbitrum",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "increaseAllowance(address,uint256)",
+        "feeDenominator()",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "setFeeExempt(address)",
+        "totalSupply()",
+        "name()",
+        "swapEnabled()",
+        "owner()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x424e7991facd1de23360cd2fd4eb039889f16d35",
+      "network": "mainnet",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "uniswapV2Pair()",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "approve(address,uint256)",
+        "uniswapV2Router()",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x608ae73fcb9abeea8b15340691f53514b9e099b9",
+      "network": "mumbai",
+      "events": [],
+      "selectors": [
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x51acd5271fa1fc6c0189d9f5c31f677f5d6f1e92",
+      "network": "mumbai",
+      "events": [],
+      "selectors": [
+        "getNonce(address)"
+      ]
+    },
+    {
+      "address": "0x7b8a8abe52b1c249c193c1d52c7015e5a102e2d9",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)"
+      ],
+      "selectors": [
+        "balanceOf(address)",
+        "treasury()",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xbc4361308dc0cd8d6469990fec0d6c27aef9028a",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)"
+      ],
+      "selectors": [
+        "balanceOf(address)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xa38c06ba2080bac880b3a2c2c04074504208ae22",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "OwnershipTransferred(address,address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Approval(address,address,uint256)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "totalBurned()",
+        "maxSupply()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "setSendVersion(uint16)",
+        "burn(uint256)",
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "forceResumeReceive(uint16,bytes)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "balanceOf(address)",
+        "setReceiveVersion(uint16)",
+        "hasRole(bytes32,address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "setConfig(uint16,uint16,uint256,bytes)",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x42e5033815d4239bda3177ec3211223028d6d6f2",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xe601c1cc6b6a89a8ad2d2daf963930948954aa8b",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x545e375763643dca6db6efa45a9a5de365539cef",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x24e763571bd392e256d0ea35a57c63b915bdf893",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x669aad6bd0880e7b3b2426acc9ded9c97f5bdfe7",
+      "network": "arbitrum-goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "burn(uint256)",
+        "increaseAllowance(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "mint(address,uint256)",
+        "_burnFrom(address,uint256)",
+        "transfer(address,uint256)",
+        "burnFrom(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x5011b76cac5a62739a117f2b901d2658cf3d45d9",
+      "network": "goerli",
+      "events": [
+        "RoleGranted(bytes32,address,address)",
+        "Unpaused(address)",
+        "RoleRevoked(bytes32,address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "paused()",
+        "getRoleAdmin(bytes32)",
+        "unpause()",
+        "factory()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "DEFAULT_ADMIN_ROLE()",
+        "pause()",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x2ce56488c82639c50576b7e27beb37f24778bedb",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "startTime()",
+        "withdrawFunds()"
+      ]
+    },
+    {
+      "address": "0x283a5e4357c48975b563aab994d2359d9f9a6761",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "increaseAllowance(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xea63b40d5594b6ef6f054da07e22d96970f4996a",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "name()",
+        "mint(address,uint256)",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x8ad68ff9dfbc427f8fe02af9e873bbdbf4f5673a",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "burn(uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "approve(address,uint256)",
+        "mint(uint256)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x04aac6fd0163e6969fd21107dc13e49cd4f52a69",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0xb51432b776ec42e68e723706dd740cf646484ea2",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "onERC721Received(address,address,uint256,bytes)",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x6c264497ddb4224a3d8f46dde2bbb2b7f5511d95",
+      "network": "goerli",
+      "events": [
+        "Unpaused(address)",
+        "OwnershipTransferred(address,address)",
+        "Paused(address)"
+      ],
+      "selectors": [
+        "transferOwnership(address)",
+        "paused()",
+        "unpause()",
+        "pause()",
+        "onERC721Received(address,address,uint256,bytes)"
+      ]
+    },
+    {
+      "address": "0x1551edfc2f32dcb57662f2f65a131b2f609973ab",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "implementation()",
+        "registry()"
+      ]
+    },
+    {
+      "address": "0xf81ad890fb7afa886c11eb33a115c8381a81bf9e",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)",
+        "TreasuryUpdated(address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "withdraw(uint256)",
+        "transferOwnership(address)",
+        "upgradeToAndCall(address,bytes)",
+        "upgradeTo(address)",
+        "owner()",
+        "onERC721Received(address,address,uint256,bytes)"
+      ]
+    },
+    {
+      "address": "0xae705a2de62234c0b70c741c5527d452b4ccc37b",
+      "network": "arbitrum-goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "withdraw()",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x6630152c9a0cf94023f0fa1409b78babf3f8517c",
+      "network": "mumbai",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x2dc5bb46129c60d816f6b0c69f6d11df1f2a8b59",
+      "network": "arbitrum-goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "burn(uint256)",
+        "increaseAllowance(address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "mint(address,uint256)",
+        "transfer(address,uint256)",
+        "burnFrom(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x4474285579d37fbb403a42f5b0c1484d566d2d43",
+      "network": "arbitrum",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "SetAutomatedMarketMakerPair(address,bool)",
+        "SwapAndLiquify(uint256,uint256,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "automatedMarketMakerPairs(address)",
+        "increaseAllowance(address,uint256)",
+        "uniswapV2Pair()",
+        "balanceOf(address)",
+        "limitsInEffect()",
+        "setAutomatedMarketMakerPair(address,bool)",
+        "allowance(address,address)",
+        "decreaseAllowance(address,uint256)",
+        "approve(address,uint256)",
+        "excludeFromMaxTransaction(address,bool)",
+        "_isExcludedMaxTransactionAmount(address)",
+        "removeLimits()",
+        "enableTrading()",
+        "uniswapV2Router()",
+        "totalSupply()",
+        "name()",
+        "tradingActive()",
+        "maxTransactionAmount()",
+        "swapEnabled()",
+        "owner()",
+        "transfer(address,uint256)",
+        "decimals()",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0xf20a04ee06e9bce9dc0b2f29e2813531ea5d0cc6",
+      "network": "arbitrum-goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "mint(address)",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x07589d167ebfc0e2b42c49cc06f19ce84e3a0ade",
+      "network": "arbitrum-goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "withdraw()",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "totalSupply()",
+        "mint()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0xfee63e22c516e87896083b841a29bd21ca084962",
+      "network": "mumbai",
+      "events": [],
+      "selectors": [
+        "owner()"
+      ]
+    },
+    {
+      "address": "0x95c45287b0f7555fa0a452f78f9ec88552c07b59",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)",
+        "TreasuryUpdated(address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "withdraw(uint256)",
+        "transferOwnership(address)",
+        "upgradeToAndCall(address,bytes)",
+        "upgradeTo(address)",
+        "owner()"
+      ]
+    },
+    {
+      "address": "0xd79cc09905cf5b2ce3d1c2c52f4eb702208c3517",
+      "network": "polygon",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "transferFrom(address,address,uint256)",
+        "balanceOf(address)",
+        "allowance(address,address)",
+        "approve(address,uint256)",
+        "totalSupply()",
+        "name()",
+        "transfer(address,uint256)",
+        "symbol()"
+      ]
+    },
+    {
+      "address": "0x170d93bad1a58136f546b28a55efd39529e282dd",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "OwnershipTransferred(address,address)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "transferOwnership(address)",
+        "transferFrom(address,address,uint256)",
+        "withdraw()",
+        "balanceOf(address)",
+        "approve(address,uint256)",
+        "isApprovedForAll(address,address)",
+        "MAX_SUPPLY()",
+        "mint(uint256)",
+        "totalSupply()",
+        "name()",
+        "owner()",
+        "symbol()",
+        "supportsInterface(bytes4)"
+      ]
+    },
+    {
+      "address": "0x26b1299a496b76e25d0519aa5bee058be8294102",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "implementation()"
+      ]
+    },
+    {
+      "address": "0x8eb90bcd54a6128f38e0da9ef7911456d8e865e1",
+      "network": "polygon",
+      "events": [
+        "OwnershipTransferred(address,address)",
+        "Upgraded(address)"
+      ],
+      "selectors": [
+        "renounceOwnership()",
+        "transferOwnership(address)",
+        "upgradeToAndCall(address,bytes)",
+        "upgradeTo(address)",
+        "initialize(address)",
+        "owner()"
+      ]
     }
   ]
 }

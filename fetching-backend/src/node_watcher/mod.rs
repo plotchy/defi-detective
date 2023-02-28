@@ -1,29 +1,14 @@
-pub mod fetcher;
-
-
 use crate::configuration::FetchSettings;
-use config::Config;
-use config::File;
-use crate::configuration::*;
 use std::{io::Write, str::FromStr, sync::atomic::{AtomicUsize, Ordering}};
-use walkdir::WalkDir;
 use std::collections::HashSet;
-use tracing_subscriber;
-use tracing::{info, warn, error, debug, trace, instrument, span, Level};
-use tokio::join;
+use tracing::{info, warn, error, trace};
 use tokio::sync::mpsc::{UnboundedSender};
 use crate::*;
 use dotenv::dotenv;
-use std::collections::HashMap;
-use tokio::task::JoinSet;
-use ethers::providers::{SubscriptionStream, TransactionStream};
-use nanoid::nanoid;
-use ethers::providers::{Provider, Http, Ws, Middleware};
+use ethers::providers::{Provider, Middleware};
 use std::time::Duration;
 use futures::future::join_all;
-use std::sync::RwLock;
 use tokio::time;
-use std::time::{Instant};
 
 static COUNTER: AtomicUsize = AtomicUsize::new(1);
 pub fn get_id() -> usize { COUNTER.fetch_add(1, Ordering::Relaxed) }
@@ -59,7 +44,7 @@ impl NodeWatcher {
         }
     }
 
-    pub fn init_fetched_addresses_set_from_file(abs_file_path: &str, chain: &Chain) -> HashSet<Address> {
+    pub fn init_fetched_addresses_set_from_file(abs_file_path: &str, _chain: &Chain) -> HashSet<Address> {
         let mut fetched_addresses_set = HashSet::new();
 
         if !std::path::Path::new(abs_file_path).exists() {
@@ -174,8 +159,8 @@ impl NodeWatcher {
                 if transaction_to.is_some() && self.fetched_addresses_set.contains(&transaction_to.unwrap()) {
                     continue;
                 }
-                let transaction_value = transaction.value;
-                let transaction_gas_price = match transaction.gas_price {
+                let _transaction_value = transaction.value;
+                let _transaction_gas_price = match transaction.gas_price {
                     Some(price) => price,
                     None => {
                         // This is type 2. just add the two fees
@@ -183,8 +168,8 @@ impl NodeWatcher {
                     }
                 };
 
-                let transaction_gas_limit = transaction.gas;
-                let transaction_input = transaction.input.clone();
+                let _transaction_gas_limit = transaction.gas;
+                let _transaction_input = transaction.input.clone();
                 // let transaction_nonce = transaction.nonce.unwrap().as_u64();
                 // let transaction_block_hash = transaction.block_hash.unwrap();
                 // let transaction_transaction_index = transaction.transaction_index.unwrap().as_u64();
@@ -201,9 +186,9 @@ impl NodeWatcher {
                         continue;
                     }
                 };
-                let transaction_gas_used = transaction_receipt.gas_used.unwrap().as_u64();
-                let transaction_logs_bloom = transaction_receipt.logs_bloom;
-                let transaction_logs = transaction_receipt.logs;
+                let _transaction_gas_used = transaction_receipt.gas_used.unwrap().as_u64();
+                let _transaction_logs_bloom = transaction_receipt.logs_bloom;
+                let _transaction_logs = transaction_receipt.logs;
 
                 // if transaction is a contract creation, then fetch bytecode
                 if transaction_to == None && transaction_receipt.contract_address.is_some() {
@@ -221,6 +206,7 @@ impl NodeWatcher {
                         bytecode,
                         block_number: Some(block_number),
                         new_creation: true,
+                        address_from: transaction_from,
                     };
 
                     info!("Sending new deployed contract to bytecode analyzer on network {:?}", &self.chain);
@@ -242,7 +228,7 @@ impl NodeWatcher {
                             continue;
                         }
                     };
-                    let mut touched_addresses = HashSet::from([to_address]); // from can never be a contract
+                    let touched_addresses = HashSet::from([to_address]); // from can never be a contract
 
 
                     // let traces_for_tx = match provider.trace_transaction(transaction.hash).await {
@@ -292,6 +278,7 @@ impl NodeWatcher {
                             bytecode,
                             block_number: Some(block_number),
                             new_creation: false,
+                            address_from: transaction_from,
                         };
 
                         // info!("Sending new touched contract to bytecode analyzer on network {:?}", &self.chain);
@@ -385,6 +372,6 @@ pub async fn run_node_watcher(fetch_settings: FetchSettings, node_msg_txr: Unbou
     value
     */
     
-    todo!()
+    todo!() // this shouldnt be hit as its infinite loop
 } 
 

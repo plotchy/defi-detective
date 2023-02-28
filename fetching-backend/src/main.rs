@@ -1,7 +1,7 @@
 use config::Config;
 use config::File;
 use defi_explorer::configuration::*;
-use ethers::{abi::FunctionExt, utils::keccak256};
+use ethers::{utils::keccak256};
 use serde_json::Value;
 use std::{io::Write};
 use walkdir::WalkDir;
@@ -9,8 +9,7 @@ use defi_explorer::node_watcher::*;
 use defi_explorer::bytecode_analyzer::*;
 use std::collections::HashSet;
 use tracing_subscriber;
-use tracing::{info, warn, error, debug, trace, instrument, span, Level};
-use tokio::join;
+use tracing::{info};
 use tokio::sync::mpsc;
 use defi_explorer::*;
 
@@ -47,7 +46,7 @@ async fn main () {
         // TODO need to make this work. seems to delete all rows? rather than the specific ones?
         let abs_match_output_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_existing_contract_matches_path);
         let matches_str = std::fs::read_to_string(&abs_match_output_path).unwrap();
-        let mut matches = match serde_json::from_str::<MatchesOutput>(&matches_str) {
+        let matches = match serde_json::from_str::<MatchesOutput>(&matches_str) {
             Ok(matches) => matches,
             Err(_) => MatchesOutput::new(),
         };
@@ -89,17 +88,17 @@ async fn main () {
 
     // set up channel passing of addresses / bytecode
 
-    // Create a new channel with a capacity of at most 32.
+    // Create a new channel unbounded capacity
     let (node_watcher_tx, bytecode_analyzer_rx) = mpsc::unbounded_channel();
 
     // run node watchers
     let node_watcher_handle = tokio::spawn(async move {
-        run_node_watcher(fetch_settings, node_watcher_tx).await;
+        run_node_watcher(fetch_settings, node_watcher_tx).await.expect("Node watcher failed");
     });
 
     // run bytecode analyzer
     let bytecode_analyzer_handle = tokio::spawn(async move {
-        run_bytecode_analyzer(bytecode_settings, bytecode_analyzer_rx).await;
+        run_bytecode_analyzer(bytecode_settings, bytecode_analyzer_rx).await.expect("Bytecode analyzer failed");
     });
 
 
