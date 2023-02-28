@@ -27,9 +27,11 @@
 		yAccessor={datum => datum.data[1]}
 		labelAccessor={datum => datum.name}
 		seriesAccessor={datum => datum.category}
-		seriesColors={Object.fromEntries(categories.map(category => [
+		seriesColors={Object.fromEntries(categories.map((category, i, { length }) => [
 			category,
-			`#${Math.floor(Math.random() * 16777215).toString(16)}`,
+			`hsl(${Math.floor((i / length) * 360)}, 80%, 60%)`,
+			// `hsl(${Math.floor(Math.random() * 360)}, 80%, 60%)`,
+			// `#${Math.floor(Math.random() * 16777215).toString(16)}`,
 		]))}
 	/>
 </section>

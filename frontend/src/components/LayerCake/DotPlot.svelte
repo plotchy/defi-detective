@@ -19,7 +19,8 @@
 	const padding = 6;
 
 
-	import { LayerCake, Svg, WebGL, Html } from 'layercake'
+	import { LayerCake, Svg, WebGL, Html, Canvas } from 'layercake'
+	import ScatterCanvas from './Scatter.canvas.svelte'
 	import ScatterWebGL from './Scatter.webgl.svelte'
 	import AxisX from './AxisX.svelte'
 	import AxisY from './AxisY.svelte'
@@ -68,12 +69,18 @@
 			/>
 		</Svg>
 
-		<WebGL>
+		<Canvas>
+			<ScatterCanvas
+				r={datum => 3}
+				fill={datum => seriesColors[seriesAccessor(datum)]}
+			/>
+		</Canvas>
+
+		<!-- <WebGL>
 			<ScatterWebGL
 				{r}
 			/>
-			<!-- fill={seriesColors[seriesAccessor(datum)]]} -->
-		</WebGL>
+		</WebGL> -->
 
 		<Html>
 			<QuadTree
@@ -88,11 +95,13 @@
 			</QuadTree>
 
 			<Labels
-				labels={
-					data
-				}
+				labels={data}
 				getLabelName={labelAccessor}
-			/>
+				let:datum
+				let:label
+			>
+				<span style="color: {seriesColors[seriesAccessor(datum)]}">{label}</span>
+			</Labels>
 		</Html>
 	</LayerCake>
 </div>
