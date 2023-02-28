@@ -62,56 +62,58 @@
 				// circle code comes from:
 				// https://www.desultoryquest.com/blog/drawing-anti-aliased-circular-points-using-opengl-slash-webgl/
 				frag: `
-				#extension GL_OES_standard_derivatives : enable
-				precision mediump float;
-				uniform vec3 fill_color;
-				uniform vec3 stroke_color;
-				varying float s_s;
-				void main () {
+					#extension GL_OES_standard_derivatives : enable
+					precision mediump float;
+					uniform vec3 fill_color;
+					uniform vec3 stroke_color;
+					varying float s_s;
+					void main () {
 
-					vec2 cxy = 2.0 * gl_PointCoord - 1.0;
+						vec2 cxy = 2.0 * gl_PointCoord - 1.0;
 
-					float dist = dot(cxy, cxy);
+						float dist = dot(cxy, cxy);
 
-					float delta = fwidth(dist);
+						float delta = fwidth(dist);
 
-					float alpha = 1.0 - smoothstep(1.0 - delta, 1.0 + delta, dist);
+						float alpha = 1.0 - smoothstep(1.0 - delta, 1.0 + delta, dist);
 
-					float outer_edge_center = 1.0 - s_s;
-					float stroke = 1.0 - smoothstep(outer_edge_center - delta, outer_edge_center + delta, dist);
+						float outer_edge_center = 1.0 - s_s;
+						float stroke = 1.0 - smoothstep(outer_edge_center - delta, outer_edge_center + delta, dist);
 
-					// gl_FragColor = vec4(fill_color,1.0) * alpha;
-					gl_FragColor = vec4( mix(stroke_color, fill_color, stroke), 1.0 ) * alpha;
-					gl_FragColor.rgb *= gl_FragColor.a;
-				}`,
+						// gl_FragColor = vec4(fill_color,1.0) * alpha;
+						gl_FragColor = vec4( mix(stroke_color, fill_color, stroke), 1.0 ) * alpha;
+						gl_FragColor.rgb *= gl_FragColor.a;
+					}
+				`,
 				vert: `
-				precision mediump float;
-				attribute vec2 position;
-				attribute float r;
-				attribute float stroke_size;
+					precision mediump float;
+					attribute vec2 position;
+					attribute float r;
+					attribute float stroke_size;
 
-				varying float s_s;
+					varying float s_s;
 
-				uniform float stage_width;
-				uniform float stage_height;
+					uniform float stage_width;
+					uniform float stage_height;
 
-				// http://peterbeshai.com/beautifully-animate-points-with-webgl-and-regl.html
-				vec2 normalizeCoords(vec2 position) {
-					// read in the positions into x and y vars
-					float x = position[0];
-					float y = position[1];
-					return vec2(
-						2.0 * ((x / stage_width) - 0.5),
-						// invert y to treat [0,0] as bottom left in pixel space
-						-(2.0 * ((y / stage_height) - 0.5))
-					);
-				}
+					// http://peterbeshai.com/beautifully-animate-points-with-webgl-and-regl.html
+					vec2 normalizeCoords(vec2 position) {
+						// read in the positions into x and y vars
+						float x = position[0];
+						float y = position[1];
+						return vec2(
+							2.0 * ((x / stage_width) - 0.5),
+							// invert y to treat [0,0] as bottom left in pixel space
+							-(2.0 * ((y / stage_height) - 0.5))
+						);
+					}
 
-				void main () {
-					s_s = stroke_size;
-					gl_PointSize = r;
-					gl_Position = vec4(normalizeCoords(position), 0.0, 1.0);
-				}`,
+					void main () {
+						s_s = stroke_size;
+						gl_PointSize = r;
+						gl_Position = vec4(normalizeCoords(position), 0.0, 1.0);
+					}
+				`,
 				attributes: {
 					// There will be a position value for each point
 					// we pass in
