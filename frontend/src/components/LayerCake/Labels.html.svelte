@@ -17,10 +17,12 @@
 	export let formatLabelName = d => d;
 
 	export let offset = { x: 0, y: -10 }
+
+	export let keyAccessor = d => Math.random().toString()
 </script>
 
 
-{#each labels as datum}
+{#each labels as datum (keyAccessor(datum))}
 	<span
 		class="label"
 		style="
