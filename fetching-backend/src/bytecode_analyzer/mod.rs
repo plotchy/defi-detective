@@ -45,6 +45,17 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
         let msg = node_msg_rx.recv().await.unwrap();
         let start_time = Instant::now();
         info!("Processing msg from: {}", &msg.network);
+        let msg_address = format!("{:?}", msg.address);
+        let msg_network = msg.network.to_string();
+
+        // if address and network already exists in existing_matches, then skip
+        if existing_matches.matches.iter().any(|match_| match_.address == msg_address && match_.network == msg_network) {
+            continue;
+        }
+        // if address and network already exists in new_matches, then skip
+        if new_matches.matches.iter().any(|match_| match_.address == msg_address && match_.network == msg_network) {
+            continue;
+        }
 
 
         // filter bytecode with regex
@@ -83,9 +94,9 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
             };
 
             if msg.new_creation {
-                new_matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add);
+                new_matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add, Some(format!("{:?}", msg.address_from)));
             } else {
-                existing_matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add);
+                existing_matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add, None);
             }
 
             // write bytecode to file

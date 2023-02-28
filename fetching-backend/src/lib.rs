@@ -80,6 +80,7 @@ pub struct Match {
     pub network: String,
     pub events: Vec<String>,
     pub selectors: Vec<String>,
+    pub deployer: Option<String>,
 }
 
 impl Match {
@@ -88,12 +89,14 @@ impl Match {
         network: String,
         events: Vec<String>,
         selectors: Vec<String>,
+        deployer: Option<String>,
     ) -> Self {
         Self {
             address,
             network,
             events,
             selectors,
+            deployer,
         }
     }
 }
@@ -111,6 +114,7 @@ impl MatchesOutput {
         network: String,
         events: Vec<String>,
         selectors: Vec<String>,
+        deployer: Option<String>,
     ) {
         // first search through existing matches to see if this address already exists
 
@@ -138,6 +142,7 @@ impl MatchesOutput {
             network,
             events,
             selectors,
+            deployer,
         });
     }
 

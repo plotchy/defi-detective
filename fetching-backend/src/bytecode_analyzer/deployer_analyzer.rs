@@ -10,3 +10,14 @@
 // use tokio::join;
 // use crate::*;
 
+/*
+If bytecode is recorded, analyze the deployer address
+
+Look for previous deployments
+
+how to get txs sent from address? any way to find all contract creation events? or txs without a to address?
+
+if found, send to bytecode analyzer
+
+
+*/
