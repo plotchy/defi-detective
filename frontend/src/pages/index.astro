@@ -1,20 +1,38 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+
+import PcaPlot from '../components/PcaPlot.astro'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+		<style>
+			main {
+				display: grid;
+				grid-template:
+					auto
+					1fr
+					/ 100%;
+				gap: 1rem;
+			}
+		</style>
 	</head>
+
 	<body>
 		<Header title={SITE_TITLE} />
+
 		<main>
 			<h2>DeFi Explorer</h2>
+
+			<PcaPlot />
 		</main>
+
 		<Footer />
 	</body>
 </html>
