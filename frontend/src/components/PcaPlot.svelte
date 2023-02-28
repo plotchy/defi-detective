@@ -15,8 +15,6 @@
 	// 			name,
 	// 		}))
 	// )
-
-	const categories = [...new Set(pcaData.map(pcaData => pcaData.category as ProjectCategory))]
 </script>
 
 
@@ -26,13 +24,7 @@
 		xAccessor={datum => datum.data[0]}
 		yAccessor={datum => datum.data[1]}
 		labelAccessor={datum => datum.name}
-		seriesAccessor={datum => datum.category}
-		seriesColors={Object.fromEntries(categories.map((category, i, { length }) => [
-			category,
-			`hsl(${Math.floor((i / length) * 360)}, 80%, 60%)`,
-			// `hsl(${Math.floor(Math.random() * 360)}, 80%, 60%)`,
-			// `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-		]))}
+		categoryAccessor={datum => datum.category}
 	/>
 </section>
 

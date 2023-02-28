@@ -108,3 +108,15 @@ pre {
 pre > code {
 	all: unset;
 }
+
+dl {
+	display: grid;
+	gap: 0.25rem;
+}
+dl > * {
+	display: grid;
+	grid-template:
+		auto
+		/ auto 1fr;
+	gap: 0.5rem;
+}

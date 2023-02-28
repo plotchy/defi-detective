@@ -1,7 +1,7 @@
 <script lang="ts">
 	type Datum = $$Generic<{}>
 	type DatumLabel = $$Generic<string>
-	type DatumSeries = $$Generic<string>
+	type DatumCategory = $$Generic<string>
 
 
 	export let data: Datum[]
@@ -11,9 +11,16 @@
 
 	export let labelAccessor: (datum: Datum) => DatumLabel = datum => datum.name
 	
-	export let seriesAccessor: (datum: Datum) => DatumSeries = datum => datum.category
-	export let seriesColors: Record<DatumSeries, string> = {}
+	export let categoryAccessor: (datum: Datum) => DatumCategory = datum => datum.category
 
+	const categories: DatumCategory[] = [...new Set(data.map(categoryAccessor))]
+
+	export let categoryColors: Record<DatumCategory, string> = Object.fromEntries(categories.map((category, i, { length }) => [
+		category,
+		`hsl(${Math.floor((i / length) * 360)}, 80%, 60%)`,
+		// `hsl(${Math.floor(Math.random() * 360)}, 80%, 60%)`,
+		// `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+	]))
 
 	const r = 3;
 	const padding = 6;
@@ -39,6 +46,12 @@
 	.chart-container {
 		width: 100%;
 		height: 100%;
+
+		display: grid;
+		grid-template:
+			1fr
+			/ 1fr auto;
+		gap: 1rem;
 	}
 
 	.circle {
@@ -49,6 +62,12 @@
 		pointer-events: none;
 		width: 10px;
 		height: 10px;
+	}
+
+	.legend {
+		overflow: auto;
+		height: 0;
+		min-height: 100%;
 	}
 </style>
 
@@ -72,7 +91,7 @@
 		<Canvas>
 			<ScatterCanvas
 				r={datum => 3}
-				fill={datum => seriesColors[seriesAccessor(datum)]}
+				fill={datum => categoryColors[categoryAccessor(datum)]}
 			/>
 		</Canvas>
 
@@ -100,8 +119,19 @@
 				let:datum
 				let:label
 			>
-				<span style="color: {seriesColors[seriesAccessor(datum)]}">{label}</span>
+				<span style="color: {categoryColors[categoryAccessor(datum)]}">{label}</span>
 			</Labels>
 		</Html>
 	</LayerCake>
+
+	<div class="legend">
+		<dl>
+			{#each categories as category}
+				<div>
+					<dt style="color: {categoryColors[category]}">●</dt>
+					<dd>{category}</dd>
+				</div>
+			{/each}
+		</dl>
+	</div>
 </div>
