@@ -5,6 +5,7 @@
 	import AxisX from './AxisX.svelte';
 	import AxisY from './AxisY.svelte';
 	import QuadTree from './QuadTree.html.svelte';
+  	import Labels from './Labels.html.svelte';
 
 
 	type Datum = $$Generic<{}>
@@ -76,6 +77,13 @@
 					style="top:{y}px;left:{x}px;display: { visible ? 'block' : 'none' };"
 				></div>
 			</QuadTree>
+
+			<Labels
+				labels={
+					data
+				}
+				getLabelName={datum => datum.name}
+			/>
 		</Html>
 	</LayerCake>
 </div>
