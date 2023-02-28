@@ -8,6 +8,7 @@ bytecode_settings:
   rel_event_patterns_path: "inputs/events.json" # i have this hardcoded to use include_str!... change later
   rel_selector_patterns_path: "inputs/selectors.json" # i have this hardcoded to use include_str!... change later
   rel_filtered_bytecodes_path: "db/filtered_bytecodes"
-  rel_match_output_path: "outputs/address_bytecode_matches.json"
+  rel_existing_contract_matches_path: "outputs/existing_contract_matches.json"
+  rel_new_contract_matches_path: "outputs/new_contract_matches.json"
   write_to_matches_interval_secs: 60
 

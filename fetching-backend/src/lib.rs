@@ -13,6 +13,7 @@ pub struct NodeBytecodeMessage {
     pub address: Address,
     pub bytecode: Bytes,
     pub block_number: Option<u64>,
+    pub new_creation: bool,
 }
 
 const RE_ERC20_SELECTORS_BYTES_SET: Lazy<bytes::RegexSet> = Lazy::new(|| {

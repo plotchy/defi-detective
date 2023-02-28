@@ -219,7 +219,8 @@ impl NodeWatcher {
                         network: self.chain,
                         address: transaction_created_address,
                         bytecode,
-                        block_number: Some(block_number)
+                        block_number: Some(block_number),
+                        new_creation: true,
                     };
 
                     info!("Sending new deployed contract to bytecode analyzer on network {:?}", &self.chain);
@@ -289,7 +290,8 @@ impl NodeWatcher {
                             network: self.chain,
                             address: *address,
                             bytecode,
-                            block_number: Some(block_number)
+                            block_number: Some(block_number),
+                            new_creation: false,
                         };
 
                         // info!("Sending new touched contract to bytecode analyzer on network {:?}", &self.chain);

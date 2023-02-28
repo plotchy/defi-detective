@@ -44,7 +44,8 @@ async fn main () {
         // read the matches file and keep only the network/address pairs related in the db/fetched_addresses, db/filtered_bytecodes
         println!("Cleaning up");
 
-        let abs_match_output_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_match_output_path);
+        // TODO need to make this work. seems to delete all rows? rather than the specific ones?
+        let abs_match_output_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_existing_contract_matches_path);
         let matches_str = std::fs::read_to_string(&abs_match_output_path).unwrap();
         let mut matches = match serde_json::from_str::<MatchesOutput>(&matches_str) {
             Ok(matches) => matches,

@@ -22,12 +22,21 @@ use std::time::{Instant};
 
 pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node_msg_rx: UnboundedReceiver<NodeBytecodeMessage>)-> eyre::Result<()> {
 
-    let abs_match_output_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_match_output_path);
-    let matches_str = match std::fs::read_to_string(&abs_match_output_path) {
+    let abs_new_contract_matches_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_new_contract_matches_path);
+    let abs_existing_contract_matches_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_existing_contract_matches_path);
+    let new_matches_str = match std::fs::read_to_string(&abs_new_contract_matches_path) {
         Ok(matches_str) => matches_str,
         Err(_) => String::new(),
     };
-    let mut matches = match serde_json::from_str::<MatchesOutput>(&matches_str) {
+    let mut new_matches = match serde_json::from_str::<MatchesOutput>(&new_matches_str) {
+        Ok(matches) => matches,
+        Err(_) => MatchesOutput::new(),
+    };
+    let existing_matches_str = match std::fs::read_to_string(&abs_existing_contract_matches_path) {
+        Ok(matches_str) => matches_str,
+        Err(_) => String::new(),
+    };
+    let mut existing_matches = match serde_json::from_str::<MatchesOutput>(&existing_matches_str) {
         Ok(matches) => matches,
         Err(_) => MatchesOutput::new(),
     };
@@ -82,8 +91,11 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
                 vec![]
             };
 
-
-            matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add);
+            if msg.new_creation {
+                new_matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add);
+            } else {
+                existing_matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add);
+            }
 
             // write bytecode to file
             let abs_bytecode_path = format!("{}/{}/{}_{}.txt", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_filtered_bytecodes_path, msg.network, msg.address);
@@ -93,7 +105,8 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
 
         // periodically write matches to file
         if last_write.elapsed() > write_interval {
-            matches.write_to_file(&abs_match_output_path);
+            new_matches.write_to_file(&abs_new_contract_matches_path);
+            existing_matches.write_to_file(&abs_existing_contract_matches_path);
             last_write = Instant::now();
         }
     }

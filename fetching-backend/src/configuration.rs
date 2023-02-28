@@ -19,7 +19,7 @@ pub struct BytecodeSettings {
     pub rel_event_patterns_path: String,
     pub rel_selector_patterns_path: String,
     pub rel_filtered_bytecodes_path: String,
-    pub rel_match_output_path: String,
+    pub rel_existing_contract_matches_path: String,
+    pub rel_new_contract_matches_path: String,
     pub write_to_matches_interval_secs: u64,
-
 }
