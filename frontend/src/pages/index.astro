@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+
+import PcaPlot from '../components/PcaPlot.astro'
 ---
 
 <!DOCTYPE html>
@@ -27,6 +29,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 
 		<main>
 			<h2>DeFi Explorer</h2>
+
+			<PcaPlot />
 		</main>
 
 		<Footer />
