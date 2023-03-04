@@ -6,12 +6,19 @@ import fetch from 'node-fetch';
 
 dotenv.config();
 
-let protocols = JSON.parse(fs.readFileSync('./data/allprots.json'));
-protocols = protocols.filter((p) => !!p.address);
+// get filenames from ./00
+const filenames = fs.readdirSync('../00');
+
+const protocols = filenames.map((filename) => ({
+  address: filename.slice(0, 40),
+  name: filename.slice(41, -5),
+}));
+
+console.log(protocols[0], protocols[1]);
 
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 async function getCode(address) {
-  const query = `https://api.etherscan.io/api?module=contract&action=getsourcecode&address=${address}&apikey=${ETHERSCAN_API_KEY}`;
+  const query = `https://api.etherscan.io/api?module=contract&action=getsourcecode&address=0x${address}&apikey=${ETHERSCAN_API_KEY}`;
   const res = await (await fetch(query)).json();
   return res;
 }
@@ -24,7 +31,7 @@ for (const p of protocols) {
     .then((code) => {
       try {
         fs.writeFileSync(
-          `./data/contracts/${p.name.replace(/\s+/g, '-').toLowerCase()}.json`,
+          `./data/00contracts/${p.name}.json`,
           JSON.stringify(code.result)
         );
       } catch (e) {
