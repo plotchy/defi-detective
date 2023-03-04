@@ -1,7 +1,7 @@
 import os
 import random
 from utils import embed
-from remove_comments import remove_comments
+from remove_comments import remove_noise
 import json
 
 source_path = './scraping/data/source/'
@@ -12,13 +12,13 @@ def get_contracts():
     contracts = {}
     for file in files:
         with open(os.path.join(source_path, file), "r") as f:
-            contracts[file] = remove_comments(f.read())
+            contracts[file] = remove_noise(f.read())
     return contracts
 
 
 contracts = get_contracts()
 for name, contract in contracts.items():
-    if os.path.exists("./embeddings/"+name+".json"):
+    if os.path.exists("./new-embeddings/"+name+".json"):
         continue
     print("Embedding contract: ", name)
     try:
@@ -26,5 +26,5 @@ for name, contract in contracts.items():
     except Exception as e:
         print(e)
         continue
-    with open("./embeddings/"+name+".json", "w") as f:
+    with open("./new-embeddings/"+name+".json", "w") as f:
         f.write(json.dumps(embedding))

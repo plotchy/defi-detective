@@ -34,7 +34,7 @@ def load_data(path):
     names = [file[:-9] for file in files]
     return names, data
 
-names, data = load_data('./embeddings/')
+names, data = load_data('./new-embeddings/')
 data = np.array(data)
 xs, ys = PCA(data)
 
