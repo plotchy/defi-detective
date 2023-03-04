@@ -1,6 +1,7 @@
 pub mod deployer_analyzer;
 
 
+use futures::SinkExt;
 use regex::{SetMatches};
 use crate::configuration::*;
 use std::{io::Write};
@@ -9,6 +10,9 @@ use crate::*;
 use tokio::sync::mpsc::{UnboundedReceiver};
 use std::time::Duration;
 use std::time::{Instant};
+use tokio_tungstenite::{self, tungstenite::Message};
+use tokio::net::TcpListener;
+use tokio_tungstenite::{accept_async, WebSocketStream};
 
 pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node_msg_rx: UnboundedReceiver<NodeBytecodeMessage>)-> eyre::Result<()> {
 
@@ -39,14 +43,37 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
 
     let mut last_write = Instant::now();
 
+    const PORT: &str = "9002";
+    let addr = format!("127.0.0.1:{}", PORT);
+
+    let listener = TcpListener::bind(&addr)
+        .await
+        .expect("Listening to TCP failed.");
+
+
+    println!("Listening on: {}", addr);
+
+    // A counter to use as client ids.
+    let mut id = 0;
+
+    let (stream, _) = listener.accept().await.unwrap();
+    let ws_stream = accept_async(stream).await.expect("Failed to accept");
+    info!("New WebSocket connection");
+    let (mut ws_sender, mut ws_receiver) = ws_stream.split();
 
 
     loop {
         let msg = node_msg_rx.recv().await.unwrap();
+        if !bytecode_settings.enable_existing_contract_matches && !&msg.new_creation {
+            // we are not analyzing existing contracts, and this is not a new contract, so skip
+            continue;
+        }
         let start_time = Instant::now();
         info!("Processing msg from: {}", &msg.network);
         let msg_address = format!("{:?}", msg.address);
         let msg_network = msg.network.to_string();
+
+        
 
         // if address and network already exists in existing_matches, then skip
         if existing_matches.matches.iter().any(|match_| match_.address == msg_address && match_.network == msg_network) {
@@ -95,6 +122,18 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
 
             if msg.new_creation {
                 new_matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add, Some(format!("{:?}", msg.address_from)));
+                let message = format!("{:?}", &msg);
+                // match websocket.write_message(message.clone()) {
+                //     Ok(_) => (),
+                //     Err(error) => {
+                //         eprintln!("Error sending message: {}", error);
+                //         break;
+                //     },
+                // }
+                let ws_message = format!("{:?}_{}", &msg.address, &msg.network);
+                ws_sender.send(Message::Text(ws_message)).await?;
+
+                
             } else {
                 existing_matches.add_new_match(format!("{:?}", msg.address), msg.network.to_string(), events_to_add, selectors_to_add, None);
             }
@@ -108,7 +147,9 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
         // periodically write matches to file
         if last_write.elapsed() > write_interval {
             new_matches.write_to_file(&abs_new_contract_matches_path);
-            existing_matches.write_to_file(&abs_existing_contract_matches_path);
+            if bytecode_settings.enable_existing_contract_matches {
+                existing_matches.write_to_file(&abs_existing_contract_matches_path);
+            }
             last_write = Instant::now();
         }
         info!("Finished processing msg from: {} in {}ms", &msg.network, start_time.elapsed().as_millis());

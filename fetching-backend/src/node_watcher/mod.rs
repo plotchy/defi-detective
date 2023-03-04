@@ -293,8 +293,6 @@ impl NodeWatcher {
             }
         }
     }
-
-
 }
 
 pub async fn run_node_watcher(fetch_settings: FetchSettings, node_msg_txr: UnboundedSender<NodeBytecodeMessage>) -> eyre::Result<()> { 

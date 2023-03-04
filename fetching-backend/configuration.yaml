@@ -11,4 +11,5 @@ bytecode_settings:
   rel_existing_contract_matches_path: "outputs/existing_contract_matches.json"
   rel_new_contract_matches_path: "outputs/new_contract_matches.json"
   write_to_matches_interval_secs: 60
+  enable_existing_contract_matches: false
 
