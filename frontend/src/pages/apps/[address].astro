@@ -6,6 +6,16 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 
 import apps from '../../../../data/pca.json';
+
+export const getStaticPaths = async () => {
+	return apps.map((app) => ({
+		params: { address: `0x${app.address}` },
+		props: app,
+	}));
+}
+
+
+const app = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,10 +24,6 @@ import apps from '../../../../data/pca.json';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
 		<style>
-			main {
-				grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-			}
-
 			a {
 				display: contents;
 			}
@@ -36,14 +42,9 @@ import apps from '../../../../data/pca.json';
 		<Header />
 
 		<main>
-			{apps.map((app) => (
-				<a href={`/apps/0x${app.address}`}>
-					<section>
-						<h3>{app.name}</h3>
-						<output>0x{app.address}</output>
-					</section>
-				</a>
-			))}
+			<h1>{app.name}</h1>
+
+			<output>0x{app.address}</output>
 		</main>
 
 		<Footer />
