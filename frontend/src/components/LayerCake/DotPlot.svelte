@@ -103,7 +103,31 @@
 	}
 
 	.label {
+		display: inline-flex;
+		padding: 0.25rem;
+		line-height: 1;
+		border-radius: 0.25em;
 		text-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.15);
+		transition-duration: 0.2s;
+		pointer-events: none;
+	}
+	.label[data-hovered="true"] {
+		font-size: 0.7rem;
+		translate: 0 -0.5em;
+		background-color: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(4px);
+		z-index: 1;
+		position: sticky;
+		inset: 0;
+	}
+	.chart-container:hover .label:not([data-hovered="true"]) {
+		font-size: 0.3rem;
+		opacity: 0.5;
+	}
+
+	.nearest-datum-link {
+		position: absolute;
+		inset: 0;
 	}
 </style>
 
@@ -140,17 +164,19 @@
 		</WebGL> -->
 
 		<Html>
-			<QuadTree
-				bind:found={nearestDatum}
-				let:x
-				let:y
-				let:visible
-			>
-				<div
-					class="circle"
-					style="top:{y}px;left:{x}px;display: { visible ? 'block' : 'none' };"
-				></div>
-			</QuadTree>
+			<a class="nearest-datum-link" href="{nearestDatum ? linkAccessor(nearestDatum) : '#'}">
+				<QuadTree
+					bind:found={nearestDatum}
+					let:x
+					let:y
+					let:visible
+				>
+					<div
+						class="circle"
+						style="top:{y}px;left:{x}px;display: { visible ? 'block' : 'none' };"
+					></div>
+				</QuadTree>
+			</a>
 
 			<Labels
 				labels={filteredData}
@@ -159,12 +185,12 @@
 				let:datum
 				let:label
 			>
-				<span class="label" style="color: {categoryColors[categoryAccessor(datum)]}">{label}</span>
+				<span
+					class="label"
+					style="color: {categoryColors[categoryAccessor(datum)]}"
+					data-hovered={nearestDatum === datum}
+				>{label}</span>
 			</Labels>
-
-			{#if nearestDatum}
-				<a href="{linkAccessor(nearestDatum)}"></a>
-			{/if}
 		</Html>
 	</LayerCake>
 

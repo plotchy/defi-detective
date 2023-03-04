@@ -26,8 +26,8 @@
 	<span
 		class="label"
 		style="
-			left:{$xGet(datum) + offset.x}px;
-			top:{$yGet(datum) + offset.y}px;
+			--x: {$xGet(datum) + offset.x}px;
+			--y: {$yGet(datum) + offset.y}px;
 		"
 	>
 		<slot
@@ -42,8 +42,9 @@
 
 <style>
 	.label {
+		translate: var(--x) var(--y);
 		position: absolute;
-		transform: translate(-50%, -50%);
+		offset: path('M 0 0') 0px;
 		font-size: 0.5em;
 	}
 </style>

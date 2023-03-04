@@ -1,5 +1,9 @@
 
 :root {
+	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
 	display: grid;
 	grid-template:
 		100%
@@ -7,6 +11,8 @@
 	min-height: 100%;
 
 	background: linear-gradient(146deg, #85beaf, #e3f17d) fixed;
+
+	transition-timing-function: var(--ease-out-expo);
 }
 
 * {
