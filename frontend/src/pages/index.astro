@@ -16,6 +16,7 @@ import PcaPlot from '../components/PcaPlot.svelte'
 
 		<style>
 			main {
+				align-content: stretch;
 				grid-template:
 					auto
 					1fr
@@ -30,9 +31,9 @@ import PcaPlot from '../components/PcaPlot.svelte'
 		<main>
 			<h2>DeFi Explorer</h2>
 
-			<WithState client:visible>
-				<PcaPlot />
-			</WithState>
+			<!-- <WithState client:visible> -->
+				<PcaPlot client:visible />
+			<!-- </WithState> -->
 		</main>
 
 		<Footer />

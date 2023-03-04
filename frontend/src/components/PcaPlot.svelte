@@ -24,7 +24,7 @@
 		xAccessor={datum => datum.position[0]}
 		yAccessor={datum => datum.position[1]}
 		labelAccessor={datum => datum.name}
-		categoryAccessor={datum => datum.category}
+		categoryAccessor={datum => 'All'}
 	/>
 </section>
 
