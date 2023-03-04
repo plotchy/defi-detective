@@ -14,6 +14,8 @@
 			items: [],
 		},
 		set => {
+			if(!globalThis.WebSocket) return
+
 			const address = 'ws://10.0.0.91:9002'
 
 			let state: State = {
