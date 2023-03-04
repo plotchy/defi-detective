@@ -34,13 +34,20 @@ def load_data(path):
     names = [file[:-9] for file in files]
     return names, data
 
-names, data = load_data('./new-embeddings/')
+names, data = load_data('./embeddings/')
 data = np.array(data)
 xs, ys = PCA(data)
 
 plot_pca(xs, ys, names)
 
+files = os.listdir('./00/')
+def get_address(name):
+    for f in files:
+        if name in f:
+            print(name, " in ", f)
+            return f[:40]
+
 with open ('pca.json', 'w') as f:
-    data_json = {name: list(data) for name, data in zip(names, zip(xs, ys))}
+    data_json = [({"name":name, "position": list(data), "address": get_address(name)}) for name, data in zip(names, zip(xs, ys))]
     f.write(json.dumps(data_json))
 

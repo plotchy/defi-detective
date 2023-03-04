@@ -15,7 +15,7 @@ def load_data(path):
             data[file[:-9]] = {"emb":np.array(json.loads(f.read())["data"][0]['embedding'])}
     return data
 
-embs = load_data('./new-embeddings/')
+embs = load_data('./embeddings/')
 with open('./scraping/data/allprots.json') as f:
     data = json.loads(f.read())
 for i in range(len(data)):

@@ -14,6 +14,7 @@ def remove_comments(text):
     text = regex.sub(_replacer, text)
     text = os.linesep.join([s for s in text.splitlines() if s.strip()])
     text = os.linesep.join([s for s in text.splitlines() if not s.startswith('pragma ')])
+    text = os.linesep.join([s for s in text.splitlines() if not s.startswith('import ')])
     return text
 
 def rem(items, pattern):
@@ -26,6 +27,8 @@ def remove_libs(text):
     contracts = rem(contracts, 'abstract contract ')
     contracts = rem(contracts, 'contract ERC20')
     contracts = rem(contracts, 'contract ERC721')
+    contracts = rem(contracts, 'contract Ownable')
+    contracts = rem(contracts, 'contract Context')
     return '\n'.join(contracts)
 
 
@@ -35,10 +38,11 @@ def remove_noise(text):
     return text
 
 
+
 if __name__ == "__main__":
-    with open('./scraping/data/source/1inch-network.sol', 'r') as f:
-        text = f.read()
-        text = remove_comments(text)
-        text = remove_libs(text)
-    with open('./1inch-network.sol', 'w') as f:
-        f.write(text)
+    source_path = './00/'
+    files = os.listdir(source_path)
+    for file in files:
+        with open(os.path.join(source_path, file), "r") as fr:
+            with open(os.path.join('./cleaned', file[41:]), "w") as fw:
+                fw.write(remove_noise(fr.read()))
