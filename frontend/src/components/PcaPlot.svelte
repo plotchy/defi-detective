@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Branded } from '../types/Branded'
 
-	import pcaData from '../../../data/pcacat.json'
+	import pcaData from '../../../data/pca.json'
 	import DotPlot from '../components/LayerCake/DotPlot.svelte'
 
 	type ProjectName = Branded<string, 'ProjectName'>
@@ -21,8 +21,8 @@
 <section>
 	<DotPlot
 		data={pcaData}
-		xAccessor={datum => datum.data[0]}
-		yAccessor={datum => datum.data[1]}
+		xAccessor={datum => datum.position[0]}
+		yAccessor={datum => datum.position[1]}
 		labelAccessor={datum => datum.name}
 		categoryAccessor={datum => datum.category}
 	/>
