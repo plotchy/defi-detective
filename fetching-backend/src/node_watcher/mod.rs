@@ -131,7 +131,7 @@ impl NodeWatcher {
 
             let block_number = block.number.unwrap().as_u64();
             // let block_hash = block.hash.unwrap();
-            // let block_timestamp = block.timestamp.as_u64();
+            let block_timestamp = block.timestamp.as_u64();
             let block_transactions = block.transactions;
 
             
@@ -207,6 +207,7 @@ impl NodeWatcher {
                         block_number: Some(block_number),
                         new_creation: true,
                         address_from: transaction_from,
+                        block_timestamp
                     };
 
                     info!("Sending new deployed contract to bytecode analyzer on network {:?}", &self.chain);
@@ -279,6 +280,7 @@ impl NodeWatcher {
                             block_number: Some(block_number),
                             new_creation: false,
                             address_from: transaction_from,
+                            block_timestamp
                         };
 
                         // info!("Sending new touched contract to bytecode analyzer on network {:?}", &self.chain);
@@ -311,6 +313,7 @@ pub async fn run_node_watcher(fetch_settings: FetchSettings, node_msg_txr: Unbou
         // (Chain::AvalancheFuji, std::env::var("INFURA_AVALANCHE_FUJI_RPC_URL").unwrap()),
         (Chain::Polygon, std::env::var("POLYGON_MAINNET_RPC_URL").unwrap()),
         (Chain::PolygonMumbai, std::env::var("POLYGON_MUMBAI_RPC_URL").unwrap()),
+        // (Chain::Avalanche, std::env::var("FLARE_RPC_URL").unwrap()),
         
         // (Chain::BaseGoerli, std::env::var("INFURA_BASE_GOERLI_RPC_URL").unwrap()), // TODO
     ];

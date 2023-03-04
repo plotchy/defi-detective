@@ -1,3 +1,4 @@
+pub mod endpoint_handler;
 pub mod bytecode_analyzer;
 pub mod configuration;
 pub mod node_watcher;
@@ -15,7 +16,47 @@ pub struct NodeBytecodeMessage {
     pub block_number: Option<u64>,
     pub new_creation: bool,
     pub address_from: Address,
+    pub block_timestamp: u64,
 }
+
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct WSMessage {
+    pub network: String,
+    pub address: Address,
+    pub block_number: Option<u64>,
+    pub new_creation: bool,
+    pub address_from: Address,
+    pub events: Vec<String>,
+    pub functions: Vec<String>,
+    pub most_similar_contracts: Vec<String>,
+}
+
+impl WSMessage {
+
+
+    pub fn from_node_bytecode_message_events_fns(msg: NodeBytecodeMessage, events: Vec<String>, fns: Vec<String>, most_similar_contracts: Vec<String>) -> Self {
+        Self {
+            network: msg.network.to_string(),
+            address: msg.address,
+            block_number: msg.block_number,
+            new_creation: msg.new_creation,
+            address_from: msg.address_from,
+            events,
+            functions: fns,
+            most_similar_contracts,
+        }
+    }
+
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ProtocolEventsFns {
+    pub protocol: String,
+    pub events: Vec<(String, String)>,
+    pub fns: Vec<(String, String)>,
+}
+
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Events {

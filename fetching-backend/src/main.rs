@@ -1,6 +1,7 @@
 use config::Config;
 use config::File;
-use defi_explorer::configuration::*;
+// use defi_explorer::{configuration::*, endpoint_handler::run_endpoint_handler};
+use defi_explorer::{configuration::*};
 use ethers::{utils::keccak256};
 use serde_json::Value;
 use std::{io::Write};
@@ -38,6 +39,7 @@ async fn main () {
     let args: Vec<String> = std::env::args().collect();
     let clean = args.len() > 1 && args[1] == "clean";
     let add_events_selectors = args.len() > 1 && args[1] == "add";
+    let try_ctc = args.len() > 1 && args[1] == "ctc";
 
     if clean {
         // read the matches file and keep only the network/address pairs related in the db/fetched_addresses, db/filtered_bytecodes
@@ -82,6 +84,9 @@ async fn main () {
         jsons_to_abi(&abs_json_dir);
         println!("Done adding events and selectors");
         return;
+    } else if try_ctc {
+        
+        return;
     }
 
 
@@ -90,6 +95,7 @@ async fn main () {
 
     // Create a new channel unbounded capacity
     let (node_watcher_tx, bytecode_analyzer_rx) = mpsc::unbounded_channel();
+    let (endpoint_msg_tx, message_handler_rx) = mpsc::unbounded_channel();
 
     // run node watchers
     let node_watcher_handle = tokio::spawn(async move {
@@ -98,8 +104,12 @@ async fn main () {
 
     // run bytecode analyzer
     let bytecode_analyzer_handle = tokio::spawn(async move {
-        run_bytecode_analyzer(bytecode_settings, bytecode_analyzer_rx).await.expect("Bytecode analyzer failed");
+        run_bytecode_analyzer(bytecode_settings, bytecode_analyzer_rx, message_handler_rx).await.expect("Bytecode analyzer failed");
     });
+
+    // let endpoint_msg_handle = tokio::spawn(async move {
+    //     run_endpoint_handler(endpoint_msg_tx).await.expect("Endpoint msg handler failed");
+    // });
 
 
     // run threads until termination / errors
@@ -124,13 +134,20 @@ async fn main () {
 }
 
 
+
 // this is a dirty fn just to do conversions from json scraped files to events and selectors
 pub fn jsons_to_abi(abs_json_dir: &str) {
 
     // walk over abs_json_dir and read ABI field from each json file
     let mut events_set: HashSet<(String, String)> = HashSet::new();
     let mut selectors_set: HashSet<(String, String)> = HashSet::new();
+
+    let mut protocols: Vec<ProtocolEventsFns> = Vec::new();
+
     for entry in WalkDir::new(abs_json_dir).into_iter().filter_map(|e| e.ok()).filter(|e| e.file_type().is_file()) {
+        let mut events_vec: Vec<(String, String)> = Vec::new();
+        let mut fns_vec: Vec<(String, String)> = Vec::new();
+        
         let json_contents = std::fs::read_to_string(entry.path()).unwrap();
         // read a file into a string
         let v: Value = serde_json::from_str(&json_contents).unwrap();
@@ -166,7 +183,8 @@ pub fn jsons_to_abi(abs_json_dir: &str) {
                 signature = format!("{})", signature);
                 // println!("{}", signature);
                 let keccak_signature = format!("0x{}", hex::encode(keccak256(signature.as_bytes())));
-                events_set.insert((signature, keccak_signature));
+                events_set.insert((signature.clone(), keccak_signature.clone()));
+                events_vec.push((signature, keccak_signature));
             } else if item["type"].as_str().unwrap() == "function" {
                 let name = item["name"].as_str().unwrap().to_string();
                 let inputs = item["inputs"].as_array().unwrap();
@@ -183,9 +201,19 @@ pub fn jsons_to_abi(abs_json_dir: &str) {
                 signature = format!("{})", signature);
                 // println!("{}", signature);
                 let keccak_signature = format!("0x{}", hex::encode(keccak256(signature.as_bytes()))[0..8].to_string());
-                selectors_set.insert((signature, keccak_signature));
+                selectors_set.insert((signature.clone(), keccak_signature.clone()));
+                fns_vec.push((signature, keccak_signature));
             }
         }
+
+        // lastly, push a new protocol to the protocols vec
+        let protocol = ProtocolEventsFns {
+            // only use the filename as the protocol name, without the .json extension
+            protocol: entry.file_name().to_str().unwrap().split('.').collect::<Vec<&str>>()[0].to_string(),
+            events: events_vec,
+            fns: fns_vec,
+        };
+        protocols.push(protocol);
     }
 
     // fill out Events struct
@@ -205,5 +233,7 @@ pub fn jsons_to_abi(abs_json_dir: &str) {
     file.write_all(serde_json::to_string_pretty(&events).unwrap().as_bytes()).unwrap();
     let mut file = std::fs::File::create("inputs/selectors.json").unwrap();
     file.write_all(serde_json::to_string_pretty(&selectors).unwrap().as_bytes()).unwrap();
+    let mut file = std::fs::File::create("inputs/protocol_events_fns.json").unwrap();
+    file.write_all(serde_json::to_string_pretty(&protocols).unwrap().as_bytes()).unwrap();
 
 }
