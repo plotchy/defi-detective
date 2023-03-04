@@ -25,6 +25,7 @@
 		yAccessor={datum => datum.position[1]}
 		labelAccessor={datum => datum.name}
 		categoryAccessor={datum => 'All'}
+		linkAccessor={datum => `/apps/0x${datum.address}`}
 	/>
 </section>
 
