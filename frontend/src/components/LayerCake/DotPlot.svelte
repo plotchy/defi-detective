@@ -2,7 +2,7 @@
 	import { lchToRgb } from '../../utils/colors'
 
 
-	type Datum = $$Generic<{}>
+	type Datum = $$Generic<object>
 	type DatumLabel = $$Generic<string>
 	type DatumCategory = $$Generic<string>
 
@@ -28,6 +28,9 @@
 		// `#${Math.floor(Math.random() * 16777215).toString(16)}`,
 	]))
 
+	export let linkAccessor: (datum: Datum) => string
+
+
 	const r = 3;
 	const padding = 6;
 
@@ -38,6 +41,9 @@
 	$: filteredData = showCategories.size
 		? data.filter((datum) => showCategories.has(categoryAccessor(datum)))
 		: data
+
+
+	let nearestDatum: Datum
 
 
 	import { LayerCake, Svg, WebGL, Html, Canvas } from 'layercake'
@@ -102,7 +108,9 @@
 </style>
 
 
-<div class="chart-container">
+<div
+	class="chart-container"
+>
 	<LayerCake
 		padding={{ top: 0, right: 5, bottom: 20, left: 25 }}
 		x={xAccessor}
@@ -133,6 +141,7 @@
 
 		<Html>
 			<QuadTree
+				bind:found={nearestDatum}
 				let:x
 				let:y
 				let:visible
@@ -152,6 +161,10 @@
 			>
 				<span class="label" style="color: {categoryColors[categoryAccessor(datum)]}">{label}</span>
 			</Labels>
+
+			{#if nearestDatum}
+				<a href="{linkAccessor(nearestDatum)}"></a>
+			{/if}
 		</Html>
 	</LayerCake>
 

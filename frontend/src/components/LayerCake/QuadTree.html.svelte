@@ -13,7 +13,7 @@
 	const { data, xGet, yGet, width, height } = getContext('LayerCake');
 
 	let visible = false;
-	let found: Datum
+	export let found: Datum
 	let e = {};
 
 	/** @type {String} [x='x'] The dimension to search across when moving the mouse left and right. */
