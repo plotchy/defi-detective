@@ -13,6 +13,8 @@ def PCA(data):
     evecs = evecs[:,idx]
     evecs = evecs[:, :2]
     data_resc = np.dot(evecs.T, data.T).T
+    with open('evecs.json', 'w') as f:
+        f.write(json.dumps(evecs.tolist()))
     return data_resc[:, 0], data_resc[:, 1]
 
 def plot_pca(xs, ys, labels):
