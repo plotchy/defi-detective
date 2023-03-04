@@ -4,6 +4,8 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 
+import WithState from '../components/WithState.svelte'
+
 import PcaPlot from '../components/PcaPlot.svelte'
 ---
 
@@ -30,7 +32,9 @@ import PcaPlot from '../components/PcaPlot.svelte'
 		<main>
 			<h2>DeFi Explorer</h2>
 
-			<PcaPlot client:visible />
+			<WithState client:visible>
+				<PcaPlot />
+			</WithState>
 		</main>
 
 		<Footer />
