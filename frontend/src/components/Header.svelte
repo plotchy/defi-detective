@@ -10,10 +10,10 @@
 	</h1>
 
 	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/apps">Apps</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
+		<HeaderLink href="/">Feed</HeaderLink>
+		<HeaderLink href="/chart-1">Chart 1</HeaderLink>
+		<HeaderLink href="/chart-2">Chart 2</HeaderLink>
+		<HeaderLink href="https://github.com/plotchy/defi-detective" target="_blank">GitHub</HeaderLink>
 	</nav>
 </header>
 
