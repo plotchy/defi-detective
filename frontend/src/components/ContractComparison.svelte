@@ -16,17 +16,27 @@
 
 
 <ContractBytecodeLoader {address} let:bytecode>
+	<br>
+
+	<h3>Bytecode</h3>
+
 	<pre>{bytecode}</pre>
 
+	<br>
+
 	<SimilarContractsLoader {address} let:contracts>
-		<label>
-			<span>Compare:</span>
-			<select bind:value={compareContract}>
-				{#each contracts as contract}
-					<option value={contract}>{contract}</option>
-				{/each}
-			</select>
-		</label>
+		<div class="row">
+			<h3>Similar Contracts</h3>
+
+			<label>
+				<span>Compare:</span>
+				<select bind:value={compareContract}>
+					{#each contracts as contract}
+						<option value={contract}>{contract}</option>
+					{/each}
+				</select>
+			</label>
+		</div>
 
 		<DiffEditor
 			leftText={bytecode}
@@ -34,3 +44,12 @@
 		/>
 	</SimilarContractsLoader>
 </ContractBytecodeLoader>
+
+
+<style>
+	.row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+</style>

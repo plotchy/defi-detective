@@ -145,3 +145,10 @@ pre {
 	max-height: 20.5rem;
 	overflow-y: auto;
 }
+
+hr {
+	background: none;
+	border: none;
+	border-bottom: currentColor 1px solid;
+	opacity: 0.25;
+}
