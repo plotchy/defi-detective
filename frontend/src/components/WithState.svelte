@@ -109,6 +109,7 @@
 <style>
 	.toast {
 		position: fixed;
+		z-index: 1;
 		bottom: 0.75rem;
 		right: 0.75rem;
 		padding: 0.4rem 0.8rem;
@@ -119,7 +120,7 @@
 	}
 
 	.connected {
-		background: rgba(0, 255, 0, 0.5);
+		background: rgba(0, 161, 0, 0.5);
 	}
 	.disconnected {
 		background: rgba(255, 0, 0, 0.5);
