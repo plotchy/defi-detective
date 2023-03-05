@@ -4,3 +4,4 @@
 /db/fetched_addresses/*
 /db/filtered_bytecodes/*
 /outputs/existing_contract_matches.json
+node_modules
