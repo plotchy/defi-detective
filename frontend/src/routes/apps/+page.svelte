@@ -1,7 +1,7 @@
 <script lang="ts">	
 	import type { State, Network, Address, App } from '../../components/WithState.svelte'
 
-	import { Context } from '../../components/Context.svelte'
+	import Context from '../../components/Context.svelte'
 
 	
 	import apps from '../../../../data/pca.json'
