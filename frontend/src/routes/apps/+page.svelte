@@ -3,6 +3,11 @@
 
 	
 	import apps from '../../../../data/pca.json'
+
+
+	import { fly, scale } from 'svelte/transition'
+	import { flip } from 'svelte/animate'
+	import { expoInOut } from 'svelte/easing'
 </script>
 
 
@@ -42,8 +47,11 @@
 		<h2>Newest protocols</h2>
 
 		<section>
-			{#each Object.values(state.apps) ?? apps as app}
-				<article>
+			{#each Object.values(state.apps) ?? apps as app, i (`${app.network}/${app.address}`)}
+				<article
+					animate:flip={{ duration: () => Object.values(state.apps).length > 20 ? 0 : 500, delay: i * 10, easing: expoInOut }}
+					transition:scale={{ duration: 300, from: 0.4, opacity: 0 }}
+				>
 					<a href={`/apps/${app.network}/${app.address}`}>
 						<h3>{app.name ?? `${app.network[0].toUpperCase()}${app.network.slice(1)} Contract`}</h3>
 					</a>
@@ -70,12 +78,17 @@
 
 						<div>
 							<dt>Gas Used</dt>
-							<dd>{app.gas_used_for_deploy} gwei</dd>
+							<dd>{app.gas_used_for_deploy} wei</dd>
 						</div>
 
 						<div>
 							<dt>Logs</dt>
 							<!-- <dd>{app.logs_emitted_on_deploy}</dd> -->
+						</div>
+
+						<div>
+							<dt>Timestamp</dt>
+							<dd>{app.timestamp}</dd>
 						</div>
 					</dl>
 				</article>
