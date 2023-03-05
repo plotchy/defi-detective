@@ -9,7 +9,7 @@
 </script>
 
 
-{#await fetch(`http://localhost:9003/get_contract_for_address/0x${address}`)}
+{#await fetch(`http://localhost:9003/get_contract_for_address/${address}`)}
 	Loading contract...
 {:then response}
 	{#await response.json() then data}

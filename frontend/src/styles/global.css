@@ -136,3 +136,12 @@ dl > * {
 label {
 	cursor: pointer;
 }
+
+pre {
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+	white-space: pre-wrap;
+	max-height: 20.5rem;
+	overflow-y: auto;
+}

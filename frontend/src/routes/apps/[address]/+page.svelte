@@ -56,13 +56,13 @@
 
 
 <main>
-	<h1>{app.name}</h1>
+	<h2>{app?.name ?? address}</h2>
 
-	<output>0x{app.address}</output>
+	<output>{address}</output>
 
 	<h3>Compare</h3>
 
 	<ContractComparison
-		address={app.address}
+		{address}
 	/>
 </main>

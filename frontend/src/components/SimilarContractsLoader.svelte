@@ -4,10 +4,17 @@
 </script>
 
 
-{#await fetch(`http://localhost:9003/get_similar_contract_for_address/0x${address}`)}
+{#await fetch(`http://localhost:9003/get_similar_contract_for_address/${address}`)
+	.then(response => response.json())
+	.then(result => {
+		if(result.contract === 'No matches found')
+			throw new Error('No matches found')
+		return result
+	})
+}
 	Finding similar contracts...
-{:then response}
-	{#await response.json() then data}
-		<slot {data} />
-	{/await}
+{:then {most_similar_contracts: contracts}}
+	<slot {contracts} />
+{:catch error}
+	{error}
 {/await}

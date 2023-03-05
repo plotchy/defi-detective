@@ -15,19 +15,22 @@
 </script>
 
 
-<ContractBytecodeLoader {address} let:data={contract}>
-	<SimilarContractsLoader {address} let:data={contracts}>
+<ContractBytecodeLoader {address} let:bytecode>
+	<pre>{bytecode}</pre>
+
+	<SimilarContractsLoader {address} let:contracts>
 		<label>
 			<span>Compare:</span>
 			<select bind:value={compareContract}>
 				{#each contracts as contract}
-					<option value={contract}>{contract.address}</option>
+					<option value={contract}>{contract}</option>
 				{/each}
 			</select>
 		</label>
 
 		<DiffEditor
-			leftText={contract.code}
+			leftText={bytecode}
+			rightText={compareContract?.bytecode ?? `Select a contract to compare`}
 		/>
 	</SimilarContractsLoader>
 </ContractBytecodeLoader>

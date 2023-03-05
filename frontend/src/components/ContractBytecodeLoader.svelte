@@ -9,10 +9,17 @@
 </script>
 
 
-{#await fetch(`http://localhost:9003/get_bytecode_for_address/0x${address}`)}
-	Loading contract...
-{:then response}
-	{#await response.json() then data}
-		<slot {data} />
-	{/await}
+{#await fetch(`http://localhost:9003/get_bytecode_for_address/${address}`)
+	.then(response => response.json())
+	.then(result => {
+		if(result.contract === 'No matches found')
+			throw new Error('No matches found')
+		return result
+	})
+}
+	Loading contract bytecode...
+{:then bytecode}
+	<slot {bytecode} />
+{:catch error}
+	{error}
 {/await}
