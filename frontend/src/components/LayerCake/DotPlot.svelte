@@ -22,7 +22,7 @@
 
 	export let categoryColors: Record<DatumCategory, string> = Object.fromEntries(categories.map((category, i, { length }) => [
 		category,
-		lchToRgb({l: 20, c: 80, h: i / length * 360})
+		length === 1 ? 'rgba(50, 50, 50, 1)' : lchToRgb({l: 20, c: 80, h: i / length * 360})
 		// `hsl(${Math.floor((i / length) * 360)}, 80%, 60%)`,
 		// `hsl(${Math.floor(Math.random() * 360)}, 80%, 60%)`,
 		// `#${Math.floor(Math.random() * 16777215).toString(16)}`,
