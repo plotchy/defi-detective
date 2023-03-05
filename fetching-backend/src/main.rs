@@ -141,66 +141,33 @@ pub fn jsons_to_abi(abs_json_dir: &str) {
     let mut protocols: Vec<ProtocolEventsFns> = Vec::new();
 
     for entry in WalkDir::new(abs_json_dir).into_iter().filter_map(|e| e.ok()).filter(|e| e.file_type().is_file()) {
-        let mut events_vec: Vec<(String, String)> = Vec::new();
-        let mut fns_vec: Vec<(String, String)> = Vec::new();
+        
         
         let json_contents = std::fs::read_to_string(entry.path()).unwrap();
         // read a file into a string
         let v: Value = serde_json::from_str(&json_contents).unwrap();
         let abi = match v[0]["ABI"].as_str() {
-            Some(abi) => abi,
+            Some(abi) => {
+                let abi = match serde_json::from_str(&abi) {
+                    Ok(abi) => abi,
+                    Err(_) => {
+                        println!("Error parsing json: {}", entry.path().to_str().unwrap());
+                        continue
+                    },
+                };
+                abi
+            },
             None => {
-                println!("No ABI field: {}", entry.path().to_str().unwrap());
-                continue
+                v
             },
         };
-        let abi: Value = match serde_json::from_str(&abi) {
-            Ok(abi) => abi,
-            Err(_) => {
-                println!("Error parsing json: {}", entry.path().to_str().unwrap());
-                continue
-            },
-        };
-
-        for item in abi.as_array().unwrap() {
-            if item["type"].as_str().unwrap() == "event" {
-                let name = item["name"].as_str().unwrap().to_string();
-                let inputs = item["inputs"].as_array().unwrap();
-                let mut signature = name.clone();
-                signature = format!("{}(", signature);
-                let inputs_length = inputs.len();
-                for (i, input) in inputs.iter().enumerate() {
-                    if i != inputs_length - 1 {
-                        signature = format!("{}{},", signature, input["type"].as_str().unwrap());
-                    } else {
-                        signature = format!("{}{}", signature, input["type"].as_str().unwrap());
-                    }
-                }
-                signature = format!("{})", signature);
-                // println!("{}", signature);
-                let keccak_signature = format!("0x{}", hex::encode(keccak256(signature.as_bytes())));
-                events_set.insert((signature.clone(), keccak_signature.clone()));
-                events_vec.push((signature, keccak_signature));
-            } else if item["type"].as_str().unwrap() == "function" {
-                let name = item["name"].as_str().unwrap().to_string();
-                let inputs = item["inputs"].as_array().unwrap();
-                let mut signature = name.clone();
-                signature = format!("{}(", signature);
-                let inputs_length = inputs.len();
-                for (i, input) in inputs.iter().enumerate() {
-                    if i != inputs_length - 1 {
-                        signature = format!("{}{},", signature, input["type"].as_str().unwrap());
-                    } else {
-                        signature = format!("{}{}", signature, input["type"].as_str().unwrap());
-                    }
-                }
-                signature = format!("{})", signature);
-                // println!("{}", signature);
-                let keccak_signature = format!("0x{}", hex::encode(keccak256(signature.as_bytes()))[0..8].to_string());
-                selectors_set.insert((signature.clone(), keccak_signature.clone()));
-                fns_vec.push((signature, keccak_signature));
-            }
+        
+        if abi.to_string().contains("Max rate limit reached") {
+            println!("Max rate limit reached for {}", entry.path().to_str().unwrap());
+            continue;
         }
+        let (mut events_vec, mut fns_vec): (Vec<(String, String)>, Vec<(String, String)>) = parse_only_abi_dhvani(abi.clone(), &mut events_set, &mut selectors_set);
+
 
         // lastly, push a new protocol to the protocols vec
         let protocol = ProtocolEventsFns {
@@ -232,4 +199,52 @@ pub fn jsons_to_abi(abs_json_dir: &str) {
     let mut file = std::fs::File::create("inputs/protocol_events_fns.json").unwrap();
     file.write_all(serde_json::to_string_pretty(&protocols).unwrap().as_bytes()).unwrap();
 
+}
+
+
+pub fn parse_only_abi_dhvani(abi: Value, events_set: &mut HashSet<(String, String)>, selectors_set: &mut HashSet<(String, String)>) -> (Vec<(String, String)>, Vec<(String, String)>) {
+    let mut events_vec: Vec<(String, String)> = Vec::new();
+    let mut fns_vec: Vec<(String, String)> = Vec::new();
+
+
+    for item in abi.as_array().unwrap() {
+        if item["type"].as_str().unwrap() == "event" {
+            let name = item["name"].as_str().unwrap().to_string();
+            let inputs = item["inputs"].as_array().unwrap();
+            let mut signature = name.clone();
+            signature = format!("{}(", signature);
+            let inputs_length = inputs.len();
+            for (i, input) in inputs.iter().enumerate() {
+                if i != inputs_length - 1 {
+                    signature = format!("{}{},", signature, input["type"].as_str().unwrap());
+                } else {
+                    signature = format!("{}{}", signature, input["type"].as_str().unwrap());
+                }
+            }
+            signature = format!("{})", signature);
+            // println!("{}", signature);
+            let keccak_signature = format!("0x{}", hex::encode(keccak256(signature.as_bytes())));
+            events_set.insert((signature.clone(), keccak_signature.clone()));
+            events_vec.push((signature, keccak_signature));
+        } else if item["type"].as_str().unwrap() == "function" {
+            let name = item["name"].as_str().unwrap().to_string();
+            let inputs = item["inputs"].as_array().unwrap();
+            let mut signature = name.clone();
+            signature = format!("{}(", signature);
+            let inputs_length = inputs.len();
+            for (i, input) in inputs.iter().enumerate() {
+                if i != inputs_length - 1 {
+                    signature = format!("{}{},", signature, input["type"].as_str().unwrap());
+                } else {
+                    signature = format!("{}{}", signature, input["type"].as_str().unwrap());
+                }
+            }
+            signature = format!("{})", signature);
+            // println!("{}", signature);
+            let keccak_signature = format!("0x{}", hex::encode(keccak256(signature.as_bytes()))[0..8].to_string());
+            selectors_set.insert((signature.clone(), keccak_signature.clone()));
+            fns_vec.push((signature, keccak_signature));
+        }
+    }
+    (events_vec, fns_vec)
 }
