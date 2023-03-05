@@ -32,7 +32,7 @@
 		<h2>Newest protocols</h2>
 
 		<section>
-			{#each state?.apps ?? apps as app}
+			{#each Object.values(state.apps) ?? apps as app}
 				<a href={`/apps/${app.network}/${app.address}`}>
 					<article>
 						<h3>{app.name}</h3>
