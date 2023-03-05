@@ -87,7 +87,7 @@
 					animate:flip={{ duration: 100, easing: expoOut }}
 					transition:scale={{ duration: 300, from: 0.4, opacity: 0 }}
 				>
-					<a href={`/apps/${app.network}/${app.address}`}>
+					<a href={`/${app.network}/${app.address}`}>
 						<h3>{app.name ?? `${app.network[0].toUpperCase()}${app.network.slice(1)} Contract`}</h3>
 					</a>
 
