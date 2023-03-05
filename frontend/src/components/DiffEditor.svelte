@@ -34,5 +34,7 @@
 <style>
 	#container {
 		height: 30rem;
+		border-radius: 0.33rem;
+		overflow: hidden;
 	}
 </style>
