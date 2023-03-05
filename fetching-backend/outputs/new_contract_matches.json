@@ -122121,6 +122121,154 @@
         "admin()"
       ],
       "deployer": "0x08f6dde16166f06e1d486749452dc3a44f175456"
+    },
+    {
+      "address": "0xf3db8d26b7d906ea12efe00628c2238a152a0c96",
+      "network": "mumbai",
+      "events": [],
+      "selectors": [
+        "withdraw()"
+      ],
+      "deployer": "0x08f6dde16166f06e1d486749452dc3a44f175456"
+    },
+    {
+      "address": "0xc047ba2cf7c1e10d50bdc0eadb993fc2c0332bb8",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "mint(uint256)",
+        "symbol()",
+        "allowance(address,address)",
+        "totalSupply()",
+        "transfer(address,uint256)",
+        "balanceOf(address)",
+        "burn(uint256)",
+        "name()",
+        "transferFrom(address,address,uint256)",
+        "approve(address,uint256)",
+        "decimals()"
+      ],
+      "deployer": "0x1f950b1d0e20913d7de58c80b63f88e154614bd5"
+    },
+    {
+      "address": "0x61dcdecc733135ec10a6d4250abfef8486d4ffe4",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)",
+        "RoleGranted(bytes32,address,address)",
+        "RoleRevoked(bytes32,address,address)"
+      ],
+      "selectors": [
+        "symbol()",
+        "DEFAULT_ADMIN_ROLE()",
+        "decreaseAllowance(address,uint256)",
+        "burn(address,uint256)",
+        "allowance(address,address)",
+        "getRoleAdmin(bytes32)",
+        "totalSupply()",
+        "BURNER_ROLE()",
+        "transfer(address,uint256)",
+        "revokeRole(bytes32,address)",
+        "renounceRole(bytes32,address)",
+        "balanceOf(address)",
+        "grantRole(bytes32,address)",
+        "mint(address,uint256)",
+        "hasRole(bytes32,address)",
+        "name()",
+        "MINTER_ROLE()",
+        "increaseAllowance(address,uint256)",
+        "transferFrom(address,address,uint256)",
+        "approve(address,uint256)",
+        "decimals()",
+        "supportsInterface(bytes4)"
+      ],
+      "deployer": "0xdbb197011d462a13e541b5140e2bc172368f2ae7"
+    },
+    {
+      "address": "0xc18177a446df9f4b51b1c0f4b2358a87a4f74036",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)",
+        "ApprovalForAll(address,address,bool)",
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "symbol()",
+        "setMerkleRoot(bytes32)",
+        "setApprovalForAll(address,bool)",
+        "transferOwnership(address)",
+        "totalSupply()",
+        "balanceOf(address)",
+        "renounceOwnership()",
+        "merkleRoot()",
+        "getApproved(uint256)",
+        "name()",
+        "safeTransferFrom(address,address,uint256)",
+        "transferFrom(address,address,uint256)",
+        "approve(address,uint256)",
+        "withdraw()",
+        "tokenURI(uint256)",
+        "supportsInterface(bytes4)",
+        "safeTransferFrom(address,address,uint256,bytes)",
+        "isApprovedForAll(address,address)",
+        "ownerOf(uint256)",
+        "owner()"
+      ],
+      "deployer": "0x0e8b8f9d757e4fb6d480334b492164613754e67d"
+    },
+    {
+      "address": "0x7686d238a3dc1c3ff568c3ff12baf288b3d3b3da",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "uniswapV3SwapCallback(int256,int256,bytes)"
+      ],
+      "deployer": "0x19ac4a4149d55c7fa749095959ab7ad132eb0f15"
+    },
+    {
+      "address": "0xb16cd97853e11b5d1ad6fc7609851c5cf2e787b7",
+      "network": "mumbai",
+      "events": [],
+      "selectors": [
+        "admin()"
+      ],
+      "deployer": "0x08f6dde16166f06e1d486749452dc3a44f175456"
+    },
+    {
+      "address": "0xb78806a3f7f0a45ef8179841d13a304abf07f105",
+      "network": "mumbai",
+      "events": [],
+      "selectors": [
+        "withdraw()"
+      ],
+      "deployer": "0x08f6dde16166f06e1d486749452dc3a44f175456"
+    },
+    {
+      "address": "0x6f934a1d54560f41858da3183224cd438d0eea2f",
+      "network": "mumbai",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "symbol()",
+        "decreaseAllowance(address,uint256)",
+        "allowance(address,address)",
+        "totalSupply()",
+        "transfer(address,uint256)",
+        "balanceOf(address)",
+        "name()",
+        "increaseAllowance(address,uint256)",
+        "transferFrom(address,address,uint256)",
+        "approve(address,uint256)",
+        "decimals()"
+      ],
+      "deployer": "0x467ee42f6ceea5e7263ea4a959c0df9ce6948a65"
     }
   ]
 }

@@ -48,7 +48,7 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
             }
         }
         return Ok(reply::json(&"No matches found"));
-    });
+    }).with(cors.clone());
 
 
     let get_similar_contracts =
@@ -120,9 +120,7 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
                 
             }
             Ok(reply::json(&"No matches found"))
-        })
-        .with(cors)
-        ;
+        }).with(cors.clone());
 
     // let contracts = serde_json::from_str::<Vec<ProtocolEventsFns>>(include_str!(
     //     "../../inputs/protocol_events_fns.json"
@@ -137,7 +135,7 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
     // });
     
 
-    warp::serve(get_similar_contracts.or(get_contract_bytecode))
+    warp::serve(get_similar_contracts.or(get_contract_bytecode).with(cors.clone()))
         .run(([0, 0, 0, 0], HTTP_PORT))
         .await;
     Ok(())
