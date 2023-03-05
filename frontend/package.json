@@ -12,6 +12,12 @@
 		"test:unit": "vitest",
 		"lint": "eslint ."
 	},
+	"dependencies": {
+		"d3-quadtree": "^3.0.1",
+		"layercake": "^7.2.2",
+		"monaco-editor": "^0.36.0",
+		"regl": "^2.1.0"
+	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^2.0.0",

@@ -1,0 +1,138 @@
+
+:root {
+	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+	display: grid;
+	grid-template:
+		100%
+		/ 100%;
+	min-height: 100%;
+
+	background: linear-gradient(146deg, #85beaf, #e3f17d) fixed;
+
+	transition-timing-function: var(--ease-out-expo);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration-color: inherit;
+	min-width: 0;
+	gap: inherit;
+	outline-color: var(--primary-color);
+	outline-width: 1px;
+	/* scroll-behavior: smooth; */
+	transform-style: inherit;
+	transition-duration: inherit;
+	transition-timing-function: inherit;
+}
+
+body {
+	width: 100%;
+	display: grid;
+	grid-template:
+		auto
+		1fr
+		auto
+		/ 60rem;
+	justify-content: center;
+	min-height: 100%;
+	gap: 2rem;
+
+	font-family: 'Manrope-Variable', sans-serif;
+	margin: auto;
+
+	overflow: clip auto;
+
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: #444;
+}
+
+body > div > main {
+	display: grid;
+	align-content: start;
+	gap: 1rem;
+}
+
+body > div > header, body > div > footer {
+	position: relative;
+	padding: 2rem;
+}
+body > div > header:before, body > div > footer:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	background-color: rgba(255, 255, 255, 0.1);
+	inset: 0 -100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	font-weight: 900;
+	color: #222;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+a {
+	color: #3273dc;
+}
+
+nav a {
+	margin-right: 10px;
+}
+
+textarea {
+	width: 100%;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+code {
+	padding: 2px 5px;
+	background-color: #f2f2f2;
+}
+pre {
+	padding: 1rem;
+}
+pre > code {
+	all: unset;
+}
+
+dl {
+	display: grid;
+	gap: 0;
+}
+dl > * {
+	display: grid;
+	grid-template:
+		auto
+		/ auto 1fr;
+	gap: 0.5rem;
+}
+
+label {
+	cursor: pointer;
+}
