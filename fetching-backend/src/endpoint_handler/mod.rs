@@ -14,6 +14,12 @@ use warp::http::header::HeaderValue;
 const HTTP_PORT: u16 = 9003;
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct BytecodeAndNetwork {
+    pub bytecode: String,
+    pub network: String,
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct MostSimilarContracts {
     pub most_similar_contracts: Vec<Contract>,
 }
@@ -22,6 +28,7 @@ pub struct MostSimilarContracts {
 pub struct Contract {
     pub name: String,
     pub source_code: String,
+    pub network: String,
 }
 
 pub async fn run_endpoint_handler() -> eyre::Result<()> {
@@ -66,7 +73,11 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
                 // read the file and return the contents
                 let bytecode_contents = std::fs::read_to_string(entry_path.clone()).unwrap();
                 // convert bytecode_contents to Bytes type
-                return Ok(reply::json(&bytecode_contents));
+                let bytecode_and_network = BytecodeAndNetwork {
+                    bytecode: bytecode_contents,
+                    network: entry_filename.split("_").collect::<Vec<&str>>()[0].to_string(),
+                };
+                return Ok(reply::json(&bytecode_and_network));
             } else {
                 continue;
             }
@@ -149,6 +160,7 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
                                     let contract_msg = Contract {
                                         name: contract_name,
                                         source_code: source_code_contents,
+                                        network: "mainnet".to_string(),
                                     };
                                     actual_contracts.push(contract_msg);
                                     break;
