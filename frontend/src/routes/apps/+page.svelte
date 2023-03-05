@@ -8,7 +8,7 @@
 
 	import { fly, scale } from 'svelte/transition'
 	import { flip } from 'svelte/animate'
-	import { expoInOut } from 'svelte/easing'
+	import { expoOut } from 'svelte/easing'
 </script>
 
 
@@ -55,7 +55,7 @@
 				i (`${app.network}/${app.address}`)
 			}
 				<article
-					animate:flip={{ duration: () => Object.values(state.apps).length > 20 ? 0 : 500, delay: i * 10, easing: expoInOut }}
+					animate:flip={{ duration: 100, easing: expoOut }}
 					transition:scale={{ duration: 300, from: 0.4, opacity: 0 }}
 				>
 					<a href={`/apps/${app.network}/${app.address}`}>
