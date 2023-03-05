@@ -29,6 +29,14 @@
 		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 	}
 
+	article {
+		transition: 0.2s;
+	}
+	article:hover {
+		filter: brightness(110%);
+		translate: 0 -0.1rem;
+	}
+
 	a {
 		display: contents;
 	}
@@ -56,6 +64,11 @@
 		translate: 1em;
 		padding-right: 1em;
 		font-size: 0.9em;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
 	}
 </style>
 
@@ -93,52 +106,53 @@
 				as app,
 				i (`${app.network}/${app.address}`)
 			}
-				<article
+				<a
+					href={`/${app.network}/${app.address}`}
 					animate:flip={{ duration: 100, easing: expoOut }}
 					transition:scale={{ duration: 300, from: 0.4, opacity: 0 }}
 				>
-					<a href={`/${app.network}/${app.address}`}>
-						<h3>{app.name ?? `${app.network[0].toUpperCase()}${app.network.slice(1)} Contract`}</h3>
-					</a>
+					<article>
+							<h3>{app.name ?? `${app.network[0].toUpperCase()}${app.network.slice(1)} Contract`}</h3>
 
-					<dl>
-						<div>
-							<dt>📒 Address</dt>
-							<dd>{formatAddress(app.address, 'middle-truncated')}</dd>
-						</div>
+						<dl>
+							<div>
+								<dt>📒 Address</dt>
+								<dd>{formatAddress(app.address, 'middle-truncated')}</dd>
+							</div>
 
-						<div>
-							<dt>📝 Similar Contracts</dt>
-							<dd>
-								<ul>
-									{#each app.most_similar_contracts.slice(0, 3) as contractName, i}
-										<li>{contractName}</li>
-									{/each}
-								</ul>
-							</dd>
-						</div>
+							<div>
+								<dt>📝 Similar Contracts</dt>
+								<dd>
+									<ul>
+										{#each app.most_similar_contracts.slice(0, 3) as contractName, i}
+											<li>{contractName}</li>
+										{/each}
+									</ul>
+								</dd>
+							</div>
 
-						<div>
-							<dt>🔥 Gas Used</dt>
-							<dd>{app.gas_used_for_deploy} wei</dd>
-						</div>
+							<div>
+								<dt>🔥 Gas Used</dt>
+								<dd>{app.gas_used_for_deploy} wei</dd>
+							</div>
 
-						<!-- <div>
-							<dt>Logs</dt>
-							<dd>{app.logs_emitted_on_deploy}</dd>
-						</div> -->
+							<!-- <div>
+								<dt>Logs</dt>
+								<dd>{app.logs_emitted_on_deploy}</dd>
+							</div> -->
 
-						<div>
-							<dt>🧊 Block Number</dt>
-							<dd>{app.block_number}</dd>
-						</div>
+							<div>
+								<dt>🧊 Block Number</dt>
+								<dd>{app.block_number}</dd>
+							</div>
 
-						<div>
-							<dt>⏰ Timestamp</dt>
-							<dd><Date date={app.timestamp * 1000} format="relative" /></dd>
-						</div>
-					</dl>
-				</article>
+							<div>
+								<dt>⏰ Timestamp</dt>
+								<dd><Date date={app.timestamp * 1000} format="relative" /></dd>
+							</div>
+						</dl>
+					</article>
+				</a>
 
 				<!-- New <a href="">{app.network}</a> contract: {app.address}
 				<br />
