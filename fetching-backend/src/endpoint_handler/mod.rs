@@ -20,7 +20,8 @@ pub struct MostSimilarContracts {
 
 pub async fn run_endpoint_handler() -> eyre::Result<()> {
     let cors = warp::cors()
-        .allow_any_origin();
+        .allow_any_origin()
+        .allow_methods(vec!["GET", "POST"]);
     let similar_contracts = serde_json::from_str::<Vec<ProtocolEventsFns>>(include_str!(
         "../../inputs/protocol_events_fns.json"
     ))
