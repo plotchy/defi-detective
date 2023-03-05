@@ -1,4 +1,5 @@
 <script lang="ts">	
+	import Date from '../../components/Date.svelte'
 	import WithState from '../../components/WithState.svelte'
 
 	
@@ -93,7 +94,7 @@
 
 						<div>
 							<dt>Timestamp</dt>
-							<dd>{app.timestamp}</dd>
+							<dd><Date date={app.timestamp * 1000} format="relative" /></dd>
 						</div>
 					</dl>
 				</article>
