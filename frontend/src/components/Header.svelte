@@ -25,7 +25,7 @@
 		color: rgba(0, 0, 0, 0.8);
 	}
 	h1::before {
-		content: '🕵️';
+		content: '🕵🏻';
 		position: absolute;
 		right: calc(100% + 1rem);
 	}

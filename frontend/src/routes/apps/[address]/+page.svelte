@@ -60,8 +60,6 @@
 
 	<output>{address}</output>
 
-	<h3>Compare</h3>
-
 	<ContractComparison
 		{address}
 	/>
