@@ -124709,6 +124709,129 @@
         "revokeRole(bytes32,address)"
       ],
       "deployer": "0x20e7b614866cb61a8fa12b847085d01783af4fbf"
+    },
+    {
+      "address": "0x523f4e4d76fb3006b5608e4cda43357641fd9b5b",
+      "network": "goerli",
+      "events": [],
+      "selectors": [
+        "owner()"
+      ],
+      "deployer": "0x8baf43c8992c3c6cd4a72afc005979882cd68a59"
+    },
+    {
+      "address": "0xd112305ceb6dbfb929bf632df547d9cb1b2b7cc8",
+      "network": "goerli",
+      "events": [
+        "OwnershipTransferred(address,address)"
+      ],
+      "selectors": [
+        "transferOwnership(address)",
+        "owner()",
+        "renounceOwnership()"
+      ],
+      "deployer": "0x5061fd4c537fe398a94a098b055d077eaca1efcb"
+    },
+    {
+      "address": "0xac86cb866b2901e72cbd7feadd59f393ea13fa46",
+      "network": "goerli",
+      "events": [
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "decimals()",
+        "totalSupply()",
+        "approve(address,uint256)",
+        "symbol()",
+        "name()",
+        "transfer(address,uint256)",
+        "allowance(address,address)",
+        "mint(uint256)",
+        "balanceOf(address)",
+        "burn(uint256)",
+        "transferFrom(address,address,uint256)"
+      ],
+      "deployer": "0x344f7fe64b5775f82d086d2e51904a89fd84a044"
+    },
+    {
+      "address": "0x1b3121421f133ff97fc88c5cca54e736dd584083",
+      "network": "goerli",
+      "events": [
+        "OwnerUpdated(address,address)",
+        "ApprovalForAll(address,address,bool)"
+      ],
+      "selectors": [
+        "setApprovalForAll(address,bool)",
+        "symbol()",
+        "name()",
+        "multicall(bytes[])",
+        "isApprovedForAll(address,address)",
+        "supportsInterface(bytes4)",
+        "owner()",
+        "setOwner(address)"
+      ],
+      "deployer": "0xe09e82d1514c192ed3f857d67eb5958a63428f57"
+    },
+    {
+      "address": "0x39b20fa0f1b8d1d59b19aa576914e44521eed3af",
+      "network": "mainnet",
+      "events": [
+        "SwapAndLiquify(uint256,uint256,uint256)",
+        "SetAutomatedMarketMakerPair(address,bool)",
+        "OwnershipTransferred(address,address)",
+        "Transfer(address,address,uint256)",
+        "Approval(address,address,uint256)"
+      ],
+      "selectors": [
+        "decimals()",
+        "totalSupply()",
+        "transferDelayEnabled()",
+        "_isExcludedMaxTransactionAmount(address)",
+        "approve(address,uint256)",
+        "symbol()",
+        "disableTransferDelay()",
+        "name()",
+        "swapEnabled()",
+        "transfer(address,uint256)",
+        "allowance(address,address)",
+        "excludeFromMaxTransaction(address,bool)",
+        "uniswapV2Router()",
+        "automatedMarketMakerPairs(address)",
+        "increaseAllowance(address,uint256)",
+        "maxTransactionAmount()",
+        "transferOwnership(address)",
+        "balanceOf(address)",
+        "tradingActive()",
+        "decreaseAllowance(address,uint256)",
+        "removeLimits()",
+        "owner()",
+        "setAutomatedMarketMakerPair(address,bool)",
+        "limitsInEffect()",
+        "transferFrom(address,address,uint256)",
+        "uniswapV2Pair()",
+        "renounceOwnership()"
+      ],
+      "deployer": "0x84eecfab82c003db3b0dd368cb0031829a6a2a97"
+    },
+    {
+      "address": "0xdaa392a5a8abc8bb6e21f90f6836d9deaa9b552b",
+      "network": "goerli",
+      "events": [
+        "RoleRevoked(bytes32,address,address)",
+        "RoleGranted(bytes32,address,address)"
+      ],
+      "selectors": [
+        "feePercentage()",
+        "getRoleAdmin(bytes32)",
+        "DEFAULT_ADMIN_ROLE()",
+        "grantRole(bytes32,address)",
+        "hasRole(bytes32,address)",
+        "supportsInterface(bytes4)",
+        "renounceRole(bytes32,address)",
+        "revokeRole(bytes32,address)"
+      ],
+      "deployer": "0x20e7b614866cb61a8fa12b847085d01783af4fbf"
     }
   ]
 }
