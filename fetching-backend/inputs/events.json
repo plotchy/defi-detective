@@ -1,1896 +1,2168 @@
 {
   "events": [
     {
-      "name": "ApplyCredit(address,address,address,uint256,uint256)",
-      "hash": "0xa90666688fb32254f45a367c38fbcd5f2664432b061a4354d9d3c9a7abcbec5b"
+      "name": "ChangedName(string,string)",
+      "hash": "0xfdcc9059d3426f73949b49e5d977553aa298184439da800d66f48959d9cc76b0"
     },
     {
-      "name": "FounderClaim(address,uint256)",
-      "hash": "0xe3fb82e12e4abf3decadf77f5be0447abeb73345b301196a9256a00bc46a1c4e"
-    },
-    {
-      "name": "UpgradeAgentSet(address)",
-      "hash": "0x7845d5aa74cc410e35571258d954f23b82276e160fe8c188fa80566580f279cc"
-    },
-    {
-      "name": "TrigRewardEvent(address,address,uint256)",
-      "hash": "0x92552527fa5ab3e91b9034146b3c83686e459ada0cd31509670b0743d301b437"
-    },
-    {
-      "name": "SwapTokensForETH(uint256,address[])",
-      "hash": "0x32cde87eb454f3a0b875ab23547023107cfad454363ec88ba5695e2c24aa52a7"
-    },
-    {
-      "name": "MinterAdded(address,address)",
-      "hash": "0x3c091dafb1d99e4a4c333024492eac3b2cd8bf921a3dd547c937db33be307bb8"
-    },
-    {
-      "name": "LiquidityAddition(address,uint256)",
-      "hash": "0x20b711375edba008429d2f91787c68aa13aab7f267c346bf91be1a104d8b7b8b"
-    },
-    {
-      "name": "Unwhitelisted(address)",
-      "hash": "0x51085ddf9ebdded84b76e829eb58c4078e4b5bdf97d9a94723f336039da46791"
-    },
-    {
-      "name": "ConfigsChanged(uint256,uint256,address,bool)",
-      "hash": "0x83564c1102f308ae821e2b1d74b5cafae42f89d7b2c57a73ad01810469fb2c99"
-    },
-    {
-      "name": "NewPendingOwner(address,address)",
-      "hash": "0xb3d55174552271a4f1aaf36b72f50381e892171636b3fb5447fe00e995e7a37b"
-    },
-    {
-      "name": "NewPendingMinter(address,address)",
-      "hash": "0x9421e8440241b8112ee6acc8e709b9ae90fd3acdf2fc48a88b46b8dde01ba8bb"
-    },
-    {
-      "name": "SetAutomatedMarketMakerPair(address,bool)",
-      "hash": "0xffa9187bf1f18bf477bd0ea1bcbb64e93b6a98132473929edfce215cd9b16fab"
-    },
-    {
-      "name": "UpdateCeiling(address,uint128)",
-      "hash": "0xcbd9889d49abd2bf5754aa55afcd1d932be6bce46399a45161b8bb3296775bd3"
-    },
-    {
-      "name": "Upgrade(address,address,uint256)",
-      "hash": "0x7e5c344a8141a805725cb476f76c6953b842222b967edd1f78ddb6e8b3f397ac"
-    },
-    {
-      "name": "Whitelisted(address)",
-      "hash": "0xaab7954e9d246b167ef88aeddad35209ca2489d95a8aeb59e288d9b19fae5a54"
-    },
-    {
-      "name": "Recovered(address,uint256)",
-      "hash": "0x8c1256b8896378cd5044f80c202f9772b9d77dc85c8a6eb51967210b09bfaa28"
-    },
-    {
-      "name": "NewGovernance(address,address)",
-      "hash": "0x48da34dfe9ebb4198c3f70d8382467788dcee33984c79a74fa850772c4e5e36f"
-    },
-    {
-      "name": "Burned(address,address,uint256,bytes,bytes)",
-      "hash": "0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098"
-    },
-    {
-      "name": "StakeGoodAccounting(uint256,uint256,address,uint40,address)",
-      "hash": "0xd824970a2cf19cc2b630c87ce5b00f67301cac3ac60513d027c7a39129f93b46"
-    },
-    {
-      "name": "KeeperWorked(address,address,address,uint256,uint256)",
-      "hash": "0x3cda93551ad083704be19fabbd7c3eb94d88f6e72ff221bdea9017e52e4144e8"
-    },
-    {
-      "name": "Minting(address,address,uint256)",
-      "hash": "0xb1233017d63154bc561d57c16f7b6a55e2e1acd7fcac94045a9f35fb31a850ca"
-    },
-    {
-      "name": "WhiteListed(address)",
-      "hash": "0x2e00aa132a0165955a7de5481083fd2933e22d472949147a9c3c69eec84c1700"
-    },
-    {
-      "name": "Burning(address,uint256)",
-      "hash": "0x62626c8ae1f1f3ad3b2f42ba7b806bbc48e9a59dab06414984113eaab612fe47"
-    },
-    {
-      "name": "DeletedNewIndex(address)",
-      "hash": "0x7f753fc23b8d98e1d3f23e00c3e6337cb1c750bfcd79a5eb38198fdb2dd50e24"
-    },
-    {
-      "name": "ChangedSymbol(string,string)",
-      "hash": "0x784d389d7a25efa135ac4c0ba29502585aff3f630e1639d375722bae3605664e"
-    },
-    {
-      "name": "MinterChanged(address,address)",
-      "hash": "0x3b0007eb941cf645526cbb3a4fdaecda9d28ce4843167d9263b536a1f1edc0f6"
-    },
-    {
-      "name": "ApprovalByPartition(bytes32,address,address,uint256)",
-      "hash": "0xf061499aa77c2f6f5e25e34955a06623705344a88256cc861a121ec0bce5cfec"
-    },
-    {
-      "name": "TransferDisabled(address)",
-      "hash": "0xb982dae7b403c8420da5251b5cce66f0975c48bd3d6fe1ae31eb19f5106b3ce3"
-    },
-    {
-      "name": "Mint(address,uint256)",
-      "hash": "0x0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885"
-    },
-    {
-      "name": "AutoBurn(uint256)",
-      "hash": "0xbaf2a973da603337d11f56e6730fba6606e95b5e8085627c9ead4d24672d8616"
-    },
-    {
-      "name": "TransferGovernancePending(address)",
-      "hash": "0x70f2dff90d8145da945114cc37c5ffde0eef9306ad5efbd39cae52dc28f9cbf3"
-    },
-    {
-      "name": "LOG_SET_UNLOCK_FACTOR(address,uint256)",
-      "hash": "0xfbd482c9dea78c178879b07a2daa165a1348ac031421bb9917d8734de948fca3"
-    },
-    {
-      "name": "KeeperSlashed(address,address,uint256,uint256)",
-      "hash": "0xf7e41ea76f0e7b22ba17dc4cc01fa75cff34ea24f5efe2874f5e175296259050"
-    },
-    {
-      "name": "ClaimVestedTokens(address,uint256,uint256)",
-      "hash": "0xffc3eace03cdc34b7c376b488d01a425cdbb40202e6cc36227247aa560948bb9"
-    },
-    {
-      "name": "UnlockUser(address)",
-      "hash": "0x687691c08a3e67a160ba20a32cb1c56791955f12c5ff5d5fcf62bc456ad79ea1"
-    },
-    {
-      "name": "Transfer(address,address,uint256,bytes)",
-      "hash": "0xe19260aff97b920c7df27010903aeb9c8d2be5d310a2c67824cf3f15396e4c16"
-    },
-    {
-      "name": "SET_CORE(address,address)",
-      "hash": "0x0056b56524ccc7cf1d147fdc1b3201b6e5bf8df426ebc07861b3564064d7fc2d"
-    },
-    {
-      "name": "TWAPSourceRemoved(address)",
-      "hash": "0x677b09947a451559cdf8756f4cb518daf9620feb88ad8f3434a77f4cbfc73bc9"
-    },
-    {
-      "name": "Burning(address,uint256,string,string,address)",
-      "hash": "0xf5577aec900779fdc4060207f95a90077d57e4ac39af49c805a073b9b1b852ea"
-    },
-    {
-      "name": "StabilityPoolAddressChanged(address)",
-      "hash": "0x82966d27eea39b038ee0fa30cd16532bb24f6e65d31cb58fb227aa5766cdcc7f"
-    },
-    {
-      "name": "Minted(address,address,uint256)",
-      "hash": "0x9d228d69b5fdb8d273a2336f8fb8612d039631024ea9bf09c424a9503aa078f0"
-    },
-    {
-      "name": "MintFinished()",
-      "hash": "0xae5184fba832cb2b1f702aca6117b8d265eaf03ad33eb133f19dde0f5920fa08"
-    },
-    {
-      "name": "IncludeInFeeUpdated(address)",
-      "hash": "0xead11242b7eb5b3a03a27edc0039f1305d251bf91b3d1e94c3861c3d6e4ac128"
-    },
-    {
-      "name": "MaxBuybackAmountUpdated(uint256)",
-      "hash": "0xb25c7820d9392eafa2a90c45ca6438ae395e13490da78f2e2c77168cbb951534"
-    },
-    {
-      "name": "NewImplementation(address,address)",
-      "hash": "0xd604de94d45953f9138079ec1b82d533cb2160c906d1076d1f7ed54befbca97a"
-    },
-    {
-      "name": "PublicCapabilityUpdated(bytes4,bool)",
-      "hash": "0x36d28126bef21a4f3765d7fcb7c45cead463ae4c41094ef3b771ede598544103"
-    },
-    {
-      "name": "TokenMinterMinted(address,address,uint256)",
-      "hash": "0xe0dcb47e0eb67e20e87f3e34aab31c669ecec7466e8b7fb329d586dadebac6b6"
-    },
-    {
-      "name": "Disallowed(address)",
-      "hash": "0x9ef90a89b00db1a1891a357dc96b2a273add9d883e378c350d22bad87a9d7d30"
-    },
-    {
-      "name": "Staked(address,uint256)",
-      "hash": "0x9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d"
-    },
-    {
-      "name": "BurnAddressUpdated(address)",
-      "hash": "0x6feb2294766fb161940a49b92df0ad4a47ffb6ef8255e0b9f80c8c05b7ec6b0f"
-    },
-    {
-      "name": "ContractFallbackCallFailed(address,address,uint256)",
-      "hash": "0x11249f0fc79fc134a15a10d1da8291b79515bf987e036ced05b9ec119614070b"
-    },
-    {
-      "name": "Reward(uint256)",
-      "hash": "0x3ac0594a85a20354f9dc74f33728416d19ce00d04a406c108cc2dcf2cecea134"
-    },
-    {
-      "name": "NewDAO(address,address)",
-      "hash": "0x567cac11d4a66456bbe20dc60d3579ec446a4e2fffae2a85f82ad0f1f18214f1"
+      "name": "ReserveFlashLoaning(address,bool)",
+      "hash": "0xc8ff3cc5b0fddaa3e6ebbbd7438f43393e4ea30e88b80ad016c1bc094655034d"
     },
     {
       "name": "FeesAccrued(address,uint256,bool,uint256)",
       "hash": "0x5623b32a5de3b9c9ab0cc28fb483268639c2a9b4fef0da1c5a7cdff50da7e485"
     },
     {
-      "name": "NftBridgedIn(address,address,address,uint256,uint256)",
-      "hash": "0x339e4100371ca3951325b190c421cb3c67f09635d57fc14e6aacfcb52d387329"
-    },
-    {
-      "name": "LogInflationRate(uint256,uint256,uint256,uint256)",
-      "hash": "0x23a10b68479b862b72163c4af5c093cdb3e4508e7acc5f62f721f2d9eb0a58de"
-    },
-    {
-      "name": "XUSDBurned(address,address,uint256)",
-      "hash": "0x4d62459ee04e10636b8fb474ff487ba15b01c013a2bdf7f9e82deafb88043502"
-    },
-    {
-      "name": "OperatorRoleGranted(address,address)",
-      "hash": "0x2d45ee102874989882745a26688d0b4fffee125a18df26536b12582c7fde4e17"
-    },
-    {
-      "name": "NewDay(uint256,uint256,uint256)",
-      "hash": "0x80fb1b49fb696967f7276660614bc3eda9d5de84b0589b1ba3c8a3997831b9bd"
-    },
-    {
-      "name": "Initialized()",
-      "hash": "0x5daa87a0e9463431830481fd4b6e3403442dfb9a12b9c07597e9f61d50b633c8"
-    },
-    {
-      "name": "DelegateChanged(address,address,uint8)",
-      "hash": "0xe8d51c8e11bd570db1734c8ec775785330e77007feed45c43b608ef33ff914bd"
-    },
-    {
-      "name": "Upgraded(address)",
-      "hash": "0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b"
-    },
-    {
-      "name": "Advanced(uint256,uint256)",
-      "hash": "0xa8eb7e5fda38cf18e907bee8da786b6c9477deefbd4f2a7869f4a12abb68b4c3"
-    },
-    {
-      "name": "Start()",
-      "hash": "0x1b55ba3aa851a46be3b365aee5b5c140edd620d578922f3e8466d2cbd96f954b"
-    },
-    {
-      "name": "BurnerSet(address,bool)",
-      "hash": "0xd28dc1379d750c7c8137c7ef7b074f62f1361b9becc7f9d77d8c0d6e46a3cd06"
-    },
-    {
-      "name": "Burnt(address,address,uint256)",
-      "hash": "0xe8a89cc6e5096f9d9f43de82c077c1f4cfe707c0e0c2032176c68813b9ae6a5c"
-    },
-    {
-      "name": "DelegatedPowerChanged(address,uint256,uint8)",
-      "hash": "0xa0a19463ee116110c9b282012d9b65cc5522dc38a9520340cbaf3142e550127f"
-    },
-    {
-      "name": "EmergencyStopMintingCollateral(address,bool)",
-      "hash": "0x5bbb1afddf32881824ddeb3fb7fe693cbb0aa35de2ef25c53ad5e8e8d44c2720"
-    },
-    {
-      "name": "MinerSet(address)",
-      "hash": "0x2f834d1c8c4b956018fff5faca4d99868ae635487424d9c265c257ccbc698c6a"
-    },
-    {
-      "name": "Deposit(address,address,uint256[],uint256,uint256)",
-      "hash": "0x06caae2b2e26a58cd4700e53b62553aa8689e11ecf1506dbc680a1cc615306c3"
-    },
-    {
       "name": "emissions(address,address,uint256)",
       "hash": "0xa9ecc4711fda39b4436a49fad69fe1e10c108a36e8f3aa20837006d26e400030"
-    },
-    {
-      "name": "MinStakeSizeUpdated(uint256)",
-      "hash": "0xbc2adebc66b92f0ce243c481c19c471165443a1f337f32912b76176bb97d5528"
-    },
-    {
-      "name": "OwnerUpdate(address,address)",
-      "hash": "0x343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a"
-    },
-    {
-      "name": "OwnershipPulled(address,address)",
-      "hash": "0xaa151555690c956fc3ea32f106bb9f119b5237a061eaa8557cff3e51e3792c8d"
-    },
-    {
-      "name": "TWAPEpochChanged(uint256,uint256)",
-      "hash": "0xcddeab46bd7c7fa32f59b80523bce21904a7f2031ac8fbefa3f9c2ba24cc0e9f"
-    },
-    {
-      "name": "LockedBalance(address,uint256)",
-      "hash": "0xebfb816221eaf798e256b970818c54755242a19e3e1a2b5b2060f9d22ecbf46d"
-    },
-    {
-      "name": "BridgeAdded(address)",
-      "hash": "0x3cda433c5679ae4c6a5dea50840e222a42cba3695e4663de4366be8993484221"
-    },
-    {
-      "name": "LOG_UNSTAKE(address,address,uint256)",
-      "hash": "0x1ddc13fab879f36a0016ded03412386f11de571437df12605dc0607742bd82c2"
-    },
-    {
-      "name": "MintCapChanged(uint256)",
-      "hash": "0x1b3897f919a5b5973b0bc01ddfa5fd686de127a16ad08e0b8618dc493aad5462"
-    },
-    {
-      "name": "Rely(address)",
-      "hash": "0xdd0e34038ac38b2a1ce960229778ac48a8719bc900b6c4f8d0475c6e8b385a60"
-    },
-    {
-      "name": "RelayHubChanged(address,address)",
-      "hash": "0xb9f84b8e65164b14439ae3620df0a4d8786d896996c0282b683f9d8c08f046e8"
-    },
-    {
-      "name": "NewIncentiveAddress(address,address)",
-      "hash": "0x5b536d33bf72072f3abff40e9c9bc550f83025bbc9b8cc36972c166d8b568b43"
-    },
-    {
-      "name": "BuyBackCrossChainTriggered()",
-      "hash": "0x6a436cd4d025d81a64b65845b219f011a8406fee86f3a2d737f274d94e268de1"
-    },
-    {
-      "name": "retrieveExcessTokens(address,address,uint256)",
-      "hash": "0xb4a9bd656f85bef0e5b143941a7ac16dd7d098f71118b6e303959cd7eb187956"
-    },
-    {
-      "name": "LogSwapin(bytes32,address,uint256)",
-      "hash": "0x05d0634fe981be85c22e2942a880821b70095d84e152c3ea3c17a4e4250d9d61"
-    },
-    {
-      "name": "Transferred(address,address,address,uint256)",
-      "hash": "0x769254a71d2f67d8ac6cb44f2803c0d05cfbcf9effadb6a984f10ff9de3df6c3"
-    },
-    {
-      "name": "AuthorizedOperatorByPartition(bytes32,address,address)",
-      "hash": "0x3646a897c70797ecc134b0adc32f471b07bf1d6f451133b0384badab531e3fd6"
-    },
-    {
-      "name": "MaxSupplyAllowedAfterChanged(uint256,uint256)",
-      "hash": "0x63abb52e09389994840613a4780aa50f65baa62888e3cdcfcb088ac2de0b7db5"
-    },
-    {
-      "name": "BuyBackTriggered()",
-      "hash": "0xac401825222c905dafef53f897e1fe565e107a9b114737f28ad26c699784bd8d"
-    },
-    {
-      "name": "MinterAdded(address)",
-      "hash": "0x6ae172837ea30b801fbfcdd4108aa1d5bf8ff775444fd70256b44e6bf3dfc3f6"
-    },
-    {
-      "name": "VaultMint(address,uint256,uint256,uint256)",
-      "hash": "0xf79584ad48f1b6f4760ff2c645a0bc47324f626fb535ad3aa1a4f7e49525651a"
-    },
-    {
-      "name": "TransferEnabled(address)",
-      "hash": "0x5285f0ad5858236d5f2ce2ec9ff0b2d3aa04320499b71f022e64d9c7549a325c"
-    },
-    {
-      "name": "XUSDMinted(address,address,uint256)",
-      "hash": "0x67aaa692dd2aa98aefdd0a45df45f3ef389ca47386032994bfdf0f66c19f08e0"
-    },
-    {
-      "name": "OwnerSet(address)",
-      "hash": "0x50146d0e3c60aa1d17a70635b05494f864e86144a2201275021014fbf08bafe2"
-    },
-    {
-      "name": "AdminRoleAdded(address)",
-      "hash": "0x25cc8d4039f7afd8efdce4a2a256292a21960a85fee5e8e73a3209d334cdcdab"
-    },
-    {
-      "name": "Sync(uint256,uint256)",
-      "hash": "0xcf2aa50876cdfbb541206f89af0ee78d44a2abf8d328e37fa4917f982149848a"
-    },
-    {
-      "name": "DelegateChanged(address,address)",
-      "hash": "0xef9fc1dee6010109e6e3b21e51d44028e246dbad8a5a71ea192a30b19e1f457f"
-    },
-    {
-      "name": "SendToChain(uint16,bytes,uint256)",
-      "hash": "0x664e26797cde1146ddfcb9a5d3f4de61179f9c11b2698599bb09e686f442172b"
-    },
-    {
-      "name": "ComponentAdded(address)",
-      "hash": "0x76da6cf8b40dd2b2c223a5956831e0ff4e75522538a86782108a0bbe1577e298"
-    },
-    {
-      "name": "Lock(address,uint256)",
-      "hash": "0x625fed9875dada8643f2418b838ae0bc78d9a148a18eee4ee1979ff0f3f5d427"
-    },
-    {
-      "name": "NewLicenseFeeSubmitted(uint256)",
-      "hash": "0xbd5dc0f7a57c40b35f45d757606b9431c68f5007f1ee9b0da8fc426433a7099a"
-    },
-    {
-      "name": "Issuance(uint256)",
-      "hash": "0x9386c90217c323f58030f9dadcbc938f807a940f4ff41cd4cead9562f5da7dc3"
-    },
-    {
-      "name": "SetRate(uint256)",
-      "hash": "0x2640b4015d3473fd09bf2b30939e17deb4068cdacf3892136e737e166ceb3210"
-    },
-    {
-      "name": "DelegateChanged(address,address,address)",
-      "hash": "0x3134e8a2e6d97e929a7e54011ea5485d7d196dd5f0ba4d4ef95803e8e3fc257f"
-    },
-    {
-      "name": "AMMSet(address,bool)",
-      "hash": "0x52f7750de642e169ff687a199cc8453a96d938130a797c0a11ea42a4d1659d87"
-    },
-    {
-      "name": "Swap(address,address,uint256,uint256,uint256,uint256)",
-      "hash": "0xb3e2773606abfd36b5bd91394b3a54d1398336c65005baf7bf7a05efeffaf75b"
-    },
-    {
-      "name": "ExecutionAdminAdminChanged(address,address)",
-      "hash": "0xb2b670b34860515166c00eba5e2e5fa8116d57091604f37ba24ac8021c7fa165"
-    },
-    {
-      "name": "DelegateVotesChanged(address,uint96,uint96)",
-      "hash": "0x664ef4a22338e827df5b675ec1747eac10c2ea611e1c575f3d96c38a2e24231e"
-    },
-    {
-      "name": "ImplChanged(address,address)",
-      "hash": "0xaad46b89531ed10d02d926f4d6bfe234a6126e3fffc02d3b07167575f9c14337"
-    },
-    {
-      "name": "Minted(address,address,uint256,bytes)",
-      "hash": "0xbcd28e05e57d4bcd5bfcc92a4661d412893e6112c44a2e25d96cfdfc30d5f22e"
-    },
-    {
-      "name": "NewLockout(address,uint256,bool,uint256,uint256)",
-      "hash": "0x7ec8d498ce0e4d11d52cf0588976b9a8b30679d7135f9e82de77e2e318a1ea40"
-    },
-    {
-      "name": "LogChangeMPCOwner(address,address,uint256)",
-      "hash": "0x1d065115f314fb9bad9557bd5460b9e3c66f7223b1dd04e73e828f0bb5afe89f"
-    },
-    {
-      "name": "ToBoring(address,uint256,uint256)",
-      "hash": "0x9f259704286ad43f90853301a977fc106c06586bc4647380a500de1669eaa061"
-    },
-    {
-      "name": "BusinessDevelopmentDivisorUpdated(uint256)",
-      "hash": "0x160ad92b724bb5157ba7574b379ecc4ec5a5f5220cd651c3b44b4b1c12332b11"
-    },
-    {
-      "name": "NewSmartToken(address)",
-      "hash": "0xf4cd1f8571e8d9c97ffcb81558807ab73f9803d54de5da6a0420593c82a4a9f0"
-    },
-    {
-      "name": "UpdateMinter(address,bool)",
-      "hash": "0xc6a23a0a2412457bc174b0b04538a04d162131389a2e6bafcb3c90d104004e16"
-    },
-    {
-      "name": "ManagerEdited(address,address)",
-      "hash": "0x43fcfef38622d6a5b118be09c27a6ed8cbdbfca21f0ea9245412ce8031c0423c"
-    },
-    {
-      "name": "JellySet()",
-      "hash": "0xf8cae5c6689c0438a60eefc96cc182e609e583494ec7611e57ef82f651888f0c"
-    },
-    {
-      "name": "Mint(uint256)",
-      "hash": "0x07883703ed0e86588a40d76551c92f8a4b329e3bf19765e0e6749473c1a84665"
-    },
-    {
-      "name": "TransferAllowlistUpdated(address,bool)",
-      "hash": "0x80e7b8bab7ab72e47957c0c472ede1b89bb3e7d2ba30cd37c2d6b000b49a960a"
-    },
-    {
-      "name": "LockupContractFactoryAddressSet(address)",
-      "hash": "0x67fc41630409887e5790bb6a910e8638e72f5f11f10d75d94a2d91178c1108b9"
-    },
-    {
-      "name": "PendingModuleRemoved(address)",
-      "hash": "0xd6b18042563148f38d728c1c4d339ffd515b632d0ad2e1833b822412f3f4d877"
-    },
-    {
-      "name": "TaxHandlerChanged(address,address)",
-      "hash": "0x00d910c9481701ba32afe0c247572aaece27072f230c8ec769bf245fc0b38de6"
-    },
-    {
-      "name": "VNLConverted(address,uint256)",
-      "hash": "0xc81072229ec6e4e2cb32e6d9fcfa0d4f4ac0b521ac84083648501b3e38274187"
-    },
-    {
-      "name": "MinBuybackAmountUpdated(uint256)",
-      "hash": "0x2d2d4e5324f4ce25e3d52eea5f16c64ccd01d35f9f80f30b73346811cc9b951d"
-    },
-    {
-      "name": "TokenStarted()",
-      "hash": "0x994a0442f4498644e0bb3fe4b4c74ad21fbbb80e04b2fd1cb31f4248796d3dde"
-    },
-    {
-      "name": "MinterRemoved(address,address)",
-      "hash": "0x4b5ef9a786cf64a7d82ebcf2d5132667edc9faef4ac36260d9a9e52c526b6232"
-    },
-    {
-      "name": "AdminChanged(address,address)",
-      "hash": "0x7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f"
-    },
-    {
-      "name": "KeeperUnbonding(address,uint256,uint256,uint256)",
-      "hash": "0x50eca01e7e4362bc0279a45c4fbe68f263771dd3418b0a29c93008759f433b2e"
-    },
-    {
-      "name": "Cancel(address,uint256)",
-      "hash": "0x27f83af92b39768b17fe0c8d6922452702717efb8626d97e7a754e0b27d4f6d2"
-    },
-    {
-      "name": "ClaimedTokens(address,address,uint256)",
-      "hash": "0xf931edb47c50b4b4104c187b5814a9aef5f709e17e2ecf9617e860cacade929c"
-    },
-    {
-      "name": "IncludeInReward(address)",
-      "hash": "0xb31990b399410eeea874c2c81063feb4b5e55f66f46004a8306f10a81f031d3f"
-    },
-    {
-      "name": "NewMinter(address,address)",
-      "hash": "0x0b5e7be615a67a819aff3f47c967d1535cead1b98db60fafdcbf22dcaa8fa5a9"
-    },
-    {
-      "name": "NewPendingGov(address,address)",
-      "hash": "0x6163d5b9efd962645dd649e6e48a61bcb0f9df00997a2398b80d135a9ab0c61e"
-    },
-    {
-      "name": "LockupTriggerAmount(uint256)",
-      "hash": "0x71b19fe37543f141c3074de019392d8a9eb84faa2ecb875434c706a07de38a9c"
-    },
-    {
-      "name": "BlackListed(address)",
-      "hash": "0x7fd26be6fc92aff63f1f4409b2b2ddeb272a888031d7f55ec830485ec6194186"
-    },
-    {
-      "name": "PointsCorrectionUpdated(address,int256)",
-      "hash": "0xf694bebd33ada288ae2f4485315db76739e2d5501daf315e71c9d8f841aa7773"
-    },
-    {
-      "name": "ControlRemoved(address,uint8)",
-      "hash": "0x99b197980951aeda56a24210ac7963b47fac50b2277554a4fc7dc06fd305b574"
-    },
-    {
-      "name": "RevokedOperator(address,address)",
-      "hash": "0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1"
-    },
-    {
-      "name": "ShareRateChange(uint256,uint40)",
-      "hash": "0x9861fa0ed101659f7a59b4583fcc798dfa4f3b419bea371c8ee2ad0ffe13a31e"
-    },
-    {
-      "name": "ClaimRewards(address,uint256)",
-      "hash": "0x1f89f96333d3133000ee447473151fa9606543368f02271c9d95ae14f13bcc67"
-    },
-    {
-      "name": "TreasuryRemoved(address)",
-      "hash": "0x0820ed7a122a6fc9da8baebd1b26fd87a75060c4d45f69af14c3bfc5f697a4ae"
-    },
-    {
-      "name": "SetApprovalAutoTimeout(address,uint16,uint16)",
-      "hash": "0x6d8d587cf6c6d60a0dcd1fa635969d1d69787cfdf26d9f83ebaba44408fc1d2d"
-    },
-    {
-      "name": "UpdateMiningParameters(uint256,uint256,uint256)",
-      "hash": "0x27e46362a1e6129b6dd539c984ce739291a97128dfcaeca1255e8ac83abd9441"
-    },
-    {
-      "name": "TransferAndCall(address,address,uint256,bytes)",
-      "hash": "0xce8124fd2ae9fd7904103e5a9ebe88b527b9ca0e32a32fd497845c82706542d3"
-    },
-    {
-      "name": "Mint(address,address,uint256,uint256,string)",
-      "hash": "0xad2943b15836caf43698401a62af4738985fb33dd979844d99d37f5293f037d3"
-    },
-    {
-      "name": "Swap(address,uint256)",
-      "hash": "0x562c219552544ec4c9d7a8eb850f80ea152973e315372bf4999fe7c953ea004f"
-    },
-    {
-      "name": "MerkleRootChanged(bytes32)",
-      "hash": "0x1b930366dfeaa7eb3b325021e4ae81e36527063452ee55b86c95f85b36f4c31c"
-    },
-    {
-      "name": "Cage(uint256)",
-      "hash": "0x8b2f35c645f75532175a00d9b4565154e45c8eb57ee0155e03d0958f3a4d4b89"
-    },
-    {
-      "name": "CreateGrant(address,uint256,address,uint256)",
-      "hash": "0x73822e28a3afc9fc2814acd342053527b35eae29ce20639db00195637d0eccdc"
-    },
-    {
-      "name": "AdminTaskDropped(bytes32)",
-      "hash": "0x468b360fa155a4c5fdf0cb38ce238407e41508a56023e7536088c21b2cd64139"
-    },
-    {
-      "name": "OwnershipTransferred(address,address)",
-      "hash": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
-    },
-    {
-      "name": "LQTYStakingAddressSet(address)",
-      "hash": "0xc03bd56bd5702c36b067ffe5fbcb0a58301813a6be63b16b7944b8181539de45"
-    },
-    {
-      "name": "BusinessDevelopmentAddressUpdated(address)",
-      "hash": "0x6a679ad6371327969c9ddeade76f85c3e657fd6d020eeb491becdd1b6d608db3"
-    },
-    {
-      "name": "DelegateVotesChanged(address,uint224,uint224)",
-      "hash": "0xda5a64c2947c0b7bf4d6e7bf736c6f84d9d1c5f991770f88bbeb3fe19c85a134"
-    },
-    {
-      "name": "LogDistributer(address)",
-      "hash": "0x08982b645dd7c290a0406bfc1066ec18c214f3a9f7ebf7c5189c0c3a79a7ada8"
-    },
-    {
-      "name": "PositionModuleAdded(address,address)",
-      "hash": "0xf71324fa78e1894b364a1fc8d0535c4208f28c7b380f752afe00c8ce386023fb"
-    },
-    {
-      "name": "NewTimeLockRegistration(address,address)",
-      "hash": "0x1b4fa7e35ece4dcbbb914f91d8c3539c828d43c0b8a700237373966a27a9693a"
-    },
-    {
-      "name": "ModuleRemoved(address)",
-      "hash": "0x0a1ee69f55c33d8467c69ca59ce2007a737a88603d75392972520bf67cb513b8"
-    },
-    {
-      "name": "AdminRoleRemoved(address)",
-      "hash": "0x2d63f8ac641aea9e12c12daecbbf1ff5c41954f082604d02af14295e2d50f640"
-    },
-    {
-      "name": "StakeReleased(uint256,uint256,address,bytes32,uint256)",
-      "hash": "0x0a5ee9b013e4bd25fbac492ab2632175b3dbed33e8698e329b560ab3463d2f9c"
-    },
-    {
-      "name": "TargetUpdated(address)",
-      "hash": "0x814250a3b8c79fcbe2ead2c131c952a278491c8f4322a79fe84b5040a810373e"
-    },
-    {
-      "name": "ChangeConfirmed(bytes32,uint256)",
-      "hash": "0xbb7640d9671cd2b6ad67894615875d39f4222b2b047d3dbfe122026796ac36b4"
-    },
-    {
-      "name": "CapUpdated(uint256)",
-      "hash": "0x3c8eb7c49d332f4c1e4d92a27cda93c31cc9452f7a408e0c6109fcddbc9946ea"
-    },
-    {
-      "name": "Approval(address,address,uint256)",
-      "hash": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
-    },
-    {
-      "name": "RoleAdminChanged(bytes32,bytes32,bytes32)",
-      "hash": "0xbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff"
-    },
-    {
-      "name": "ClaimAssist(uint256,uint256,uint256,address)",
-      "hash": "0x3a84b2d9dac24683628d63034c6949797f15fab735e16232518ee4e753fd49b7"
-    },
-    {
-      "name": "ExcludeFromFee(address)",
-      "hash": "0x58c3e0504c69d3a92726966f152a771e0f8f6ad4daca1ae9055a38aba1fd2b62"
-    },
-    {
-      "name": "LogSetRewardTokens(address[],bool[])",
-      "hash": "0x1c642aedd77a6c0551f3b7c026dae498837b683e54380a47c3874bef3ad0394a"
-    },
-    {
-      "name": "RevokeAllApprovals(address,bool,bool)",
-      "hash": "0x5c20d5f19f8c6bc73cb1cba38e0b27f3837b43909d18a4ef193d1fa3c6f8f0d4"
-    },
-    {
-      "name": "DelegatesChanged(address,address,address)",
-      "hash": "0xfeb33bf853fe1792904c8eb8d9051f75733847700e159cdb11cf8721a700a010"
-    },
-    {
-      "name": "Revoke(address,bytes32)",
-      "hash": "0xc7fb647e59b18047309aa15aad418e5d7ca96d173ad704f1031a2c3d7591734b"
-    },
-    {
-      "name": "ChangedName(string,string)",
-      "hash": "0xfdcc9059d3426f73949b49e5d977553aa298184439da800d66f48959d9cc76b0"
-    },
-    {
-      "name": "RevenueDistributed(address,uint256,uint256,uint256)",
-      "hash": "0x615e44f94de69b66b60b6cdd78b2056d4ebbd39a1338646e5cf21328ead50d23"
-    },
-    {
-      "name": "ComponentRemoved(address)",
-      "hash": "0xc605d0bf97f9b921340106a2e59f9428d5eb9039b16866159e0cdd2bf8e963df"
-    },
-    {
-      "name": "Burned(address,uint256)",
-      "hash": "0x696de425f79f4a40bc6d2122ca50507f0efbeabbff86a84871b7196ab8ea8df7"
-    },
-    {
-      "name": "AddedBlackList(address)",
-      "hash": "0x42e160154868087d6bfdc0ca23d96a1c1cfa32f1b72ba9ba27b69b98a0d819dc"
-    },
-    {
-      "name": "DailyDataUpdate(uint256,address)",
-      "hash": "0xb8d6eb541ded1720cc657b719f57abcb1fe4711cb7ead82751b135f5d94bc944"
-    },
-    {
-      "name": "LockUser(address)",
-      "hash": "0x169aadf55dc2098830ccf9f334e3ce3933b6e895b9114fc9f49242f2be61fe8e"
-    },
-    {
-      "name": "RescueTokens(address,address,uint256)",
-      "hash": "0x0de377c3f3362540c047602ad996510f81ec5d84f9ad151c7b6ebecce8ea6b7b"
-    },
-    {
-      "name": "Stop()",
-      "hash": "0xbedf0f4abfe86d4ffad593d9607fe70e83ea706033d44d24b3b6283cf3fc4f6b"
-    },
-    {
-      "name": "TransactionCapUpdated(uint256)",
-      "hash": "0x699d1c4c28f453c7c162bf9ab9d182bcca9b5860718f5dbc0dadb620c0aa077e"
-    },
-    {
-      "name": "Withdraw(address,address,address,uint256[],uint256,uint256)",
-      "hash": "0x1219fadb6b0ead011622d9ff05712029b1ba5ae340a49f25c9b5607a94a842c4"
-    },
-    {
-      "name": "WhitelistDisabled()",
-      "hash": "0x212c6e1d3045c9581ef0adf2504dbb1d137f52f38162ccf77a16c69d14eba5c3"
-    },
-    {
-      "name": "Params(uint256,uint256)",
-      "hash": "0xb044a1e409eac5c48e5af22d4af52670dd1a99059537a78b31b48c6500a6354e"
-    },
-    {
-      "name": "Minted(address,address,uint256,bytes,bytes)",
-      "hash": "0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d"
-    },
-    {
-      "name": "DiamondCut(tuple[],address,bytes)",
-      "hash": "0xe785b7d46d252880dc19457b2c8b06b2de37c69d645338fdd151c21279e60633"
-    },
-    {
-      "name": "AddMinter(address)",
-      "hash": "0x16baa937b08d58713325f93ac58b8a9369a4359bbefb4957d6d9b402735722ab"
-    },
-    {
-      "name": "WhitelistAddress(address,bool)",
-      "hash": "0x33e0bf3ce98fac4118d5a0a8fe49e83b6acdfdef32871c9eca20e1528d7701ba"
-    },
-    {
-      "name": "KeeperBonded(address,uint256,uint256,uint256)",
-      "hash": "0x3d80dd4660c08288217e88c2d45230220fcd3debf16898013243026e6a2aad05"
-    },
-    {
-      "name": "StakeDestroyed(uint256,uint256,address,bytes32)",
-      "hash": "0x4b3881ff04395479f7458b355a00566abee8c352046752526b13e4ef9f053aab"
-    },
-    {
-      "name": "RiseBridgedIn(address,address,uint256)",
-      "hash": "0x0e128c83dc42be0b80a07793e5b69c77c3981238a44754802b90d92ae85b3b48"
-    },
-    {
-      "name": "EtherWithdraw(uint256,address)",
-      "hash": "0xec47e7ed86c86774d1a72c19f35c639911393fe7c1a34031fdbd260890da90de"
-    },
-    {
-      "name": "CollateralManagerRegistered(address)",
-      "hash": "0x2d9629b61129967906b4b31b246507fe09b2b62e2c963a3b9e4d1aff6d4af75b"
-    },
-    {
-      "name": "PauserAdded(address)",
-      "hash": "0x6719d08c1888103bea251a4ed56406bd0c3e69723c8a1686e017e7bbe159b6f8"
-    },
-    {
-      "name": "MinTokensBeforeSwapUpdated(uint256)",
-      "hash": "0x5948780118f41f7c4577ae4619d5cbd064057bd8562d9f7b7e60324053375c00"
-    },
-    {
-      "name": "TransferEnabled()",
-      "hash": "0x75fce015c314a132947a3e42f6ab79ab8e05397dabf35b4d742dea228bbadc2d"
-    },
-    {
-      "name": "SetBuyFee(uint256,uint256,uint256,uint256)",
-      "hash": "0x7e09f732e3c0d29138378fac770c27e86c9881459c60b3218337780e2dd176cf"
-    },
-    {
-      "name": "ERC223Transfer(address,address,uint256,bytes)",
-      "hash": "0x9bfafdc2ae8835972d7b64ef3f8f307165ac22ceffde4a742c52da5487f45fd1"
-    },
-    {
-      "name": "OwnerUpdated(address,address)",
-      "hash": "0x8292fce18fa69edf4db7b94ea2e58241df0ae57f97e0a6c9b29067028bf92d76"
-    },
-    {
-      "name": "TransfersRestrictedBeforeUpdated(uint256)",
-      "hash": "0xd7b9c9321b627ff004969698b4616502d6b7305a588e685489e91c46fca509a9"
-    },
-    {
-      "name": "StakeStart(uint256,address,uint40)",
-      "hash": "0x14872dc760f33532684e68e1b6d5fd3f71ba7b07dee76bdb2b084f28b74233ef"
-    },
-    {
-      "name": "Initialised()",
-      "hash": "0x09dfb9099a2610601d58030170fde7ae9db3e1bcb751c3d6800216cbe3b499b5"
-    },
-    {
-      "name": "BurnerStatusUpdated(address,bool)",
-      "hash": "0x5217d618731e650419668d9b99f95d662e37d7b87d4689cd98e92e1c176cc705"
-    },
-    {
-      "name": "RemovedBlackList(address)",
-      "hash": "0xd7e9ec6e6ecd65492dce6bf513cd6867560d49544421d0783ddf06e76c24470c"
-    },
-    {
-      "name": "NewAdmin(address,address)",
-      "hash": "0xf9ffabca9c8276e99321725bcb43fb076a6c66a54b7f21c4e8146d8519b417dc"
-    },
-    {
-      "name": "Burn(address,bytes32,uint256)",
-      "hash": "0xc3599666213715dfabdf658c56a97b9adfad2cd9689690c70c79b20bc61940c9"
-    },
-    {
-      "name": "ReceiveDividend(address,address,uint256)",
-      "hash": "0x2430938b8d30b820033fae6f9e34a1309e01e0e1bf106ec0ed06ab26a590af48"
-    },
-    {
-      "name": "ToBor(address,uint256,uint256)",
-      "hash": "0x55f46887179b50b434bdb2d033330ad49bcbc584a44ae674bb09196f110ff4f3"
-    },
-    {
-      "name": "BridgeRemoved(address)",
-      "hash": "0x5d9d5034656cb3ebfb0655057cd7f9b4077a9b42ff42ce223cbac5bc586d2126"
-    },
-    {
-      "name": "BuybackUpperLimitUpdated(uint256)",
-      "hash": "0xcc06eb9a0c57a5ee1100a0e2e4029558c04ff3b2a110a881ac9700cffed1a824"
-    },
-    {
-      "name": "TokenMinterBurned(address,address,uint256)",
-      "hash": "0xdc7fd22bc401e7c6b9be2c2736286a2a42ea0c6307bc97ff0fb12bd0abd2c747"
-    },
-    {
-      "name": "Snapshot(uint256)",
-      "hash": "0x8030e83b04d87bef53480e26263266d6ca66863aa8506aca6f2559d18aa1cb67"
-    },
-    {
-      "name": "PendingConfigChanges(uint256,uint256,address,bool)",
-      "hash": "0x01c0ca0e9ae895c3d36eca6824cc5bd60faa1048833ef3014f522ee5f1b23970"
-    },
-    {
-      "name": "LOG_SET_UNLOCK_BLOCK_GAP(address,uint256)",
-      "hash": "0x4fa1c8bae1f2ee3d51f5bea75dc354c17cf230fdf1fa6bfa458cd03e2ede08bc"
-    },
-    {
-      "name": "Swap(address,string,uint256)",
-      "hash": "0xf6c184dc66b66fdd652f70b2bd5fc222712bd2978e2d910ee14b62cf4d04cf37"
-    },
-    {
-      "name": "NewRebaser(address,address)",
-      "hash": "0x51f448520e2183de499e224808a409ee01a1f380edb2e8497572320c15030545"
-    },
-    {
-      "name": "Deposit(address,uint256)",
-      "hash": "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c"
-    },
-    {
-      "name": "Sent(address,address,address,uint256,bytes,bytes)",
-      "hash": "0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987"
-    },
-    {
-      "name": "NewIncentivizer(address,address)",
-      "hash": "0x2ee668ca7d17a9122dc00c0bfd73b684f2f7d681f17733cc02b294f69f1b3896"
-    },
-    {
-      "name": "BasisPointAdded(uint256)",
-      "hash": "0x1330ba3093e46415841480e940641e13c5cb2a79863d5f29936420dba2f1624d"
-    },
-    {
-      "name": "BlacklistedSet(address,bool)",
-      "hash": "0xd347f3377aa78fbf3d569e645590833e6f1f2ad4acb059e8924c12628bf649f1"
-    },
-    {
-      "name": "DEUSBurned(address,address,uint256)",
-      "hash": "0xfea1faea8b86058686e38c71a510e9ba19bc719a67a74e590aa5f68dfdfc21be"
-    },
-    {
-      "name": "OffChainBalanceExcluded(bool)",
-      "hash": "0x3d7f39af0cf901fec3da1b0ecfab4a0eb553ed671de67850e09cca22848dd866"
-    },
-    {
-      "name": "ExternalPositionDataEdited(address,address,bytes)",
-      "hash": "0xb373eedb8e9038a2dcba31f06b2735887c1a904125e5c9f0021ba41ed972318e"
-    },
-    {
-      "name": "Minting(address,uint256,string,address)",
-      "hash": "0x0416081e24ea042d7f2160192c1d6bef74c76f5f4fffeb36c5dcc9e4a5dcf9b4"
-    },
-    {
-      "name": "AdminRequiredNumChanged(string,string,uint256,uint256)",
-      "hash": "0xce49fc04234925e87b95750e0e50cac6d4ffcf8a696e3316b3e13bedc84ee7a8"
-    },
-    {
-      "name": "LOG_UNLOCK_TRANSFER(address,address,uint256)",
-      "hash": "0xb5a2a645ea10b3aaf0b61965c340be4cf9ef443e7e784f656b3119e9f4dd130d"
-    },
-    {
-      "name": "PauseChangedTo(bool)",
-      "hash": "0x0619930b74b56b9cdbdbd8709cef274ec3e9ed0616d7e996599558acccac8e6e"
-    },
-    {
-      "name": "SwapAndLiquifyEnabledUpdated(bool)",
-      "hash": "0x53726dfcaf90650aa7eb35524f4d3220f07413c8d6cb404cc8c18bf5591bc159"
-    },
-    {
-      "name": "TreasuryHandlerChanged(address,address)",
-      "hash": "0x1bf87992a35ee29395ab494f9adb9a500a7fa60c3082cba0ef02701bb35900d9"
-    },
-    {
-      "name": "OwnershipTransferAuthorization(address)",
-      "hash": "0xb58bcc286020502f4931905baafed22acc969c092ed724234c73361efc688390"
-    },
-    {
-      "name": "PositionModuleRemoved(address,address)",
-      "hash": "0x5d0275f68d583838a7e2be68e3ef8ac2c1f9d4eeaa4b223360f4cd093a160d75"
-    },
-    {
-      "name": "FundsWithdrawn(address,uint256,uint256)",
-      "hash": "0xfbc3a599b784fe88772fc5abcc07223f64ca0b13acc341f4fb1e46bef0510eb4"
-    },
-    {
-      "name": "MinterChange(address,address)",
-      "hash": "0x5c56bcd5a7e3f34a239651ac01fe373b8b0b837d818abb9b02df4f1bc9c49c78"
-    },
-    {
-      "name": "Withdrawal(address,uint256)",
-      "hash": "0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65"
-    },
-    {
-      "name": "RoleGranted(bytes32,address,address)",
-      "hash": "0x2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d"
-    },
-    {
-      "name": "MetaTransactionExecuted(address,address,bytes)",
-      "hash": "0x5845892132946850460bff5a0083f71031bc5bf9aadcd40f1de79423eac9b10b"
-    },
-    {
-      "name": "RewardStakers(uint256)",
-      "hash": "0xd3be3dbc076afa976ee7dfe1f596f6d7905e9441a1a426a244a12ef071272dd4"
-    },
-    {
-      "name": "RPLFixedSupplyBurn(address,uint256,uint256)",
-      "hash": "0x6baaa7e377675e56cf5b72632742a306ea2dbb4df3aed1c5fb884af8ee436cff"
-    },
-    {
-      "name": "ExcludeFromFeeUpdated(address)",
-      "hash": "0x7168e8adb718597b3ac83e2dfe415bea8ebaabb57fe933ffac2e0ed93b80718e"
-    },
-    {
-      "name": "AuthorizedOperator(address,address)",
-      "hash": "0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9"
-    },
-    {
-      "name": "BuyBackEnabledUpdated(bool)",
-      "hash": "0x3794234fa370c9f3b948dda3e3040530785b2ef1eb27dda3ffde478f4e2643c0"
-    },
-    {
-      "name": "KeeperDispute(address,uint256)",
-      "hash": "0xfb2bdfce35c242f34d4f9633225d3c34a5892d5eae9ce102de6aac188dd25ba0"
-    },
-    {
-      "name": "PartitionStrategySet(bytes4,string,address)",
-      "hash": "0xb1c6e929e0b0638c228622a32f1f2fb3375541d8faa4a0176173b50b4bfc75ea"
-    },
-    {
-      "name": "LiquidityFeeUpdated(uint256)",
-      "hash": "0x5597c0e02a719eddde3b801d7abc15c0023afdcf6880c1e254427559820083c2"
-    },
-    {
-      "name": "DefaultPositionUnitEdited(address,int256)",
-      "hash": "0x8133e2bf34edab764b55c59d1d41f9df637e7c22828bb6b0a9d55b429d008a97"
-    },
-    {
-      "name": "TournamentCreated(uint256)",
-      "hash": "0x113d32d0b7aec15a8c7f50af4cb42f4695e5b95524ed69519ac88d6c1f1f40f6"
-    },
-    {
-      "name": "SupplyControllerChanged(address,address)",
-      "hash": "0xa0c3b07e87149049c5705737ef1ab211dc9f921e780e4ac44789f521e4d15edd"
-    },
-    {
-      "name": "UpdateMiningParameters(uint256,uint256,uint256,int256)",
-      "hash": "0x77c99c82d406169745430d971da8381be7390d804af3ad20e40a95e070e08bd1"
-    },
-    {
-      "name": "DestroyedBlackFunds(address,uint256)",
-      "hash": "0x61e6e66b0d6339b2980aecc6ccc0039736791f0ccde9ed512e789a7fbdd698c6"
-    },
-    {
-      "name": "LockWallet(address,address,uint256)",
-      "hash": "0x9141f23a32bd7f35c8ce161a6f9d05eba59799700a6a44094330bd68b3e25103"
-    },
-    {
-      "name": "RoleUpdated(address,address,uint256,uint256)",
-      "hash": "0x5a10526456f5116c0b7b80582c217d666243fd51b6a2d92c8011e601c2462e5f"
-    },
-    {
-      "name": "MinterStatusUpdated(address,bool)",
-      "hash": "0xd7f05487ae3002c125e5927b52b19827dd903ac7cb2e69c4f7f2fdbc17d1145c"
-    },
-    {
-      "name": "DelegateVotesChanged(address,uint256,uint256)",
-      "hash": "0xdec2bacdd2f05b59de34da9b523dff8be42e5e38e818c82fdb0bae774387a724"
-    },
-    {
-      "name": "LogSwapout(address,address,uint256)",
-      "hash": "0x6b616089d04950dc06c45c6dd787d657980543f89651aec47924752c7d16c888"
-    },
-    {
-      "name": "ChangedPublisher(address)",
-      "hash": "0xc03338f668383af1c20205e21efe0b67ba7bfda360184f445aad4e7b0e9de923"
-    },
-    {
-      "name": "LOG_CLAIM_UNLOCKED(address,uint256)",
-      "hash": "0x9b0d7ec397f0d7459574b710fa67fcdfc3d3c80ca2d0c1a84a67dd566464b298"
-    },
-    {
-      "name": "LogAddAuth(address,uint256)",
-      "hash": "0xff9be4a5a0b9027fd253167d4c170ef1bbf8403af21bf06a0ed87ac8c8ecb5c6"
-    },
-    {
-      "name": "StakingDecreased(address,uint256)",
-      "hash": "0xbedcdd66d86f5dc81286de7b36cc38398208ffb595a3e95330fca4fb21f08cba"
-    },
-    {
-      "name": "WeightsSet()",
-      "hash": "0xf36b123659e7f76fa32a2aa2e12774361455e152120e66b04d179d9140a42370"
-    },
-    {
-      "name": "VotingPowerChanged(address,uint256,uint256)",
-      "hash": "0x53ed7954de66613e30dd29b46ab783aa594e6309d021d8854c76bb3325d03aa3"
-    },
-    {
-      "name": "JobAdded(address,uint256,address)",
-      "hash": "0x3d9884fbd11fce9188657c4bcfda7491d3316ce97bd234d981b7be1f012a852f"
-    },
-    {
-      "name": "AuthorizationUsed(address,bytes32)",
-      "hash": "0x98de503528ee59b575ef0c0a2576a82497bfc029a5685b209e9ec333479b10a5"
-    },
-    {
-      "name": "SwapEnabledUpdated(bool)",
-      "hash": "0x436b6cf978c7b6998fcce43dfe4d37e3a0dc2bb780144a2eb55d7138201e8a12"
-    },
-    {
-      "name": "SettleProfit(address,uint256,uint256)",
-      "hash": "0x394b370ea0a08c686d2e92e80f9f02a2356568ac54d39b51737ba20f6a9b1abb"
-    },
-    {
-      "name": "Claim(address,uint256)",
-      "hash": "0x47cee97cb7acd717b3c0aa1435d004cd5b3c8c57d70dbceb4e4458bbd60e39d4"
-    },
-    {
-      "name": "LockWalletExtend(address,uint256)",
-      "hash": "0x402f92847e995eb87d15fd380cf11ec5c61ca69a5f6cd305fd26cd1cb6a41757"
-    },
-    {
-      "name": "AccountReActive(address)",
-      "hash": "0x96cc51e6ab9b6970cc6fc055179c755849347faa4f703098b52724f2a76ad956"
-    },
-    {
-      "name": "OwnerChanged(address,address)",
-      "hash": "0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c"
-    },
-    {
-      "name": "TransferAllowed()",
-      "hash": "0x795b0e16c8da9807b0a215f3749bd6dbcc49fc0472183f4e446abb7dcbd9d007"
-    },
-    {
-      "name": "ModuleInitialized(address)",
-      "hash": "0x27b541a16df0902e262f34789782092ab25125513b8ed73608e802951771b928"
-    },
-    {
-      "name": "NewEra(uint256,uint256)",
-      "hash": "0xb46eeb115d9875d9d717a1b1dd704bc9a45fdeb55eecc9c6c4f777ffa5698fe5"
-    },
-    {
-      "name": "TWAPSourceAdded(address)",
-      "hash": "0xb702ce677d2c4388aab38b10f96ca003dbe3dadb46fbf858cb7d55cba6bebc46"
-    },
-    {
-      "name": "LogSetOwner(address)",
-      "hash": "0xce241d7ca1f669fee44b6fc00b8eba2df3bb514eed0f6f668f8f89096e81ed94"
-    },
-    {
-      "name": "ChangeRequested(bytes32,uint256)",
-      "hash": "0x418d422a38ef786681f03ffea8d9ae04b8cad6da2488f8200a80daddd13b870b"
-    },
-    {
-      "name": "NewCloneToken(address,uint256)",
-      "hash": "0x086c875b377f900b07ce03575813022f05dd10ed7640b5282cf6d3c3fc352ade"
-    },
-    {
-      "name": "AutoBurnEnabled(bool)",
-      "hash": "0x381a2ba311289fc64532188b12030ca4ad77b2dc7c3a88ab03bacbf13da52a1c"
-    },
-    {
-      "name": "StakingIncreased(address,uint256,uint8)",
-      "hash": "0xf4476f182b22aa6860f6aea0edf736040fd43167d941069fadffe4aef18ef728"
-    },
-    {
-      "name": "NftBridgedOut(address,address,address,uint256,uint256)",
-      "hash": "0xe0bf1306ae80358ba075e7e155d3d3100bd1cb7245f654f111d39453f756356a"
-    },
-    {
-      "name": "RevenueAddressSet(address)",
-      "hash": "0x27b897754d1deeb07d290d26a64625918a5bc4185daca6a3c569cd4331571baf"
-    },
-    {
-      "name": "Deny(address)",
-      "hash": "0x184450df2e323acec0ed3b5c7531b81f9b4cdef7914dfd4c0a4317416bb5251b"
-    },
-    {
-      "name": "KeeperBonding(address,uint256,uint256,uint256)",
-      "hash": "0xa150b7ad789014c0171a2873708daadbdbf87457d90d3896eaf0907e5b225ae4"
-    },
-    {
-      "name": "AddCredit(address,address,address,uint256,uint256)",
-      "hash": "0xb97975ea9bf5ae2173b9ea765214622396032aba11cd5cc1450c760ac80d059a"
-    },
-    {
-      "name": "ChangeCanceled(bytes32,uint256)",
-      "hash": "0x2f6191371f2d30882f348c3fedb0661e7d34da33a44c4d44dc8aaca6d8d37945"
-    },
-    {
-      "name": "ChangedLicenseFee(uint256)",
-      "hash": "0x74eb18939a29d79421724f7a16ca267d96c1c381ae51e02011a0daec3932c68f"
-    },
-    {
-      "name": "UpdatedMarketingAddress(address)",
-      "hash": "0xd1e7d6a3390dd5008bd1c57798817b9f806e4c417264e7d3d67e42e784dc24a9"
-    },
-    {
-      "name": "Minted(address,uint256,string)",
-      "hash": "0xe7cd4ce7f2a465edc730269a1305e8a48bad821e8fb7e152ec413829c01a53c4"
-    },
-    {
-      "name": "BlacklistAdded(address)",
-      "hash": "0x44d5fe68b00f68950fb9c1ff0a61ef7f747b1a36359a7e3a7f3324db4b878967"
-    },
-    {
-      "name": "AccountInactive(address,uint256)",
-      "hash": "0x481010afe95c4aad3901e4d3948ca845e8772b11b72f77bf2dd74a9940e21a21"
-    },
-    {
-      "name": "LiquidityLocked(bool)",
-      "hash": "0xff33d24fddcb9b99aca93607453cdcbd7aa449ae3ea8a9f69421881c7eae81c9"
-    },
-    {
-      "name": "SetPair(address,address)",
-      "hash": "0xd482e95abb3d8f5eaf8f07dbd4c204ea55842bacc8cf5d530aa104716551e216"
-    },
-    {
-      "name": "AdminRoleGranted(address,address)",
-      "hash": "0x2570ac42fd8b322dc453ada624dc2ed0e9bdd67f16f201a25bbd30468f2aa187"
-    },
-    {
-      "name": "Unpause()",
-      "hash": "0x7805862f689e2f13df9f062ff482ad3ad112aca9e0847911ed832e158c525b33"
-    },
-    {
-      "name": "StakingAddressUpdated(address)",
-      "hash": "0x8ae96d8af35324a34b19e4f33e72d620b502f69595bb43870ab5fd7a7de78239"
-    },
-    {
-      "name": "ExchangeHotWalletAdded(address)",
-      "hash": "0x07eccb5a6343032639dc3f1a913d254583bf745e350cdaa19ffc2b4cc2ebff6b"
-    },
-    {
-      "name": "ChangeMinter(address)",
-      "hash": "0xc87aeafc6e4ae6202adf4f08a76769119ae93cc129c0e0cbac08a118bc18e1ce"
-    },
-    {
-      "name": "FXSBurned(address,address,uint256)",
-      "hash": "0xed0632d0be8a77d1cd861e2e5f035c6684bad17c6bd6850e2d3621c6542d140d"
-    },
-    {
-      "name": "RemoveGold(uint256)",
-      "hash": "0x19b4cf73e928f35f5b561a793ad1648ee8ffd717737f5a605419936c8c5a2236"
-    },
-    {
-      "name": "SwapAndLiquify(uint256,uint256,uint256)",
-      "hash": "0x17bbfb9a6069321b6ded73bd96327c9e6b7212a5cd51ff219cd61370acafb561"
-    },
-    {
-      "name": "DEIAddressSet(address)",
-      "hash": "0x0692ea78a01b96b5abe8a744eae1de9f7f001f685fd013f0c552220d563d4ba7"
-    },
-    {
-      "name": "DiscountAuthorityFrozen()",
-      "hash": "0x527064e85a8453752e55610dd634b6ee8cd80307b0ea3f0eed8c1f7ca2696f8e"
-    },
-    {
-      "name": "RevokeSnapshot(address)",
-      "hash": "0x7c207ff2189685b05df103e0e4a96c61ba8a28d4356e625f3b4acb7c01b79698"
-    },
-    {
-      "name": "RemovedBlackLists(address[])",
-      "hash": "0x98feb506554d800c8b843a711fb4a52365bf0230afbf171e4e0c8491ad57eda4"
-    },
-    {
-      "name": "Burned(address,uint256,string,string)",
-      "hash": "0xe7fe72e51b458dcd29475a3be9675669af7aa5c3d7e9161fdb6cbba71803dd50"
-    },
-    {
-      "name": "ShareMinted(address,address,uint256)",
-      "hash": "0xf4d2b66b63836b39ffec28f88533e0f50c9136ab7d8d9b9976f93d3880e80205"
-    },
-    {
-      "name": "NewCurve(address,uint256)",
-      "hash": "0xe61d471656d849b230e45307bce5f71d00383888866b992d6a6993b72361e799"
-    },
-    {
-      "name": "NewDuration(address,uint256)",
-      "hash": "0xc0473c2cbb9705ca96e7d892f51ae51b81f597dab7ed6eb25f0a3e7c75d46639"
-    },
-    {
-      "name": "KeeperResolved(address,uint256)",
-      "hash": "0x7574a4a2c81b3099d59aaf15526ea966e1e2886afd21bf4a350af7af22db3a70"
-    },
-    {
-      "name": "OperatorAdded(address)",
-      "hash": "0xac6fa858e9350a46cec16539926e0fde25b7629f84b5a72bffaae4df888ae86d"
-    },
-    {
-      "name": "StakeEnd(uint256,uint256,address,uint40)",
-      "hash": "0x72d9c5a7ab13846e08d9c838f9e866a1bb4a66a2fd3ba3c9e7da3cf9e394dfd7"
-    },
-    {
-      "name": "ProposalUpdated(address,uint256,bool,uint256)",
-      "hash": "0x1a8ead4104f496e8a2f3d71d8008865f6b4c02195a9b30368431a7b9f9f03f10"
-    },
-    {
-      "name": "RoleRevoked(bytes32,address,address)",
-      "hash": "0xf6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b"
-    },
-    {
-      "name": "TransferByPartition(bytes32,address,address,address,uint256,bytes,bytes)",
-      "hash": "0xff4e9a26af4eb73b8bacfaa4abd4fea03d9448e7b912dc5ff4019048875aa2d4"
-    },
-    {
-      "name": "SetSellFee(uint256,uint256,uint256,uint256)",
-      "hash": "0xc35b083cad11ee3ca1c82068780b9916789cac19799d2fb148fcab9e643d56f9"
-    },
-    {
-      "name": "XfLobbyExit(uint256,address,uint256,address)",
-      "hash": "0xa6b19fa7f41317a186e1d58e9d81f86a52f1102b6bce10b4eca83f37aaa58468"
-    },
-    {
-      "name": "TokenWithdraw(address,uint256,address)",
-      "hash": "0x72cb8a894ddb372ceec3d2a7648d86f17d5a15caae0e986c53109b8a9a9385e6"
-    },
-    {
-      "name": "Rebase(uint256,uint256,uint256)",
-      "hash": "0xc6642d24d84e7f3d36ca39f5cce10e75639d9b158d5193aa350e2f900653e4c0"
-    },
-    {
-      "name": "TransferBlockUpdate(address,uint256)",
-      "hash": "0xdddba73c10478848936b4de3bb31b86169c4c4147c9e9f9f2699906c36b94298"
-    },
-    {
-      "name": "SetAdmin(address)",
-      "hash": "0x5a272403b402d892977df56625f4164ccaf70ca3863991c43ecfe76a6905b0a1"
-    },
-    {
-      "name": "AdminOperatorChange(address,address)",
-      "hash": "0xe8fdc5340d9288e129a7c6af86dc4002f708091280d69f89583f7e6349c0a8d6"
-    },
-    {
-      "name": "JobRemoved(address,uint256,address)",
-      "hash": "0x2ca18fdfae50f1042480d285d21f6706aa6abbd567d60a044b5bec07ccfee648"
-    },
-    {
-      "name": "BeaconUpgraded(address)",
-      "hash": "0x1cf3b03a6cf19fa2baba4df148e9dcabedea7f8a5c07840e207e5c089be95d3e"
-    },
-    {
-      "name": "AdminChanged(string,string,address,address)",
-      "hash": "0xb02ddf2800cd4468f7eb14268a7c9f1b6e816aa425ed542d13d8d3a96fa44566"
-    },
-    {
-      "name": "Transfer(address,address,uint256)",
-      "hash": "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
-    },
-    {
-      "name": "MinterSet(address,address,bool)",
-      "hash": "0x9e83b60577a847f7aec99ac60cc404d84b6fae0df5a54aaf535394add0fc7de7"
-    },
-    {
-      "name": "UserRoleUpdated(address,uint8,bool)",
-      "hash": "0x4c9bdd0c8e073eb5eda2250b18d8e5121ff27b62064fbeeeed4869bb99bc5bf2"
-    },
-    {
-      "name": "TreasuryUpdated(address)",
-      "hash": "0x7dae230f18360d76a040c81f050aa14eb9d6dc7901b20fc5d855e2a20fe814d1"
-    },
-    {
-      "name": "ChangedPartition(bytes32,bytes32,uint256)",
-      "hash": "0x67c8ba31d2dd11f1384577b3405b04ed91eed1231e408432ad2458cab37b2fa1"
-    },
-    {
-      "name": "WhitelistEnabled()",
-      "hash": "0xe5e5846f783279948f6ec5faad38318cde86fe5be7ea845ede56d62f16c37434"
-    },
-    {
-      "name": "TransferBlockWait(uint256)",
-      "hash": "0x93e5b468f9da07b0db7acdc0da4dfd32eeadbbfb57e61629d428856ec9b22d7a"
-    },
-    {
-      "name": "RoleCapabilityUpdated(uint8,bytes4,bool)",
-      "hash": "0xbfe16b2c35ce23dfd1ab0e7b5d086a10060c9b52d1574e1680c881b3b3a2b151"
-    },
-    {
-      "name": "VestingContractDeployed(address,address)",
-      "hash": "0x739fe22b8edefd6ce1fe32460f9cd54bf8e66fc7447f4c8a8131ce078a1988af"
-    },
-    {
-      "name": "OwnershipTransferInitiated(address,address)",
-      "hash": "0xb150023a879fd806e3599b6ca8ee3b60f0e360ab3846d128d67ebce1a391639a"
-    },
-    {
-      "name": "MinterRoleRemoved(address,address)",
-      "hash": "0x56692a161ffec953ddf9def93b958ea8d1ec95e21b80870c66be91a4374dc4e3"
-    },
-    {
-      "name": "TransferWithData(address,address,uint256,bytes)",
-      "hash": "0xe68ca1ec8e8e022357047aae1f96036cbb808c6dc2bbbfbd3bde507ab21098c4"
-    },
-    {
-      "name": "ReceiveFromChain(uint16,uint64,uint256)",
-      "hash": "0x831bc68226f8d1f734ffcca73602efc4eca13711402ba1d2cc05ee17bb54f631"
-    },
-    {
-      "name": "Staked(address,bytes32,uint256,uint256,uint256,uint256)",
-      "hash": "0x40d7f7e83df425b94fc095bee99432663e855ad29362ed33290e762f90fbff72"
-    },
-    {
-      "name": "TransfersAllowed(bool)",
-      "hash": "0x5854ddf9a9b69cf8f2802ec78fb8d6bbf299e949955d9361212e652f4fec0e82"
-    },
-    {
-      "name": "MaxSupplyChanged(uint256,uint256)",
-      "hash": "0xa626f93317e2474b716846a09cf0e28aacb96052643b252fe97704208fecf9b5"
-    },
-    {
-      "name": "OperatorRoleRemoved(address,address)",
-      "hash": "0x70b25138b6fadeb9992d18b9653564271823e34b3e3257515d12a6d4b15fcddf"
-    },
-    {
-      "name": "OwnerChanged(address)",
-      "hash": "0xa2ea9883a321a3e97b8266c2b078bfeec6d50c711ed71f874a90d500ae2eaf36"
-    },
-    {
-      "name": "OffRampPairSet(address)",
-      "hash": "0x205890426c74334fba9f3d65990e94e55dac01584e054394ab50173c4a01da2d"
-    },
-    {
-      "name": "SuperOperator(address,bool)",
-      "hash": "0x44f92d27abdf4cfb6a7d712c3af68f3be086d4ca747ab802c36f67d6790060d8"
-    },
-    {
-      "name": "LogNote(bytes4,address,bytes32,bytes32,uint256,bytes)",
-      "hash": "0x644843f351d3fba4abcd60109eaff9f54bac8fb8ccf0bab941009c21df21cf31"
-    },
-    {
-      "name": "Paused(bool)",
-      "hash": "0x0e2fb031ee032dc02d8011dc50b816eb450cf856abd8261680dac74f72165bd2"
-    },
-    {
-      "name": "CapUpdated(address,uint256)",
-      "hash": "0x32fb4810d3e24ba1aa970e73c47779c970d006f8e33c4f3b696dc6fce03b61c0"
-    },
-    {
-      "name": "Released(address,uint256)",
-      "hash": "0xb21fb52d5749b80f3182f8c6992236b5e5576681880914484d7f4c9b062e619e"
-    },
-    {
-      "name": "BridgeVaultAddressUpdated(address)",
-      "hash": "0x1501eda19b56071bf17a0a32e2efdeb611ccec1e2da5c7612bf674204901ce7a"
-    },
-    {
-      "name": "BuybackMinAvailabilityUpdated(uint256)",
-      "hash": "0xac218d80006936a5fb23226f25ffed76cd856dbcc539b7dd7a8abb5a418a8da4"
-    },
-    {
-      "name": "IncludeInFee(address)",
-      "hash": "0x4f6a6b6efe34ec6478021aa9fb7f6980e78ea3a10c74074a8ce49d5d3ebf1f7e"
-    },
-    {
-      "name": "TreasuryAdded(address)",
-      "hash": "0xedfa2f73691730ba0803543209339afdd054637240c6ff0a7ae0dad3c191648c"
-    },
-    {
-      "name": "Swap(address,address,uint256)",
-      "hash": "0xea368a40e9570069bb8e6511d668293ad2e1f03b0d982431fd223de9f3b70ca6"
-    },
-    {
-      "name": "AdminRoleRemoved(address,address)",
-      "hash": "0x21ba1239795d4e22874e3dc55f0a9d7b65bfb23069d32965d7c23be9524ccf95"
-    },
-    {
-      "name": "LOG_STAKE(address,address,uint256)",
-      "hash": "0xc21b429107df2ac940fc444798554039f5c34696739d39ef7d39fa0abb4a9fc7"
-    },
-    {
-      "name": "PositionMultiplierEdited(int256)",
-      "hash": "0xc4e78b3245dc105eefced18655b978e194ff858545a1080f2888dc3b6ae8df0a"
-    },
-    {
-      "name": "Allowed(address)",
-      "hash": "0x77a7dbc6ad97703ad411a8d5edfcd1df382fb34b076a90898b11884f7ebdcc05"
-    },
-    {
-      "name": "DiscountAuthoritySet(address)",
-      "hash": "0x03694a956320a0c277498a931248855f5ef47143cabe91ec33fc0a4393bb774e"
-    },
-    {
-      "name": "NewEra(uint256,uint256,uint256)",
-      "hash": "0x9d472bcf372fce01fd875c3296e8e5ae0a08bfca42dedac19e202271ce8f39c5"
-    },
-    {
-      "name": "FeeNumeratorSet(uint256)",
-      "hash": "0xc1bcceddd77fdc95a8da9bec5802d2e0bb564dd02c0730222d8e12030bd91043"
-    },
-    {
-      "name": "UpdatedTokenInformation(string,string)",
-      "hash": "0xd131ab1e6f279deea74e13a18477e13e2107deb6dc8ae955648948be5841fb46"
-    },
-    {
-      "name": "BuyBackTriggerTokenLimitUpdated(uint256)",
-      "hash": "0x29b4862b0ac325a5ba77a99236953f6a42e083f4f886db919d7b0b5e9f2cee00"
-    },
-    {
-      "name": "ExchangeHotWalletRemoved(address)",
-      "hash": "0xe96bbe78c8bc645f0ee444e35730f56b458ea663d1b2a35cf93cefd7fce93dc1"
-    },
-    {
-      "name": "OwnershipPushed(address,address)",
-      "hash": "0xea8258f2d9ddb679928cf34b78cf645b7feda9acc828e4dd82d014eaae270eba"
-    },
-    {
-      "name": "RiseBridgedOut(address,address,uint256)",
-      "hash": "0x5cd522aff7a2bf4d0c00ba029b9cebb7a25ed4a77695101f28f01f865421d040"
-    },
-    {
-      "name": "Destruction(uint256)",
-      "hash": "0x9a1b418bc061a5d80270261562e6986a35d995f8051145f277be16103abd3453"
-    },
-    {
-      "name": "DepositToGrant(address,uint256,address,uint256)",
-      "hash": "0xfae34c500956466552fb92f220d08f0781819f358b519cd80b67c58b8b66ac3c"
-    },
-    {
-      "name": "KeeperUnbound(address,uint256,uint256,uint256)",
-      "hash": "0x095ae150bb74a0755c30809eb8d4aa810b63b66b9ca96a1945bbb03d809df2e9"
-    },
-    {
-      "name": "PauserRemoved(address)",
-      "hash": "0xcd265ebaf09df2871cc7bd4133404a235ba12eff2041bb89d9c714a2621c7c7e"
-    },
-    {
-      "name": "OwnerNominated(address)",
-      "hash": "0x906a1c6bd7e3091ea86693dd029a831c19049ce77f1dce2ce0bab1cacbabce22"
-    },
-    {
-      "name": "VoterVotesChanged(address,uint256,uint256)",
-      "hash": "0x3eaa1c4be29b4a4c60e00300b5a17a8ec6c982b5b0ad5870cc84ebdc3b24d68e"
-    },
-    {
-      "name": "Pause()",
-      "hash": "0x6985a02210a168e66602d3235cb6db0e70f92b3ba4d376a33c0f3d9434bff625"
-    },
-    {
-      "name": "RoundCreated(uint256,uint256,uint256,uint256)",
-      "hash": "0x0b1ec92e2c042f4433769bc035846b6ff94397d5fd8ba47e37658193b09188c4"
-    },
-    {
-      "name": "AdminTransferInvoked(address)",
-      "hash": "0xb22a57ba0314fafe219dc14abcf1f22e86e6e82d599c0c31177a2d7c2e1b17e1"
-    },
-    {
-      "name": "InflationMint(uint256,uint256,address)",
-      "hash": "0x684dda5f2ff4dbc047d8de6878e6894b3705b57fa032e175e768088ca38bfedd"
-    },
-    {
-      "name": "Deprecate(address)",
-      "hash": "0xcc358699805e9a8b7f77b522628c7cb9abd07d9efb86b6fb616af1609036a99e"
-    },
-    {
-      "name": "RevokedOperatorByPartition(bytes32,address,address)",
-      "hash": "0x3b287c4f1bab4df949b33bceacef984f544dc5d5479930d00e4ee8c9d8dd96f2"
-    },
-    {
-      "name": "AddedBlackLists(address[])",
-      "hash": "0xe9b487e36d4279af2f695c62e0e801c5d45017d600659f53f7889ebea442dd77"
-    },
-    {
-      "name": "Anarchized()",
-      "hash": "0xbf30e910dd2b6e24c75c800d9f3477674e89a4b45e366f87cd03c99e0ba64961"
-    },
-    {
-      "name": "RPLInflationLog(address,uint256,uint256)",
-      "hash": "0x4374b0955b3a09853fddeb2fd614040864f97881e39b7cf2f6edea1ec9415177"
-    },
-    {
-      "name": "OwnershipTransferConfirmed(address,address)",
-      "hash": "0x646fe5eeb20d96ea45a9caafcb508854a2fb5660885ced7772e12a633c974571"
-    },
-    {
-      "name": "Freezed(address,uint64,uint256)",
-      "hash": "0x2ecd071e4d10ed2221b04636ed0724cce66a873aa98c1a31b4bb0e6846d3aab4"
-    },
-    {
-      "name": "GovernanceClaimed(address,address)",
-      "hash": "0xb0758afd6736a6cb3153d002696dcdd7615f1ff7c626469b3daf3358286c1c24"
-    },
-    {
-      "name": "NewPendingAdmin(address,address)",
-      "hash": "0xca4f2f25d0898edd99413412fb94012f9e54ec8142f9b093e7720646a95b16a9"
-    },
-    {
-      "name": "ExternalPositionUnitEdited(address,address,int256)",
-      "hash": "0x81a422e27f503e1b92cdb616a6e653aac10a8e0c3fa6832a58dc616c080fd7bd"
-    },
-    {
-      "name": "AuthorityUpdated(address)",
-      "hash": "0x2f658b440c35314f52658ea8a740e05b284cdc84dc9ae01e891f21b8933e7cad"
-    },
-    {
-      "name": "SwapETHForTokens(uint256,address[])",
-      "hash": "0x6fd378a9d8b7345c2e5b18229aaf1e39d32b177b501d0a0d26a0a858a23a9624"
-    },
-    {
-      "name": "TimelockChanged(address)",
-      "hash": "0xf02fdf7b40fb25784d39342249bbb15cee2bc0288f75ded1cf8ad2e63d4d91aa"
-    },
-    {
-      "name": "Unstaked(address,uint256,uint256)",
-      "hash": "0x7fc4727e062e336010f2c282598ef5f14facb3de68cf8195c2f23e1454b2b74e"
-    },
-    {
-      "name": "BuybackTokensWithETH(uint256,uint256)",
-      "hash": "0x3967d46c5aa65ced73be27b4c6d249e552274da7a605101a66ef571a8e2608a4"
-    },
-    {
-      "name": "BurnableTokensZeroed()",
-      "hash": "0x38e9e1bdbb19e199e2318a4fdd4145df21973acc643c88012128eeb61a386c60"
-    },
-    {
-      "name": "AddBackedGold(uint256)",
-      "hash": "0x09b6db8121b98e8afd720f8845773ef4340dfe3c6a1eadc5e068ff266357e807"
-    },
-    {
-      "name": "NewGov(address,address)",
-      "hash": "0x1f14cfc03e486d23acee577b07bc0b3b23f4888c91fcdba5e0fef5a2549d5523"
-    },
-    {
-      "name": "DEUSMinted(address,address,uint256)",
-      "hash": "0xdcdaf2f9efb1a9727c667bcd34ba547e3ce5ec7f3af304aa8829a5e590211d7e"
-    },
-    {
-      "name": "UpdateTroveManagers(address[])",
-      "hash": "0x3856df4367c58f483e04d7f8228b2a82709f7f54e5abf5b7f14de9401b33b69d"
-    },
-    {
-      "name": "NewPublisherSubmitted(address)",
-      "hash": "0x99b686e5f2cdb08efcde95954dac0c7b76fe862e82bc70154ee45a301fcba3f6"
-    },
-    {
-      "name": "Freezed()",
-      "hash": "0x962a6139ca22015759d0878e2cf5d770dcb8152e1d5ba08e46a969dd9b154a9c"
-    },
-    {
-      "name": "OwnershipRenounced(address)",
-      "hash": "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820"
-    },
-    {
-      "name": "OperatorTransferred(address,address)",
-      "hash": "0x74da04524d50c64947f5dd5381ef1a4dca5cba8ed1d816243f9e48aa0b5617ed"
-    },
-    {
-      "name": "MinterRoleGranted(address,address)",
-      "hash": "0x0be6ab9784c7401fafb73f7bc47bc67cc4ef8c47a60ad3cb66d1de0353a0784c"
-    },
-    {
-      "name": "NewMaxSupplySubmitted(uint256)",
-      "hash": "0x2e95024329023a8cd7349484ae59cc67a52401dd9a2f10f4636e6619187cf98e"
-    },
-    {
-      "name": "NewEpoch(uint256,uint256,uint256)",
-      "hash": "0x3bb7b347508b7c148ec2094ac60d2e3d8b7595421025643f08b45cb78b326b58"
-    },
-    {
-      "name": "GrantSnapshot(address)",
-      "hash": "0xba2657b171d29405fda532aee83e937a6b0890d272bcddca2d89d7f50314e69a"
-    },
-    {
-      "name": "Minted(address,uint256)",
-      "hash": "0x30385c845b448a36257a6a1716e6ad2e1bc2cbe333cde1e69fe849ad6511adfe"
-    },
-    {
-      "name": "MinterRemoved(address)",
-      "hash": "0xe94479a9f7e1952cc78f2d6baab678adc1b772d936c6583def489e524cb66692"
-    },
-    {
-      "name": "BlacklistRemoved(address)",
-      "hash": "0x1747ca720b1a174a464b6513ace29b1d3190b5f632b9f34147017c81425bfde8"
-    },
-    {
-      "name": "Invoked(address,uint256,bytes,bytes)",
-      "hash": "0x2a936dbabeaea30adc1ddad138b1958497988474bef8b09a29411f0105ab8ab2"
-    },
-    {
-      "name": "ModuleAdded(address)",
-      "hash": "0xead6a006345da1073a106d5f32372d2d2204f46cb0b4bca8f5ebafcbbed12b8a"
-    },
-    {
-      "name": "NewMigrator(address,address)",
-      "hash": "0x99b2b7456799067566d467831e63363500739eac62c12ccb8cf9745078f06d2a"
-    },
-    {
-      "name": "BurnEvent(address,address,uint256)",
-      "hash": "0xe0deda1dd123aa6cdd7f4460830c05edf058ceb3c302f94e81a4fda7cfc42371"
-    },
-    {
-      "name": "Paused(address)",
-      "hash": "0x62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258"
-    },
-    {
-      "name": "Unpaused(address)",
-      "hash": "0x5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa"
-    },
-    {
-      "name": "BuybackBlocksUpdated(uint256)",
-      "hash": "0xe24723968dd1fe95c864bec60a98788d4f02a5a3e1e9e80ccafdee9146ff54c7"
-    },
-    {
-      "name": "ChangedMaxSupply(uint256)",
-      "hash": "0x8e2c9753593ed4f1397b57187f06771c15ea739bffcb290ea6ed07dadb9fe5be"
-    },
-    {
-      "name": "TransferForeignToken(address,uint256)",
-      "hash": "0xdeda980967fcead7b61e78ac46a4da14274af29e894d4d61e8b81ec38ab3e438"
-    },
-    {
-      "name": "SubmitJob(address,address,address,uint256,uint256)",
-      "hash": "0xe1cb44a16adbd63a44f65c279b23b8f447b2c6e120a2bc7f004758b446e05ed1"
-    },
-    {
-      "name": "LogSetAuthority(address)",
-      "hash": "0x1abebea81bfa2637f28358c371278fb15ede7ea8dd28d2e03b112ff6d936ada4"
-    },
-    {
-      "name": "UnbondJob(address,address,address,uint256,uint256)",
-      "hash": "0x6d962fe34dd0cf9a9df3e12a7b8ddfe5f790b3f11668553455d7b52db70a07be"
-    },
-    {
-      "name": "SetGovernance(address)",
-      "hash": "0x24a8c4807b324a269a51827c3446b8ac1cc13810d7d0c0ca1efafabddd7b6219"
-    },
-    {
-      "name": "LPTokenClaimed(address,uint256)",
-      "hash": "0x586e28f4f60b4d906fc69694ea6d7fe5c5668730ce3286d7af8eca868f3c2760"
-    },
-    {
-      "name": "PublishedNewIndex(address)",
-      "hash": "0x75f6678af486575bd3d5529cbbef61337718845507c76fa7c370715a7f6c4bd2"
-    },
-    {
-      "name": "OperatorRemoved(address)",
-      "hash": "0x80c0b871b97b595b16a7741c1b06fed0c6f6f558639f18ccbce50724325dc40d"
-    },
-    {
-      "name": "FXSMinted(address,address,uint256)",
-      "hash": "0xbe70a233924923d3d70cfd3c5c22c22f0a43c6df422cc029140e80684f7b70eb"
-    },
-    {
-      "name": "ReflinkRewards(address,uint256)",
-      "hash": "0x4b8126d2c8cfe6526bd9f134921855f9c6076a52dd74535c1bf55d59a778edc8"
-    },
-    {
-      "name": "ControlAdded(address,uint8)",
-      "hash": "0xda7159b01021254a0864c86d0163ad02e9f9ce045913f19dc9315ce339a7270a"
-    },
-    {
-      "name": "Log(string)",
-      "hash": "0xcf34ef537ac33ee1ac626ca1587a0a7e8e51561e5514f8cb36afa1c5102b3bab"
-    },
-    {
-      "name": "FundsDistributed(address,uint256)",
-      "hash": "0x26536799ace2c3dbe12e638ec3ade6b4173dcf1289be0a58d51a5003015649bd"
-    },
-    {
-      "name": "ShareBurned(address,address,uint256)",
-      "hash": "0xdf05d6cb804e48c3130d5f7811e55947769ccdecf499faea489170f17df227cf"
-    },
-    {
-      "name": "MinterSet(address,bool)",
-      "hash": "0x583b0aa0e528532caf4b907c11d7a8158a122fe2a6fb80cd9b09776ebea8d92d"
-    },
-    {
-      "name": "NewIndexSubmitted()",
-      "hash": "0xb1b4780912af5c8cad76579a8c63b2e0dde7d485776955bba7068660df7a8113"
-    },
-    {
-      "name": "TransferExternalTokens(address,address,uint256)",
-      "hash": "0xf217402c85197de87cd806653771027d1e91101ef79ab35684a580c62b91a9b5"
-    },
-    {
-      "name": "ExcludeFromReward(address)",
-      "hash": "0x6f6f36b62c3e3a776fc3052d503097ffb886d7eb4546e768132fef82747e30b9"
-    },
-    {
-      "name": "OperatorChanged(address,address)",
-      "hash": "0xd58299b712891143e76310d5e664c4203c940a67db37cf856bdaa3c5c76a802c"
-    },
-    {
-      "name": "RemoveMinter(address)",
-      "hash": "0x2f91b591fc56ac0917953ad01ec225524ee5ef0555213e4c8a9d8c9728ee7ffb"
-    },
-    {
-      "name": "PointsPerShareUpdated(uint256)",
-      "hash": "0x1f8d7705f31c3337a080803a8ad7e71946fb88d84738879be2bf402f97156e96"
-    },
-    {
-      "name": "Migrate(address,uint256)",
-      "hash": "0xa59785389b00cbd19745afbe8d59b28e3161395c6b1e3525861a2b0dede0b90d"
-    },
-    {
-      "name": "ExecutionOperator(address,bool)",
-      "hash": "0xfcebaa973ed84808fb785c92941aa4798f3f66923f5a2ff544382db3a9b3a3a2"
-    },
-    {
-      "name": "Burn(address,uint256)",
-      "hash": "0xcc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca5"
-    },
-    {
-      "name": "TokenSwapCapUpdated(address,uint256)",
-      "hash": "0x51c7b3899924578d835c066303e3f765c25fea17d7b18840cd109a90f5c5601f"
-    },
-    {
-      "name": "CommunityIssuanceAddressSet(address)",
-      "hash": "0x3d2d65171cd82be2a82a4c8559f66bc443ecd480dffeacc3cf52caf9963e9a6f"
-    },
-    {
-      "name": "IssueTo(address,uint256)",
-      "hash": "0x95b20c4dce7884f76ac43c1deba4dc6c3f968fdbb364501891f11021bc17b6f2"
-    },
-    {
-      "name": "WhitelistUpdated(address,bool,bool)",
-      "hash": "0x855852ede06df792cbe12bbb8b292fd0d251a1dcfea1f072d5793f1930568ebf"
-    },
-    {
-      "name": "GTCDistChanged(address,address)",
-      "hash": "0x12aa09d7887b401e20989b89da323840a273720748810afd3cdcc7ba0aedaeb9"
-    },
-    {
-      "name": "RecoverToken(address,address,uint256)",
-      "hash": "0x16a1412f01b73c390eb2548427101644aa86c1443c272f73df00fb74c48fe499"
-    },
-    {
-      "name": "Confirmation(address,bytes32)",
-      "hash": "0xe1c52dc63b719ade82e8bea94cc41a0d5d28e4aaf536adb5e9cccc9ff8c1aeda"
-    },
-    {
-      "name": "DCHFTokenBalanceUpdated(address,uint256)",
-      "hash": "0x52370bcf49e23c875a9f6c3ddcd7420765603469e4986869b98af6de882d2181"
-    },
-    {
-      "name": "AccountLocked(address)",
-      "hash": "0x78be06d07afe380e04d6deeba0f33c892db454f303fb739d9b768987a5ec6aca"
-    },
-    {
-      "name": "ErcSwept(address,address,address,uint256)",
-      "hash": "0x2c4e64c7c0957a81c0076a0a3f3c7d9f0a5d6158292071c794436f829d12cfb7"
-    },
-    {
-      "name": "HolderWeightChanged(address,uint256,uint256)",
-      "hash": "0x7ffd5ecbf13a4814c06acbd9d31dff13c728c3936046c339e8053a8c26b38bb5"
-    },
-    {
-      "name": "UpdateBorrowerOps(address[])",
-      "hash": "0x0672fe2a5b16f4cc77859793be589f38603b1c305687e1c6d3195658c61c58f6"
-    },
-    {
-      "name": "NameChanged(string,address)",
-      "hash": "0x1e3652b21ef1bd2c76130610ad0be2b8ab01fbea80964c84c54473bf090dc8a4"
-    },
-    {
-      "name": "LiquidityHubFrozen()",
-      "hash": "0x4d344c8b0016d5807caec92f09a154f1cfc026110a8106ccbe2dceff0317355d"
-    },
-    {
-      "name": "SetMinter(address)",
-      "hash": "0xcec52196e972044edde8689a1b608e459c5946b7f3e5c8cd3d6d8e126d422e1c"
-    },
-    {
-      "name": "ProxyOwnershipTransferred(address,address)",
-      "hash": "0x5a3e66efaa1e445ebd894728a69d6959842ea1e97bd79b892797106e270efcd9"
     },
     {
       "name": "MultisigClaim(address,uint256)",
       "hash": "0x12ed450bcc3fbbe60547c4b6ad842d061208aff7023a3412658688a87978aa38"
     },
     {
-      "name": "LiquidityHubSet(address)",
-      "hash": "0xd3c93458b0ffb1a51466cc4b7fcda74d245ef1c6bdfe9e111609eea5afcae4c9"
+      "name": "AddBackedGold(uint256)",
+      "hash": "0x09b6db8121b98e8afd720f8845773ef4340dfe3c6a1eadc5e068ff266357e807"
     },
     {
-      "name": "TWAPOracleChanged(address,address)",
-      "hash": "0x04d449efb9af82ca8fd89ca047e3c023180cac06245c5ace8ecf96c7f637c00a"
+      "name": "DelegateChanged(address,address,uint8)",
+      "hash": "0xe8d51c8e11bd570db1734c8ec775785330e77007feed45c43b608ef33ff914bd"
     },
     {
-      "name": "MintedNewTokens(address,uint256)",
-      "hash": "0x51c018f451551bf4e92356d59bc5f1fcd317ef0f884d97807cae6dd395da7fe0"
+      "name": "AuthorizedOperatorByPartition(bytes32,address,address)",
+      "hash": "0x3646a897c70797ecc134b0adc32f471b07bf1d6f451133b0384badab531e3fd6"
     },
     {
-      "name": "UnFreezed()",
-      "hash": "0xf0daac2271a735ea786b9adf80dfcbd6a3cbd52f3cab0a78337114692d5faf5d"
+      "name": "SupplyControllerChanged(address,address)",
+      "hash": "0xa0c3b07e87149049c5705737ef1ab211dc9f921e780e4ac44789f521e4d15edd"
     },
     {
-      "name": "Approved(address,address,uint256,uint256)",
-      "hash": "0x71594b34a69973da9bff6f72cc0aad2c51069b6b8e9c70c0648b58d10d7bd84b"
+      "name": "CapUpdated(uint256)",
+      "hash": "0x3c8eb7c49d332f4c1e4d92a27cda93c31cc9452f7a408e0c6109fcddbc9946ea"
     },
     {
-      "name": "BridgeSupplyCapUpdated(address,uint256)",
-      "hash": "0x59e1e4348943de408b89af8ab71e502ea722dd41efd1ff4a3548c60e83e91c60"
+      "name": "NewPublisherSubmitted(address)",
+      "hash": "0x99b686e5f2cdb08efcde95954dac0c7b76fe862e82bc70154ee45a301fcba3f6"
     },
     {
-      "name": "TransferPaused(address)",
-      "hash": "0x483d42b2ec355eefc30508020d123de3c2fca2f0d6f8e751f98449099242b76b"
+      "name": "Rely(address)",
+      "hash": "0xdd0e34038ac38b2a1ce960229778ac48a8719bc900b6c4f8d0475c6e8b385a60"
     },
     {
-      "name": "ConvertTokensForETH(uint256,uint256)",
-      "hash": "0x1d835182508bc46cfe26167d5d6ca20231bf92fb2ee0d558d40553b29a40fdf9"
-    },
-    {
-      "name": "NewRewardsDistributorRegistration(address,address)",
-      "hash": "0xd8732c543edde4e60b54e1136459ee3a610f1243749765d9dbdbcf9fe76a7bd5"
-    },
-    {
-      "name": "TransferUnpaused(address)",
-      "hash": "0x27b779563480879c8e2872999840b721537eb09dccf94115a2276ca341cdbb52"
-    },
-    {
-      "name": "RouterAddressUpdated(address)",
-      "hash": "0xafec26814d7c5e0716cdb68343bdf123509d8bae8a1a877de1c3869411985c55"
-    },
-    {
-      "name": "NewIBRatio(uint256)",
-      "hash": "0xa1a1b7ab78876f7189087445ea5c3b24e2c620e85ca418855a3341eee17716e5"
+      "name": "MinterChanged(address,address)",
+      "hash": "0x3b0007eb941cf645526cbb3a4fdaecda9d28ce4843167d9263b536a1f1edc0f6"
     },
     {
       "name": "NewGovernance(address)",
       "hash": "0x4f386975ea1c2f7cf1845b08bee00626fbb624ecad16254d63d9bb9ba86526de"
     },
     {
-      "name": "LogChangeVault(address,address,uint256)",
-      "hash": "0x5c364079e7102c27c608f9b237c735a1b7bfa0b67f27c2ad26bad447bf965cac"
+      "name": "BeaconUpgraded(address)",
+      "hash": "0x1cf3b03a6cf19fa2baba4df148e9dcabedea7f8a5c07840e207e5c089be95d3e"
+    },
+    {
+      "name": "BurnerSet(address,bool)",
+      "hash": "0xd28dc1379d750c7c8137c7ef7b074f62f1361b9becc7f9d77d8c0d6e46a3cd06"
+    },
+    {
+      "name": "ShareRateChange(uint256,uint40)",
+      "hash": "0x9861fa0ed101659f7a59b4583fcc798dfa4f3b419bea371c8ee2ad0ffe13a31e"
+    },
+    {
+      "name": "EmergencyStopMintingCollateral(address,bool)",
+      "hash": "0x5bbb1afddf32881824ddeb3fb7fe693cbb0aa35de2ef25c53ad5e8e8d44c2720"
+    },
+    {
+      "name": "AddCredit(address,address,address,uint256,uint256)",
+      "hash": "0xb97975ea9bf5ae2173b9ea765214622396032aba11cd5cc1450c760ac80d059a"
+    },
+    {
+      "name": "ReserveDataUpdated(address,uint256,uint256,uint256,uint256,uint256)",
+      "hash": "0x804c9b842b2748a22bb64b345453a3de7ca54a6ca45ce00d415894979e22897a"
+    },
+    {
+      "name": "MarketIdSet(string,string)",
+      "hash": "0xe685c8cdecc6030c45030fd54778812cb84ed8e4467c38294403d68ba7860823"
+    },
+    {
+      "name": "NewMaxSupplySubmitted(uint256)",
+      "hash": "0x2e95024329023a8cd7349484ae59cc67a52401dd9a2f10f4636e6619187cf98e"
+    },
+    {
+      "name": "OffChainBalanceExcluded(bool)",
+      "hash": "0x3d7f39af0cf901fec3da1b0ecfab4a0eb553ed671de67850e09cca22848dd866"
+    },
+    {
+      "name": "ReserveDropped(address)",
+      "hash": "0xeeec4c06f7adad215cbdb4d2960896c83c26aedce02dde76d36fa28588d62da4"
+    },
+    {
+      "name": "JobRemoved(address,uint256,address)",
+      "hash": "0x2ca18fdfae50f1042480d285d21f6706aa6abbd567d60a044b5bec07ccfee648"
+    },
+    {
+      "name": "SwapTokensForETH(uint256,address[])",
+      "hash": "0x32cde87eb454f3a0b875ab23547023107cfad454363ec88ba5695e2c24aa52a7"
+    },
+    {
+      "name": "FeeNumeratorSet(uint256)",
+      "hash": "0xc1bcceddd77fdc95a8da9bec5802d2e0bb564dd02c0730222d8e12030bd91043"
+    },
+    {
+      "name": "retrieveExcessTokens(address,address,uint256)",
+      "hash": "0xb4a9bd656f85bef0e5b143941a7ac16dd7d098f71118b6e303959cd7eb187956"
+    },
+    {
+      "name": "OwnershipRenounced(address)",
+      "hash": "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820"
+    },
+    {
+      "name": "TransferExternalTokens(address,address,uint256)",
+      "hash": "0xf217402c85197de87cd806653771027d1e91101ef79ab35684a580c62b91a9b5"
+    },
+    {
+      "name": "AccountLocked(address)",
+      "hash": "0x78be06d07afe380e04d6deeba0f33c892db454f303fb739d9b768987a5ec6aca"
+    },
+    {
+      "name": "RewardStakers(uint256)",
+      "hash": "0xd3be3dbc076afa976ee7dfe1f596f6d7905e9441a1a426a244a12ef071272dd4"
+    },
+    {
+      "name": "AddressSetAsProxy(bytes32,address,address,address)",
+      "hash": "0x3bbd45b5429b385e3fb37ad5cd1cd1435a3c8ec32196c7937597365a3fd3e99c"
+    },
+    {
+      "name": "Mint(address,address,uint256,uint256,string)",
+      "hash": "0xad2943b15836caf43698401a62af4738985fb33dd979844d99d37f5293f037d3"
+    },
+    {
+      "name": "UpdateMinter(address,bool)",
+      "hash": "0xc6a23a0a2412457bc174b0b04538a04d162131389a2e6bafcb3c90d104004e16"
+    },
+    {
+      "name": "NewTimeLockRegistration(address,address)",
+      "hash": "0x1b4fa7e35ece4dcbbb914f91d8c3539c828d43c0b8a700237373966a27a9693a"
+    },
+    {
+      "name": "BasisPointAdded(uint256)",
+      "hash": "0x1330ba3093e46415841480e940641e13c5cb2a79863d5f29936420dba2f1624d"
+    },
+    {
+      "name": "OperatorRoleGranted(address,address)",
+      "hash": "0x2d45ee102874989882745a26688d0b4fffee125a18df26536b12582c7fde4e17"
+    },
+    {
+      "name": "Staked(address,bytes32,uint256,uint256,uint256,uint256)",
+      "hash": "0x40d7f7e83df425b94fc095bee99432663e855ad29362ed33290e762f90fbff72"
+    },
+    {
+      "name": "RevenueAddressSet(address)",
+      "hash": "0x27b897754d1deeb07d290d26a64625918a5bc4185daca6a3c569cd4331571baf"
+    },
+    {
+      "name": "LogSwapout(address,address,uint256)",
+      "hash": "0x6b616089d04950dc06c45c6dd787d657980543f89651aec47924752c7d16c888"
+    },
+    {
+      "name": "Issuance(uint256)",
+      "hash": "0x9386c90217c323f58030f9dadcbc938f807a940f4ff41cd4cead9562f5da7dc3"
+    },
+    {
+      "name": "MintCapChanged(uint256)",
+      "hash": "0x1b3897f919a5b5973b0bc01ddfa5fd686de127a16ad08e0b8618dc493aad5462"
+    },
+    {
+      "name": "Unpaused(address)",
+      "hash": "0x5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa"
+    },
+    {
+      "name": "AuthorizationUsed(address,bytes32)",
+      "hash": "0x98de503528ee59b575ef0c0a2576a82497bfc029a5685b209e9ec333479b10a5"
+    },
+    {
+      "name": "LiquidityHubSet(address)",
+      "hash": "0xd3c93458b0ffb1a51466cc4b7fcda74d245ef1c6bdfe9e111609eea5afcae4c9"
+    },
+    {
+      "name": "NewCurve(address,uint256)",
+      "hash": "0xe61d471656d849b230e45307bce5f71d00383888866b992d6a6993b72361e799"
+    },
+    {
+      "name": "IncreaseLiquidity(uint256,uint128,uint256,uint256)",
+      "hash": "0x3067048beee31b25b2f1681f88dac838c8bba36af25bfb2b7cf7473a5847e35f"
+    },
+    {
+      "name": "NewDuration(address,uint256)",
+      "hash": "0xc0473c2cbb9705ca96e7d892f51ae51b81f597dab7ed6eb25f0a3e7c75d46639"
+    },
+    {
+      "name": "BridgeRemoved(address)",
+      "hash": "0x5d9d5034656cb3ebfb0655057cd7f9b4077a9b42ff42ce223cbac5bc586d2126"
+    },
+    {
+      "name": "RemoveGold(uint256)",
+      "hash": "0x19b4cf73e928f35f5b561a793ad1648ee8ffd717737f5a605419936c8c5a2236"
+    },
+    {
+      "name": "TransferGovernancePending(address)",
+      "hash": "0x70f2dff90d8145da945114cc37c5ffde0eef9306ad5efbd39cae52dc28f9cbf3"
+    },
+    {
+      "name": "DiamondCut(tuple[],address,bytes)",
+      "hash": "0xe785b7d46d252880dc19457b2c8b06b2de37c69d645338fdd151c21279e60633"
+    },
+    {
+      "name": "ReserveFrozen(address,bool)",
+      "hash": "0x0c4443d258a350d27dc50c378b2ebf165e6469725f786d21b30cab16823f5587"
+    },
+    {
+      "name": "RevokeSnapshot(address)",
+      "hash": "0x7c207ff2189685b05df103e0e4a96c61ba8a28d4356e625f3b4acb7c01b79698"
+    },
+    {
+      "name": "PendingModuleRemoved(address)",
+      "hash": "0xd6b18042563148f38d728c1c4d339ffd515b632d0ad2e1833b822412f3f4d877"
+    },
+    {
+      "name": "PoolCreated(address,address,uint24,int24,address)",
+      "hash": "0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118"
+    },
+    {
+      "name": "SetPair(address,address)",
+      "hash": "0xd482e95abb3d8f5eaf8f07dbd4c204ea55842bacc8cf5d530aa104716551e216"
+    },
+    {
+      "name": "Params(uint256,uint256)",
+      "hash": "0xb044a1e409eac5c48e5af22d4af52670dd1a99059537a78b31b48c6500a6354e"
+    },
+    {
+      "name": "TournamentCreated(uint256)",
+      "hash": "0x113d32d0b7aec15a8c7f50af4cb42f4695e5b95524ed69519ac88d6c1f1f40f6"
+    },
+    {
+      "name": "ExcludeFromFeeUpdated(address)",
+      "hash": "0x7168e8adb718597b3ac83e2dfe415bea8ebaabb57fe933ffac2e0ed93b80718e"
+    },
+    {
+      "name": "TransferBlockUpdate(address,uint256)",
+      "hash": "0xdddba73c10478848936b4de3bb31b86169c4c4147c9e9f9f2699906c36b94298"
+    },
+    {
+      "name": "Unstaked(address,uint256,uint256)",
+      "hash": "0x7fc4727e062e336010f2c282598ef5f14facb3de68cf8195c2f23e1454b2b74e"
+    },
+    {
+      "name": "RoleUpdated(address,address,uint256,uint256)",
+      "hash": "0x5a10526456f5116c0b7b80582c217d666243fd51b6a2d92c8011e601c2462e5f"
+    },
+    {
+      "name": "NewImplementation(address,address)",
+      "hash": "0xd604de94d45953f9138079ec1b82d533cb2160c906d1076d1f7ed54befbca97a"
+    },
+    {
+      "name": "KeeperDispute(address,uint256)",
+      "hash": "0xfb2bdfce35c242f34d4f9633225d3c34a5892d5eae9ce102de6aac188dd25ba0"
+    },
+    {
+      "name": "OwnerChanged(address)",
+      "hash": "0xa2ea9883a321a3e97b8266c2b078bfeec6d50c711ed71f874a90d500ae2eaf36"
+    },
+    {
+      "name": "PointsPerShareUpdated(uint256)",
+      "hash": "0x1f8d7705f31c3337a080803a8ad7e71946fb88d84738879be2bf402f97156e96"
+    },
+    {
+      "name": "CollateralManagerRegistered(address)",
+      "hash": "0x2d9629b61129967906b4b31b246507fe09b2b62e2c963a3b9e4d1aff6d4af75b"
+    },
+    {
+      "name": "Staked(address,uint256)",
+      "hash": "0x9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d"
+    },
+    {
+      "name": "ChangedMaxSupply(uint256)",
+      "hash": "0x8e2c9753593ed4f1397b57187f06771c15ea739bffcb290ea6ed07dadb9fe5be"
+    },
+    {
+      "name": "TWAPOracleChanged(address,address)",
+      "hash": "0x04d449efb9af82ca8fd89ca047e3c023180cac06245c5ace8ecf96c7f637c00a"
+    },
+    {
+      "name": "EModeCategoryAdded(uint8,uint256,uint256,uint256,address,string)",
+      "hash": "0x0acf8b4a3cace10779798a89a206a0ae73a71b63acdd3be2801d39c2ef7ab3cb"
+    },
+    {
+      "name": "ImplChanged(address,address)",
+      "hash": "0xaad46b89531ed10d02d926f4d6bfe234a6126e3fffc02d3b07167575f9c14337"
+    },
+    {
+      "name": "UpdateTroveManagers(address[])",
+      "hash": "0x3856df4367c58f483e04d7f8228b2a82709f7f54e5abf5b7f14de9401b33b69d"
+    },
+    {
+      "name": "Transfer(address,address,uint256)",
+      "hash": "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+    },
+    {
+      "name": "SET_CORE(address,address)",
+      "hash": "0x0056b56524ccc7cf1d147fdc1b3201b6e5bf8df426ebc07861b3564064d7fc2d"
+    },
+    {
+      "name": "Approval(address,address,uint256)",
+      "hash": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
+    },
+    {
+      "name": "StakingIncreased(address,uint256,uint8)",
+      "hash": "0xf4476f182b22aa6860f6aea0edf736040fd43167d941069fadffe4aef18ef728"
+    },
+    {
+      "name": "IncludeInFee(address)",
+      "hash": "0x4f6a6b6efe34ec6478021aa9fb7f6980e78ea3a10c74074a8ce49d5d3ebf1f7e"
+    },
+    {
+      "name": "LiquidityAddition(address,uint256)",
+      "hash": "0x20b711375edba008429d2f91787c68aa13aab7f267c346bf91be1a104d8b7b8b"
+    },
+    {
+      "name": "BuyBackCrossChainTriggered()",
+      "hash": "0x6a436cd4d025d81a64b65845b219f011a8406fee86f3a2d737f274d94e268de1"
+    },
+    {
+      "name": "LPTokenClaimed(address,uint256)",
+      "hash": "0x586e28f4f60b4d906fc69694ea6d7fe5c5668730ce3286d7af8eca868f3c2760"
+    },
+    {
+      "name": "TransferByPartition(bytes32,address,address,address,uint256,bytes,bytes)",
+      "hash": "0xff4e9a26af4eb73b8bacfaa4abd4fea03d9448e7b912dc5ff4019048875aa2d4"
+    },
+    {
+      "name": "LogSetAuthority(address)",
+      "hash": "0x1abebea81bfa2637f28358c371278fb15ede7ea8dd28d2e03b112ff6d936ada4"
+    },
+    {
+      "name": "ATokenUpgraded(address,address,address)",
+      "hash": "0xa76f65411ec66a7fb6bc467432eb14767900449ae4469fa295e4441fe5e1cb73"
+    },
+    {
+      "name": "AdminRequiredNumChanged(string,string,uint256,uint256)",
+      "hash": "0xce49fc04234925e87b95750e0e50cac6d4ffcf8a696e3316b3e13bedc84ee7a8"
+    },
+    {
+      "name": "DefaultPositionUnitEdited(address,int256)",
+      "hash": "0x8133e2bf34edab764b55c59d1d41f9df637e7c22828bb6b0a9d55b429d008a97"
+    },
+    {
+      "name": "IssueTo(address,uint256)",
+      "hash": "0x95b20c4dce7884f76ac43c1deba4dc6c3f968fdbb364501891f11021bc17b6f2"
+    },
+    {
+      "name": "RevenueDistributed(address,uint256,uint256,uint256)",
+      "hash": "0x615e44f94de69b66b60b6cdd78b2056d4ebbd39a1338646e5cf21328ead50d23"
+    },
+    {
+      "name": "StakeGoodAccounting(uint256,uint256,address,uint40,address)",
+      "hash": "0xd824970a2cf19cc2b630c87ce5b00f67301cac3ac60513d027c7a39129f93b46"
+    },
+    {
+      "name": "AdminRoleRemoved(address,address)",
+      "hash": "0x21ba1239795d4e22874e3dc55f0a9d7b65bfb23069d32965d7c23be9524ccf95"
+    },
+    {
+      "name": "DestroyedBlackFunds(address,uint256)",
+      "hash": "0x61e6e66b0d6339b2980aecc6ccc0039736791f0ccde9ed512e789a7fbdd698c6"
+    },
+    {
+      "name": "LOG_CLAIM_UNLOCKED(address,uint256)",
+      "hash": "0x9b0d7ec397f0d7459574b710fa67fcdfc3d3c80ca2d0c1a84a67dd566464b298"
+    },
+    {
+      "name": "ApprovalByPartition(bytes32,address,address,uint256)",
+      "hash": "0xf061499aa77c2f6f5e25e34955a06623705344a88256cc861a121ec0bce5cfec"
+    },
+    {
+      "name": "Migrate(address,uint256)",
+      "hash": "0xa59785389b00cbd19745afbe8d59b28e3161395c6b1e3525861a2b0dede0b90d"
+    },
+    {
+      "name": "MintFinished()",
+      "hash": "0xae5184fba832cb2b1f702aca6117b8d265eaf03ad33eb133f19dde0f5920fa08"
+    },
+    {
+      "name": "BackUnbacked(address,address,uint256,uint256)",
+      "hash": "0x281596e92b2d974beb7d4f124df30a0b39067b096893e95011ce4bdad798b759"
+    },
+    {
+      "name": "BuyBackTriggered()",
+      "hash": "0xac401825222c905dafef53f897e1fe565e107a9b114737f28ad26c699784bd8d"
+    },
+    {
+      "name": "RelayHubChanged(address,address)",
+      "hash": "0xb9f84b8e65164b14439ae3620df0a4d8786d896996c0282b683f9d8c08f046e8"
+    },
+    {
+      "name": "Initialised()",
+      "hash": "0x09dfb9099a2610601d58030170fde7ae9db3e1bcb751c3d6800216cbe3b499b5"
+    },
+    {
+      "name": "TokenMinterBurned(address,address,uint256)",
+      "hash": "0xdc7fd22bc401e7c6b9be2c2736286a2a42ea0c6307bc97ff0fb12bd0abd2c747"
+    },
+    {
+      "name": "UpdateCeiling(address,uint128)",
+      "hash": "0xcbd9889d49abd2bf5754aa55afcd1d932be6bce46399a45161b8bb3296775bd3"
+    },
+    {
+      "name": "ClaimVestedTokens(address,uint256,uint256)",
+      "hash": "0xffc3eace03cdc34b7c376b488d01a425cdbb40202e6cc36227247aa560948bb9"
+    },
+    {
+      "name": "Swap(address,string,uint256)",
+      "hash": "0xf6c184dc66b66fdd652f70b2bd5fc222712bd2978e2d910ee14b62cf4d04cf37"
+    },
+    {
+      "name": "Transferred(address,address,address,uint256)",
+      "hash": "0x769254a71d2f67d8ac6cb44f2803c0d05cfbcf9effadb6a984f10ff9de3df6c3"
+    },
+    {
+      "name": "RebalanceStableBorrowRate(address,address)",
+      "hash": "0x9f439ae0c81e41a04d3fdfe07aed54e6a179fb0db15be7702eb66fa8ef6f5300"
+    },
+    {
+      "name": "PointsCorrectionUpdated(address,int256)",
+      "hash": "0xf694bebd33ada288ae2f4485315db76739e2d5501daf315e71c9d8f841aa7773"
+    },
+    {
+      "name": "OperatorChanged(address,address)",
+      "hash": "0xd58299b712891143e76310d5e664c4203c940a67db37cf856bdaa3c5c76a802c"
+    },
+    {
+      "name": "KeeperUnbonding(address,uint256,uint256,uint256)",
+      "hash": "0x50eca01e7e4362bc0279a45c4fbe68f263771dd3418b0a29c93008759f433b2e"
+    },
+    {
+      "name": "ExcludeFromFee(address)",
+      "hash": "0x58c3e0504c69d3a92726966f152a771e0f8f6ad4daca1ae9055a38aba1fd2b62"
+    },
+    {
+      "name": "ProposalUpdated(address,uint256,bool,uint256)",
+      "hash": "0x1a8ead4104f496e8a2f3d71d8008865f6b4c02195a9b30368431a7b9f9f03f10"
+    },
+    {
+      "name": "Cancel(address,uint256)",
+      "hash": "0x27f83af92b39768b17fe0c8d6922452702717efb8626d97e7a754e0b27d4f6d2"
+    },
+    {
+      "name": "ReserveUsedAsCollateralDisabled(address,address)",
+      "hash": "0x44c58d81365b66dd4b1a7f36c25aa97b8c71c361ee4937adc1a00000227db5dd"
+    },
+    {
+      "name": "Revoke(address,bytes32)",
+      "hash": "0xc7fb647e59b18047309aa15aad418e5d7ca96d173ad704f1031a2c3d7591734b"
+    },
+    {
+      "name": "WhitelistDisabled()",
+      "hash": "0x212c6e1d3045c9581ef0adf2504dbb1d137f52f38162ccf77a16c69d14eba5c3"
+    },
+    {
+      "name": "EtherWithdraw(uint256,address)",
+      "hash": "0xec47e7ed86c86774d1a72c19f35c639911393fe7c1a34031fdbd260890da90de"
+    },
+    {
+      "name": "Freezed()",
+      "hash": "0x962a6139ca22015759d0878e2cf5d770dcb8152e1d5ba08e46a969dd9b154a9c"
+    },
+    {
+      "name": "VNLConverted(address,uint256)",
+      "hash": "0xc81072229ec6e4e2cb32e6d9fcfa0d4f4ac0b521ac84083648501b3e38274187"
+    },
+    {
+      "name": "RewardsClaimed(address,address,address,address,uint256)",
+      "hash": "0xc052130bc4ef84580db505783484b067ea8b71b3bca78a7e12db7aea8658f004"
+    },
+    {
+      "name": "Minted(address,uint256)",
+      "hash": "0x30385c845b448a36257a6a1716e6ad2e1bc2cbe333cde1e69fe849ad6511adfe"
+    },
+    {
+      "name": "MinterAdded(address,address)",
+      "hash": "0x3c091dafb1d99e4a4c333024492eac3b2cd8bf921a3dd547c937db33be307bb8"
+    },
+    {
+      "name": "Burned(address,uint256,string,string)",
+      "hash": "0xe7fe72e51b458dcd29475a3be9675669af7aa5c3d7e9161fdb6cbba71803dd50"
+    },
+    {
+      "name": "ControlRemoved(address,uint8)",
+      "hash": "0x99b197980951aeda56a24210ac7963b47fac50b2277554a4fc7dc06fd305b574"
+    },
+    {
+      "name": "TreasuryAdded(address)",
+      "hash": "0xedfa2f73691730ba0803543209339afdd054637240c6ff0a7ae0dad3c191648c"
+    },
+    {
+      "name": "TransferEnabled(address)",
+      "hash": "0x5285f0ad5858236d5f2ce2ec9ff0b2d3aa04320499b71f022e64d9c7549a325c"
+    },
+    {
+      "name": "Swap(address,address,uint256)",
+      "hash": "0xea368a40e9570069bb8e6511d668293ad2e1f03b0d982431fd223de9f3b70ca6"
+    },
+    {
+      "name": "BuybackMinAvailabilityUpdated(uint256)",
+      "hash": "0xac218d80006936a5fb23226f25ffed76cd856dbcc539b7dd7a8abb5a418a8da4"
+    },
+    {
+      "name": "NameChanged(string,address)",
+      "hash": "0x1e3652b21ef1bd2c76130610ad0be2b8ab01fbea80964c84c54473bf090dc8a4"
+    },
+    {
+      "name": "RoleGranted(bytes32,address,address)",
+      "hash": "0x2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d"
+    },
+    {
+      "name": "XUSDMinted(address,address,uint256)",
+      "hash": "0x67aaa692dd2aa98aefdd0a45df45f3ef389ca47386032994bfdf0f66c19f08e0"
+    },
+    {
+      "name": "BorrowableInIsolationChanged(address,bool)",
+      "hash": "0x74adf6aaf58c08bc4f993640385e136522375ea3d1589a10d02adbb906c67d1c"
+    },
+    {
+      "name": "MinterRoleRemoved(address,address)",
+      "hash": "0x56692a161ffec953ddf9def93b958ea8d1ec95e21b80870c66be91a4374dc4e3"
+    },
+    {
+      "name": "AddedBlackLists(address[])",
+      "hash": "0xe9b487e36d4279af2f695c62e0e801c5d45017d600659f53f7889ebea442dd77"
+    },
+    {
+      "name": "RiseBridgedOut(address,address,uint256)",
+      "hash": "0x5cd522aff7a2bf4d0c00ba029b9cebb7a25ed4a77695101f28f01f865421d040"
+    },
+    {
+      "name": "Transfer(address,address,uint256,bytes)",
+      "hash": "0xe19260aff97b920c7df27010903aeb9c8d2be5d310a2c67824cf3f15396e4c16"
+    },
+    {
+      "name": "Disallowed(address)",
+      "hash": "0x9ef90a89b00db1a1891a357dc96b2a273add9d883e378c350d22bad87a9d7d30"
+    },
+    {
+      "name": "SetGovernance(address)",
+      "hash": "0x24a8c4807b324a269a51827c3446b8ac1cc13810d7d0c0ca1efafabddd7b6219"
+    },
+    {
+      "name": "Claim(address,uint256)",
+      "hash": "0x47cee97cb7acd717b3c0aa1435d004cd5b3c8c57d70dbceb4e4458bbd60e39d4"
+    },
+    {
+      "name": "FundsWithdrawn(address,uint256,uint256)",
+      "hash": "0xfbc3a599b784fe88772fc5abcc07223f64ca0b13acc341f4fb1e46bef0510eb4"
+    },
+    {
+      "name": "NewEpoch(uint256,uint256,uint256)",
+      "hash": "0x3bb7b347508b7c148ec2094ac60d2e3d8b7595421025643f08b45cb78b326b58"
+    },
+    {
+      "name": "ExecutionOperator(address,bool)",
+      "hash": "0xfcebaa973ed84808fb785c92941aa4798f3f66923f5a2ff544382db3a9b3a3a2"
+    },
+    {
+      "name": "TransferDisabled(address)",
+      "hash": "0xb982dae7b403c8420da5251b5cce66f0975c48bd3d6fe1ae31eb19f5106b3ce3"
+    },
+    {
+      "name": "NewLicenseFeeSubmitted(uint256)",
+      "hash": "0xbd5dc0f7a57c40b35f45d757606b9431c68f5007f1ee9b0da8fc426433a7099a"
+    },
+    {
+      "name": "TWAPSourceAdded(address)",
+      "hash": "0xb702ce677d2c4388aab38b10f96ca003dbe3dadb46fbf858cb7d55cba6bebc46"
+    },
+    {
+      "name": "RevokedOperatorByPartition(bytes32,address,address)",
+      "hash": "0x3b287c4f1bab4df949b33bceacef984f544dc5d5479930d00e4ee8c9d8dd96f2"
+    },
+    {
+      "name": "TransferStrategyInstalled(address,address)",
+      "hash": "0x8ca1d928f1d72493a6b78c4f74aabde976bc37ffe2570f2a1ce5a8abd3dde0aa"
+    },
+    {
+      "name": "Pause()",
+      "hash": "0x6985a02210a168e66602d3235cb6db0e70f92b3ba4d376a33c0f3d9434bff625"
+    },
+    {
+      "name": "AccountInactive(address,uint256)",
+      "hash": "0x481010afe95c4aad3901e4d3948ca845e8772b11b72f77bf2dd74a9940e21a21"
+    },
+    {
+      "name": "MaxSupplyAllowedAfterChanged(uint256,uint256)",
+      "hash": "0x63abb52e09389994840613a4780aa50f65baa62888e3cdcfcb088ac2de0b7db5"
+    },
+    {
+      "name": "SendToChain(uint16,bytes,uint256)",
+      "hash": "0x664e26797cde1146ddfcb9a5d3f4de61179f9c11b2698599bb09e686f442172b"
+    },
+    {
+      "name": "RoleCapabilityUpdated(uint8,bytes4,bool)",
+      "hash": "0xbfe16b2c35ce23dfd1ab0e7b5d086a10060c9b52d1574e1680c881b3b3a2b151"
+    },
+    {
+      "name": "SiloedBorrowingChanged(address,bool,bool)",
+      "hash": "0x842a280b07e8e502a9101f32a3b768ebaba3655556dd674f0831900861fc674b"
+    },
+    {
+      "name": "LiquidationCall(address,address,address,uint256,uint256,address,bool)",
+      "hash": "0xe413a321e8681d831f4dbccbca790d2952b56f977908e45be37335533e005286"
+    },
+    {
+      "name": "AdminRoleRemoved(address)",
+      "hash": "0x2d63f8ac641aea9e12c12daecbbf1ff5c41954f082604d02af14295e2d50f640"
+    },
+    {
+      "name": "OwnerChanged(address,address)",
+      "hash": "0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c"
+    },
+    {
+      "name": "TransfersAllowed(bool)",
+      "hash": "0x5854ddf9a9b69cf8f2802ec78fb8d6bbf299e949955d9361212e652f4fec0e82"
+    },
+    {
+      "name": "Withdrawal(address,uint256)",
+      "hash": "0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65"
+    },
+    {
+      "name": "AdminOperatorChange(address,address)",
+      "hash": "0xe8fdc5340d9288e129a7c6af86dc4002f708091280d69f89583f7e6349c0a8d6"
+    },
+    {
+      "name": "MinterSet(address,address,bool)",
+      "hash": "0x9e83b60577a847f7aec99ac60cc404d84b6fae0df5a54aaf535394add0fc7de7"
+    },
+    {
+      "name": "EModeAssetCategoryChanged(address,uint8,uint8)",
+      "hash": "0x5bb69795b6a2ea222d73a5f8939c23471a1f85a99c7ca43c207f1b71f10c6264"
+    },
+    {
+      "name": "SetAdmin(address)",
+      "hash": "0x5a272403b402d892977df56625f4164ccaf70ca3863991c43ecfe76a6905b0a1"
+    },
+    {
+      "name": "TokenStarted()",
+      "hash": "0x994a0442f4498644e0bb3fe4b4c74ad21fbbb80e04b2fd1cb31f4248796d3dde"
+    },
+    {
+      "name": "JellySet()",
+      "hash": "0xf8cae5c6689c0438a60eefc96cc182e609e583494ec7611e57ef82f651888f0c"
+    },
+    {
+      "name": "ModuleInitialized(address)",
+      "hash": "0x27b541a16df0902e262f34789782092ab25125513b8ed73608e802951771b928"
+    },
+    {
+      "name": "RPLFixedSupplyBurn(address,uint256,uint256)",
+      "hash": "0x6baaa7e377675e56cf5b72632742a306ea2dbb4df3aed1c5fb884af8ee436cff"
+    },
+    {
+      "name": "MinerSet(address)",
+      "hash": "0x2f834d1c8c4b956018fff5faca4d99868ae635487424d9c265c257ccbc698c6a"
+    },
+    {
+      "name": "ErcSwept(address,address,address,uint256)",
+      "hash": "0x2c4e64c7c0957a81c0076a0a3f3c7d9f0a5d6158292071c794436f829d12cfb7"
+    },
+    {
+      "name": "ChangedSymbol(string,string)",
+      "hash": "0x784d389d7a25efa135ac4c0ba29502585aff3f630e1639d375722bae3605664e"
+    },
+    {
+      "name": "FXSBurned(address,address,uint256)",
+      "hash": "0xed0632d0be8a77d1cd861e2e5f035c6684bad17c6bd6850e2d3621c6542d140d"
+    },
+    {
+      "name": "NewDay(uint256,uint256,uint256)",
+      "hash": "0x80fb1b49fb696967f7276660614bc3eda9d5de84b0589b1ba3c8a3997831b9bd"
+    },
+    {
+      "name": "ModuleRemoved(address)",
+      "hash": "0x0a1ee69f55c33d8467c69ca59ce2007a737a88603d75392972520bf67cb513b8"
+    },
+    {
+      "name": "BurnAddressUpdated(address)",
+      "hash": "0x6feb2294766fb161940a49b92df0ad4a47ffb6ef8255e0b9f80c8c05b7ec6b0f"
+    },
+    {
+      "name": "BusinessDevelopmentAddressUpdated(address)",
+      "hash": "0x6a679ad6371327969c9ddeade76f85c3e657fd6d020eeb491becdd1b6d608db3"
+    },
+    {
+      "name": "DelegateChanged(address,address,address)",
+      "hash": "0x3134e8a2e6d97e929a7e54011ea5485d7d196dd5f0ba4d4ef95803e8e3fc257f"
+    },
+    {
+      "name": "WhitelistEnabled()",
+      "hash": "0xe5e5846f783279948f6ec5faad38318cde86fe5be7ea845ede56d62f16c37434"
+    },
+    {
+      "name": "HolderWeightChanged(address,uint256,uint256)",
+      "hash": "0x7ffd5ecbf13a4814c06acbd9d31dff13c728c3936046c339e8053a8c26b38bb5"
+    },
+    {
+      "name": "RevokeAllApprovals(address,bool,bool)",
+      "hash": "0x5c20d5f19f8c6bc73cb1cba38e0b27f3837b43909d18a4ef193d1fa3c6f8f0d4"
+    },
+    {
+      "name": "SetRate(uint256)",
+      "hash": "0x2640b4015d3473fd09bf2b30939e17deb4068cdacf3892136e737e166ceb3210"
+    },
+    {
+      "name": "DiscountAuthorityFrozen()",
+      "hash": "0x527064e85a8453752e55610dd634b6ee8cd80307b0ea3f0eed8c1f7ca2696f8e"
+    },
+    {
+      "name": "Advanced(uint256,uint256)",
+      "hash": "0xa8eb7e5fda38cf18e907bee8da786b6c9477deefbd4f2a7869f4a12abb68b4c3"
+    },
+    {
+      "name": "VestingContractDeployed(address,address)",
+      "hash": "0x739fe22b8edefd6ce1fe32460f9cd54bf8e66fc7447f4c8a8131ce078a1988af"
+    },
+    {
+      "name": "ToBor(address,uint256,uint256)",
+      "hash": "0x55f46887179b50b434bdb2d033330ad49bcbc584a44ae674bb09196f110ff4f3"
+    },
+    {
+      "name": "ERC223Transfer(address,address,uint256,bytes)",
+      "hash": "0x9bfafdc2ae8835972d7b64ef3f8f307165ac22ceffde4a742c52da5487f45fd1"
+    },
+    {
+      "name": "MinterRemoved(address,address)",
+      "hash": "0x4b5ef9a786cf64a7d82ebcf2d5132667edc9faef4ac36260d9a9e52c526b6232"
+    },
+    {
+      "name": "KeeperUnbound(address,uint256,uint256,uint256)",
+      "hash": "0x095ae150bb74a0755c30809eb8d4aa810b63b66b9ca96a1945bbb03d809df2e9"
+    },
+    {
+      "name": "ChangeCanceled(bytes32,uint256)",
+      "hash": "0x2f6191371f2d30882f348c3fedb0661e7d34da33a44c4d44dc8aaca6d8d37945"
+    },
+    {
+      "name": "UpdatedMarketingAddress(address)",
+      "hash": "0xd1e7d6a3390dd5008bd1c57798817b9f806e4c417264e7d3d67e42e784dc24a9"
     },
     {
       "name": "RemoveJob(address,address,address,uint256,uint256)",
       "hash": "0xb69fc9f6d19ed402461251491f86c736bfcbe966e9584d3fb8a0057b313b6920"
     },
     {
+      "name": "MinBuybackAmountUpdated(uint256)",
+      "hash": "0x2d2d4e5324f4ce25e3d52eea5f16c64ccd01d35f9f80f30b73346811cc9b951d"
+    },
+    {
+      "name": "FlashLoan(address,address,address,uint256,uint8,uint256,uint16)",
+      "hash": "0xefefaba5e921573100900a3ad9cf29f222d995fb3b6045797eaea7521bd8d6f0"
+    },
+    {
+      "name": "ReflinkRewards(address,uint256)",
+      "hash": "0x4b8126d2c8cfe6526bd9f134921855f9c6076a52dd74535c1bf55d59a778edc8"
+    },
+    {
+      "name": "WhitelistAddress(address,bool)",
+      "hash": "0x33e0bf3ce98fac4118d5a0a8fe49e83b6acdfdef32871c9eca20e1528d7701ba"
+    },
+    {
+      "name": "FlashloanPremiumTotalUpdated(uint128,uint128)",
+      "hash": "0x71aba182c9d0529b516de7a78bed74d49c207ef7e152f52f7ea5d8730138f643"
+    },
+    {
+      "name": "AdminRoleGranted(address,address)",
+      "hash": "0x2570ac42fd8b322dc453ada624dc2ed0e9bdd67f16f201a25bbd30468f2aa187"
+    },
+    {
+      "name": "TransfersRestrictedBeforeUpdated(uint256)",
+      "hash": "0xd7b9c9321b627ff004969698b4616502d6b7305a588e685489e91c46fca509a9"
+    },
+    {
+      "name": "DCHFTokenBalanceUpdated(address,uint256)",
+      "hash": "0x52370bcf49e23c875a9f6c3ddcd7420765603469e4986869b98af6de882d2181"
+    },
+    {
+      "name": "BlacklistRemoved(address)",
+      "hash": "0x1747ca720b1a174a464b6513ace29b1d3190b5f632b9f34147017c81425bfde8"
+    },
+    {
+      "name": "NewPendingOwner(address,address)",
+      "hash": "0xb3d55174552271a4f1aaf36b72f50381e892171636b3fb5447fe00e995e7a37b"
+    },
+    {
+      "name": "TransferAllowed()",
+      "hash": "0x795b0e16c8da9807b0a215f3749bd6dbcc49fc0472183f4e446abb7dcbd9d007"
+    },
+    {
+      "name": "GrantSnapshot(address)",
+      "hash": "0xba2657b171d29405fda532aee83e937a6b0890d272bcddca2d89d7f50314e69a"
+    },
+    {
+      "name": "Reward(uint256)",
+      "hash": "0x3ac0594a85a20354f9dc74f33728416d19ce00d04a406c108cc2dcf2cecea134"
+    },
+    {
+      "name": "Swap(address,address,uint256,uint256,uint256,uint256)",
+      "hash": "0xb3e2773606abfd36b5bd91394b3a54d1398336c65005baf7bf7a05efeffaf75b"
+    },
+    {
+      "name": "LOG_SET_UNLOCK_BLOCK_GAP(address,uint256)",
+      "hash": "0x4fa1c8bae1f2ee3d51f5bea75dc354c17cf230fdf1fa6bfa458cd03e2ede08bc"
+    },
+    {
+      "name": "AddressSet(bytes32,address,address)",
+      "hash": "0x9ef0e8c8e52743bb38b83b17d9429141d494b8041ca6d616a6c77cebae9cd8b7"
+    },
+    {
+      "name": "AutoBurn(uint256)",
+      "hash": "0xbaf2a973da603337d11f56e6730fba6606e95b5e8085627c9ead4d24672d8616"
+    },
+    {
+      "name": "LQTYStakingAddressSet(address)",
+      "hash": "0xc03bd56bd5702c36b067ffe5fbcb0a58301813a6be63b16b7944b8181539de45"
+    },
+    {
+      "name": "ShareBurned(address,address,uint256)",
+      "hash": "0xdf05d6cb804e48c3130d5f7811e55947769ccdecf499faea489170f17df227cf"
+    },
+    {
+      "name": "ReservePaused(address,bool)",
+      "hash": "0xe188d542a5f11925d3a3af33703cdd30a43cb3e8066a3cf68b1b57f61a5a94b5"
+    },
+    {
+      "name": "AdminChanged(address,address)",
+      "hash": "0x7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f"
+    },
+    {
+      "name": "OwnerNominated(address)",
+      "hash": "0x906a1c6bd7e3091ea86693dd029a831c19049ce77f1dce2ce0bab1cacbabce22"
+    },
+    {
+      "name": "NewPendingAdmin(address,address)",
+      "hash": "0xca4f2f25d0898edd99413412fb94012f9e54ec8142f9b093e7720646a95b16a9"
+    },
+    {
+      "name": "MintedNewTokens(address,uint256)",
+      "hash": "0x51c018f451551bf4e92356d59bc5f1fcd317ef0f884d97807cae6dd395da7fe0"
+    },
+    {
+      "name": "AdminTransferInvoked(address)",
+      "hash": "0xb22a57ba0314fafe219dc14abcf1f22e86e6e82d599c0c31177a2d7c2e1b17e1"
+    },
+    {
+      "name": "ReceiveFromChain(uint16,uint64,uint256)",
+      "hash": "0x831bc68226f8d1f734ffcca73602efc4eca13711402ba1d2cc05ee17bb54f631"
+    },
+    {
+      "name": "VaultMint(address,uint256,uint256,uint256)",
+      "hash": "0xf79584ad48f1b6f4760ff2c645a0bc47324f626fb535ad3aa1a4f7e49525651a"
+    },
+    {
+      "name": "Deprecate(address)",
+      "hash": "0xcc358699805e9a8b7f77b522628c7cb9abd07d9efb86b6fb616af1609036a99e"
+    },
+    {
+      "name": "DepositToGrant(address,uint256,address,uint256)",
+      "hash": "0xfae34c500956466552fb92f220d08f0781819f358b519cd80b67c58b8b66ac3c"
+    },
+    {
+      "name": "Start()",
+      "hash": "0x1b55ba3aa851a46be3b365aee5b5c140edd620d578922f3e8466d2cbd96f954b"
+    },
+    {
+      "name": "LOG_STAKE(address,address,uint256)",
+      "hash": "0xc21b429107df2ac940fc444798554039f5c34696739d39ef7d39fa0abb4a9fc7"
+    },
+    {
+      "name": "UpgradeAgentSet(address)",
+      "hash": "0x7845d5aa74cc410e35571258d954f23b82276e160fe8c188fa80566580f279cc"
+    },
+    {
+      "name": "Log(string)",
+      "hash": "0xcf34ef537ac33ee1ac626ca1587a0a7e8e51561e5514f8cb36afa1c5102b3bab"
+    },
+    {
+      "name": "MinterAdded(address)",
+      "hash": "0x6ae172837ea30b801fbfcdd4108aa1d5bf8ff775444fd70256b44e6bf3dfc3f6"
+    },
+    {
+      "name": "ProxyCreated(bytes32,address,address)",
+      "hash": "0x4a465a9bd819d9662563c1e11ae958f8109e437e7f4bf1c6ef0b9a7b3f35d478"
+    },
+    {
+      "name": "ClaimerSet(address,address)",
+      "hash": "0x4925eafc82d0c4d67889898eeed64b18488ab19811e61620f387026dec126a28"
+    },
+    {
+      "name": "Allowed(address)",
+      "hash": "0x77a7dbc6ad97703ad411a8d5edfcd1df382fb34b076a90898b11884f7ebdcc05"
+    },
+    {
+      "name": "NewIncentiveAddress(address,address)",
+      "hash": "0x5b536d33bf72072f3abff40e9c9bc550f83025bbc9b8cc36972c166d8b568b43"
+    },
+    {
+      "name": "NftBridgedIn(address,address,address,uint256,uint256)",
+      "hash": "0x339e4100371ca3951325b190c421cb3c67f09635d57fc14e6aacfcb52d387329"
+    },
+    {
+      "name": "MaxBuybackAmountUpdated(uint256)",
+      "hash": "0xb25c7820d9392eafa2a90c45ca6438ae395e13490da78f2e2c77168cbb951534"
+    },
+    {
+      "name": "SwapAndLiquify(uint256,uint256,uint256)",
+      "hash": "0x17bbfb9a6069321b6ded73bd96327c9e6b7212a5cd51ff219cd61370acafb561"
+    },
+    {
+      "name": "CapUpdated(address,uint256)",
+      "hash": "0x32fb4810d3e24ba1aa970e73c47779c970d006f8e33c4f3b696dc6fce03b61c0"
+    },
+    {
+      "name": "TokenSwapCapUpdated(address,uint256)",
+      "hash": "0x51c7b3899924578d835c066303e3f765c25fea17d7b18840cd109a90f5c5601f"
+    },
+    {
+      "name": "SwapAndLiquifyEnabledUpdated(bool)",
+      "hash": "0x53726dfcaf90650aa7eb35524f4d3220f07413c8d6cb404cc8c18bf5591bc159"
+    },
+    {
+      "name": "LockWalletExtend(address,uint256)",
+      "hash": "0x402f92847e995eb87d15fd380cf11ec5c61ca69a5f6cd305fd26cd1cb6a41757"
+    },
+    {
+      "name": "NewSmartToken(address)",
+      "hash": "0xf4cd1f8571e8d9c97ffcb81558807ab73f9803d54de5da6a0420593c82a4a9f0"
+    },
+    {
+      "name": "PositionModuleRemoved(address,address)",
+      "hash": "0x5d0275f68d583838a7e2be68e3ef8ac2c1f9d4eeaa4b223360f4cd093a160d75"
+    },
+    {
+      "name": "ReserveBorrowing(address,bool)",
+      "hash": "0x2443ba28e8d1d88d531a3d90b981816a4f3b3c7f1fd4085c6029e81d1b7a570d"
+    },
+    {
+      "name": "PauseChangedTo(bool)",
+      "hash": "0x0619930b74b56b9cdbdbd8709cef274ec3e9ed0616d7e996599558acccac8e6e"
+    },
+    {
+      "name": "TWAPSourceRemoved(address)",
+      "hash": "0x677b09947a451559cdf8756f4cb518daf9620feb88ad8f3434a77f4cbfc73bc9"
+    },
+    {
+      "name": "ApprovalForAll(address,address,bool)",
+      "hash": "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31"
+    },
+    {
+      "name": "VariableDebtTokenUpgraded(address,address,address)",
+      "hash": "0x9439658a562a5c46b1173589df89cf001483d685bad28aedaff4a88656292d81"
+    },
+    {
+      "name": "AuthorizedOperator(address,address)",
+      "hash": "0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9"
+    },
+    {
+      "name": "Sent(address,address,address,uint256,bytes,bytes)",
+      "hash": "0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987"
+    },
+    {
+      "name": "BlacklistedSet(address,bool)",
+      "hash": "0xd347f3377aa78fbf3d569e645590833e6f1f2ad4acb059e8924c12628bf649f1"
+    },
+    {
+      "name": "NewIBRatio(uint256)",
+      "hash": "0xa1a1b7ab78876f7189087445ea5c3b24e2c620e85ca418855a3341eee17716e5"
+    },
+    {
+      "name": "SetApprovalAutoTimeout(address,uint16,uint16)",
+      "hash": "0x6d8d587cf6c6d60a0dcd1fa635969d1d69787cfdf26d9f83ebaba44408fc1d2d"
+    },
+    {
+      "name": "ContractFallbackCallFailed(address,address,uint256)",
+      "hash": "0x11249f0fc79fc134a15a10d1da8291b79515bf987e036ced05b9ec119614070b"
+    },
+    {
+      "name": "UnbackedMintCapChanged(address,uint256,uint256)",
+      "hash": "0x09808b1fc5abde94edf02fdde393bea0d2e4795999ba31695472848638b5c29f"
+    },
+    {
+      "name": "DelegatedPowerChanged(address,uint256,uint8)",
+      "hash": "0xa0a19463ee116110c9b282012d9b65cc5522dc38a9520340cbaf3142e550127f"
+    },
+    {
+      "name": "Burned(address,address,uint256,bytes,bytes)",
+      "hash": "0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098"
+    },
+    {
+      "name": "OwnerSet(address)",
+      "hash": "0x50146d0e3c60aa1d17a70635b05494f864e86144a2201275021014fbf08bafe2"
+    },
+    {
+      "name": "LOG_UNLOCK_TRANSFER(address,address,uint256)",
+      "hash": "0xb5a2a645ea10b3aaf0b61965c340be4cf9ef443e7e784f656b3119e9f4dd130d"
+    },
+    {
+      "name": "SuperOperator(address,bool)",
+      "hash": "0x44f92d27abdf4cfb6a7d712c3af68f3be086d4ca747ab802c36f67d6790060d8"
+    },
+    {
+      "name": "ExcludeFromReward(address)",
+      "hash": "0x6f6f36b62c3e3a776fc3052d503097ffb886d7eb4546e768132fef82747e30b9"
+    },
+    {
+      "name": "UpdateBorrowerOps(address[])",
+      "hash": "0x0672fe2a5b16f4cc77859793be589f38603b1c305687e1c6d3195658c61c58f6"
+    },
+    {
+      "name": "Unwhitelisted(address)",
+      "hash": "0x51085ddf9ebdded84b76e829eb58c4078e4b5bdf97d9a94723f336039da46791"
+    },
+    {
+      "name": "DecreaseLiquidity(uint256,uint128,uint256,uint256)",
+      "hash": "0x26f6a048ee9138f2c0ce266f322cb99228e8d619ae2bff30c67f8dcf9d2377b4"
+    },
+    {
+      "name": "SetBuyFee(uint256,uint256,uint256,uint256)",
+      "hash": "0x7e09f732e3c0d29138378fac770c27e86c9881459c60b3218337780e2dd176cf"
+    },
+    {
+      "name": "PriceOracleUpdated(address,address)",
+      "hash": "0x56b5f80d8cac1479698aa7d01605fd6111e90b15fc4d2b377417f46034876cbd"
+    },
+    {
+      "name": "OperatorTransferred(address,address)",
+      "hash": "0x74da04524d50c64947f5dd5381ef1a4dca5cba8ed1d816243f9e48aa0b5617ed"
+    },
+    {
+      "name": "Snapshot(uint256)",
+      "hash": "0x8030e83b04d87bef53480e26263266d6ca66863aa8506aca6f2559d18aa1cb67"
+    },
+    {
+      "name": "ReserveStableRateBorrowing(address,bool)",
+      "hash": "0x0b64d0941719acd363f1a6be3d8525d8ec9d71738f7445aabcd88d7939b472e7"
+    },
+    {
+      "name": "KeeperResolved(address,uint256)",
+      "hash": "0x7574a4a2c81b3099d59aaf15526ea966e1e2886afd21bf4a350af7af22db3a70"
+    },
+    {
+      "name": "Minted(address,uint256,string)",
+      "hash": "0xe7cd4ce7f2a465edc730269a1305e8a48bad821e8fb7e152ec413829c01a53c4"
+    },
+    {
+      "name": "ACLAdminUpdated(address,address)",
+      "hash": "0xe9cf53972264dc95304fd424458745019ddfca0e37ae8f703d74772c41ad115b"
+    },
+    {
+      "name": "BurnerStatusUpdated(address,bool)",
+      "hash": "0x5217d618731e650419668d9b99f95d662e37d7b87d4689cd98e92e1c176cc705"
+    },
+    {
+      "name": "RouterAddressUpdated(address)",
+      "hash": "0xafec26814d7c5e0716cdb68343bdf123509d8bae8a1a877de1c3869411985c55"
+    },
+    {
+      "name": "LockWallet(address,address,uint256)",
+      "hash": "0x9141f23a32bd7f35c8ce161a6f9d05eba59799700a6a44094330bd68b3e25103"
+    },
+    {
+      "name": "NewLockout(address,uint256,bool,uint256,uint256)",
+      "hash": "0x7ec8d498ce0e4d11d52cf0588976b9a8b30679d7135f9e82de77e2e318a1ea40"
+    },
+    {
+      "name": "TreasuryHandlerChanged(address,address)",
+      "hash": "0x1bf87992a35ee29395ab494f9adb9a500a7fa60c3082cba0ef02701bb35900d9"
+    },
+    {
+      "name": "IncludeInFeeUpdated(address)",
+      "hash": "0xead11242b7eb5b3a03a27edc0039f1305d251bf91b3d1e94c3861c3d6e4ac128"
+    },
+    {
+      "name": "StabilityPoolAddressChanged(address)",
+      "hash": "0x82966d27eea39b038ee0fa30cd16532bb24f6e65d31cb58fb227aa5766cdcc7f"
+    },
+    {
+      "name": "LiquidityHubFrozen()",
+      "hash": "0x4d344c8b0016d5807caec92f09a154f1cfc026110a8106ccbe2dceff0317355d"
+    },
+    {
+      "name": "TreasuryUpdated(address)",
+      "hash": "0x7dae230f18360d76a040c81f050aa14eb9d6dc7901b20fc5d855e2a20fe814d1"
+    },
+    {
+      "name": "CreateGrant(address,uint256,address,uint256)",
+      "hash": "0x73822e28a3afc9fc2814acd342053527b35eae29ce20639db00195637d0eccdc"
+    },
+    {
+      "name": "TransferWithData(address,address,uint256,bytes)",
+      "hash": "0xe68ca1ec8e8e022357047aae1f96036cbb808c6dc2bbbfbd3bde507ab21098c4"
+    },
+    {
+      "name": "GTCDistChanged(address,address)",
+      "hash": "0x12aa09d7887b401e20989b89da323840a273720748810afd3cdcc7ba0aedaeb9"
+    },
+    {
+      "name": "UpdateTokenRatioPriority(address,int256)",
+      "hash": "0x5fd68dea96a9ad4e6dc9cfad3617d7eb84c2070e6352848fb091a254f4629e92"
+    },
+    {
+      "name": "Whitelisted(address)",
+      "hash": "0xaab7954e9d246b167ef88aeddad35209ca2489d95a8aeb59e288d9b19fae5a54"
+    },
+    {
+      "name": "DebtCeilingChanged(address,uint256,uint256)",
+      "hash": "0x6824a6c7fbc10d2979b1f1ccf2dd4ed0436541679a661dedb5c10bd4be830682"
+    },
+    {
+      "name": "ChangedPublisher(address)",
+      "hash": "0xc03338f668383af1c20205e21efe0b67ba7bfda360184f445aad4e7b0e9de923"
+    },
+    {
       "name": "UpdatedDevAddress(address)",
       "hash": "0x804ec39c1aea0b9f2615a34c3fa437b6ddda2c72e6848abf0f23955589a7ad54"
+    },
+    {
+      "name": "NewEra(uint256,uint256)",
+      "hash": "0xb46eeb115d9875d9d717a1b1dd704bc9a45fdeb55eecc9c6c4f777ffa5698fe5"
+    },
+    {
+      "name": "LockUser(address)",
+      "hash": "0x169aadf55dc2098830ccf9f334e3ce3933b6e895b9114fc9f49242f2be61fe8e"
+    },
+    {
+      "name": "MinterRoleGranted(address,address)",
+      "hash": "0x0be6ab9784c7401fafb73f7bc47bc67cc4ef8c47a60ad3cb66d1de0353a0784c"
+    },
+    {
+      "name": "KeeperBonded(address,uint256,uint256,uint256)",
+      "hash": "0x3d80dd4660c08288217e88c2d45230220fcd3debf16898013243026e6a2aad05"
+    },
+    {
+      "name": "JobAdded(address,uint256,address)",
+      "hash": "0x3d9884fbd11fce9188657c4bcfda7491d3316ce97bd234d981b7be1f012a852f"
+    },
+    {
+      "name": "LogSetOwner(address)",
+      "hash": "0xce241d7ca1f669fee44b6fc00b8eba2df3bb514eed0f6f668f8f89096e81ed94"
+    },
+    {
+      "name": "PoolConfiguratorUpdated(address,address)",
+      "hash": "0x8932892569eba59c8382a089d9b732d1f49272878775235761a2a6b0309cd465"
+    },
+    {
+      "name": "SupplyCapChanged(address,uint256,uint256)",
+      "hash": "0x0263602682188540a2d633561c0b4453b7d8566285e99f9f6018b8ef2facef49"
+    },
+    {
+      "name": "FlashloanPremiumToProtocolUpdated(uint128,uint128)",
+      "hash": "0xe7e0c75e1fc2d0bd83dc85d59f085b3e763107c392fb368e85572b292f1f5576"
+    },
+    {
+      "name": "KeeperBonding(address,uint256,uint256,uint256)",
+      "hash": "0xa150b7ad789014c0171a2873708daadbdbf87457d90d3896eaf0907e5b225ae4"
+    },
+    {
+      "name": "OwnerUpdate(address,address)",
+      "hash": "0x343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a"
+    },
+    {
+      "name": "NewDAO(address,address)",
+      "hash": "0x567cac11d4a66456bbe20dc60d3579ec446a4e2fffae2a85f82ad0f1f18214f1"
+    },
+    {
+      "name": "Minting(address,uint256,string,address)",
+      "hash": "0x0416081e24ea042d7f2160192c1d6bef74c76f5f4fffeb36c5dcc9e4a5dcf9b4"
+    },
+    {
+      "name": "PendingConfigChanges(uint256,uint256,address,bool)",
+      "hash": "0x01c0ca0e9ae895c3d36eca6824cc5bd60faa1048833ef3014f522ee5f1b23970"
+    },
+    {
+      "name": "CommunityIssuanceAddressSet(address)",
+      "hash": "0x3d2d65171cd82be2a82a4c8559f66bc443ecd480dffeacc3cf52caf9963e9a6f"
+    },
+    {
+      "name": "OwnerUpdated(address,address)",
+      "hash": "0x8292fce18fa69edf4db7b94ea2e58241df0ae57f97e0a6c9b29067028bf92d76"
+    },
+    {
+      "name": "BuyBackEnabledUpdated(bool)",
+      "hash": "0x3794234fa370c9f3b948dda3e3040530785b2ef1eb27dda3ffde478f4e2643c0"
+    },
+    {
+      "name": "FounderClaim(address,uint256)",
+      "hash": "0xe3fb82e12e4abf3decadf77f5be0447abeb73345b301196a9256a00bc46a1c4e"
+    },
+    {
+      "name": "ReserveFactorChanged(address,uint256,uint256)",
+      "hash": "0xb46e2b82b0c2cf3d7d9dece53635e165c53e0eaa7a44f904d61a2b7174826aef"
+    },
+    {
+      "name": "Collect(uint256,address,uint256,uint256)",
+      "hash": "0x40d0efd1a53d60ecbf40971b9daf7dc90178c3aadc7aab1765632738fa8b8f01"
+    },
+    {
+      "name": "ConfigsChanged(uint256,uint256,address,bool)",
+      "hash": "0x83564c1102f308ae821e2b1d74b5cafae42f89d7b2c57a73ad01810469fb2c99"
+    },
+    {
+      "name": "ExecutionAdminAdminChanged(address,address)",
+      "hash": "0xb2b670b34860515166c00eba5e2e5fa8116d57091604f37ba24ac8021c7fa165"
+    },
+    {
+      "name": "DelegateVotesChanged(address,uint256,uint256)",
+      "hash": "0xdec2bacdd2f05b59de34da9b523dff8be42e5e38e818c82fdb0bae774387a724"
+    },
+    {
+      "name": "MinterChange(address,address)",
+      "hash": "0x5c56bcd5a7e3f34a239651ac01fe373b8b0b837d818abb9b02df4f1bc9c49c78"
+    },
+    {
+      "name": "AddressesProviderUnregistered(address,uint256)",
+      "hash": "0x254723080701bde71d562cad0e967cef23d86bb27ee842c190a2596820f3b241"
+    },
+    {
+      "name": "RoleAdminChanged(bytes32,bytes32,bytes32)",
+      "hash": "0xbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff"
+    },
+    {
+      "name": "RPLInflationLog(address,uint256,uint256)",
+      "hash": "0x4374b0955b3a09853fddeb2fd614040864f97881e39b7cf2f6edea1ec9415177"
+    },
+    {
+      "name": "ShareMinted(address,address,uint256)",
+      "hash": "0xf4d2b66b63836b39ffec28f88533e0f50c9136ab7d8d9b9976f93d3880e80205"
+    },
+    {
+      "name": "OwnershipTransferAuthorization(address)",
+      "hash": "0xb58bcc286020502f4931905baafed22acc969c092ed724234c73361efc688390"
+    },
+    {
+      "name": "AccountReActive(address)",
+      "hash": "0x96cc51e6ab9b6970cc6fc055179c755849347faa4f703098b52724f2a76ad956"
+    },
+    {
+      "name": "DelegateChanged(address,address)",
+      "hash": "0xef9fc1dee6010109e6e3b21e51d44028e246dbad8a5a71ea192a30b19e1f457f"
+    },
+    {
+      "name": "Confirmation(address,bytes32)",
+      "hash": "0xe1c52dc63b719ade82e8bea94cc41a0d5d28e4aaf536adb5e9cccc9ff8c1aeda"
+    },
+    {
+      "name": "BurnEvent(address,address,uint256)",
+      "hash": "0xe0deda1dd123aa6cdd7f4460830c05edf058ceb3c302f94e81a4fda7cfc42371"
+    },
+    {
+      "name": "OffRampPairSet(address)",
+      "hash": "0x205890426c74334fba9f3d65990e94e55dac01584e054394ab50173c4a01da2d"
+    },
+    {
+      "name": "MetaTransactionExecuted(address,address,bytes)",
+      "hash": "0x5845892132946850460bff5a0083f71031bc5bf9aadcd40f1de79423eac9b10b"
+    },
+    {
+      "name": "VotingPowerChanged(address,uint256,uint256)",
+      "hash": "0x53ed7954de66613e30dd29b46ab783aa594e6309d021d8854c76bb3325d03aa3"
+    },
+    {
+      "name": "RiseBridgedIn(address,address,uint256)",
+      "hash": "0x0e128c83dc42be0b80a07793e5b69c77c3981238a44754802b90d92ae85b3b48"
+    },
+    {
+      "name": "BlackListed(address)",
+      "hash": "0x7fd26be6fc92aff63f1f4409b2b2ddeb272a888031d7f55ec830485ec6194186"
+    },
+    {
+      "name": "BuybackBlocksUpdated(uint256)",
+      "hash": "0xe24723968dd1fe95c864bec60a98788d4f02a5a3e1e9e80ccafdee9146ff54c7"
+    },
+    {
+      "name": "OwnershipPulled(address,address)",
+      "hash": "0xaa151555690c956fc3ea32f106bb9f119b5237a061eaa8557cff3e51e3792c8d"
+    },
+    {
+      "name": "RewardOracleUpdated(address,address)",
+      "hash": "0x1a1cd5483e52e60b9ff7f3b9d1db3bbd9e9d21c6324ad3a8c79dba9b75e62f4d"
+    },
+    {
+      "name": "SwapETHForTokens(uint256,address[])",
+      "hash": "0x6fd378a9d8b7345c2e5b18229aaf1e39d32b177b501d0a0d26a0a858a23a9624"
+    },
+    {
+      "name": "MinterStatusUpdated(address,bool)",
+      "hash": "0xd7f05487ae3002c125e5927b52b19827dd903ac7cb2e69c4f7f2fdbc17d1145c"
+    },
+    {
+      "name": "BridgeProtocolFeeUpdated(uint256,uint256)",
+      "hash": "0x30b17cb587a89089d003457c432f73e22aeee93de425e92224ba01080260ecd9"
+    },
+    {
+      "name": "Withdraw(address,address,address,uint256[],uint256,uint256)",
+      "hash": "0x1219fadb6b0ead011622d9ff05712029b1ba5ae340a49f25c9b5607a94a842c4"
+    },
+    {
+      "name": "ProxyOwnershipTransferred(address,address)",
+      "hash": "0x5a3e66efaa1e445ebd894728a69d6959842ea1e97bd79b892797106e270efcd9"
+    },
+    {
+      "name": "TimelockChanged(address)",
+      "hash": "0xf02fdf7b40fb25784d39342249bbb15cee2bc0288f75ded1cf8ad2e63d4d91aa"
+    },
+    {
+      "name": "Mint(address,uint256)",
+      "hash": "0x0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885"
+    },
+    {
+      "name": "LockupTriggerAmount(uint256)",
+      "hash": "0x71b19fe37543f141c3074de019392d8a9eb84faa2ecb875434c706a07de38a9c"
+    },
+    {
+      "name": "UserRoleUpdated(address,uint8,bool)",
+      "hash": "0x4c9bdd0c8e073eb5eda2250b18d8e5121ff27b62064fbeeeed4869bb99bc5bf2"
+    },
+    {
+      "name": "Paused(address)",
+      "hash": "0x62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258"
+    },
+    {
+      "name": "NewIncentivizer(address,address)",
+      "hash": "0x2ee668ca7d17a9122dc00c0bfd73b684f2f7d681f17733cc02b294f69f1b3896"
+    },
+    {
+      "name": "Sync(uint256,uint256)",
+      "hash": "0xcf2aa50876cdfbb541206f89af0ee78d44a2abf8d328e37fa4917f982149848a"
+    },
+    {
+      "name": "TreasuryRemoved(address)",
+      "hash": "0x0820ed7a122a6fc9da8baebd1b26fd87a75060c4d45f69af14c3bfc5f697a4ae"
+    },
+    {
+      "name": "MinterSet(address,bool)",
+      "hash": "0x583b0aa0e528532caf4b907c11d7a8158a122fe2a6fb80cd9b09776ebea8d92d"
+    },
+    {
+      "name": "UpdatedTokenInformation(string,string)",
+      "hash": "0xd131ab1e6f279deea74e13a18477e13e2107deb6dc8ae955648948be5841fb46"
+    },
+    {
+      "name": "RevokedOperator(address,address)",
+      "hash": "0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1"
+    },
+    {
+      "name": "ChangeConfirmed(bytes32,uint256)",
+      "hash": "0xbb7640d9671cd2b6ad67894615875d39f4222b2b047d3dbfe122026796ac36b4"
+    },
+    {
+      "name": "Burning(address,uint256,string,string,address)",
+      "hash": "0xf5577aec900779fdc4060207f95a90077d57e4ac39af49c805a073b9b1b852ea"
+    },
+    {
+      "name": "OwnershipPushed(address,address)",
+      "hash": "0xea8258f2d9ddb679928cf34b78cf645b7feda9acc828e4dd82d014eaae270eba"
+    },
+    {
+      "name": "AdminChanged(string,string,address,address)",
+      "hash": "0xb02ddf2800cd4468f7eb14268a7c9f1b6e816aa425ed542d13d8d3a96fa44566"
     },
     {
       "name": "Claim(uint256,uint256,bytes20,address,address)",
       "hash": "0x41e3c7dc6eebc97a48a437ff2afdc629613f12c48ba37a2c94563f80acba9725"
     },
     {
+      "name": "AuthorityUpdated(address)",
+      "hash": "0x2f658b440c35314f52658ea8a740e05b284cdc84dc9ae01e891f21b8933e7cad"
+    },
+    {
+      "name": "TransferForeignToken(address,uint256)",
+      "hash": "0xdeda980967fcead7b61e78ac46a4da14274af29e894d4d61e8b81ec38ab3e438"
+    },
+    {
+      "name": "AdminRoleAdded(address)",
+      "hash": "0x25cc8d4039f7afd8efdce4a2a256292a21960a85fee5e8e73a3209d334cdcdab"
+    },
+    {
+      "name": "IncludeInReward(address)",
+      "hash": "0xb31990b399410eeea874c2c81063feb4b5e55f66f46004a8306f10a81f031d3f"
+    },
+    {
+      "name": "ClaimRewards(address,uint256)",
+      "hash": "0x1f89f96333d3133000ee447473151fa9606543368f02271c9d95ae14f13bcc67"
+    },
+    {
+      "name": "LogAddAuth(address,uint256)",
+      "hash": "0xff9be4a5a0b9027fd253167d4c170ef1bbf8403af21bf06a0ed87ac8c8ecb5c6"
+    },
+    {
+      "name": "StakeEnd(uint256,uint256,address,uint40)",
+      "hash": "0x72d9c5a7ab13846e08d9c838f9e866a1bb4a66a2fd3ba3c9e7da3cf9e394dfd7"
+    },
+    {
+      "name": "XfLobbyExit(uint256,address,uint256,address)",
+      "hash": "0xa6b19fa7f41317a186e1d58e9d81f86a52f1102b6bce10b4eca83f37aaa58468"
+    },
+    {
+      "name": "ReceiveDividend(address,address,uint256)",
+      "hash": "0x2430938b8d30b820033fae6f9e34a1309e01e0e1bf106ec0ed06ab26a590af48"
+    },
+    {
+      "name": "SubmitJob(address,address,address,uint256,uint256)",
+      "hash": "0xe1cb44a16adbd63a44f65c279b23b8f447b2c6e120a2bc7f004758b446e05ed1"
+    },
+    {
+      "name": "InflationMint(uint256,uint256,address)",
+      "hash": "0x684dda5f2ff4dbc047d8de6878e6894b3705b57fa032e175e768088ca38bfedd"
+    },
+    {
+      "name": "TokenWithdraw(address,uint256,address)",
+      "hash": "0x72cb8a894ddb372ceec3d2a7648d86f17d5a15caae0e986c53109b8a9a9385e6"
+    },
+    {
+      "name": "ExternalPositionDataEdited(address,address,bytes)",
+      "hash": "0xb373eedb8e9038a2dcba31f06b2735887c1a904125e5c9f0021ba41ed972318e"
+    },
+    {
+      "name": "BridgeAdded(address)",
+      "hash": "0x3cda433c5679ae4c6a5dea50840e222a42cba3695e4663de4366be8993484221"
+    },
+    {
+      "name": "ExternalPositionUnitEdited(address,address,int256)",
+      "hash": "0x81a422e27f503e1b92cdb616a6e653aac10a8e0c3fa6832a58dc616c080fd7bd"
+    },
+    {
+      "name": "DEUSBurned(address,address,uint256)",
+      "hash": "0xfea1faea8b86058686e38c71a510e9ba19bc719a67a74e590aa5f68dfdfc21be"
+    },
+    {
+      "name": "ChangeMinter(address)",
+      "hash": "0xc87aeafc6e4ae6202adf4f08a76769119ae93cc129c0e0cbac08a118bc18e1ce"
+    },
+    {
+      "name": "Upgraded(address)",
+      "hash": "0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b"
+    },
+    {
+      "name": "NewAdmin(address,address)",
+      "hash": "0xf9ffabca9c8276e99321725bcb43fb076a6c66a54b7f21c4e8146d8519b417dc"
+    },
+    {
+      "name": "UnbondJob(address,address,address,uint256,uint256)",
+      "hash": "0x6d962fe34dd0cf9a9df3e12a7b8ddfe5f790b3f11668553455d7b52db70a07be"
+    },
+    {
+      "name": "LockedBalance(address,uint256)",
+      "hash": "0xebfb816221eaf798e256b970818c54755242a19e3e1a2b5b2060f9d22ecbf46d"
+    },
+    {
+      "name": "PositionModuleAdded(address,address)",
+      "hash": "0xf71324fa78e1894b364a1fc8d0535c4208f28c7b380f752afe00c8ce386023fb"
+    },
+    {
+      "name": "ComponentAdded(address)",
+      "hash": "0x76da6cf8b40dd2b2c223a5956831e0ff4e75522538a86782108a0bbe1577e298"
+    },
+    {
+      "name": "Cage(uint256)",
+      "hash": "0x8b2f35c645f75532175a00d9b4565154e45c8eb57ee0155e03d0958f3a4d4b89"
+    },
+    {
+      "name": "NewEra(uint256,uint256,uint256)",
+      "hash": "0x9d472bcf372fce01fd875c3296e8e5ae0a08bfca42dedac19e202271ce8f39c5"
+    },
+    {
+      "name": "PauserRemoved(address)",
+      "hash": "0xcd265ebaf09df2871cc7bd4133404a235ba12eff2041bb89d9c714a2621c7c7e"
+    },
+    {
+      "name": "NewIndexSubmitted()",
+      "hash": "0xb1b4780912af5c8cad76579a8c63b2e0dde7d485776955bba7068660df7a8113"
+    },
+    {
+      "name": "LogSwapin(bytes32,address,uint256)",
+      "hash": "0x05d0634fe981be85c22e2942a880821b70095d84e152c3ea3c17a4e4250d9d61"
+    },
+    {
+      "name": "ChangedPartition(bytes32,bytes32,uint256)",
+      "hash": "0x67c8ba31d2dd11f1384577b3405b04ed91eed1231e408432ad2458cab37b2fa1"
+    },
+    {
+      "name": "AddMinter(address)",
+      "hash": "0x16baa937b08d58713325f93ac58b8a9369a4359bbefb4957d6d9b402735722ab"
+    },
+    {
+      "name": "Paused(bool)",
+      "hash": "0x0e2fb031ee032dc02d8011dc50b816eb450cf856abd8261680dac74f72165bd2"
+    },
+    {
+      "name": "CollateralConfigurationChanged(address,uint256,uint256,uint256)",
+      "hash": "0x637febbda9275aea2e85c0ff690444c8d87eb2e8339bbede9715abcc89cb0995"
+    },
+    {
+      "name": "NewRebaser(address,address)",
+      "hash": "0x51f448520e2183de499e224808a409ee01a1f380edb2e8497572320c15030545"
+    },
+    {
+      "name": "Stop()",
+      "hash": "0xbedf0f4abfe86d4ffad593d9607fe70e83ea706033d44d24b3b6283cf3fc4f6b"
+    },
+    {
+      "name": "TransferPaused(address)",
+      "hash": "0x483d42b2ec355eefc30508020d123de3c2fca2f0d6f8e751f98449099242b76b"
+    },
+    {
+      "name": "OperatorRemoved(address)",
+      "hash": "0x80c0b871b97b595b16a7741c1b06fed0c6f6f558639f18ccbce50724325dc40d"
+    },
+    {
+      "name": "PublicCapabilityUpdated(bytes4,bool)",
+      "hash": "0x36d28126bef21a4f3765d7fcb7c45cead463ae4c41094ef3b771ede598544103"
+    },
+    {
+      "name": "UnlockUser(address)",
+      "hash": "0x687691c08a3e67a160ba20a32cb1c56791955f12c5ff5d5fcf62bc456ad79ea1"
+    },
+    {
+      "name": "Minted(address,address,uint256,bytes)",
+      "hash": "0xbcd28e05e57d4bcd5bfcc92a4661d412893e6112c44a2e25d96cfdfc30d5f22e"
+    },
+    {
+      "name": "BorrowCapChanged(address,uint256,uint256)",
+      "hash": "0xc51aca575985d521c5072ad11549bad77013bb786d57f30f94b40ed8f8dc9bc4"
+    },
+    {
+      "name": "XUSDBurned(address,address,uint256)",
+      "hash": "0x4d62459ee04e10636b8fb474ff487ba15b01c013a2bdf7f9e82deafb88043502"
+    },
+    {
+      "name": "DiscountAuthoritySet(address)",
+      "hash": "0x03694a956320a0c277498a931248855f5ef47143cabe91ec33fc0a4393bb774e"
+    },
+    {
+      "name": "DailyDataUpdate(uint256,address)",
+      "hash": "0xb8d6eb541ded1720cc657b719f57abcb1fe4711cb7ead82751b135f5d94bc944"
+    },
+    {
+      "name": "BuybackTokensWithETH(uint256,uint256)",
+      "hash": "0x3967d46c5aa65ced73be27b4c6d249e552274da7a605101a66ef571a8e2608a4"
+    },
+    {
+      "name": "OwnershipTransferInitiated(address,address)",
+      "hash": "0xb150023a879fd806e3599b6ca8ee3b60f0e360ab3846d128d67ebce1a391639a"
+    },
+    {
+      "name": "PoolUpdated(address,address)",
+      "hash": "0x90affc163f1a2dfedcd36aa02ed992eeeba8100a4014f0b4cdc20ea265a66627"
+    },
+    {
+      "name": "LockupContractFactoryAddressSet(address)",
+      "hash": "0x67fc41630409887e5790bb6a910e8638e72f5f11f10d75d94a2d91178c1108b9"
+    },
+    {
+      "name": "FXSMinted(address,address,uint256)",
+      "hash": "0xbe70a233924923d3d70cfd3c5c22c22f0a43c6df422cc029140e80684f7b70eb"
+    },
+    {
+      "name": "PauserAdded(address)",
+      "hash": "0x6719d08c1888103bea251a4ed56406bd0c3e69723c8a1686e017e7bbe159b6f8"
+    },
+    {
+      "name": "NewCloneToken(address,uint256)",
+      "hash": "0x086c875b377f900b07ce03575813022f05dd10ed7640b5282cf6d3c3fc352ade"
+    },
+    {
+      "name": "Anarchized()",
+      "hash": "0xbf30e910dd2b6e24c75c800d9f3477674e89a4b45e366f87cd03c99e0ba64961"
+    },
+    {
+      "name": "SetAutomatedMarketMakerPair(address,bool)",
+      "hash": "0xffa9187bf1f18bf477bd0ea1bcbb64e93b6a98132473929edfce215cd9b16fab"
+    },
+    {
+      "name": "AMMSet(address,bool)",
+      "hash": "0x52f7750de642e169ff687a199cc8453a96d938130a797c0a11ea42a4d1659d87"
+    },
+    {
+      "name": "BuybackUpperLimitUpdated(uint256)",
+      "hash": "0xcc06eb9a0c57a5ee1100a0e2e4029558c04ff3b2a110a881ac9700cffed1a824"
+    },
+    {
+      "name": "Borrow(address,address,address,uint256,uint8,uint256,uint16)",
+      "hash": "0xb3d084820fb1a9decffb176436bd02558d15fac9b0ddfed8c465bc7359d7dce0"
+    },
+    {
+      "name": "Burnt(address,address,uint256)",
+      "hash": "0xe8a89cc6e5096f9d9f43de82c077c1f4cfe707c0e0c2032176c68813b9ae6a5c"
+    },
+    {
+      "name": "LogChangeMPCOwner(address,address,uint256)",
+      "hash": "0x1d065115f314fb9bad9557bd5460b9e3c66f7223b1dd04e73e828f0bb5afe89f"
+    },
+    {
+      "name": "LogChangeVault(address,address,uint256)",
+      "hash": "0x5c364079e7102c27c608f9b237c735a1b7bfa0b67f27c2ad26bad447bf965cac"
+    },
+    {
+      "name": "OperatorRoleRemoved(address,address)",
+      "hash": "0x70b25138b6fadeb9992d18b9653564271823e34b3e3257515d12a6d4b15fcddf"
+    },
+    {
+      "name": "BridgeSupplyCapUpdated(address,uint256)",
+      "hash": "0x59e1e4348943de408b89af8ab71e502ea722dd41efd1ff4a3548c60e83e91c60"
+    },
+    {
+      "name": "RescueTokens(address,address,uint256)",
+      "hash": "0x0de377c3f3362540c047602ad996510f81ec5d84f9ad151c7b6ebecce8ea6b7b"
+    },
+    {
+      "name": "MaxSupplyChanged(uint256,uint256)",
+      "hash": "0xa626f93317e2474b716846a09cf0e28aacb96052643b252fe97704208fecf9b5"
+    },
+    {
+      "name": "Repay(address,address,address,uint256,bool)",
+      "hash": "0xa534c8dbe71f871f9f3530e97a74601fea17b426cae02e1c5aee42c96c784051"
+    },
+    {
+      "name": "PoolDataProviderUpdated(address,address)",
+      "hash": "0xc853974cfbf81487a14a23565917bee63f527853bcb5fa54f2ae1cdf8a38356d"
+    },
+    {
+      "name": "OperatorAdded(address)",
+      "hash": "0xac6fa858e9350a46cec16539926e0fde25b7629f84b5a72bffaae4df888ae86d"
+    },
+    {
+      "name": "StakeStart(uint256,address,uint40)",
+      "hash": "0x14872dc760f33532684e68e1b6d5fd3f71ba7b07dee76bdb2b084f28b74233ef"
+    },
+    {
+      "name": "Burning(address,uint256)",
+      "hash": "0x62626c8ae1f1f3ad3b2f42ba7b806bbc48e9a59dab06414984113eaab612fe47"
+    },
+    {
+      "name": "LogInflationRate(uint256,uint256,uint256,uint256)",
+      "hash": "0x23a10b68479b862b72163c4af5c093cdb3e4508e7acc5f62f721f2d9eb0a58de"
+    },
+    {
+      "name": "TransferBlockWait(uint256)",
+      "hash": "0x93e5b468f9da07b0db7acdc0da4dfd32eeadbbfb57e61629d428856ec9b22d7a"
+    },
+    {
+      "name": "AddedBlackList(address)",
+      "hash": "0x42e160154868087d6bfdc0ca23d96a1c1cfa32f1b72ba9ba27b69b98a0d819dc"
+    },
+    {
+      "name": "RemovedBlackLists(address[])",
+      "hash": "0x98feb506554d800c8b843a711fb4a52365bf0230afbf171e4e0c8491ad57eda4"
+    },
+    {
+      "name": "KeeperSlashed(address,address,uint256,uint256)",
+      "hash": "0xf7e41ea76f0e7b22ba17dc4cc01fa75cff34ea24f5efe2874f5e175296259050"
+    },
+    {
+      "name": "NewRewardsDistributorRegistration(address,address)",
+      "hash": "0xd8732c543edde4e60b54e1136459ee3a610f1243749765d9dbdbcf9fe76a7bd5"
+    },
+    {
+      "name": "Lock(address,uint256)",
+      "hash": "0x625fed9875dada8643f2418b838ae0bc78d9a148a18eee4ee1979ff0f3f5d427"
+    },
+    {
+      "name": "DeletedNewIndex(address)",
+      "hash": "0x7f753fc23b8d98e1d3f23e00c3e6337cb1c750bfcd79a5eb38198fdb2dd50e24"
+    },
+    {
+      "name": "LogDistributer(address)",
+      "hash": "0x08982b645dd7c290a0406bfc1066ec18c214f3a9f7ebf7c5189c0c3a79a7ada8"
+    },
+    {
+      "name": "Deposit(address,address,uint256[],uint256,uint256)",
+      "hash": "0x06caae2b2e26a58cd4700e53b62553aa8689e11ecf1506dbc680a1cc615306c3"
+    },
+    {
+      "name": "IsolationModeTotalDebtUpdated(address,uint256)",
+      "hash": "0xaef84d3b40895fd58c561f3998000f0583abb992a52fbdc99ace8e8de4d676a5"
+    },
+    {
+      "name": "BridgeVaultAddressUpdated(address)",
+      "hash": "0x1501eda19b56071bf17a0a32e2efdeb611ccec1e2da5c7612bf674204901ce7a"
+    },
+    {
+      "name": "PublishedNewIndex(address)",
+      "hash": "0x75f6678af486575bd3d5529cbbef61337718845507c76fa7c370715a7f6c4bd2"
+    },
+    {
+      "name": "ClaimedTokens(address,address,uint256)",
+      "hash": "0xf931edb47c50b4b4104c187b5814a9aef5f709e17e2ecf9617e860cacade929c"
+    },
+    {
+      "name": "NftBridgedOut(address,address,address,uint256,uint256)",
+      "hash": "0xe0bf1306ae80358ba075e7e155d3d3100bd1cb7245f654f111d39453f756356a"
+    },
+    {
+      "name": "TaxHandlerChanged(address,address)",
+      "hash": "0x00d910c9481701ba32afe0c247572aaece27072f230c8ec769bf245fc0b38de6"
+    },
+    {
+      "name": "Recovered(address,uint256)",
+      "hash": "0x8c1256b8896378cd5044f80c202f9772b9d77dc85c8a6eb51967210b09bfaa28"
+    },
+    {
+      "name": "SetSellFee(uint256,uint256,uint256,uint256)",
+      "hash": "0xc35b083cad11ee3ca1c82068780b9916789cac19799d2fb148fcab9e643d56f9"
+    },
+    {
+      "name": "ClaimAssist(uint256,uint256,uint256,address)",
+      "hash": "0x3a84b2d9dac24683628d63034c6949797f15fab735e16232518ee4e753fd49b7"
+    },
+    {
+      "name": "LOG_SET_UNLOCK_FACTOR(address,uint256)",
+      "hash": "0xfbd482c9dea78c178879b07a2daa165a1348ac031421bb9917d8734de948fca3"
+    },
+    {
+      "name": "UserEModeSet(address,uint8)",
+      "hash": "0xd728da875fc88944cbf17638bcbe4af0eedaef63becd1d1c57cc097eb4608d84"
+    },
+    {
+      "name": "NewGov(address,address)",
+      "hash": "0x1f14cfc03e486d23acee577b07bc0b3b23f4888c91fcdba5e0fef5a2549d5523"
+    },
+    {
+      "name": "NewPendingMinter(address,address)",
+      "hash": "0x9421e8440241b8112ee6acc8e709b9ae90fd3acdf2fc48a88b46b8dde01ba8bb"
+    },
+    {
+      "name": "AutoBurnEnabled(bool)",
+      "hash": "0x381a2ba311289fc64532188b12030ca4ad77b2dc7c3a88ab03bacbf13da52a1c"
+    },
+    {
+      "name": "VoterVotesChanged(address,uint256,uint256)",
+      "hash": "0x3eaa1c4be29b4a4c60e00300b5a17a8ec6c982b5b0ad5870cc84ebdc3b24d68e"
+    },
+    {
+      "name": "BurnableTokensZeroed()",
+      "hash": "0x38e9e1bdbb19e199e2318a4fdd4145df21973acc643c88012128eeb61a386c60"
+    },
+    {
+      "name": "Approved(address,address,uint256,uint256)",
+      "hash": "0x71594b34a69973da9bff6f72cc0aad2c51069b6b8e9c70c0648b58d10d7bd84b"
+    },
+    {
+      "name": "ToBoring(address,uint256,uint256)",
+      "hash": "0x9f259704286ad43f90853301a977fc106c06586bc4647380a500de1669eaa061"
+    },
+    {
+      "name": "Withdraw(address,address,address,uint256)",
+      "hash": "0x3115d1449a7b732c986cba18244e897a450f61e1bb8d589cd2e69e6c8924f9f7"
+    },
+    {
+      "name": "LiquidityLocked(bool)",
+      "hash": "0xff33d24fddcb9b99aca93607453cdcbd7aa449ae3ea8a9f69421881c7eae81c9"
+    },
+    {
+      "name": "ModuleAdded(address)",
+      "hash": "0xead6a006345da1073a106d5f32372d2d2204f46cb0b4bca8f5ebafcbbed12b8a"
+    },
+    {
+      "name": "AddressesProviderRegistered(address,uint256)",
+      "hash": "0xc2e7cc813550ef0e7126cc0571281850ce5df2e9c400acf3589c38e4627f85f1"
+    },
+    {
+      "name": "LogSetRewardTokens(address[],bool[])",
+      "hash": "0x1c642aedd77a6c0551f3b7c026dae498837b683e54380a47c3874bef3ad0394a"
+    },
+    {
+      "name": "AdminTaskDropped(bytes32)",
+      "hash": "0x468b360fa155a4c5fdf0cb38ce238407e41508a56023e7536088c21b2cd64139"
+    },
+    {
+      "name": "Unpause()",
+      "hash": "0x7805862f689e2f13df9f062ff482ad3ad112aca9e0847911ed832e158c525b33"
+    },
+    {
+      "name": "ApplyCredit(address,address,address,uint256,uint256)",
+      "hash": "0xa90666688fb32254f45a367c38fbcd5f2664432b061a4354d9d3c9a7abcbec5b"
+    },
+    {
+      "name": "UnFreezed()",
+      "hash": "0xf0daac2271a735ea786b9adf80dfcbd6a3cbd52f3cab0a78337114692d5faf5d"
+    },
+    {
+      "name": "PositionMultiplierEdited(int256)",
+      "hash": "0xc4e78b3245dc105eefced18655b978e194ff858545a1080f2888dc3b6ae8df0a"
+    },
+    {
+      "name": "ACLManagerUpdated(address,address)",
+      "hash": "0xb30efa04327bb8a537d61cc1e5c48095345ad18ef7cc04e6bacf7dfb6caaf507"
+    },
+    {
+      "name": "FeeAmountEnabled(uint24,int24)",
+      "hash": "0xc66a3fdf07232cdd185febcc6579d408c241b47ae2f9907d84be655141eeaecc"
+    },
+    {
+      "name": "MinStakeSizeUpdated(uint256)",
+      "hash": "0xbc2adebc66b92f0ce243c481c19c471165443a1f337f32912b76176bb97d5528"
+    },
+    {
+      "name": "ControlAdded(address,uint8)",
+      "hash": "0xda7159b01021254a0864c86d0163ad02e9f9ce045913f19dc9315ce339a7270a"
+    },
+    {
+      "name": "Initialized()",
+      "hash": "0x5daa87a0e9463431830481fd4b6e3403442dfb9a12b9c07597e9f61d50b633c8"
+    },
+    {
+      "name": "Upgrade(address,address,uint256)",
+      "hash": "0x7e5c344a8141a805725cb476f76c6953b842222b967edd1f78ddb6e8b3f397ac"
+    },
+    {
+      "name": "DelegatesChanged(address,address,address)",
+      "hash": "0xfeb33bf853fe1792904c8eb8d9051f75733847700e159cdb11cf8721a700a010"
+    },
+    {
+      "name": "TransferUnpaused(address)",
+      "hash": "0x27b779563480879c8e2872999840b721537eb09dccf94115a2276ca341cdbb52"
+    },
+    {
+      "name": "AssetConfigUpdated(address,address,uint256,uint256,uint256,uint256,uint256)",
+      "hash": "0xac1777479f07f3e7c34da8402139d54027a6a260caaae168bdee825ca5580dc5"
+    },
+    {
+      "name": "PartitionStrategySet(bytes4,string,address)",
+      "hash": "0xb1c6e929e0b0638c228622a32f1f2fb3375541d8faa4a0176173b50b4bfc75ea"
+    },
+    {
+      "name": "MinterRemoved(address)",
+      "hash": "0xe94479a9f7e1952cc78f2d6baab678adc1b772d936c6583def489e524cb66692"
+    },
+    {
+      "name": "Rebase(uint256,uint256,uint256)",
+      "hash": "0xc6642d24d84e7f3d36ca39f5cce10e75639d9b158d5193aa350e2f900653e4c0"
+    },
+    {
+      "name": "KeeperWorked(address,address,address,uint256,uint256)",
+      "hash": "0x3cda93551ad083704be19fabbd7c3eb94d88f6e72ff221bdea9017e52e4144e8"
+    },
+    {
+      "name": "ReserveActive(address,bool)",
+      "hash": "0xc36c7d11ba01a5869d52aa4a3781939dab851cbc9ee6e7fdcedc7d58898a3f1e"
+    },
+    {
+      "name": "OwnershipTransferred(address,address)",
+      "hash": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+    },
+    {
+      "name": "UpdateMiningParameters(uint256,uint256,uint256)",
+      "hash": "0x27e46362a1e6129b6dd539c984ce739291a97128dfcaeca1255e8ac83abd9441"
+    },
+    {
+      "name": "GovernanceClaimed(address,address)",
+      "hash": "0xb0758afd6736a6cb3153d002696dcdd7615f1ff7c626469b3daf3358286c1c24"
+    },
+    {
+      "name": "TargetUpdated(address)",
+      "hash": "0x814250a3b8c79fcbe2ead2c131c952a278491c8f4322a79fe84b5040a810373e"
+    },
+    {
+      "name": "ReserveUsedAsCollateralEnabled(address,address)",
+      "hash": "0x00058a56ea94653cdf4f152d227ace22d4c00ad99e2a43f58cb7d9e3feb295f2"
+    },
+    {
+      "name": "DelegateVotesChanged(address,uint96,uint96)",
+      "hash": "0x664ef4a22338e827df5b675ec1747eac10c2ea611e1c575f3d96c38a2e24231e"
+    },
+    {
+      "name": "LiquidityFeeUpdated(uint256)",
+      "hash": "0x5597c0e02a719eddde3b801d7abc15c0023afdcf6880c1e254427559820083c2"
+    },
+    {
+      "name": "Supply(address,address,address,uint256,uint16)",
+      "hash": "0x2b627736bca15cd5381dcf80b0bf11fd197d01a037c52b927a881a10fb73ba61"
+    },
+    {
+      "name": "ChangeRequested(bytes32,uint256)",
+      "hash": "0x418d422a38ef786681f03ffea8d9ae04b8cad6da2488f8200a80daddd13b870b"
+    },
+    {
+      "name": "OwnershipTransferConfirmed(address,address)",
+      "hash": "0x646fe5eeb20d96ea45a9caafcb508854a2fb5660885ced7772e12a633c974571"
+    },
+    {
+      "name": "StakingDecreased(address,uint256)",
+      "hash": "0xbedcdd66d86f5dc81286de7b36cc38398208ffb595a3e95330fca4fb21f08cba"
+    },
+    {
+      "name": "Minted(address,address,uint256)",
+      "hash": "0x9d228d69b5fdb8d273a2336f8fb8612d039631024ea9bf09c424a9503aa078f0"
+    },
+    {
+      "name": "TransferEnabled()",
+      "hash": "0x75fce015c314a132947a3e42f6ab79ab8e05397dabf35b4d742dea228bbadc2d"
+    },
+    {
+      "name": "RecoverToken(address,address,uint256)",
+      "hash": "0x16a1412f01b73c390eb2548427101644aa86c1443c272f73df00fb74c48fe499"
+    },
+    {
+      "name": "Invoked(address,uint256,bytes,bytes)",
+      "hash": "0x2a936dbabeaea30adc1ddad138b1958497988474bef8b09a29411f0105ab8ab2"
+    },
+    {
+      "name": "RemoveMinter(address)",
+      "hash": "0x2f91b591fc56ac0917953ad01ec225524ee5ef0555213e4c8a9d8c9728ee7ffb"
+    },
+    {
+      "name": "Burned(address,uint256)",
+      "hash": "0x696de425f79f4a40bc6d2122ca50507f0efbeabbff86a84871b7196ab8ea8df7"
+    },
+    {
+      "name": "Burn(address,bytes32,uint256)",
+      "hash": "0xc3599666213715dfabdf658c56a97b9adfad2cd9689690c70c79b20bc61940c9"
+    },
+    {
+      "name": "Minting(address,address,uint256)",
+      "hash": "0xb1233017d63154bc561d57c16f7b6a55e2e1acd7fcac94045a9f35fb31a850ca"
+    },
+    {
+      "name": "TransferAndCall(address,address,uint256,bytes)",
+      "hash": "0xce8124fd2ae9fd7904103e5a9ebe88b527b9ca0e32a32fd497845c82706542d3"
+    },
+    {
+      "name": "MinTokensBeforeSwapUpdated(uint256)",
+      "hash": "0x5948780118f41f7c4577ae4619d5cbd064057bd8562d9f7b7e60324053375c00"
+    },
+    {
+      "name": "NewMigrator(address,address)",
+      "hash": "0x99b2b7456799067566d467831e63363500739eac62c12ccb8cf9745078f06d2a"
+    },
+    {
+      "name": "ManagerEdited(address,address)",
+      "hash": "0x43fcfef38622d6a5b118be09c27a6ed8cbdbfca21f0ea9245412ce8031c0423c"
+    },
+    {
+      "name": "TransactionCapUpdated(uint256)",
+      "hash": "0x699d1c4c28f453c7c162bf9ab9d182bcca9b5860718f5dbc0dadb620c0aa077e"
+    },
+    {
+      "name": "MerkleRootChanged(bytes32)",
+      "hash": "0x1b930366dfeaa7eb3b325021e4ae81e36527063452ee55b86c95f85b36f4c31c"
+    },
+    {
+      "name": "TokenMinterMinted(address,address,uint256)",
+      "hash": "0xe0dcb47e0eb67e20e87f3e34aab31c669ecec7466e8b7fb329d586dadebac6b6"
+    },
+    {
+      "name": "DelegateVotesChanged(address,uint224,uint224)",
+      "hash": "0xda5a64c2947c0b7bf4d6e7bf736c6f84d9d1c5f991770f88bbeb3fe19c85a134"
+    },
+    {
+      "name": "MintUnbacked(address,address,address,uint256,uint16)",
+      "hash": "0xf25af37b3d3ec226063dc9bdc103ece7eb110a50f340fe854bb7bc1b0676d7d0"
+    },
+    {
+      "name": "RemovedBlackList(address)",
+      "hash": "0xd7e9ec6e6ecd65492dce6bf513cd6867560d49544421d0783ddf06e76c24470c"
+    },
+    {
+      "name": "Freezed(address,uint64,uint256)",
+      "hash": "0x2ecd071e4d10ed2221b04636ed0724cce66a873aa98c1a31b4bb0e6846d3aab4"
+    },
+    {
       "name": "XfLobbyEnter(uint256,address,uint256,address)",
       "hash": "0x25ecdb937d5c5cc78f0d18dfb1ac82c44086b5dc608380ba357d06c9868f0b1d"
+    },
+    {
+      "name": "LOG_UNSTAKE(address,address,uint256)",
+      "hash": "0x1ddc13fab879f36a0016ded03412386f11de571437df12605dc0607742bd82c2"
+    },
+    {
+      "name": "LiquidationProtocolFeeChanged(address,uint256,uint256)",
+      "hash": "0xb5b0a963825337808b6e3154de8e98027595a5cad4219bb3a9bc55b192f4b391"
+    },
+    {
+      "name": "NewGovernance(address,address)",
+      "hash": "0x48da34dfe9ebb4198c3f70d8382467788dcee33984c79a74fa850772c4e5e36f"
+    },
+    {
+      "name": "Burn(address,uint256)",
+      "hash": "0xcc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca5"
+    },
+    {
+      "name": "Mint(uint256)",
+      "hash": "0x07883703ed0e86588a40d76551c92f8a4b329e3bf19765e0e6749473c1a84665"
+    },
+    {
+      "name": "WeightsSet()",
+      "hash": "0xf36b123659e7f76fa32a2aa2e12774361455e152120e66b04d179d9140a42370"
+    },
+    {
+      "name": "TrigRewardEvent(address,address,uint256)",
+      "hash": "0x92552527fa5ab3e91b9034146b3c83686e459ada0cd31509670b0743d301b437"
+    },
+    {
+      "name": "NewPendingGov(address,address)",
+      "hash": "0x6163d5b9efd962645dd649e6e48a61bcb0f9df00997a2398b80d135a9ab0c61e"
+    },
+    {
+      "name": "Released(address,uint256)",
+      "hash": "0xb21fb52d5749b80f3182f8c6992236b5e5576681880914484d7f4c9b062e619e"
+    },
+    {
+      "name": "ExchangeHotWalletRemoved(address)",
+      "hash": "0xe96bbe78c8bc645f0ee444e35730f56b458ea663d1b2a35cf93cefd7fce93dc1"
+    },
+    {
+      "name": "DEIAddressSet(address)",
+      "hash": "0x0692ea78a01b96b5abe8a744eae1de9f7f001f685fd013f0c552220d563d4ba7"
+    },
+    {
+      "name": "BusinessDevelopmentDivisorUpdated(uint256)",
+      "hash": "0x160ad92b724bb5157ba7574b379ecc4ec5a5f5220cd651c3b44b4b1c12332b11"
+    },
+    {
+      "name": "MintedToTreasury(address,uint256)",
+      "hash": "0xbfa21aa5d5f9a1f0120a95e7c0749f389863cbdbfff531aa7339077a5bc919de"
+    },
+    {
+      "name": "RoundCreated(uint256,uint256,uint256,uint256)",
+      "hash": "0x0b1ec92e2c042f4433769bc035846b6ff94397d5fd8ba47e37658193b09188c4"
+    },
+    {
+      "name": "DEUSMinted(address,address,uint256)",
+      "hash": "0xdcdaf2f9efb1a9727c667bcd34ba547e3ce5ec7f3af304aa8829a5e590211d7e"
+    },
+    {
+      "name": "Accrued(address,address,address,uint256,uint256,uint256)",
+      "hash": "0x3303facd24627943a92e9dc87cfbb34b15c49b726eec3ad3487c16be9ab8efe8"
+    },
+    {
+      "name": "FundsDistributed(address,uint256)",
+      "hash": "0x26536799ace2c3dbe12e638ec3ade6b4173dcf1289be0a58d51a5003015649bd"
+    },
+    {
+      "name": "StableDebtTokenUpgraded(address,address,address)",
+      "hash": "0x7a943a5b6c214bf7726c069a878b1e2a8e7371981d516048b84e03743e67bc28"
+    },
+    {
+      "name": "WhiteListed(address)",
+      "hash": "0x2e00aa132a0165955a7de5481083fd2933e22d472949147a9c3c69eec84c1700"
+    },
+    {
+      "name": "Minted(address,address,uint256,bytes,bytes)",
+      "hash": "0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d"
+    },
+    {
+      "name": "ReserveInterestRateStrategyChanged(address,address,address)",
+      "hash": "0xdb8dada53709ce4988154324196790c2e4a60c377e1256790946f83b87db3c33"
+    },
+    {
+      "name": "BlacklistAdded(address)",
+      "hash": "0x44d5fe68b00f68950fb9c1ff0a61ef7f747b1a36359a7e3a7f3324db4b878967"
+    },
+    {
+      "name": "LogNote(bytes4,address,bytes32,bytes32,uint256,bytes)",
+      "hash": "0x644843f351d3fba4abcd60109eaff9f54bac8fb8ccf0bab941009c21df21cf31"
+    },
+    {
+      "name": "Destruction(uint256)",
+      "hash": "0x9a1b418bc061a5d80270261562e6986a35d995f8051145f277be16103abd3453"
+    },
+    {
+      "name": "SwapBorrowRateMode(address,address,uint8)",
+      "hash": "0x7962b394d85a534033ba2efcf43cd36de57b7ebeb3de0ca4428965d9b3ddc481"
+    },
+    {
+      "name": "ComponentRemoved(address)",
+      "hash": "0xc605d0bf97f9b921340106a2e59f9428d5eb9039b16866159e0cdd2bf8e963df"
+    },
+    {
+      "name": "PriceOracleSentinelUpdated(address,address)",
+      "hash": "0x5326514eeca90494a14bedabcff812a0e683029ee85d1e23824d44fd14cd6ae7"
+    },
+    {
+      "name": "Deposit(address,uint256)",
+      "hash": "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c"
+    },
+    {
+      "name": "UpdateMiningParameters(uint256,uint256,uint256,int256)",
+      "hash": "0x77c99c82d406169745430d971da8381be7390d804af3ad20e40a95e070e08bd1"
+    },
+    {
+      "name": "Deny(address)",
+      "hash": "0x184450df2e323acec0ed3b5c7531b81f9b4cdef7914dfd4c0a4317416bb5251b"
+    },
+    {
+      "name": "Swap(address,uint256)",
+      "hash": "0x562c219552544ec4c9d7a8eb850f80ea152973e315372bf4999fe7c953ea004f"
+    },
+    {
+      "name": "ChangedLicenseFee(uint256)",
+      "hash": "0x74eb18939a29d79421724f7a16ca267d96c1c381ae51e02011a0daec3932c68f"
+    },
+    {
+      "name": "ConvertTokensForETH(uint256,uint256)",
+      "hash": "0x1d835182508bc46cfe26167d5d6ca20231bf92fb2ee0d558d40553b29a40fdf9"
+    },
+    {
+      "name": "ReserveInitialized(address,address,address,address,address)",
+      "hash": "0x3a0ca721fc364424566385a1aa271ed508cc2c0949c2272575fb3013a163a45f"
+    },
+    {
+      "name": "RoleRevoked(bytes32,address,address)",
+      "hash": "0xf6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b"
+    },
+    {
+      "name": "TWAPEpochChanged(uint256,uint256)",
+      "hash": "0xcddeab46bd7c7fa32f59b80523bce21904a7f2031ac8fbefa3f9c2ba24cc0e9f"
+    },
+    {
+      "name": "SwapEnabledUpdated(bool)",
+      "hash": "0x436b6cf978c7b6998fcce43dfe4d37e3a0dc2bb780144a2eb55d7138201e8a12"
+    },
+    {
+      "name": "SetMinter(address)",
+      "hash": "0xcec52196e972044edde8689a1b608e459c5946b7f3e5c8cd3d6d8e126d422e1c"
+    },
+    {
+      "name": "WhitelistUpdated(address,bool,bool)",
+      "hash": "0x855852ede06df792cbe12bbb8b292fd0d251a1dcfea1f072d5793f1930568ebf"
+    },
+    {
+      "name": "StakeReleased(uint256,uint256,address,bytes32,uint256)",
+      "hash": "0x0a5ee9b013e4bd25fbac492ab2632175b3dbed33e8698e329b560ab3463d2f9c"
+    },
+    {
+      "name": "TransferAllowlistUpdated(address,bool)",
+      "hash": "0x80e7b8bab7ab72e47957c0c472ede1b89bb3e7d2ba30cd37c2d6b000b49a960a"
+    },
+    {
+      "name": "StakeDestroyed(uint256,uint256,address,bytes32)",
+      "hash": "0x4b3881ff04395479f7458b355a00566abee8c352046752526b13e4ef9f053aab"
+    },
+    {
+      "name": "BuyBackTriggerTokenLimitUpdated(uint256)",
+      "hash": "0x29b4862b0ac325a5ba77a99236953f6a42e083f4f886db919d7b0b5e9f2cee00"
+    },
+    {
+      "name": "ExchangeHotWalletAdded(address)",
+      "hash": "0x07eccb5a6343032639dc3f1a913d254583bf745e350cdaa19ffc2b4cc2ebff6b"
+    },
+    {
+      "name": "NewMinter(address,address)",
+      "hash": "0x0b5e7be615a67a819aff3f47c967d1535cead1b98db60fafdcbf22dcaa8fa5a9"
+    },
+    {
+      "name": "SettleProfit(address,uint256,uint256)",
+      "hash": "0x394b370ea0a08c686d2e92e80f9f02a2356568ac54d39b51737ba20f6a9b1abb"
+    },
+    {
+      "name": "StakingAddressUpdated(address)",
+      "hash": "0x8ae96d8af35324a34b19e4f33e72d620b502f69595bb43870ab5fd7a7de78239"
     }
   ]
 }
