@@ -9,6 +9,7 @@ use tokio_tungstenite::{self, tungstenite::Message};
 use tokio_tungstenite::{accept_async, WebSocketStream};
 use walkdir::WalkDir;
 use warp::{reply, Filter};
+use warp::http::header::HeaderValue;
 
 const HTTP_PORT: u16 = 9003;
 
@@ -19,6 +20,14 @@ pub struct MostSimilarContracts {
 }
 
 pub async fn run_endpoint_handler() -> eyre::Result<()> {
+
+    // Create a CORS policy that allows all origins and all methods
+    // let cors = warp::cors()
+    //     .allow_any_origin()
+    //     .allow_methods(vec!["GET", "POST", "PUT", "DELETE"])
+    //     .allow_headers(vec![HeaderValue::from_static("*")])
+    //     .build();
+
     let cors = warp::cors()
         .allow_any_origin()
         // .allow_methods(vec!["*"])
@@ -27,7 +36,8 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
         .max_age(Duration::from_secs(86400))
         .allow_methods(vec!["GET", "POST", "OPTIONS"])
         // .allow_headers(vec!["*"]);
-        .allow_headers(vec!["User-Agent", "Sec-Fetch-Mode", "Referer", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", "Content-Type",]);
+        .allow_headers(vec!["User-Agent", "Sec-Fetch-Mode", "Referer", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", "Content-Type",])
+        .build();
 
 
     let similar_contracts = serde_json::from_str::<Vec<ProtocolEventsFns>>(include_str!(
