@@ -15,8 +15,13 @@ const HTTP_PORT: u16 = 9003;
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct MostSimilarContracts {
-    pub address: Address,
-    pub most_similar_contracts: Vec<String>,
+    pub most_similar_contracts: Vec<Contract>,
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct Contract {
+    pub name: String,
+    pub source_code: String,
 }
 
 pub async fn run_endpoint_handler() -> eyre::Result<()> {
@@ -124,11 +129,41 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
                             &events_to_add,
                             &selectors_to_add,
                         );
+
+                        let mut actual_contracts: Vec<Contract> = vec![];
+                        // for each contract, get the source code by matching the contract name to the file name in ../scraping/data/source/*
+                        for contract in contracts.iter() {
+                            let contract_name = contract.clone();
+                            for entry in WalkDir::new("../scraping/data/source")
+                                .into_iter()
+                                .filter_map(|e| e.ok())
+                                .filter(|e| e.file_type().is_file())
+                            {
+                                let entry_filename = entry.file_name().to_str().unwrap();
+                                if entry_filename.contains(&contract_name) {
+                                    let entry_path = entry.path();
+                                    let entry_filename = entry.file_name().to_str().unwrap();
+                                    // read the file and return the contents
+                                    let source_code_contents =
+                                        std::fs::read_to_string(entry_path.clone()).unwrap();
+                                    let contract_msg = Contract {
+                                        name: contract_name,
+                                        source_code: source_code_contents,
+                                    };
+                                    actual_contracts.push(contract_msg);
+                                    break;
+                                } else {
+                                    continue;
+                                }
+                            }
+                        }
+
+                        
+
                         let most_similar_contracts = MostSimilarContracts {
-                            address,
-                            most_similar_contracts: contracts,
+                            most_similar_contracts: actual_contracts,
                         };
-                        let contents = serde_json::to_string(&most_similar_contracts).unwrap();
+                        // let contents = serde_json::to_string(&most_similar_contracts).unwrap();
                         return Ok(reply::json(&most_similar_contracts));
                     }
 
