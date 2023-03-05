@@ -116,10 +116,10 @@
 							<dd>{app.gas_used_for_deploy} wei</dd>
 						</div>
 
-						<div>
+						<!-- <div>
 							<dt>Logs</dt>
-							<!-- <dd>{app.logs_emitted_on_deploy}</dd> -->
-						</div>
+							<dd>{app.logs_emitted_on_deploy}</dd>
+						</div> -->
 
 						<div>
 							<dt>Timestamp</dt>
