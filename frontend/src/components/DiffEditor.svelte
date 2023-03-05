@@ -5,26 +5,43 @@
 	import * as monaco from 'monaco-editor'
 
 	let container: HTMLElement
+	let diffEditor: monaco.editor.IStandaloneDiffEditor
+	let leftTextModel: monaco.editor.ITextModel
+	let rightTextModel: monaco.editor.ITextModel
+	let diffNavigator: monaco.editor.IDiffNavigator
 
-	$: if(container){console.log({container})
-		const diffEditor = monaco.editor.createDiffEditor(container)
+	$: if(container)
+		diffEditor ??= monaco.editor.createDiffEditor(container)
 
-		diffEditor.setModel({
-			original: monaco.editor.createModel(
+	$: if(leftText)
+		if(!leftTextModel)
+			leftTextModel = monaco.editor.createModel(
 				leftText,
 				"text/plain"
-			),
-			modified: monaco.editor.createModel(
+			)
+		else
+			leftTextModel.setValue(leftText)
+
+	$: if(rightText)
+		if(!rightTextModel)
+			rightTextModel = monaco.editor.createModel(
 				rightText,
 				"text/plain"
-			),
-		});
+			)
+		else
+			rightTextModel.setValue(rightText)
+	
+	$: if(diffEditor && leftTextModel && rightTextModel)
+		diffEditor.setModel({
+			original: leftTextModel,
+			modified: rightTextModel,
+		})
 
-		const navi = monaco.editor.createDiffNavigator(diffEditor, {
+	$: if(diffEditor)
+		diffNavigator = monaco.editor.createDiffNavigator(diffEditor, {
 			followsCaret: true, // resets the navigator state when the user selects something in the editor
 			ignoreCharChanges: true, // jump from line to line
 		})
-	}
 </script>
 
 
