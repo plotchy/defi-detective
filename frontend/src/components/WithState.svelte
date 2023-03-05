@@ -73,4 +73,4 @@
 </script>
 
 
-<slot {state} />
+<slot state={$state} />
