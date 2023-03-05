@@ -85,7 +85,7 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
                 continue;
             }
             let start_time = Instant::now();
-            info!("Processing msg from: {}", &msg.network);
+            // info!("New contract from: {}", &msg.network);
             let msg_address = format!("{:?}", msg.address);
             let msg_network = msg.network.to_string();
 
@@ -176,7 +176,7 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
                 }
                 last_write = Instant::now();
             }
-            info!("Finished processing msg from: {} in {}ms", &msg.network, start_time.elapsed().as_millis());
+            // info!("Finished processing msg from: {} in {}ms", &msg.network, start_time.elapsed().as_millis());
         }
     }
     Ok(())

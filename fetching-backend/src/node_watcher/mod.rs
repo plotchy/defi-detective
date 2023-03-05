@@ -295,7 +295,7 @@ impl NodeWatcher {
                     }
                 }
                 if send_count % 100 == 0 {
-                    info!("Sent {} new contracts to bytecode analyzer on network {:?}", send_count, &self.chain);
+                    // info!("Sent {} new contracts to bytecode analyzer on network {:?}", send_count, &self.chain);
                 }
             }
         }
