@@ -61,6 +61,9 @@
 				const app = JSON.parse(event.data)
 				state.apps = {...state.apps, [`${app.network}/${app.address}`]: app}
 				console.log({state})
+
+				dispatchEvent?.(new CustomEvent('appDeploy', { detail: { app } }))
+
 				set(state)
 			}
 

@@ -9,6 +9,13 @@
 	import { fly, scale } from 'svelte/transition'
 	import { flip } from 'svelte/animate'
 	import { expoOut } from 'svelte/easing'
+
+
+	import sound1 from '../../sounds/cash-register-fake-88639.mp3'
+	import sound2 from '../../sounds/cash-register-kaching-sound-effect-125042.mp3'
+	import sound3 from '../../sounds/cash-register-purchase-87313.mp3'
+	import sound4 from '../../sounds/cha-ching-1-90777.mp3'
+	import sound5 from '../../sounds/cha-ching-7053.mp3'
 </script>
 
 
@@ -43,7 +50,29 @@
 </style>
 
 
-<WithState let:state>
+<svelte:window
+	on:appDeploy={({ detail: app }) => {
+		console.log(app)
+		console.log({sound1, sound2, sound3, sound4, sound5})
+		new Audio(
+			{
+				'arbitrum': sound1,
+				'arbitrum-goerli': sound2,
+				'goerli': sound3,
+				'mainnet': sound4,
+				'mumbai': sound5,
+				'optimism': sound1,
+				'polygon': sound2,
+				'avalanche': sound3,
+				'aurora': sound4,
+			}[app.network]
+		).play()
+	}}
+/>
+
+<WithState
+	let:state
+>
 	<main>
 		<h2>Newest protocols</h2>
 
