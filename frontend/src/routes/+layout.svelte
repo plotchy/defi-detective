@@ -16,4 +16,3 @@
 
 	<Footer />
 </WithState>
-

@@ -1,4 +1,9 @@
-<script lang="ts">
+<script lang="ts">	
+	import type { State, Network, Address, App } from '../../components/WithState.svelte'
+
+	import { Context } from '../../components/Context.svelte'
+
+	
 	import apps from '../../../../data/pca.json'
 </script>
 
@@ -24,45 +29,47 @@
 </style>
 
 
-<main>
-	<h2>Newest protocols</h2>
+<Context key="state" let:state>
+	<main>
+		<h2>Newest protocols</h2>
 
-	<section>
-		{#each apps as app}
-			<a href={`/apps/0x${app.address}`}>
-				<article>
-					<h3>{app.name}</h3>
-					<output>0x{app.address}</output>
-				</article>
+		<section>
+			{#each state.apps ?? apps as app}
+				<a href={`/apps/${app.network}/${app.address}`}>
+					<article>
+						<h3>{app.name}</h3>
+						<output>{app.address}</output>
+					</article>
 
-				<!-- New <a href="">{app.network}</a> contract: {app.address}
-				<br />
-				Deployed by {app.address_from} in block {app.block_number}
-				{app.functions.length > 0 && (
-				<h4>Functions:</h4>
-				)}
-				<ul>
-				{app.functions.map((f, j) => (
-					<li key={j}>{f}</li>
-				))}
-				</ul>
-				{app.events.length > 0 && <h4>Events:</h4>}
-				<ul>
-				{app.events.map((e, j) => (
-					<li key={j}>{e}</li>
-				))}
-				</ul>
-				{app.most_similar_contracts?.length && (
-					<>
-						<h4>Similar protocols:</h4>
-						{app.most_similar_contracts.map((c, j) => (
-							<a key={j}>
-							{c}
-							</a>
-						))}
-					</>
-				)} -->
-			</a>
-		{/each}
-	</section>
-</main>
+					<!-- New <a href="">{app.network}</a> contract: {app.address}
+					<br />
+					Deployed by {app.address_from} in block {app.block_number}
+					{app.functions.length > 0 && (
+					<h4>Functions:</h4>
+					)}
+					<ul>
+					{app.functions.map((f, j) => (
+						<li key={j}>{f}</li>
+					))}
+					</ul>
+					{app.events.length > 0 && <h4>Events:</h4>}
+					<ul>
+					{app.events.map((e, j) => (
+						<li key={j}>{e}</li>
+					))}
+					</ul>
+					{app.most_similar_contracts?.length && (
+						<>
+							<h4>Similar protocols:</h4>
+							{app.most_similar_contracts.map((c, j) => (
+								<a key={j}>
+								{c}
+								</a>
+							))}
+						</>
+					)} -->
+				</a>
+			{/each}
+		</section>
+	</main>
+</Context>
