@@ -15,12 +15,12 @@
 	)
 
 
-	import apps from '../../../../../../data/pca.json'
+	import apps from '../../../../../data/pca.json'
 	const appsByAddress = Object.fromEntries(apps.map(app => [`0x${app.address}`, app]))
 
 
-	import ContractComparison from '../../../../components/ContractComparison.svelte'
-	import WithState from '../../../../components/WithState.svelte'
+	import ContractComparison from '../../../components/ContractComparison.svelte'
+	import WithState from '../../../components/WithState.svelte'
 </script>
 
 

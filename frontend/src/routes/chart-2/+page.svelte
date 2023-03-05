@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
-	
 	import PcaPlot from '../../components/PcaPlot.svelte'
 </script>
 
@@ -9,7 +7,6 @@
 	main {
 		align-content: stretch;
 		grid-template:
-			auto
 			1fr
 			/ 100%;
 	}
@@ -17,7 +14,5 @@
 
 
 <main>
-	<h2>{SITE_TITLE}</h2>
-
 	<PcaPlot />
 </main>
