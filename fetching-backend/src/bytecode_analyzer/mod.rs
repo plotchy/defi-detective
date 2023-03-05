@@ -148,7 +148,7 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
                 }
 
                 // write bytecode to file
-                let abs_bytecode_path = format!("{}/{}/{}_{}.txt", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_filtered_bytecodes_path, msg.network, msg.address);
+                let abs_bytecode_path = format!("{}/{}/{}_{:?}.txt", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_filtered_bytecodes_path, msg.network, msg.address);
                 write_bytecode_to_file(&msg.bytecode, &abs_bytecode_path);
             }
 

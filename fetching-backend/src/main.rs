@@ -1,7 +1,6 @@
 use config::Config;
 use config::File;
-// use defi_explorer::{configuration::*, endpoint_handler::run_endpoint_handler};
-use defi_explorer::{configuration::*};
+use defi_explorer::{configuration::*, endpoint_handler::run_endpoint_handler};
 use ethers::{utils::keccak256};
 use serde_json::Value;
 use std::{io::Write};
@@ -18,9 +17,6 @@ use defi_explorer::*;
 #[tokio::main]
 async fn main () {
     
-    
-
-
     // initialize tracing
     tracing_subscriber::fmt::init();
 
@@ -107,27 +103,27 @@ async fn main () {
         run_bytecode_analyzer(bytecode_settings, bytecode_analyzer_rx, message_handler_rx).await.expect("Bytecode analyzer failed");
     });
 
-    // let endpoint_msg_handle = tokio::spawn(async move {
-    //     run_endpoint_handler(endpoint_msg_tx).await.expect("Endpoint msg handler failed");
-    // });
+    let endpoint_msg_handle = tokio::spawn(async move {
+        run_endpoint_handler().await.expect("Endpoint msg handler failed");
+    });
 
 
     // run threads until termination / errors
-    let join_result = tokio::join!(node_watcher_handle, bytecode_analyzer_handle);
+    let join_result = tokio::join!(node_watcher_handle, bytecode_analyzer_handle, endpoint_msg_handle);
 
     match join_result {
-        (Ok(_), Ok(_)) => {
+        (Ok(_), Ok(_), Ok(_)) => {
             println!("All handles exited")
         },
-        (Ok(_), Err(e2)) => {
-            println!("Error: {}", e2);
+        _ => {
+            println!("Errors in any of the handles");
         },
-        (Err(e1), Ok(_)) => {
-            println!("Error: {}", e1);
-        },
-        (Err(e1), Err(e2)) => {
-            println!("Errors: {}, and also {}", e1, e2);
-        },
+        // (Err(e1), Ok(_)) => {
+        //     println!("Error: {}", e1);
+        // },
+        // (Err(e1), Err(e2)) => {
+        //     println!("Errors: {}, and also {}", e1, e2);
+        // },
     }
 
     println!("Program exited")
