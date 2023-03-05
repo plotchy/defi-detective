@@ -24,6 +24,16 @@
 		border-radius: 1rem;
 		background-color: rgba(255, 255, 255, 0.2);
 	}
+
+	dl {
+		gap: 0.5rem;
+	}
+	dl div {
+		display: grid;
+	}
+	dt {
+		min-width: 8rem;
+	}
 </style>
 
 
@@ -33,40 +43,70 @@
 
 		<section>
 			{#each Object.values(state.apps) ?? apps as app}
-				<a href={`/apps/${app.network}/${app.address}`}>
-					<article>
-						<h3>{app.name}</h3>
-						<output>{app.address}</output>
-					</article>
+				<article>
+					<a href={`/apps/${app.network}/${app.address}`}>
+						<h3>{app.name ?? `${app.network[0].toUpperCase()}${app.network.slice(1)} Contract`}</h3>
+					</a>
 
-					<!-- New <a href="">{app.network}</a> contract: {app.address}
-					<br />
-					Deployed by {app.address_from} in block {app.block_number}
-					{app.functions.length > 0 && (
-					<h4>Functions:</h4>
-					)}
-					<ul>
-					{app.functions.map((f, j) => (
-						<li key={j}>{f}</li>
-					))}
-					</ul>
-					{app.events.length > 0 && <h4>Events:</h4>}
-					<ul>
-					{app.events.map((e, j) => (
-						<li key={j}>{e}</li>
-					))}
-					</ul>
-					{app.most_similar_contracts?.length && (
-						<>
-							<h4>Similar protocols:</h4>
-							{app.most_similar_contracts.map((c, j) => (
-								<a key={j}>
-								{c}
-								</a>
-							))}
-						</>
-					)} -->
-				</a>
+					<dl>
+						<div>
+							<dt>Address</dt>
+							<output>{app.address}</output>
+						</div>
+
+						<div>
+							<dt>Block Number</dt>
+							<dd>{app.block_number}</dd>
+						</div>
+
+						<div>
+							<dt>Similar Contracts</dt>
+							<dd>
+								{#each app.most_similar_contracts.slice(0, 3) as contractName, i}
+									<p>{contractName}</p>
+								{/each}
+							</dd>
+						</div>
+
+						<div>
+							<dt>Gas Used</dt>
+							<dd>{app.gas_used_for_deploy} gwei</dd>
+						</div>
+
+						<div>
+							<dt>Logs</dt>
+							<!-- <dd>{app.logs_emitted_on_deploy}</dd> -->
+						</div>
+					</dl>
+				</article>
+
+				<!-- New <a href="">{app.network}</a> contract: {app.address}
+				<br />
+				Deployed by {app.address_from} in block {app.block_number}
+				{app.functions.length > 0 && (
+				<h4>Functions:</h4>
+				)}
+				<ul>
+				{app.functions.map((f, j) => (
+					<li key={j}>{f}</li>
+				))}
+				</ul>
+				{app.events.length > 0 && <h4>Events:</h4>}
+				<ul>
+				{app.events.map((e, j) => (
+					<li key={j}>{e}</li>
+				))}
+				</ul>
+				{app.most_similar_contracts?.length && (
+					<>
+						<h4>Similar protocols:</h4>
+						{app.most_similar_contracts.map((c, j) => (
+							<a key={j}>
+							{c}
+							</a>
+						))}
+					</>
+				)} -->
 			{/each}
 		</section>
 	</main>
