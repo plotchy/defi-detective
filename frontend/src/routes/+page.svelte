@@ -22,7 +22,5 @@
 <main>
 	<h2>{SITE_TITLE}</h2>
 
-	<WithState>
-		<PcaPlot />
-	</WithState>
+	<PcaPlot />
 </main>
