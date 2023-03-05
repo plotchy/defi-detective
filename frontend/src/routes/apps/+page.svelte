@@ -1,7 +1,5 @@
 <script lang="ts">	
-	import type { State, Network, Address, App } from '../../components/WithState.svelte'
-
-	import Context from '../../components/Context.svelte'
+	import WithState from '../../components/WithState.svelte'
 
 	
 	import apps from '../../../../data/pca.json'
@@ -29,7 +27,7 @@
 </style>
 
 
-<Context key="state" let:state>
+<WithState let:state>
 	<main>
 		<h2>Newest protocols</h2>
 
@@ -72,4 +70,4 @@
 			{/each}
 		</section>
 	</main>
-</Context>
+</WithState>

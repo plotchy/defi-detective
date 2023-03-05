@@ -18,25 +18,22 @@
 	import apps from '../../../../../../data/pca.json'
 	const appsByAddress = Object.fromEntries(apps.map(app => [`0x${app.address}`, app]))
 
-	import { getContext } from 'svelte'
-	const state = getContext<SvelteStore<State>>('state')
-
-
-	let app: App
-	$: app = $state.apps[`${network}/${address}`]
-		?? appsByAddress[address] // fallback
-
 
 	import ContractComparison from '../../../../components/ContractComparison.svelte'
+	import WithState from '../../../../components/WithState.svelte'
 </script>
 
 
-<main>
-	<h2>{app?.name ?? address}</h2>
+<WithState let:state>
+	{@const app = state.apps[`${network}/${address}`] ?? appsByAddress[address]}
 
-	<output>{address}</output>
+	<main>
+		<h2>{app?.name ?? address}</h2>
 
-	<ContractComparison
-		{address}
-	/>
-</main>
+		<output>{address}</output>
+
+		<ContractComparison
+			{address}
+		/>
+	</main>
+</WithState>
