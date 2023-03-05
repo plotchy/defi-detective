@@ -17,6 +17,13 @@ use tokio::sync::oneshot;
 
 pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node_msg_rx: UnboundedReceiver<NodeBytecodeMessage>, mut message_handler_rx: UnboundedReceiver<(Address, oneshot::Sender<WSMessage>)>)-> eyre::Result<()> {
 
+    // seed the websocket with ~30 messages from the cache at ./db/cache_of_ws_msgs.json
+    let mut ws_msg_cache = match serde_json::from_str::<Vec<WSMessage>>(include_str!("../../db/cache_of_ws_msgs.json")) {
+        Ok(cache) => cache,
+        Err(_) => Vec::new(),
+    };
+
+    let abs_cache_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), "db/cache_of_ws_msgs.json");
     let abs_new_contract_matches_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_new_contract_matches_path);
     let abs_existing_contract_matches_path = format!("{}/{}", std::env::current_dir().unwrap().to_str().unwrap(), &bytecode_settings.rel_existing_contract_matches_path);
     let new_matches_str = match std::fs::read_to_string(&abs_new_contract_matches_path) {
@@ -60,11 +67,17 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
     // let ws_stream = accept_async(stream).await.expect("Failed to accept");
     // info!("New WebSocket connection");
     // let (mut ws_sender, mut _ws_receiver) = ws_stream.split();
-
     while let Ok((stream, addr)) = listener.accept().await {
+        
         let ws_stream = accept_async(stream).await.expect("Failed to accept");
         info!("New WebSocket connection: {}", addr);
         let (mut ws_sender, mut _ws_receiver) = ws_stream.split();
+        // send all messages in cache to new websocket
+        for msg in ws_msg_cache.iter() {
+            let msg = serde_json::to_string(&msg).unwrap();
+            let msg = Message::Text(msg);
+            ws_sender.send(msg).await.unwrap();
+        }
         'analyzer: loop {
             let msg = node_msg_rx.recv().await.unwrap();
             if !bytecode_settings.enable_existing_contract_matches && !&msg.new_creation {
@@ -130,8 +143,10 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
 
                     // create a WSMessage from a NodeBytecodeMessage
                     let ws_message = WSMessage::from_node_bytecode_message_events_fns(msg.clone(), events_to_add.clone(), selectors_to_add.clone(), most_similar_contracts);
+                    ws_msg_cache.push(ws_message.clone());
                     
                     let ws_message = serde_json::to_string(&ws_message).unwrap();
+                    write_ws_msg_vec_to_cache(&mut ws_msg_cache, &abs_cache_path);
                     info!("Sending WSMessage to : {}", addr);
                     match ws_sender.send(Message::Text(ws_message)).await {
                         Ok(_) => (),
@@ -165,6 +180,19 @@ pub async fn run_bytecode_analyzer(bytecode_settings: BytecodeSettings, mut node
         }
     }
     Ok(())
+}
+
+pub fn write_ws_msg_vec_to_cache(ws_msg_vec: &mut Vec<WSMessage>, abs_cache_path: &str) {
+    // only keep the last 50 messages in the cache
+    if ws_msg_vec.len() > 50 {
+        ws_msg_vec.drain(0..ws_msg_vec.len() - 50);
+    }
+
+    
+    let mut file = std::fs::File::create(abs_cache_path).unwrap();
+
+    let ws_msg = serde_json::to_string(&ws_msg_vec).unwrap();
+    file.write_all(ws_msg.as_bytes()).unwrap();
 }
 
 pub fn retreive_matches_for_markers(bytecode: &Bytes) -> (Option<SetMatches>, Option<SetMatches>) {
