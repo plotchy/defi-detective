@@ -6,6 +6,9 @@
 	import apps from '../../../data/pca.json'
 
 
+	import { formatAddress } from '../utils/formatAddress'
+
+
 	import { fly, scale } from 'svelte/transition'
 	import { flip } from 'svelte/animate'
 	import { expoOut } from 'svelte/easing'
@@ -95,7 +98,7 @@
 					<dl>
 						<div>
 							<dt>📒 Address</dt>
-							<output>{app.address}</output>
+							<output>{formatAddress(app.address, 'middle-truncated')}</output>
 						</div>
 
 						<div>
