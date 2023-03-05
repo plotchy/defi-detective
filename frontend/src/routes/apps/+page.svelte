@@ -47,7 +47,12 @@
 		<h2>Newest protocols</h2>
 
 		<section>
-			{#each Object.values(state.apps) ?? apps as app, i (`${app.network}/${app.address}`)}
+			{#each
+				(Object.values(state.apps) ?? apps)
+					.sort((a, b) => b.timestamp - a.timestamp)
+				as app,
+				i (`${app.network}/${app.address}`)
+			}
 				<article
 					animate:flip={{ duration: () => Object.values(state.apps).length > 20 ? 0 : 500, delay: i * 10, easing: expoInOut }}
 					transition:scale={{ duration: 300, from: 0.4, opacity: 0 }}
