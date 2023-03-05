@@ -120,16 +120,6 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
-}
-pre {
-	padding: 1rem;
-}
-pre > code {
-	all: unset;
-}
 
 dl {
 	display: grid;
@@ -161,4 +151,19 @@ hr {
 	border: none;
 	border-bottom: currentColor 1px solid;
 	opacity: 0.25;
+}
+
+output {
+	background-color: rgba(255, 255, 255, 0.3);
+	font-family: monospace;
+	border-radius: 0.5rem;
+	line-height: 1em;
+	padding: 0.5rem;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }

@@ -12,7 +12,7 @@
 		return result
 	})
 }
-	Finding similar contracts...
+	<strong>📝 Finding similar contracts...</strong>
 {:then {most_similar_contracts: contracts}}
 	<slot {contracts} />
 {:catch error}

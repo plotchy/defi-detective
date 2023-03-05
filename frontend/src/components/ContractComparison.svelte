@@ -18,7 +18,7 @@
 <ContractBytecodeLoader {address} let:bytecode>
 	<br>
 
-	<h3>Bytecode</h3>
+	<h3>🎛️ Bytecode</h3>
 
 	<pre>{bytecode}</pre>
 
@@ -44,12 +44,3 @@
 		/>
 	</SimilarContractsLoader>
 </ContractBytecodeLoader>
-
-
-<style>
-	.row {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-</style>

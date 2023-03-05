@@ -36,6 +36,7 @@
 		padding: 1rem;
 		border-radius: 1rem;
 		background-color: rgba(255, 255, 255, 0.2);
+		font-size: 0.8em;
 	}
 
 	dl {
@@ -93,12 +94,12 @@
 
 					<dl>
 						<div>
-							<dt>📒 Address</dt>
+							<dt>📒 Address</dt>
 							<output>{app.address}</output>
 						</div>
 
 						<div>
-							<dt>🫂 Similar Contracts</dt>
+							<dt>📝 Similar Contracts</dt>
 							<dd>
 								{#each app.most_similar_contracts.slice(0, 3) as contractName, i}
 									<p>{contractName}</p>
@@ -107,7 +108,7 @@
 						</div>
 
 						<div>
-							<dt>🔥 Gas Used</dt>
+							<dt>🔥 Gas Used</dt>
 							<dd>{app.gas_used_for_deploy} wei</dd>
 						</div>
 
@@ -117,12 +118,12 @@
 						</div> -->
 
 						<div>
-							<dt>🧊 Block Number</dt>
+							<dt>🧊 Block Number</dt>
 							<dd>{app.block_number}</dd>
 						</div>
 
 						<div>
-							<dt>⏰ Timestamp</dt>
+							<dt>⏰ Timestamp</dt>
 							<dd><Date date={app.timestamp * 1000} format="relative" /></dd>
 						</div>
 					</dl>

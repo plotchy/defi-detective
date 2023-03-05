@@ -28,9 +28,10 @@
 	{@const app = state.apps[`${network}/${address}`] ?? appsByAddress[address]}
 
 	<main>
-		<h2>{app?.name ?? address}</h2>
-
-		<output>{address}</output>
+		<div class="row">
+			<h2>📝 {app?.name ?? address}</h2>
+			<output>{address}</output>
+		</div>
 
 		<ContractComparison
 			{address}

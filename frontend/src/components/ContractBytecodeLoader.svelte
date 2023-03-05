@@ -17,7 +17,7 @@
 		return result
 	})
 }
-	Loading contract bytecode...
+	<strong>Loading contract bytecode...</strong>
 {:then bytecode}
 	<slot {bytecode} />
 {:catch error}
