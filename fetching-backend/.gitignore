@@ -5,3 +5,5 @@
 /db/filtered_bytecodes/*
 /outputs/existing_contract_matches.json
 node_modules
+/db/cache_of_ws_msgs.json
+/outputs/new_contract_matches.json
