@@ -20,7 +20,7 @@
 
 	<h3>🎛️ Bytecode</h3>
 
-	<pre>{bytecode}</pre>
+	<pre>{bytecode.bytecode}</pre>
 
 	<br>
 

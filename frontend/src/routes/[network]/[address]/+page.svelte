@@ -27,14 +27,16 @@
 <WithState let:state>
 	{@const app = state.apps[`${network}/${address}`] ?? appsByAddress[address]}
 
-	<main>
-		<div class="row">
-			<h2>📝 {app?.name ?? address}</h2>
-			<output>{address}</output>
-		</div>
+	{#if app}
+		<main>
+			<div class="row">
+				<h2>📝 {app.name ?? `${app.network[0].toUpperCase()}${app.network.slice(1)} Contract`}</h2>
+				<output>{address}</output>
+			</div>
 
-		<ContractComparison
-			{address}
-		/>
-	</main>
+			<ContractComparison
+				{address}
+			/>
+		</main>
+	{/if}
 </WithState>
