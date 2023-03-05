@@ -109,9 +109,10 @@
 		bottom: 0.75rem;
 		right: 0.75rem;
 		padding: 0.4rem 0.8rem;
-		background: #eee;
 		animation: Toast 5s forwards;
 		border-radius: 0.5em;
+		color: rgba(255, 255, 255, 0.8);
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	}
 
 	.connected {
