@@ -32,7 +32,7 @@
 				<span>Compare:</span>
 				<select bind:value={compareContract}>
 					{#each contracts as contract}
-						<option value={contract}>{contract}</option>
+						<option value={contract?.name}>{contract?.name}</option>
 					{/each}
 				</select>
 			</label>
@@ -40,7 +40,7 @@
 
 		<DiffEditor
 			leftText={bytecode}
-			rightText={compareContract?.bytecode ?? `Select a contract to compare`}
+			rightText={compareContract?.source_code ?? `Select a contract to compare`}
 		/>
 	</SimilarContractsLoader>
 </ContractBytecodeLoader>
