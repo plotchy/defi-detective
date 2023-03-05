@@ -1,0 +1,361 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract Kernel",
+                "name": "kernel_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IOperator",
+                "name": "operator_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract ERC20",
+                "name": "rewardToken_",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "reward_",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "Heart_BeatAvailable",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "Heart_BeatStopped",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "Heart_InvalidParams",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "Heart_OutOfCycle",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller_",
+                "type": "address"
+            }
+        ],
+        "name": "KernelAdapter_OnlyKernel",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "Keycode",
+                "name": "keycode_",
+                "type": "bytes5"
+            }
+        ],
+        "name": "Policy_ModuleDoesNotExist",
+        "type": "error"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "timestamp_",
+                "type": "uint256"
+            }
+        ],
+        "name": "Beat",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "to_",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "rewardAmount_",
+                "type": "uint256"
+            }
+        ],
+        "name": "RewardIssued",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "contract ERC20",
+                "name": "token_",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "rewardAmount_",
+                "type": "uint256"
+            }
+        ],
+        "name": "RewardUpdated",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "ROLES",
+        "outputs": [
+            {
+                "internalType": "contract ROLESv1",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "activate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "active",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "beat",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract Kernel",
+                "name": "newKernel_",
+                "type": "address"
+            }
+        ],
+        "name": "changeKernel",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "configureDependencies",
+        "outputs": [
+            {
+                "internalType": "Keycode[]",
+                "name": "dependencies",
+                "type": "bytes5[]"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "deactivate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "frequency",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "isActive",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "kernel",
+        "outputs": [
+            {
+                "internalType": "contract Kernel",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "lastBeat",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "operator",
+        "outputs": [
+            {
+                "internalType": "contract IOperator",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "requestPermissions",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "Keycode",
+                        "name": "keycode",
+                        "type": "bytes5"
+                    },
+                    {
+                        "internalType": "bytes4",
+                        "name": "funcSelector",
+                        "type": "bytes4"
+                    }
+                ],
+                "internalType": "struct Permissions[]",
+                "name": "permissions",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "resetBeat",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "reward",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "rewardToken",
+        "outputs": [
+            {
+                "internalType": "contract ERC20",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "operator_",
+                "type": "address"
+            }
+        ],
+        "name": "setOperator",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract ERC20",
+                "name": "token_",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "reward_",
+                "type": "uint256"
+            }
+        ],
+        "name": "setRewardTokenAndAmount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract ERC20",
+                "name": "token_",
+                "type": "address"
+            }
+        ],
+        "name": "withdrawUnspentRewards",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
