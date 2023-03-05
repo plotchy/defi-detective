@@ -21,8 +21,13 @@ pub struct MostSimilarContracts {
 pub async fn run_endpoint_handler() -> eyre::Result<()> {
     let cors = warp::cors()
         .allow_any_origin()
-        .allow_methods(vec!["GET", "POST"])
-        .allow_headers(vec!["User-Agent", "Sec-Fetch-Mode", "Referer", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]);
+        .allow_methods(vec!["*"])
+        .allow_credentials(true)
+        .expose_headers(vec!["*"])
+        .max_age(Duration::from_secs(86400))
+        // .allow_methods(vec!["GET", "POST"])
+        .allow_headers(vec!["*"]);
+    // .allow_headers(vec!["User-Agent", "Sec-Fetch-Mode", "Referer", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", "Content-Type",]);
 
 
     let similar_contracts = serde_json::from_str::<Vec<ProtocolEventsFns>>(include_str!(
