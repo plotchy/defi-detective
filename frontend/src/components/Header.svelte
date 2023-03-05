@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeaderLink from './HeaderLink.svelte';
+	import Link from './Link.svelte';
 	import { SITE_TITLE } from '../consts';
 </script>
 
@@ -10,10 +10,9 @@
 	</h1>
 
 	<nav>
-		<HeaderLink href="/">Feed</HeaderLink>
-		<HeaderLink href="/chart-1">Chart 1</HeaderLink>
-		<HeaderLink href="/chart-2">Chart 2</HeaderLink>
-		<HeaderLink href="https://github.com/plotchy/defi-detective" target="_blank">GitHub</HeaderLink>
+		<Link href="/">Feed</Link>
+		<Link href="/chart-1">Chart 1</Link>
+		<Link href="/chart-2">Chart 2</Link>
 	</nav>
 </header>
 
