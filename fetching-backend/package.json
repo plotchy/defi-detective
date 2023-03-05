@@ -7,7 +7,8 @@
     "example": "examples"
   },
   "scripts": {
-    "start": "mkdir -p db/filtered_bytecodes; mkdir -p db/fetched_addresses; wscat -c ws://127.0.0.1:9002",
+    "start": "cargo run --release",
+    "start:wscat": "mkdir -p db/filtered_bytecodes; mkdir -p db/fetched_addresses; wscat -c ws://127.0.0.1:9002",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
