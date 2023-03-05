@@ -97,7 +97,7 @@
 	let:state
 >
 	<main>
-		<h2>Newest protocols</h2>
+		<h2>Newest Protocols</h2>
 
 		<section>
 			{#each
