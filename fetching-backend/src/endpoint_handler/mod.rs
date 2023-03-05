@@ -21,7 +21,10 @@ pub struct MostSimilarContracts {
 pub async fn run_endpoint_handler() -> eyre::Result<()> {
     let cors = warp::cors()
         .allow_any_origin()
-        .allow_methods(vec!["GET", "POST"]);
+        .allow_methods(vec!["GET", "POST"])
+        .allow_headers(vec!["User-Agent", "Sec-Fetch-Mode", "Referer", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]);
+
+
     let similar_contracts = serde_json::from_str::<Vec<ProtocolEventsFns>>(include_str!(
         "../../inputs/protocol_events_fns.json"
     ))
@@ -49,7 +52,7 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
             }
         }
         return Ok(reply::json(&"No matches found"));
-    }).with(cors.clone());
+    });
 
 
     let get_similar_contracts =
@@ -121,7 +124,7 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
                 
             }
             Ok(reply::json(&"No matches found"))
-        }).with(cors.clone());
+        });
 
     // let contracts = serde_json::from_str::<Vec<ProtocolEventsFns>>(include_str!(
     //     "../../inputs/protocol_events_fns.json"
@@ -134,9 +137,12 @@ pub async fn run_endpoint_handler() -> eyre::Result<()> {
     //         bytecode_analyzer::get_events_and_selectors(bytecode);
     //     let contracts = get_most_similar_contracts(&contracts, events_to_add, selectors_to_add);
     // });
+
+    let routes = get_similar_contracts.or(get_contract_bytecode)
+        .with(cors);
     
 
-    warp::serve(get_similar_contracts.or(get_contract_bytecode).with(cors.clone()))
+    warp::serve(routes)
         .run(([0, 0, 0, 0], HTTP_PORT))
         .await;
     Ok(())
