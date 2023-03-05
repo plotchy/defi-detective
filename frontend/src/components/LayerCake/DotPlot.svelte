@@ -164,7 +164,7 @@
 		</WebGL> -->
 
 		<Html>
-			<a class="nearest-datum-link" href="{nearestDatum ? linkAccessor(nearestDatum) : '#'}">
+			<a class="nearest-datum-link" href="{nearestDatum ? linkAccessor?.(nearestDatum) : '#'}">
 				<QuadTree
 					bind:found={nearestDatum}
 					let:x
