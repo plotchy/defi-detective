@@ -7,7 +7,7 @@
 	•
 	hacked & scraped together by 
 	<a href="https://twitter.com/plotchy" target="_blank" rel="noreferrer">@plotchy</a>,
-	<a href="https://twitter.com/aleks_misztal" target="_blank" rel="noreferrer">@aleks</a> &
+	<a href="https://twitter.com/aleks_misztal" target="_blank" rel="noreferrer">@aleks_misztal</a> &
 	<a href="https://twitter.com/darrylyeo" target="_blank" rel="noreferrer">@darrylyeo</a>
 	at
 	<a href="https://www.ethdenver.com/">ETHDenver 2023</a>
