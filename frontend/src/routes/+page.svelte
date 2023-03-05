@@ -112,7 +112,7 @@
 					transition:scale={{ duration: 300, from: 0.4, opacity: 0 }}
 				>
 					<article>
-							<h3>{app.name ?? `${app.network[0].toUpperCase()}${app.network.slice(1)} Contract`}</h3>
+							<h3>{app.name ?? `${app.network[0].toUpperCase().replace('-g', ' G')}${app.network.slice(1)} Contract`}</h3>
 
 						<dl>
 							<div>

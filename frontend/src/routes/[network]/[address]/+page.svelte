@@ -30,7 +30,7 @@
 	{#if app}
 		<main>
 			<div class="row">
-				<h2>📝 {app.name ?? `${app.network[0].toUpperCase()}${app.network.slice(1)} Contract`}</h2>
+				<h2>📝 {app.name ?? `${app.network[0].toUpperCase().replace('-g', ' G')}${app.network.slice(1)} Contract`}</h2>
 				<output>{address}</output>
 			</div>
 
