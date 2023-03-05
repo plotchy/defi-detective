@@ -51,6 +51,12 @@
 	dt {
 		min-width: 8rem;
 	}
+
+	ul {
+		translate: 1em;
+		padding-right: 1em;
+		font-size: 0.9em;
+	}
 </style>
 
 
@@ -98,15 +104,17 @@
 					<dl>
 						<div>
 							<dt>📒 Address</dt>
-							<output>{formatAddress(app.address, 'middle-truncated')}</output>
+							<dd>{formatAddress(app.address, 'middle-truncated')}</dd>
 						</div>
 
 						<div>
 							<dt>📝 Similar Contracts</dt>
 							<dd>
-								{#each app.most_similar_contracts.slice(0, 3) as contractName, i}
-									<p>{contractName}</p>
-								{/each}
+								<ul>
+									{#each app.most_similar_contracts.slice(0, 3) as contractName, i}
+										<li>{contractName}</li>
+									{/each}
+								</ul>
 							</dd>
 						</div>
 
