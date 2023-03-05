@@ -1,4 +1,4 @@
-# DeFi explorer
+# DeFi Detective
 
 Explorer of new DeFi protocols. Innovations and imitations, forks and new projects.
 
