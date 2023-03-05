@@ -5,17 +5,32 @@ import Footer from '../../components/Footer.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 
-import apps from '../../../../data/pca.json';
+
+import apps from '../../../../data/pca.json'
+
+const appsByAddress = Object.fromEntries(apps.map(app => [app.address, app]))
 
 export const getStaticPaths = async () => {
 	return apps.map((app) => ({
 		params: { address: `0x${app.address}` },
 		props: app,
-	}));
+	}))
+
+	// const apps = []
+
+	// for(let i = 0n; i < 0xffffffffffffffffffffffffffffffffffffffffn; i++)
+	// 	apps.map((app) => ({
+	// 		params: { address: `0x${i.toString(16)}` },
+	// 		props: app,
+	// 	}))
+	
+	// return apps
 }
 
 
-const app = Astro.props;
+import ContractComparison from '../../components/ContractComparison.svelte'
+
+const app = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -45,6 +60,13 @@ const app = Astro.props;
 			<h1>{app.name}</h1>
 
 			<output>0x{app.address}</output>
+
+			<h3>Compare</h3>
+
+			<ContractComparison
+				client:visible
+				address={app.address}
+			/>
 		</main>
 
 		<Footer />
