@@ -7,6 +7,7 @@ use ethers::prelude::*;
 use once_cell::sync::Lazy;
 use serde::{Deserialize, Serialize};
 use tracing::{warn};
+use tracing_subscriber::fmt::format;
 
 #[derive(Debug, Clone, Deserialize)]
 pub struct NodeBytecodeMessage {
@@ -17,6 +18,8 @@ pub struct NodeBytecodeMessage {
     pub new_creation: bool,
     pub address_from: Address,
     pub block_timestamp: u64,
+    pub gas_used_for_deploy: u64,
+    pub logs_emitted_on_deploy: Vec<Log>,
 }
 
 
@@ -30,12 +33,17 @@ pub struct WSMessage {
     pub events: Vec<String>,
     pub functions: Vec<String>,
     pub most_similar_contracts: Vec<String>,
+    pub timestamp: u64,
+    pub gas_used_for_deploy: u64,
+    pub logs_emitted_on_deploy: String,
 }
 
 impl WSMessage {
 
 
     pub fn from_node_bytecode_message_events_fns(msg: NodeBytecodeMessage, events: Vec<String>, fns: Vec<String>, most_similar_contracts: Vec<String>) -> Self {
+        
+        let logs = format!("{:?}", msg.logs_emitted_on_deploy);
         Self {
             network: msg.network.to_string(),
             address: msg.address,
@@ -45,6 +53,9 @@ impl WSMessage {
             events,
             functions: fns,
             most_similar_contracts,
+            timestamp: msg.block_timestamp,
+            gas_used_for_deploy: msg.gas_used_for_deploy,
+            logs_emitted_on_deploy: logs,
         }
     }
 

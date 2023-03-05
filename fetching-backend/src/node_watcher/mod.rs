@@ -170,7 +170,7 @@ impl NodeWatcher {
 
                 let _transaction_gas_limit = transaction.gas;
                 let _transaction_input = transaction.input.clone();
-                // let transaction_nonce = transaction.nonce.unwrap().as_u64();
+                let transaction_nonce = transaction.nonce.as_u64();
                 // let transaction_block_hash = transaction.block_hash.unwrap();
                 // let transaction_transaction_index = transaction.transaction_index.unwrap().as_u64();
 
@@ -186,9 +186,9 @@ impl NodeWatcher {
                         continue;
                     }
                 };
-                let _transaction_gas_used = transaction_receipt.gas_used.unwrap().as_u64();
+                let transaction_gas_used = transaction_receipt.gas_used.unwrap().as_u64();
                 let _transaction_logs_bloom = transaction_receipt.logs_bloom;
-                let _transaction_logs = transaction_receipt.logs;
+                let transaction_logs = transaction_receipt.logs;
 
                 // if transaction is a contract creation, then fetch bytecode
                 if transaction_to == None && transaction_receipt.contract_address.is_some() {
@@ -207,7 +207,10 @@ impl NodeWatcher {
                         block_number: Some(block_number),
                         new_creation: true,
                         address_from: transaction_from,
-                        block_timestamp
+                        block_timestamp,
+                        gas_used_for_deploy: transaction_gas_used,
+                        logs_emitted_on_deploy: transaction_logs,
+
                     };
 
                     info!("Sending new deployed contract to bytecode analyzer on network {:?}", &self.chain);
@@ -280,7 +283,9 @@ impl NodeWatcher {
                             block_number: Some(block_number),
                             new_creation: false,
                             address_from: transaction_from,
-                            block_timestamp
+                            block_timestamp,
+                            gas_used_for_deploy: transaction_gas_used,
+                            logs_emitted_on_deploy: transaction_logs.clone(),
                         };
 
                         // info!("Sending new touched contract to bytecode analyzer on network {:?}", &self.chain);
